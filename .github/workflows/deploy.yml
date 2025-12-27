@@ -15,17 +15,13 @@ jobs:
       - name: Checkout source repo
         uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - name: Set up pixi
+        uses: prefix-dev/setup-pixi@v0.8.1
         with:
-          python-version: '3.12'
-          cache: 'pip'
-
-      - name: Install dependencies
-        run: pip install -r requirements.txt
+          cache: true
 
       - name: Build site
-        run: pelican content -o output -s publishconf.py
+        run: pixi run publish
 
       - name: Deploy to cranmer.github.io
         uses: peaceiris/actions-gh-pages@v4
