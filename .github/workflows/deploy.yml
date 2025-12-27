@@ -28,6 +28,7 @@ jobs:
 
       - name: Install dependencies
         run: |
+          pip install "jinja2<3.1"
           pip install pelican[markdown] pelican-render-math pelican-liquid-tags
           pip install pelican-i18n-subsites pelican-neighbors pelican-sitemap
           pip install typogrify beautifulsoup4 lxml pybtex markdown ghp-import
