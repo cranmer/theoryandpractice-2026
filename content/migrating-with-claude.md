@@ -35,6 +35,7 @@ This repository is a fresh migration of the original [TheoryAndPractice](https:/
 - Publications page (`/publications.html`) generated from BibTeX
 - Presentations page (`/presentations.html`) displaying 113 talks with video icons, compatible with [IRIS-HEP format](https://iris-hep.org/presentations/byperson.html)
 - Custom `pelican-presentations` plugin for parsing YAML presentation data
+- [Pagefind](https://pagefind.app/) search with instant client-side search across all pages
 - Bluesky social link with custom butterfly icon
 - BibTeX modal popups with copy-to-clipboard functionality
 - Markdown rendering inside HTML blocks (`md_in_html` extension)
@@ -67,7 +68,7 @@ This entire migration was done in collaboration with Claude Code. The AI agent w
 - Create a new `pelican-presentations` plugin from scratch, compatible with IRIS-HEP's format
 - Debug issues with template rendering and markdown processing
 - Create the GitHub Actions deployment workflow
-- Add new features like the BibTeX modals, presentations page, and Bluesky social icon
+- Add new features like the BibTeX modals, presentations page, Pagefind search, and Bluesky social icon
 
 It was a genuinely collaborative process—I would describe what I wanted, Claude would implement it, and we'd iterate on the details together.
 

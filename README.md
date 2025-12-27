@@ -85,6 +85,15 @@ These are installed from PyPI and auto-discovered by Pelican:
 | `pelican-jupyter` | Jupyter notebook support |
 | `pelican-presentations` | Presentations page from YAML data |
 
+### Search
+
+The site uses [Pagefind](https://pagefind.app/) for fast, client-side search:
+- Indexes all pages at build time
+- Instant search with no server required
+- Search icon in navbar links to `/search.html`
+
+Pagefind runs automatically after Pelican builds (configured in `pyproject.toml`).
+
 ### Local Plugins (in `plugins/`)
 
 These are custom or modified plugins maintained locally:

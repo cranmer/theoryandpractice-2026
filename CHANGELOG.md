@@ -12,6 +12,8 @@ All notable changes to theoryandpractice.org are documented in this file.
 - Presentations page (`/presentations.html`) with 113 talks from IRIS-HEP format YAML
 - Video camera icons for presentations with recordings
 - `pelican-presentations` plugin (separate repository) for IRIS-HEP compatible presentations
+- Pagefind search (`/search.html`) with instant client-side search across all pages
+- Search icon (magnifying glass) in navbar
 - Bluesky social link with custom butterfly icon
 - BibTeX modal popups with copy-to-clipboard functionality
 - Markdown rendering inside HTML blocks (`md_in_html` extension)
