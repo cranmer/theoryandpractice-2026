@@ -28,13 +28,11 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install --upgrade pip setuptools wheel
-          pip install "jinja2<3.1" "markupsafe<2.1"
           pip install pelican[markdown] pelican-render-math pelican-liquid-tags
-          pip install pelican-i18n-subsites pelican-neighbors pelican-sitemap
+          pip install pelican-neighbors pelican-sitemap
           pip install typogrify beautifulsoup4 lxml pybtex markdown ghp-import
           pip install nbconvert ipython jupyter pelican-jupyter
-          pip install git+https://github.com/cranmer/pelican-presentations.git --no-deps
+          pip install git+https://github.com/cranmer/pelican-presentations.git
 
       - name: Build site
         run: pelican content -o output -s publishconf.py

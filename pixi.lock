@@ -115,7 +115,6 @@ environments:
       - pypi: https://files.pythonhosted.org/packages/30/c3/a6bf5a88ec27887d31c740117b72df4f7a66910552ae3f6ccadaba5ae934/pelican-4.11.0.post0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/0d/8d/ca734a9b161c3cb1e520e038cd7723cae866b95888b548b8ffb2df75fac3/pelican-jupyter-0.10.0.tar.gz
       - pypi: git+https://github.com/cranmer/pelican-presentations.git#c188e1b53ba6a9e953ff83eebc81d4f5794caa08
-      - pypi: https://files.pythonhosted.org/packages/b8/2a/67872fc6bf3b89d47128b86ab8218a077c11dc89e08175450db47d435167/pelican_i18n_subsites-1.0.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/49/0e/d3f4ad95b39e4de55fee98ec969eb0a05605018d9441c3c77400e2c647c8/pelican_liquid_tags-1.0.4-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/8d/ad/f2ad5fa3c1d35681707cf809a4573dda85a67dac007c59ff9371dae87b29/pelican_neighbors-1.2.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/51/0e/368abb67e18c4ce965ce88cf96aa67c6cb8be2f8e0b2ed1ec1f306be5dad/pelican_render_math-1.0.5-py3-none-any.whl
@@ -264,7 +263,6 @@ environments:
       - pypi: https://files.pythonhosted.org/packages/30/c3/a6bf5a88ec27887d31c740117b72df4f7a66910552ae3f6ccadaba5ae934/pelican-4.11.0.post0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/0d/8d/ca734a9b161c3cb1e520e038cd7723cae866b95888b548b8ffb2df75fac3/pelican-jupyter-0.10.0.tar.gz
       - pypi: git+https://github.com/cranmer/pelican-presentations.git#c188e1b53ba6a9e953ff83eebc81d4f5794caa08
-      - pypi: https://files.pythonhosted.org/packages/b8/2a/67872fc6bf3b89d47128b86ab8218a077c11dc89e08175450db47d435167/pelican_i18n_subsites-1.0.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/49/0e/d3f4ad95b39e4de55fee98ec969eb0a05605018d9441c3c77400e2c647c8/pelican_liquid_tags-1.0.4-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/8d/ad/f2ad5fa3c1d35681707cf809a4573dda85a67dac007c59ff9371dae87b29/pelican_neighbors-1.2.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/51/0e/368abb67e18c4ce965ce88cf96aa67c6cb8be2f8e0b2ed1ec1f306be5dad/pelican_render_math-1.0.5-py3-none-any.whl
@@ -1992,14 +1990,6 @@ packages:
   - tzdata ; sys_platform == 'win32'
   - markdown>=3.1 ; extra == 'markdown'
   requires_python: '>=3.9,<4.0'
-- pypi: https://files.pythonhosted.org/packages/b8/2a/67872fc6bf3b89d47128b86ab8218a077c11dc89e08175450db47d435167/pelican_i18n_subsites-1.0.0-py3-none-any.whl
-  name: pelican-i18n-subsites
-  version: 1.0.0
-  sha256: 443818256caea963c58c95de13c687bc064f84ddd879ce10f13c108b08e4bd0d
-  requires_dist:
-  - pelican>=4.5
-  - markdown>=3.4 ; extra == 'markdown'
-  requires_python: ~=3.9
 - pypi: https://files.pythonhosted.org/packages/0d/8d/ca734a9b161c3cb1e520e038cd7723cae866b95888b548b8ffb2df75fac3/pelican-jupyter-0.10.0.tar.gz
   name: pelican-jupyter
   version: 0.10.0
@@ -2510,12 +2500,11 @@ packages:
 - pypi: ./
   name: theoryandpractice-2026
   version: 0.1.0
-  sha256: da4320881d9e15898fa8c51fc598d81bb645e4439fb45fab3b1022c49da3240a
+  sha256: a7664561ba2360109bf24c909071881f7eb09e65a640220053b3f1763dd7a95a
   requires_dist:
   - pelican[markdown]>=4.11.0
   - pelican-render-math
   - pelican-liquid-tags
-  - pelican-i18n-subsites
   - pelican-neighbors
   - pelican-sitemap
   - typogrify
