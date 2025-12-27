@@ -1,0 +1,15 @@
+pelican[markdown]>=4.11.0
+pelican-render-math
+pelican-liquid-tags
+pelican-i18n-subsites
+pelican-neighbors
+pelican-sitemap
+typogrify
+beautifulsoup4
+lxml
+pybtex
+markdown>=3.4
+ghp-import
+nbconvert
+ipython
+pelican-jupyter
