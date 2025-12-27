@@ -30,7 +30,6 @@ channels = ["conda-forge"]
 platforms = ["osx-arm64", "linux-64"]
 
 [tool.pixi.pypi-dependencies]
-theoryandpractice_2026 = { path = ".", editable = true }
 # pelican-jupyter for notebook support - installed from PyPI
 pelican-jupyter = "*"
 # pelican-presentations for displaying talks/presentations
