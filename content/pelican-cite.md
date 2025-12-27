@@ -43,3 +43,5 @@ Ok, I played with [pelican-bibtex](https://github.com/vene/pelican-bibtex) some.
     formatted_entries = plain_style.format_entries(bibdata_all.entries.values())
 ```
 so that I don't have to modify the `.bib` file. That produces [this page](/publications.html)
+
+**Update 2025-12-27:** I used claude code to add a modal pop-up for the \[Bibtex\] entries. 

@@ -2,7 +2,7 @@ Title:  Casseville Checkers
 date: 2025-12-24
 Slug: cassville-checkers
 Category: Blog
-Tags:  website, python, machine learning
+Tags:  Claude, python, machine learning
 Authors: Kyle Cranmer
 Summary: Cassville Checkers is a marble racing board game that has been played by my wife's family for generations. I used Claude Code to build an RL environment and web interface for the game.
 
