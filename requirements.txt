@@ -13,3 +13,4 @@ ghp-import
 nbconvert
 ipython
 pelican-jupyter
+pelican-presentations @ git+https://github.com/cranmer/pelican-presentations.git
