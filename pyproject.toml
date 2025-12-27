@@ -42,12 +42,12 @@ nodejs = ">=18"
 
 [tool.pixi.tasks]
 # Build the site
-build = "pelican content -o output -s pelicanconf.py && npx pagefind --site output"
+build = "pelican content -o output -s pelicanconf.py && npm exec pagefind -- --site output"
 # Build for production
-publish = "pelican content -o output -s publishconf.py && npx pagefind --site output"
+publish = "pelican content -o output -s publishconf.py && npm exec pagefind -- --site output"
 # Clean the output directory
 clean = "rm -rf output cache"
 # Development server (clean, build, then serve)
-serve = "rm -rf output cache && pelican content -o output -s pelicanconf.py && npx pagefind --site output && python -m http.server 8000 -d output"
+serve = "rm -rf output cache && pelican content -o output -s pelicanconf.py && npm exec pagefind -- --site output && python -m http.server 8000 -d output"
 # Watch for changes and rebuild (run in separate terminal)
 watch = "pelican content -o output -s pelicanconf.py --autoreload"
