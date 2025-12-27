@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% block title %}Presentations{% endblock %}
+{% block content %}
+<section id="content" class="body">
+    <h1 class="entry-title">Presentations</h1>
+
+    <p class="presentations-count">{{ presentations|length }} presentations</p>
+
+    {% for year, talks in presentations_by_year %}
+    <h2 id="year-{{ year }}">{{ year }}</h2>
+    <ul class="presentations-list">
+    {% for p in talks %}
+        <li class="presentation-item">
+            <span class="presentation-date">{{ p.date_formatted }}</span> &mdash;
+            {% if p.url %}
+            <a href="{{ p.url }}" class="presentation-title">"{{ p.title }}"</a>
+            {% else %}
+            <span class="presentation-title">"{{ p.title }}"</span>
+            {% endif %}
+            {% if p.meeting %}
+            at {% if p.meetingurl %}<a href="{{ p.meetingurl }}" class="presentation-meeting">{{ p.meeting }}</a>{% else %}<span class="presentation-meeting">{{ p.meeting }}</span>{% endif %}
+            {% endif %}
+            {% if p.location %}
+            <span class="presentation-location">({{ p.location }})</span>
+            {% endif %}
+        </li>
+    {% endfor %}
+    </ul>
+    {% endfor %}
+</section>
+
+<style>
+.presentations-list {
+    list-style: none;
+    padding-left: 0;
+}
+.presentation-item {
+    margin-bottom: 0.75em;
+    line-height: 1.5;
+}
+.presentation-date {
+    color: #666;
+    font-size: 0.9em;
+}
+.presentation-title {
+    font-weight: 500;
+}
+.presentation-location {
+    color: #888;
+    font-size: 0.9em;
+}
+.presentations-count {
+    color: #666;
+    font-style: italic;
+}
+</style>
+{% endblock %}

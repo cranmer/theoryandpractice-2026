@@ -22,6 +22,7 @@ MENUITEMS = (
     ('About', '/index.html'),
     ('Research', '/pages/Research.html'),
     ('Projects', '/pages/projects.html'),
+    ('Presentations', '/presentations.html'),
     ('Media & Outreach', '/pages/in-the-news.html'),
 )
 
@@ -85,6 +86,7 @@ PLUGINS = [
     'sitemap',
     'neighbors',
     'liquid_tags',
+    'pelican_presentations',
     # Local plugins
     'pelican_javascript',
     'pelican-cite',
@@ -142,8 +144,11 @@ MARKDOWN = {
     'output_format': 'html5',
 }
 
-# Direct templates (for publications page generated from pelican-bibtex)
-DIRECT_TEMPLATES = ['index', 'categories', 'authors', 'archives', 'publications']
+# Direct templates (for publications and presentations pages)
+DIRECT_TEMPLATES = ['index', 'categories', 'authors', 'archives', 'publications', 'presentations']
+
+# Presentations (pelican-presentations plugin)
+PRESENTATIONS_SRC = 'content/presentations.yml'
 
 # Sitemap configuration
 SITEMAP = {

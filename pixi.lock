@@ -151,6 +151,7 @@ environments:
       - pypi: https://files.pythonhosted.org/packages/f4/24/2a3e3df732393fed8b3ebf2ec078f05546de641fe1b667ee316ec1dcf3b7/webencodings-0.5.1-py2.py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/34/db/b10e48aa8fff7407e67470363eac595018441cf32d5e1001567a7aeba5d2/websocket_client-1.9.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/3f/0e/fa3b193432cfc60c93b42f3be03365f5f909d2b3ea410295cf36df739e31/widgetsnbextension-4.0.15-py3-none-any.whl
+      - pypi: ../pelican-presentations
       - pypi: ./
       osx-arm64:
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/bzip2-1.0.8-hd037594_8.conda
@@ -290,6 +291,7 @@ environments:
       - pypi: https://files.pythonhosted.org/packages/f4/24/2a3e3df732393fed8b3ebf2ec078f05546de641fe1b667ee316ec1dcf3b7/webencodings-0.5.1-py2.py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/34/db/b10e48aa8fff7407e67470363eac595018441cf32d5e1001567a7aeba5d2/websocket_client-1.9.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/3f/0e/fa3b193432cfc60c93b42f3be03365f5f909d2b3ea410295cf36df739e31/widgetsnbextension-4.0.15-py3-none-any.whl
+      - pypi: ../pelican-presentations
       - pypi: ./
 packages:
 - conda: https://conda.anaconda.org/conda-forge/linux-64/_libgcc_mutex-0.1-conda_forge.tar.bz2
@@ -1744,6 +1746,17 @@ packages:
   - markdown>=3.2,<4.0 ; extra == 'markdown'
   - pelican>=3,<5
   requires_python: '>=3.6.2,<4.0'
+- pypi: ../pelican-presentations
+  name: pelican-presentations
+  version: 0.1.0
+  sha256: de64785db8ed088ca63317a9dab19e36b9840c2108f6464e7a00cbf72a380c58
+  requires_dist:
+  - pelican>=4.5
+  - pyyaml>=5.0
+  - pytest ; extra == 'dev'
+  - pytest-cov ; extra == 'dev'
+  requires_python: '>=3.9'
+  editable: true
 - pypi: https://files.pythonhosted.org/packages/51/0e/368abb67e18c4ce965ce88cf96aa67c6cb8be2f8e0b2ed1ec1f306be5dad/pelican_render_math-1.0.5-py3-none-any.whl
   name: pelican-render-math
   version: 1.0.5
@@ -2215,7 +2228,7 @@ packages:
 - pypi: ./
   name: theoryandpractice-2026
   version: 0.1.0
-  sha256: e535d3b04daff19a945b04f0e06d857b96f8d89f4f89ece91ce7699101dfd831
+  sha256: 8257a537ebba5e2adc96e13624f6a0859f84dad489808f166b380601f434bdff
   requires_dist:
   - pelican[markdown]>=4.11.0
   - pelican-render-math

@@ -34,6 +34,8 @@ platforms = ["osx-arm64", "linux-64"]
 theoryandpractice_2026 = { path = ".", editable = true }
 # pelican-jupyter for notebook support - installed from PyPI
 pelican-jupyter = "*"
+# pelican-presentations for displaying talks/presentations
+pelican-presentations = { path = "../pelican-presentations", editable = true }
 
 [tool.pixi.tasks]
 # Build the site
