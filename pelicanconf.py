@@ -153,8 +153,8 @@ MARKDOWN = {
     'output_format': 'html5',
 }
 
-# Direct templates (for publications and presentations pages)
-DIRECT_TEMPLATES = ['index', 'categories', 'authors', 'archives', 'publications', 'presentations']
+# Direct templates (for publications, presentations, and search pages)
+DIRECT_TEMPLATES = ['index', 'categories', 'authors', 'archives', 'publications', 'presentations', 'search']
 
 # Presentations (pelican-presentations plugin)
 PRESENTATIONS_SRC = 'content/presentations.yml'

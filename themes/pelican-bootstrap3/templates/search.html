@@ -1,27 +1,22 @@
-{% extends 'base.html' %}
-
-{% block title %}
-{{ _('Search') }} - {{ super() }}
-{% endblock %}
-
-{% block scripts %}
-    {% if 'assets' in PLUGINS %}
-    {% include 'includes/minify_tipuesearch.html' with context %}
-    {% else %}
-    <script src="{{ SITEURL }}/tipuesearch_content.js"></script>
-    <script type="text/javascript" src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/tipuesearch/tipuesearch_set.js"></script>
-    <script type="text/javascript" src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/tipuesearch/tipuesearch.min.js"></script>
-    {% endif %}
-    <script>
-    $(document).ready(function() {
-      $('#tipue_search_input').tipuesearch({
-        'show': 10,
-        'newWindow': false
-      });
-    });
-    </script>
-{% endblock %}
-
+{% extends "base.html" %}
+{% block title %}Search - {{ SITENAME }}{% endblock %}
 {% block content %}
-<div id="tipue_search_content"></div>
+<section id="content" class="body">
+    <h1 class="entry-title">Search</h1>
+
+    <div id="search" class="pagefind-search">
+        <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+        <script src="/pagefind/pagefind-ui.js"></script>
+        <div id="pagefind-search"></div>
+        <script>
+            window.addEventListener('DOMContentLoaded', (event) => {
+                new PagefindUI({
+                    element: "#pagefind-search",
+                    showSubResults: true,
+                    showImages: false
+                });
+            });
+        </script>
+    </div>
+</section>
 {% endblock %}
