@@ -35,7 +35,7 @@ theoryandpractice_2026 = { path = ".", editable = true }
 # pelican-jupyter for notebook support - installed from PyPI
 pelican-jupyter = "*"
 # pelican-presentations for displaying talks/presentations
-pelican-presentations = { path = "../pelican-presentations", editable = true }
+pelican-presentations = { git = "https://github.com/cranmer/pelican-presentations.git" }
 
 [tool.pixi.tasks]
 # Build the site
