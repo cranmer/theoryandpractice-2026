@@ -34,6 +34,7 @@ LINKS = (
 
 # Social
 SOCIAL = (
+    ('Bluesky', 'https://bsky.app/profile/kylecranmer.bsky.social', 'bluesky'),
     ('twitter', 'http://twitter.com/kylecranmer'),
     ('github', 'http://github.com/cranmer'),
     ('linkedin', 'http://www.linkedin.com/in/kylecranmer'),
@@ -43,7 +44,7 @@ SOCIAL = (
     ('ORCiD', 'https://orcid.org/0000-0002-5769-7094'),
 )
 
-CC_LICENSE = "CC-BY"
+CC_LICENSE = "CC-BY-NC"
 DEFAULT_PAGINATION = 6
 
 # URL structure (maintain compatibility with old site)
