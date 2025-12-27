@@ -27,7 +27,10 @@ jobs:
         uses: prefix-dev/setup-pixi@v0.8.1
         with:
           pixi-version: v0.49.0
-          cache: true
+          cache: false
+
+      - name: Install dependencies
+        run: pixi install
 
       - name: Build site
         run: pixi run publish
