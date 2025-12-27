@@ -38,6 +38,7 @@ pelican-jupyter = "*"
 pelican-presentations = { git = "https://github.com/cranmer/pelican-presentations.git" }
 
 [tool.pixi.dependencies]
+python = ">=3.11,<3.13"
 nodejs = ">=18"
 
 [tool.pixi.tasks]
