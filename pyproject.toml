@@ -36,13 +36,13 @@ theoryandpractice_2026 = { path = ".", editable = true }
 pelican-jupyter = "*"
 
 [tool.pixi.tasks]
-# Development server
-serve = "pelican --listen --autoreload"
 # Build the site
 build = "pelican content -o output -s pelicanconf.py"
 # Build for production
 publish = "pelican content -o output -s publishconf.py"
 # Clean the output directory
-clean = "rm -rf output"
-# Regenerate and serve
-regenerate = { cmd = "pelican content -o output -s pelicanconf.py && pelican --listen", depends-on = ["clean"] }
+clean = "rm -rf output cache"
+# Development server (build then serve)
+serve = { cmd = "pelican content -o output -s pelicanconf.py && python -m http.server 8000 -d output", depends-on = ["clean"] }
+# Watch for changes and rebuild (run in separate terminal)
+watch = "pelican content -o output -s pelicanconf.py --autoreload"
