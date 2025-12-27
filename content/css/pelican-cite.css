@@ -1,0 +1,14 @@
+/* Placeholder styles for pelican-cite bibliography */
+
+/* Style for citation links */
+a.cite-backref {
+    font-size: 0.8em;
+    margin-left: 0.3em;
+}
+
+/* Bibliography section styling */
+.bibliography h2 {
+    margin-top: 2em;
+    border-top: 1px solid #eee;
+    padding-top: 1em;
+}

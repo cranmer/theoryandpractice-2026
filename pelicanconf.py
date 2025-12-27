@@ -131,6 +131,19 @@ GOOGLE_ANALYTICS = 'UA-3337202-1'
 # Pygments code highlighting
 PYGMENTS_STYLE = 'default'
 
+# Markdown configuration - enable md_in_html for markdown inside HTML blocks
+MARKDOWN = {
+    'extension_configs': {
+        'markdown.extensions.extra': {},
+        'markdown.extensions.meta': {},
+        'markdown.extensions.md_in_html': {},
+    },
+    'output_format': 'html5',
+}
+
+# Direct templates (for publications page generated from pelican-bibtex)
+DIRECT_TEMPLATES = ['index', 'categories', 'authors', 'archives', 'publications']
+
 # Sitemap configuration
 SITEMAP = {
     'format': 'xml',

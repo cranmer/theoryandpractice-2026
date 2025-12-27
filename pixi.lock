@@ -2215,7 +2215,7 @@ packages:
 - pypi: ./
   name: theoryandpractice-2026
   version: 0.1.0
-  sha256: a663a98b6fc93e69a448bd0cf2f5edc1dfe5cdd2d9e1f703d39c9593ee11b9d2
+  sha256: e535d3b04daff19a945b04f0e06d857b96f8d89f4f89ece91ce7699101dfd831
   requires_dist:
   - pelican[markdown]>=4.11.0
   - pelican-render-math

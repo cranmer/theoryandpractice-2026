@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block title %}Publications{% endblock %}
+{% block content %}
+
+<script type="text/javascript">
+    function showBibtex(bibtex) {
+        // Replace literal \n with actual newlines
+        var formatted = bibtex.replace(/\\n/g, '\n');
+        document.getElementById('bibtex-content').textContent = formatted;
+        $('#bibtexModal').modal('show');
+    }
+
+    function copyBibtex() {
+        var bibtexText = document.getElementById('bibtex-content').textContent;
+        navigator.clipboard.writeText(bibtexText).then(function() {
+            var btn = document.getElementById('copy-btn');
+            btn.textContent = 'Copied!';
+            btn.className = 'btn btn-success';
+            setTimeout(function() {
+                btn.textContent = 'Copy to Clipboard';
+                btn.className = 'btn btn-primary';
+            }, 2000);
+        });
+    }
+</script>
+
+<!-- Bootstrap Modal for BibTeX -->
+<div class="modal fade" id="bibtexModal" tabindex="-1" role="dialog" aria-labelledby="bibtexModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="bibtexModalLabel">BibTeX Entry</h4>
+      </div>
+      <div class="modal-body">
+        <pre id="bibtex-content" style="white-space: pre-wrap; word-wrap: break-word; background: #f5f5f5; padding: 15px; border-radius: 4px;"></pre>
+      </div>
+      <div class="modal-footer">
+        <button type="button" id="copy-btn" class="btn btn-primary" onclick="copyBibtex()">Copy to Clipboard</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section id="content" class="body">
+    <h1 class="entry-title">Publications with 20 authors or less</h1>
+    <ol>
+    {% for key, year, text, bibtex, pdf, slides, poster in publications %}
+    <li id="{{ key }}">{{ text }}
+    [&nbsp;<a href="javascript:void(0);" onclick="showBibtex(decodeURIComponent('{{ bibtex|urlencode }}'));">Bibtex</a>&nbsp;]
+    {% for label, target in [('PDF', pdf), ('Slides', slides), ('Poster', poster)] %}
+    {{ "[&nbsp;<a href=\"%s\">%s</a>&nbsp;]" % (target, label) if target }}
+    {% endfor %}
+    </li>
+    {% endfor %}
+    </ol>
+</section>
+{% endblock %}
