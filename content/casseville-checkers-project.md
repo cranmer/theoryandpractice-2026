@@ -1,24 +1,20 @@
 Title:  Casseville Checkers
 date: 2025-12-24
 Slug: cassville-checkers
-Category: Blog 
+Category: Blog
 Tags:  website, python, machine learning
 Authors: Kyle Cranmer
+Summary: Cassville Checkers is a marble racing board game that has been played by my wife's family for generations. I used Claude Code to build an RL environment and web interface for the game.
 
-
-
- <div >
- <img src="{filename}/images/casseville-checkers.jpeg" alt="Cassville checkers board" width="35%"  style="float: right;"/>
+<img src="{filename}/images/casseville-checkers.jpeg" alt="Cassville checkers board" width="35%" style="float: right; margin-left: 15px; margin-bottom: 10px;"/>
 
 Cassville Checkers is a marble racing board game that has been played by my wife's family for generations. The game is played on a handmade wooden board with a distinctive ring track. Marbles race around a circular track, competing to be the first to get all their pieces home.
 
-I've wanted to try coding up this game in a reinforcement learning environment for a lont time. I started to do this back in 2018, but I didn't make it very far and it was never a high priority. 
+I've wanted to try coding up this game in a reinforcement learning environment for a long time. I started to do this back in 2018, but I didn't make it very far and it was never a high priority.
 
-But recently, a friend of mine (Sidharth Mishra-Sharma) encouraged me to try using claude code (from Anthropic). This is an advanced agentic AI coding tool. I used this project as a test case, and I was very impressed. 
+But recently, a friend of mine (Sidharth Mishra-Sharma) encouraged me to try using claude code (from Anthropic). This is an advanced agentic AI coding tool. I used this project as a test case, and I was very impressed.
 
- </div><br />
-
-<br clear="all" />
+<br clear="all"/>
 
  Not only did claude code create the RL environment, I also had it build a web user interface to play the game and help me debug it. I also had it write some benchmarking scripts to analyze the game and write it all up in a reproducible way using MyST:
 
