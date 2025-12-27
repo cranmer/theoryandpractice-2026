@@ -4,6 +4,7 @@
 AUTHOR = 'Kyle Cranmer'
 SITENAME = 'Theory And Practice'
 SITEURL = ''
+PATH = 'content'
 
 TIMEZONE = 'America/Chicago'
 DEFAULT_LANG = 'en'
