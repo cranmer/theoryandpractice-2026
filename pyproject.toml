@@ -42,7 +42,7 @@ build = "pelican content -o output -s pelicanconf.py"
 publish = "pelican content -o output -s publishconf.py"
 # Clean the output directory
 clean = "rm -rf output cache"
-# Development server (build then serve)
-serve = { cmd = "pelican content -o output -s pelicanconf.py && python -m http.server 8000 -d output", depends-on = ["clean"] }
+# Development server (clean, build, then serve)
+serve = "rm -rf output cache && pelican content -o output -s pelicanconf.py && python -m http.server 8000 -d output"
 # Watch for changes and rebuild (run in separate terminal)
 watch = "pelican content -o output -s pelicanconf.py --autoreload"
