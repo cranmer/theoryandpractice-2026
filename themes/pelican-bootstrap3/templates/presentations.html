@@ -17,6 +17,9 @@
             {% else %}
             <span class="presentation-title">"{{ p.title }}"</span>
             {% endif %}
+            {% if p.video %}
+            <a href="{{ p.video }}" class="presentation-video" aria-label="Video" title="Watch video"><i class="fa fa-video-camera" aria-hidden="true"></i></a>
+            {% endif %}
             {% if p.meeting %}
             at {% if p.meetingurl %}<a href="{{ p.meetingurl }}" class="presentation-meeting">{{ p.meeting }}</a>{% else %}<span class="presentation-meeting">{{ p.meeting }}</span>{% endif %}
             {% endif %}
@@ -52,6 +55,13 @@
 .presentations-count {
     color: #666;
     font-style: italic;
+}
+.presentation-video {
+    color: #c0392b;
+    margin-left: 0.3em;
+}
+.presentation-video:hover {
+    color: #e74c3c;
 }
 </style>
 {% endblock %}
