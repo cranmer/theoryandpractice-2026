@@ -115,7 +115,6 @@ environments:
       - pypi: https://files.pythonhosted.org/packages/30/c3/a6bf5a88ec27887d31c740117b72df4f7a66910552ae3f6ccadaba5ae934/pelican-4.11.0.post0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/0d/8d/ca734a9b161c3cb1e520e038cd7723cae866b95888b548b8ffb2df75fac3/pelican-jupyter-0.10.0.tar.gz
       - pypi: git+https://github.com/cranmer/pelican-presentations.git#c188e1b53ba6a9e953ff83eebc81d4f5794caa08
-      - pypi: https://files.pythonhosted.org/packages/b8/2a/67872fc6bf3b89d47128b86ab8218a077c11dc89e08175450db47d435167/pelican_i18n_subsites-1.0.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/49/0e/d3f4ad95b39e4de55fee98ec969eb0a05605018d9441c3c77400e2c647c8/pelican_liquid_tags-1.0.4-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/8d/ad/f2ad5fa3c1d35681707cf809a4573dda85a67dac007c59ff9371dae87b29/pelican_neighbors-1.2.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/51/0e/368abb67e18c4ce965ce88cf96aa67c6cb8be2f8e0b2ed1ec1f306be5dad/pelican_render_math-1.0.5-py3-none-any.whl
@@ -163,7 +162,6 @@ environments:
       - pypi: https://files.pythonhosted.org/packages/f4/24/2a3e3df732393fed8b3ebf2ec078f05546de641fe1b667ee316ec1dcf3b7/webencodings-0.5.1-py2.py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/34/db/b10e48aa8fff7407e67470363eac595018441cf32d5e1001567a7aeba5d2/websocket_client-1.9.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/3f/0e/fa3b193432cfc60c93b42f3be03365f5f909d2b3ea410295cf36df739e31/widgetsnbextension-4.0.15-py3-none-any.whl
-      - pypi: ./
       osx-arm64:
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/bzip2-1.0.8-hd037594_8.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/c-ares-1.34.6-hc919400_0.conda
@@ -266,7 +264,6 @@ environments:
       - pypi: https://files.pythonhosted.org/packages/30/c3/a6bf5a88ec27887d31c740117b72df4f7a66910552ae3f6ccadaba5ae934/pelican-4.11.0.post0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/0d/8d/ca734a9b161c3cb1e520e038cd7723cae866b95888b548b8ffb2df75fac3/pelican-jupyter-0.10.0.tar.gz
       - pypi: git+https://github.com/cranmer/pelican-presentations.git#c188e1b53ba6a9e953ff83eebc81d4f5794caa08
-      - pypi: https://files.pythonhosted.org/packages/b8/2a/67872fc6bf3b89d47128b86ab8218a077c11dc89e08175450db47d435167/pelican_i18n_subsites-1.0.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/49/0e/d3f4ad95b39e4de55fee98ec969eb0a05605018d9441c3c77400e2c647c8/pelican_liquid_tags-1.0.4-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/8d/ad/f2ad5fa3c1d35681707cf809a4573dda85a67dac007c59ff9371dae87b29/pelican_neighbors-1.2.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/51/0e/368abb67e18c4ce965ce88cf96aa67c6cb8be2f8e0b2ed1ec1f306be5dad/pelican_render_math-1.0.5-py3-none-any.whl
@@ -314,7 +311,6 @@ environments:
       - pypi: https://files.pythonhosted.org/packages/f4/24/2a3e3df732393fed8b3ebf2ec078f05546de641fe1b667ee316ec1dcf3b7/webencodings-0.5.1-py2.py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/34/db/b10e48aa8fff7407e67470363eac595018441cf32d5e1001567a7aeba5d2/websocket_client-1.9.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/3f/0e/fa3b193432cfc60c93b42f3be03365f5f909d2b3ea410295cf36df739e31/widgetsnbextension-4.0.15-py3-none-any.whl
-      - pypi: ./
 packages:
 - conda: https://conda.anaconda.org/conda-forge/linux-64/_libgcc_mutex-0.1-conda_forge.tar.bz2
   sha256: fe51de6107f9edc7aa4f786a70f4a883943bc9d39b3bb7307c04c41410990726
@@ -1995,14 +1991,6 @@ packages:
   - tzdata ; sys_platform == 'win32'
   - markdown>=3.1 ; extra == 'markdown'
   requires_python: '>=3.9,<4.0'
-- pypi: https://files.pythonhosted.org/packages/b8/2a/67872fc6bf3b89d47128b86ab8218a077c11dc89e08175450db47d435167/pelican_i18n_subsites-1.0.0-py3-none-any.whl
-  name: pelican-i18n-subsites
-  version: 1.0.0
-  sha256: 443818256caea963c58c95de13c687bc064f84ddd879ce10f13c108b08e4bd0d
-  requires_dist:
-  - pelican>=4.5
-  - markdown>=3.4 ; extra == 'markdown'
-  requires_python: ~=3.9
 - pypi: https://files.pythonhosted.org/packages/0d/8d/ca734a9b161c3cb1e520e038cd7723cae866b95888b548b8ffb2df75fac3/pelican-jupyter-0.10.0.tar.gz
   name: pelican-jupyter
   version: 0.10.0
@@ -2523,28 +2511,6 @@ packages:
   - mypy~=1.6 ; extra == 'typing'
   - traitlets>=5.11.1 ; extra == 'typing'
   requires_python: '>=3.8'
-- pypi: ./
-  name: theoryandpractice-2026
-  version: 0.1.0
-  sha256: 8bef223b6aa0a368376758912f18fa469b3a7d321bd759313e3d6dd25daab7c1
-  requires_dist:
-  - pelican[markdown]>=4.11.0
-  - pelican-render-math
-  - pelican-liquid-tags
-  - pelican-i18n-subsites
-  - pelican-neighbors
-  - pelican-sitemap
-  - typogrify
-  - beautifulsoup4
-  - lxml
-  - pybtex
-  - markdown>=3.4
-  - ghp-import
-  - nbconvert
-  - ipython
-  - jupyter
-  requires_python: '>=3.11'
-  editable: true
 - pypi: https://files.pythonhosted.org/packages/e6/34/ebdc18bae6aa14fbee1a08b63c015c72b64868ff7dae68808ab500c492e2/tinycss2-1.4.0-py3-none-any.whl
   name: tinycss2
   version: 1.4.0

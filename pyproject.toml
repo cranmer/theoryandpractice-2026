@@ -8,7 +8,6 @@ dependencies = [
     "pelican[markdown]>=4.11.0",
     "pelican-render-math",
     "pelican-liquid-tags",
-    "pelican-i18n-subsites",
     "pelican-neighbors",
     "pelican-sitemap",
     "typogrify",
@@ -31,23 +30,23 @@ channels = ["conda-forge"]
 platforms = ["osx-arm64", "linux-64"]
 
 [tool.pixi.pypi-dependencies]
-theoryandpractice_2026 = { path = ".", editable = true }
 # pelican-jupyter for notebook support - installed from PyPI
 pelican-jupyter = "*"
 # pelican-presentations for displaying talks/presentations
 pelican-presentations = { git = "https://github.com/cranmer/pelican-presentations.git" }
 
 [tool.pixi.dependencies]
+python = ">=3.11"
 nodejs = ">=18"
 
 [tool.pixi.tasks]
 # Build the site
-build = "pelican content -o output -s pelicanconf.py && npx pagefind --site output"
+build = "pelican content -o output -s pelicanconf.py && npm exec pagefind -- --site output"
 # Build for production
-publish = "pelican content -o output -s publishconf.py && npx pagefind --site output"
+publish = "pelican content -o output -s publishconf.py && npm exec pagefind -- --site output"
 # Clean the output directory
 clean = "rm -rf output cache"
 # Development server (clean, build, then serve)
-serve = "rm -rf output cache && pelican content -o output -s pelicanconf.py && npx pagefind --site output && python -m http.server 8000 -d output"
+serve = "rm -rf output cache && pelican content -o output -s pelicanconf.py && npm exec pagefind -- --site output && python -m http.server 8000 -d output"
 # Watch for changes and rebuild (run in separate terminal)
 watch = "pelican content -o output -s pelicanconf.py --autoreload"

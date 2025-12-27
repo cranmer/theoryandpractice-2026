@@ -91,12 +91,12 @@ PLUGIN_PATHS = ['plugins']
 PLUGINS = [
     # Namespace plugins (auto-discovered via pip install)
     'render_math',
-    'i18n_subsites',
     'sitemap',
     'neighbors',
     'liquid_tags',
     'pelican_presentations',
     # Local plugins
+    'i18n_init',  # Minimal i18n for theme (replaces pelican-i18n-subsites)
     'pelican_javascript',
     'pelican-cite',
     'pelican-bibtex',

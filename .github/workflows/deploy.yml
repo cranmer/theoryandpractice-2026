@@ -17,8 +17,6 @@ jobs:
 
       - name: Set up pixi
         uses: prefix-dev/setup-pixi@v0.8.1
-        with:
-          cache: true
 
       - name: Build site
         run: pixi run publish
