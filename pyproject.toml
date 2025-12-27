@@ -1,0 +1,48 @@
+[project]
+authors = [{name = "Kyle Cranmer", email = "kyle.cranmer@wisc.edu"}]
+name = "theoryandpractice-2026"
+description = "Kyle Cranmer's personal website - Theory And Practice"
+requires-python = ">= 3.11"
+version = "0.1.0"
+dependencies = [
+    "pelican[markdown]>=4.11.0",
+    "pelican-render-math",
+    "pelican-liquid-tags",
+    "pelican-i18n-subsites",
+    "pelican-neighbors",
+    "pelican-sitemap",
+    "typogrify",
+    "beautifulsoup4",
+    "lxml",
+    "pybtex",
+    "markdown>=3.4",
+    "ghp-import",
+    "nbconvert",
+    "ipython",
+    "jupyter",
+]
+
+[build-system]
+build-backend = "hatchling.build"
+requires = ["hatchling"]
+
+[tool.pixi.workspace]
+channels = ["conda-forge"]
+platforms = ["osx-arm64", "linux-64"]
+
+[tool.pixi.pypi-dependencies]
+theoryandpractice_2026 = { path = ".", editable = true }
+# pelican-jupyter for notebook support - installed from PyPI
+pelican-jupyter = "*"
+
+[tool.pixi.tasks]
+# Development server
+serve = "pelican --listen --autoreload"
+# Build the site
+build = "pelican content -o output -s pelicanconf.py"
+# Build for production
+publish = "pelican content -o output -s publishconf.py"
+# Clean the output directory
+clean = "rm -rf output"
+# Regenerate and serve
+regenerate = { cmd = "pelican content -o output -s pelicanconf.py && pelican --listen", depends-on = ["clean"] }
