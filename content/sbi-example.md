@@ -1,6 +1,6 @@
 Title:  A pedagogical SBI example
 date: 2025-07-11
-Slug: A pedagogical SBI example
+Slug: pedagogical-SBI-example
 Category: Blog
 Tags:  statistics 
 Authors: Kyle Cranmer
