@@ -19,7 +19,6 @@ AUTHOR_FEED_RSS = None
 # Menu configuration
 DISPLAY_PAGES_ON_MENU = False
 MENUITEMS = (
-    ('About', '/index.html'),
     ('Research', '/pages/Research.html'),
     ('Projects', '/pages/projects.html'),
     ('Presentations', '/presentations.html'),
