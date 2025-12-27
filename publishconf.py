@@ -8,8 +8,7 @@ sys.path.append(os.curdir)
 from pelicanconf import *
 
 # Production URL
-# For deployment to theoryandpractice-2026 repo under custom domain
-SITEURL = 'https://theoryandpractice.org/theoryandpractice-2026'
+SITEURL = 'https://theoryandpractice.org'
 RELATIVE_URLS = False
 
 # Enable feeds for production
