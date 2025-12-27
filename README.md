@@ -83,6 +83,7 @@ These are installed from PyPI and auto-discovered by Pelican:
 | `pelican-neighbors` | Next/previous article navigation |
 | `pelican-sitemap` | XML sitemap generation |
 | `pelican-jupyter` | Jupyter notebook support |
+| `pelican-presentations` | Presentations page from YAML data |
 
 ### Local Plugins (in `plugins/`)
 
@@ -121,6 +122,23 @@ The site uses [pelican-bootstrap3](https://github.com/getpelican/pelican-themes/
 - Added per-page JavaScript support in article/page templates
 - Added Bluesky social icon (custom CSS with SVG, since Font Awesome 4.x lacks it)
 - Added `publications.html` template for bibliography page
+- Added `presentations.html` template for talks/presentations page with video icons
+
+### pelican-presentations
+
+A custom plugin (in separate repository `../pelican-presentations`) that generates a presentations page from YAML data, compatible with the [IRIS-HEP](https://iris-hep.org/presentations/byperson.html) presentations format.
+
+**Features:**
+- Parses YAML files with presentation data (title, date, meeting, location, URL, video)
+- Groups presentations by year
+- Shows video camera icon for presentations with recordings
+- Supports both single file (`PRESENTATIONS_SRC`) and multiple files (`PRESENTATIONS_YAML_FILES`)
+
+**Configuration:**
+```python
+PRESENTATIONS_SRC = 'content/presentations.yml'
+DIRECT_TEMPLATES = [..., 'presentations']
+```
 
 ## Configuration
 
@@ -136,6 +154,7 @@ The site uses [pelican-bootstrap3](https://github.com/getpelican/pelican-themes/
 | `BOOTSTRAP_THEME` | `flatly` | Bootswatch theme variant |
 | `CC_LICENSE` | `CC-BY-NC` | Creative Commons license |
 | `PUBLICATIONS_SRC` | `content/kyle-20authors.bib` | BibTeX file for publications |
+| `PRESENTATIONS_SRC` | `content/presentations.yml` | YAML file for presentations |
 
 ## Content Structure
 

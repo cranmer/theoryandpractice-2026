@@ -33,6 +33,8 @@ This repository is a fresh migration of the original [TheoryAndPractice](https:/
 - pixi environment management for reproducible builds
 - GitHub Actions deployment workflow to cranmer.github.io
 - Publications page (`/publications.html`) generated from BibTeX
+- Presentations page (`/presentations.html`) displaying 113 talks with video icons, compatible with [IRIS-HEP format](https://iris-hep.org/presentations/byperson.html)
+- Custom `pelican-presentations` plugin for parsing YAML presentation data
 - Bluesky social link with custom butterfly icon
 - BibTeX modal popups with copy-to-clipboard functionality
 - Markdown rendering inside HTML blocks (`md_in_html` extension)
@@ -53,6 +55,8 @@ The migration required modifications to several plugins:
 
 **pelican_javascript**: Migrated to Pelican 4 signal API while maintaining support for per-page custom CSS and JavaScript.
 
+**pelican-presentations**: A new plugin created during this migration to generate a presentations page from YAML data. It's compatible with the IRIS-HEP presentations format, groups talks by year, and displays video icons for presentations with recordings.
+
 ## Working with Claude Code
 
 This entire migration was done in collaboration with Claude Code. The AI agent was able to:
@@ -60,9 +64,10 @@ This entire migration was done in collaboration with Claude Code. The AI agent w
 - Understand the existing Pelican 3.7 configuration and plugin structure
 - Set up the new pixi environment and Pelican 4.11 configuration
 - Migrate and modify plugins to work with the new Pelican version
+- Create a new `pelican-presentations` plugin from scratch, compatible with IRIS-HEP's format
 - Debug issues with template rendering and markdown processing
 - Create the GitHub Actions deployment workflow
-- Add new features like the BibTeX modals and Bluesky social icon
+- Add new features like the BibTeX modals, presentations page, and Bluesky social icon
 
 It was a genuinely collaborative process—I would describe what I wanted, Claude would implement it, and we'd iterate on the details together.
 

@@ -9,6 +9,9 @@ All notable changes to theoryandpractice.org are documented in this file.
 - pixi environment management for reproducible builds
 - GitHub Actions deployment workflow to cranmer.github.io
 - Publications page (`/publications.html`) generated from BibTeX
+- Presentations page (`/presentations.html`) with 113 talks from IRIS-HEP format YAML
+- Video camera icons for presentations with recordings
+- `pelican-presentations` plugin (separate repository) for IRIS-HEP compatible presentations
 - Bluesky social link with custom butterfly icon
 - BibTeX modal popups with copy-to-clipboard functionality
 - Markdown rendering inside HTML blocks (`md_in_html` extension)
@@ -51,6 +54,7 @@ All notable changes to theoryandpractice.org are documented in this file.
 - Added `extra_stylesheets` block to `base.html`
 - Added stylesheet/javascript rendering to `article.html` and `page.html`
 - Added `publications.html` template
+- Added `presentations.html` template with video icon support
 - Added Bluesky to social icon whitelist
 - Added custom CSS for Bluesky butterfly icon (SVG-based)
 
