@@ -256,3 +256,27 @@ figure.floatcenter, .align-center {
     background-position: center;
     vertical-align: -0.15em;
 }
+
+/* ==========================================================================
+   Jupyter Notebook CSS Variable Defaults
+   The notebook plugin injects CSS that uses undefined variables, causing
+   font sizes to break. Define safe defaults at the root level.
+   ========================================================================== */
+:root {
+    --jp-content-font-size1: 14px;
+    --jp-content-font-size0: 12px;
+    --jp-ui-font-size1: 14px;
+    --jp-code-font-size: 13px;
+    --jp-content-line-height: 1.6;
+}
+
+/* Hide anchor links (¶) from notebook headings */
+.anchor-link {
+    display: none;
+}
+
+/* Make notebook headings appear one level deeper */
+.entry-content .text_cell h1 { font-size: 2.15em; }  /* h1 looks like h2 */
+.entry-content .text_cell h2 { font-size: 1.75em; }  /* h2 looks like h3 */
+.entry-content .text_cell h3 { font-size: 1.35em; }  /* h3 looks like h4 */
+.entry-content .text_cell h4 { font-size: 1.15em; }  /* h4 looks like h5 */

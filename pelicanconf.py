@@ -1,6 +1,16 @@
 #!/usr/bin/env python
 """Pelican configuration for Theory And Practice site."""
 
+# Patch nbconvert to use 'basic' template instead of 'lab' to avoid CSS conflicts
+# The 'lab' template injects massive JupyterLab CSS that breaks Bootstrap styling
+from nbconvert.exporters import HTMLExporter
+_original_init = HTMLExporter.__init__
+def _patched_init(self, *args, **kwargs):
+    if 'template_name' not in kwargs:
+        kwargs['template_name'] = 'basic'
+    _original_init(self, *args, **kwargs)
+HTMLExporter.__init__ = _patched_init
+
 AUTHOR = 'Kyle Cranmer'
 SITENAME = 'Theory And Practice'
 SITEURL = ''
