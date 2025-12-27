@@ -18,7 +18,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
+          python-version: '3.12'
           cache: 'pip'
 
       - name: Set up Node.js
@@ -28,12 +28,13 @@ jobs:
 
       - name: Install dependencies
         run: |
+          pip install --upgrade pip setuptools wheel
+          pip install "jinja2<3.1" "markupsafe<2.1"
           pip install pelican[markdown] pelican-render-math pelican-liquid-tags
           pip install pelican-i18n-subsites pelican-neighbors pelican-sitemap
           pip install typogrify beautifulsoup4 lxml pybtex markdown ghp-import
           pip install nbconvert ipython jupyter pelican-jupyter
-          pip install git+https://github.com/cranmer/pelican-presentations.git
-          pip install "jinja2<3.1" --force-reinstall
+          pip install git+https://github.com/cranmer/pelican-presentations.git --no-deps
 
       - name: Build site
         run: pelican content -o output -s publishconf.py
