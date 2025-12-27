@@ -28,12 +28,12 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install "jinja2<3.1"
           pip install pelican[markdown] pelican-render-math pelican-liquid-tags
           pip install pelican-i18n-subsites pelican-neighbors pelican-sitemap
           pip install typogrify beautifulsoup4 lxml pybtex markdown ghp-import
           pip install nbconvert ipython jupyter pelican-jupyter
           pip install git+https://github.com/cranmer/pelican-presentations.git
+          pip install "jinja2<3.1" --force-reinstall
 
       - name: Build site
         run: pelican content -o output -s publishconf.py
