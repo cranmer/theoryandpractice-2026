@@ -907,18 +907,18 @@ presentations:
     location: Munich
   - title: Keynote
     date: 2024-06-12
-    url:
-    meeting: "Helmholtz AI"
+    url: https://www2.helmholtz.ai/themenmenue/latest/events/helmholtz-ai-conference-2024/index.html
+    meeting: "Helmholtz AI Conference 2024"
     meetingurl: https://haicon24.de
     focus-area: as
-    location:
+    location: Düsseldorf, Germany
   - title: Generative AI Panel
     date: 2024-06-13
-    url:
-    meeting: "Helmholtz AI"
+    url: https://haicon24.de/conference-program/
+    meeting: "Helmholtz AI Conference 2024"
     meetingurl: https://haicon24.de
     focus-area: as
-    location:
+    location: Düsseldorf, Germany
   - title: Keynote
     date: 2024-07-12
     url:
@@ -933,3 +933,40 @@ presentations:
     meetingurl: https://spigmworkshop2024.github.io
     focus-area: as
     location: Vienna, Austria
+  - title: "The intersection of statistics, machine learning, and the physical sciences"
+    date: 2024-09-20
+    url: https://www.cmu.edu/dietrich/statistics-datascience/stamps/events/launch-event/index.html
+    meeting: "STAMPS@CMU Research Center Launch Event"
+    meetingurl: https://www.cmu.edu/dietrich/statistics-datascience/stamps/events/launch-event/index.html
+    location: Carnegie Mellon University, Pittsburgh
+  - title: "Roundtable on P5 and future particle physics programs"
+    date: 2024-12-17
+    url: https://indico.slac.stanford.edu/event/9140/contributions/10341/attachments/4901/13165/2024.12.17.P5Roundtable.pdf
+    meeting: "US LUA Annual Meeting"
+    meetingurl: https://indico.slac.stanford.edu/event/9140/timetable/
+    location: SLAC National Accelerator Laboratory
+  - title: "Vision for the next 25 years based on experiences"
+    date: 2025-01-16
+    url: https://indico.cern.ch/event/1465837/
+    meeting: "PhyStat25"
+    meetingurl: https://indico.cern.ch/event/1465837/
+    location: CERN
+  - title: "Emerging Patterns in AI for Science"
+    date: 2025-01-28
+    url: https://kenkennedy.rice.edu/ken-kennedy-institute-distinguished-lecture-series
+    meeting: "Ken Kennedy Institute Distinguished Lecture Series"
+    meetingurl: https://kenkennedy.rice.edu/ken-kennedy-institute-distinguished-lecture-series
+    location: Rice University
+    video: https://www.youtube.com/watch?v=Vxvf6No8LsE
+  - title: "How AI is raising the ambition of physicists"
+    date: 2025-02-18
+    url: https://physikseminar.desy.de/hamburg/colloquia_in_2025/18_february_2025/
+    meeting: "DESY Physics Colloquium"
+    meetingurl: https://physikseminar.desy.de/hamburg/colloquia_in_2025/
+    location: DESY Hamburg
+  - title: TBD
+    date: 2025-03-18
+    url: https://summit.aps.org/events/APR-C10/1
+    meeting: "APS Global Physics Summit 2025"
+    meetingurl: https://summit.aps.org/
+    location: Anaheim, CA
