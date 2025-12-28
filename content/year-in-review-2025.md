@@ -44,22 +44,22 @@ Here’s a list of the major trips I took this year, with a bit of narrative for
 Despite being busy with travel and leading the Data Science Institute, I was able to do some research. Here are the papers I co-authored this year. These works span statistical methodology, machine learning, and high-energy physics:
 
 * **[Recurrent Features of Amplitudes in Planar N=4 Super Yang-Mills Theory](https://arxiv.org/abs/2501.05743)** (Jan 2025)
-  *Yuntao Cai, François Charton, Kyle Cranmer, Lance Dixon, Maximilian Merz, Matthias Wilhelm* — A study of recurrent structures in high-loop scattering amplitudes.
+  *Tianji Cai, François Charton, Kyle Cranmer, Lance J. Dixon, Garrett W. Merz, Matthias Wilhelm
 
 * **[Self-Supervised Learning Strategies for Jet Physics](https://arxiv.org/abs/2503.11632)** (Mar 2025)
-  *Rolf Rieck, Kyle Cranmer, Frédéric Dreyer, Eilam Gross, et al.* — Self-supervised learning approaches for representing and analyzing hadronic jets.
+  *Patrick Rieck, Kyle Cranmer, Etienne Dreyer, Eilam Gross, Nilotpal Kakati, Dmitrii Kobylanskii, Garrett W. Merz, Nathalie Soybelman* — Self-supervised learning approaches for representing and analyzing hadronic jets.
 
 * **[The 200 Gbps Challenge: Imagining HL-LHC Analysis Facilities](https://arxiv.org/abs/2503.15464)** (Mar 2025)
-  *Alexander Held, Kenneth Bloom, Brian Bockelman, Kyle Cranmer, et al.* — A vision for future high-throughput computing and analysis infrastructure at HL-LHC scale.
+  *Alexander Held, et al.* — A vision for future high-throughput computing and analysis infrastructure at HL-LHC scale.
 
 * **[Efficient Estimation of Unfactorizable Systematic Uncertainties](https://arxiv.org/abs/2509.15500)** (Sep 2025)
-  *Javier Romero, Kyle Cranmer, Daniel Whiteson* — Techniques for estimating systematic uncertainties without factorization assumptions.
+  *Alexis Romero, Kyle Cranmer, Daniel Whiteson* — Techniques for estimating systematic uncertainties without factorization assumptions.
 
 * **[Multimodal Datasets with Controllable Mutual Information](https://arxiv.org/abs/2510.21686)** (Oct 2025)
-  *Hassan Hashmani, Maximilian Merz, Zhaozhi Qu, Michael Pettee, Kyle Cranmer* — A framework for generating multimodal datasets with known and controllable mutual information.
+  *Raheem Hashmani, Garrett Merz, Helen Qu, Mariel Pettee, Kyle Cranmer* — A framework for generating multimodal datasets with known and controllable mutual information.
 
 * **[Quasiprobabilistic Density Ratio Estimation](https://arxiv.org/abs/2512.19913)** (Dec 2025)
-  *Matthew Drnevich, Chris Jiggins, Kyle Cranmer* — A new take on density-ratio estimation for quasiprobabilistic settings that handles negative densities.
+  *Matthew Drnevich, Stephen Jiggins, Kyle Cranmer* — A new take on density-ratio estimation for quasiprobabilistic settings that handles negative densities.
 
 ---
 
