@@ -33,7 +33,7 @@ Here’s a list of the major trips I took this year, with a bit of narrative for
 * **Green Bay, August** — I gave a talk titled [How is AI Revolutionizing Science?](https://www.youtube.com/live/7V3ue6VxQv4?si=kNtgkLMx3b7z4cDQ) at the Neville Public Museum in Green Bay, which was aired on PBS Wisconsin. 
 * **Heidelberg, September** — Attended the **Heidelberg Laureate Forum**, including [a panel on AI and science](https://youtu.be/I-Ye-rMhRws?si=lEWrqKuPTJ-rMnwL). A highlight was sharing a short essay called [*The Bittersweet Lesson*]({filename}/the-bittersweet-lesson.md) and getting to chat with Rich Sutton about it.
 * **CalTech, November** — I received the inaugural **Pritzker Prize for AI and Science** at a conference at Caltech — an incredible honor. While in the area I also ran into old friends Paul and Ágnes from my Brookhaven days.
-* **San Diego, December** — Wrapped the year at **NeurIPS**, where we hosted the 8th annual Machine Learning for Physical Sciences workshop. Leaving chilly Madison for sunny Southern California was a welcome bonus. words
+* **San Diego, December** — Wrapped the year at **NeurIPS**, where we hosted the 8th annual [Machine Learning and the Physical Sciences](http://ml4physicalsciences.github.io) workshop. Leaving chilly Madison for sunny Southern California was a welcome bonus. words
 
 <iframe src="/downloads/files/arcs_example.html" width="80%" height="400px" style="border: none; display: block; margin-left: auto;  margin-right: auto;" allowfullscreen></iframe>
 
