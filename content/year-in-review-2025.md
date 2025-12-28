@@ -44,7 +44,7 @@ Here’s a list of the major trips I took this year, with a bit of narrative for
 Despite being busy with travel and leading the Data Science Institute, I was able to do some research. Here are the papers I co-authored this year. These works span statistical methodology, machine learning, and high-energy physics:
 
 * **[Recurrent Features of Amplitudes in Planar N=4 Super Yang-Mills Theory](https://arxiv.org/abs/2501.05743)** (Jan 2025)
-  *Tianji Cai, François Charton, Kyle Cranmer, Lance J. Dixon, Garrett W. Merz, Matthias Wilhelm
+  *Tianji Cai, François Charton, Kyle Cranmer, Lance J. Dixon, Garrett W. Merz, Matthias Wilhelm* - A study of recurrent structures in high-loop scattering amplitudes.
 
 * **[Self-Supervised Learning Strategies for Jet Physics](https://arxiv.org/abs/2503.11632)** (Mar 2025)
   *Patrick Rieck, Kyle Cranmer, Etienne Dreyer, Eilam Gross, Nilotpal Kakati, Dmitrii Kobylanskii, Garrett W. Merz, Nathalie Soybelman* — Self-supervised learning approaches for representing and analyzing hadronic jets.
