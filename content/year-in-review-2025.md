@@ -71,8 +71,8 @@ A lot happened this year at the **Data Science Institute (DSI)** and with the **
 * We celebrated **Maja Rudolph** — previously a Research Professor at DSI — in her new role as a **tenure-track Assistant Professor in Statistics**.
 * In **August**, **DSI was selected to be the RISE-AI Collaboration Headquarters**, and I was honored to be appointed **Lead of the RISE-AI HQ**, a campus-wide hub for AI research, teaching, and engagement at **UW–Madison**. More on this in the [UW–Madison news release](https://news.wisc.edu/rise-ai-collaboration-hq-to-build-connections-and-advance-research-teaching-and-engagement/). 
 * That same month, **UW–Madison joined the AI Alliance**, joining a global community committed to advancing safe, responsible AI rooted in open innovation. See the announcement on the [DSI site](https://dsi.wisc.edu/2025/09/22/uw-madison-joins-the-ai-alliance/). 
-* We moved into **Morgridge Hall** in August alongside campus partners. ([more][5])
-* In **April**, we held our **inaugural open awards** at the Research Bazaar — recognizing exciting open science contributions. ([more][https://ospo.wisc.edu/activities/open-awards])
+* We moved into **Morgridge Hall** in August alongside campus partners. ([more](https://cdis.wisc.edu/virtual-tour-inside-morgridge-hall-the-future-home-of-cdis/))
+* In **April**, we held our **inaugural open awards** at the Research Bazaar — recognizing exciting open science contributions. ([more](https://ospo.wisc.edu/activities/open-awards))
 * We hired **Anna Haensch** as a new Research Professor who will spend half her time as the Associate Director for the new Digital Scholarship Hub in the Libraries. Anna is awesome, check out her profile at [https://annahaensch.com/](https://annahaensch.com/).
 * We partnered with **UW Extension** to host events on the promise and risks associated to the use of AI for local governments including the **Wisconsin Towns Association**, **Wisconsin League of Municipalities**, and **Wisconsin Counties Association**.
 * The **Sloan Foundation renewed support for our Open Source Program Office**, complementing our open awards and AI Alliance efforts.
