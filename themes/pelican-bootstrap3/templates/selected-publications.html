@@ -114,11 +114,17 @@
         gap: 15px;
     }
     .metrics-profiles a {
-        font-size: 1.5em;
+        font-size: 2em;
         color: #2c3e50;
     }
     .metrics-profiles a:hover {
         color: #EE9F43;
+    }
+    .selected-pubs-header {
+        margin-top: 30px;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #2c3e50;
     }
 </style>
 {% endblock %}
@@ -217,7 +223,7 @@
 </div>
 
 <section id="content" class="body">
-    <h1 class="entry-title">Selected Publications</h1>
+    <h1 class="entry-title">Publications</h1>
 
     <!-- Publication Metrics -->
     {% if PUBLICATION_METRICS or PUBLICATION_PROFILES %}
@@ -253,6 +259,8 @@
         {% endif %}
     </div>
     {% endif %}
+
+    <h2 class="selected-pubs-header">Selected Publications</h2>
 
     {% if selected_publications and selected_publications.categories %}
     <!-- Filters -->

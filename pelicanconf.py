@@ -105,6 +105,7 @@ PUBLICATION_PROFILES = (
     ('Google Scholar', 'http://scholar.google.com/citations?user=EZjSxgwAAAAJ', 'google-scholar'),
     ('INSPIRE', 'https://inspirehep.net/authors/1023993', 'inspire'),
     ('OpenAlex', 'https://openalex.org/works?filter=authorships.author.id:a5108167175', 'openaccess'),
+    ('ORCiD', 'https://orcid.org/0000-0002-5769-7094', 'orcid'),
 )
 
 # Plugin configuration
