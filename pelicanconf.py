@@ -143,7 +143,7 @@ ADDTHIS_PROFILE = 'ra-5332e76b5340f5f3'
 # Open Graph and Twitter Cards for social media previews
 TWITTER_CARDS = True
 TWITTER_USERNAME = 'kylecranmer'
-OPEN_GRAPH_IMAGE = 'images/Kyle-Cranmer-headshot-cropped-square-web.jpeg'
+OPEN_GRAPH_IMAGE = 'images/TheoryAndPractice-logo-byline.png'
 
 # Analytics
 GOOGLE_ANALYTICS = 'UA-3337202-1'
