@@ -239,6 +239,32 @@
             }
         }
     }
+
+    function toggleAllAltmetrics() {
+        var checkbox = document.getElementById('toggle-all-altmetrics');
+        var containers = document.querySelectorAll('.altmetric-container');
+        var links = document.querySelectorAll('.altmetric-toggle');
+
+        if (checkbox.checked) {
+            containers.forEach(function(container) {
+                container.classList.add('show');
+            });
+            links.forEach(function(link) {
+                link.textContent = 'hide altmetrics';
+            });
+            // Trigger altmetric to render
+            if (typeof _altmetric_embed_init === 'function') {
+                _altmetric_embed_init();
+            }
+        } else {
+            containers.forEach(function(container) {
+                container.classList.remove('show');
+            });
+            links.forEach(function(link) {
+                link.textContent = 'show altmetrics';
+            });
+        }
+    }
 </script>
 
 <!-- Bootstrap Modal for BibTeX -->
@@ -335,6 +361,10 @@
             <label for="filter-highlight">
                 <input type="checkbox" id="filter-highlight" onchange="filterPublications()">
                 <span class="highlight-star">&#9733;</span> Highlights only
+            </label>
+            <label for="toggle-all-altmetrics" style="margin-left: 20px;">
+                <input type="checkbox" id="toggle-all-altmetrics" onchange="toggleAllAltmetrics()">
+                Show altmetrics
             </label>
         </div>
     </div>
