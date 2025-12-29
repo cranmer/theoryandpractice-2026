@@ -328,3 +328,25 @@ figure.floatcenter, .align-center {
 .entry-content .text_cell h2 { font-size: 1.75em; }  /* h2 looks like h3 */
 .entry-content .text_cell h3 { font-size: 1.35em; }  /* h3 looks like h4 */
 .entry-content .text_cell h4 { font-size: 1.15em; }  /* h4 looks like h5 */
+
+/* ==========================================================================
+   Navbar Hover Color Override
+   Change hover color from Flatly's default #18bc9c to custom orange #EE9F43
+   ========================================================================== */
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: #EE9F43;
+}
+
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+    color: #EE9F43;
+    background-color: transparent;
+}
+
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+    color: #EE9F43;
+    background-color: transparent;
+}
