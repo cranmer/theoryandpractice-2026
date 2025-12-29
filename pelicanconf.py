@@ -31,13 +31,14 @@ DISPLAY_PAGES_ON_MENU = False
 MENUITEMS = (
     ('Research', '/pages/Research.html'),
     ('Projects', '/pages/projects.html'),
-    ('Presentations', '/presentations.html'),
+    ('Talks', '/presentations.html'),
+    ('Publications', '/publications.html'),
     ('Media & Outreach', '/pages/in-the-news.html'),
 )
 
 # Links
 LINKS = (
-    ('Data Science @ UW', 'https://datascience.wisc.edu'),
+    ('Data Science Institute', 'https://dsi.wisc.edu'),
     ('My UW Physics webpage', 'https://www.physics.wisc.edu/directory/cranmer-kyle/'),
     ('IRIS-HEP', 'https://iris-hep.org/'),
 )
@@ -46,12 +47,13 @@ LINKS = (
 SOCIAL = (
     ('Bluesky', 'https://bsky.app/profile/kylecranmer.bsky.social', 'bluesky'),
     ('twitter', 'http://twitter.com/kylecranmer'),
+    ('instagram', 'https://www.instagram.com/kyle.cranmer/'),
     ('github', 'http://github.com/cranmer'),
     ('linkedin', 'http://www.linkedin.com/in/kylecranmer'),
     ('youtube', 'https://www.youtube.com/channel/UCKl2VoIJiPYp3QhuK22b7xQ'),
-    ('INSPIRE (≤ 10 authors)', 'https://inspirehep.net/literature?sort=mostrecent&size=25&page=1&q=a%3Ak.s.cranmer.1%20and%20ac%201-%3E10&ui-citation-summary=true'),
-    ('Google Scholar', 'http://scholar.google.com/citations?user=EZjSxgwAAAAJ'),
-    ('ORCiD', 'https://orcid.org/0000-0002-5769-7094'),
+    ('INSPIRE (≤ 10 authors)', 'https://inspirehep.net/literature?sort=mostrecent&size=25&page=1&q=a%3Ak.s.cranmer.1%20and%20ac%201-%3E10&ui-citation-summary=true', 'inspire'),
+    ('Google Scholar', 'http://scholar.google.com/citations?user=EZjSxgwAAAAJ', 'google-scholar'),
+    ('ORCiD', 'https://orcid.org/0000-0002-5769-7094', 'orcid'),
 )
 
 CC_LICENSE = "CC-BY-NC"
@@ -84,7 +86,7 @@ CODE_DIR = 'downloads/code'
 NOTEBOOK_DIR = ''
 
 # Publications (pelican-bibtex)
-PUBLICATIONS_SRC = 'content/kyle-20authors.bib'
+PUBLICATIONS_SRC = 'content/cranmer-2025-lt20authors.bib'
 
 # Plugin configuration
 PLUGIN_PATHS = ['plugins']
