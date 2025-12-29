@@ -61,15 +61,15 @@ This repository is a fresh migration of the original [TheoryAndPractice](https:/
 
 The migration required modifications to several plugins:
 
-**pelican-cite**: Added Bootstrap modal for viewing BibTeX entries with copy-to-clipboard functionality.
+ * **pelican-cite**: Added Bootstrap modal for viewing BibTeX entries with copy-to-clipboard functionality.
 
-**pelican-bibtex**: Added Bootstrap modal replacing the old `window.open` popups that modern browsers block.
+ * **pelican-bibtex**: Added Bootstrap modal replacing the old `window.open` popups that modern browsers block.
 
-**pelican_javascript**: Migrated to Pelican 4 signal API while maintaining support for per-page custom CSS and JavaScript.
+ * **pelican_javascript**: Migrated to Pelican 4 signal API while maintaining support for per-page custom CSS and JavaScript.
 
-**pelican-presentations**: A new plugin created during this migration to generate a presentations page from YAML data. It's compatible with the IRIS-HEP presentations format, groups talks by year, and displays video icons for presentations with recordings.
+ * **pelican-presentations**: A new plugin created during this migration to generate a presentations page from YAML data. It's compatible with the IRIS-HEP presentations format, groups talks by year, and displays video icons for presentations with recordings.
 
-**pelican-selected-publications**: Another new plugin that generates a curated publications page organized by research themes. Publications are defined in a YAML file that references BibTeX keys, allowing thematic grouping with category descriptions. Features include filtering by category/year/highlights, publication metrics display, profile icons, and collapsible Altmetric badges.
+ * **pelican-selected-publications**: Another new plugin that generates a curated publications page organized by research themes. Publications are defined in a YAML file that references BibTeX keys, allowing thematic grouping with category descriptions. Features include filtering by category/year/highlights, publication metrics display, profile icons, and collapsible Altmetric badges.
 
 ## Working with Claude Code
 
