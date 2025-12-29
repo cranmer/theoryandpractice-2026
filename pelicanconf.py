@@ -95,15 +95,16 @@ SELECTED_PUBLICATIONS_SRC = 'content/selected-publications.yml'
 
 # Publication metrics (manually updated)
 PUBLICATION_METRICS = {
-    'total_publications': 450,
-    'total_citations': 130000,
-    'h_index': 95,
+    'total_publications': 1200,
+    'total_citations': 349000,
+    'h_index': 241,
 }
 
 # Publication profile links
 PUBLICATION_PROFILES = (
     ('Google Scholar', 'http://scholar.google.com/citations?user=EZjSxgwAAAAJ', 'google-scholar'),
     ('INSPIRE', 'https://inspirehep.net/authors/1023993', 'inspire'),
+    ('arXiv', 'https://arxiv.org/search/?searchtype=author&query=Cranmer%2C+K', 'arxiv'),
     ('OpenAlex', 'https://openalex.org/works?filter=authorships.author.id:a5108167175', 'openaccess'),
     ('ORCiD', 'https://orcid.org/0000-0002-5769-7094', 'orcid'),
 )
