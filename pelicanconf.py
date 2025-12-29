@@ -41,6 +41,7 @@ LINKS = (
     ('Data Science Institute', 'https://dsi.wisc.edu'),
     ('My UW Physics webpage', 'https://www.physics.wisc.edu/directory/cranmer-kyle/'),
     ('IRIS-HEP', 'https://iris-hep.org/'),
+    ('wikipedia', 'https://en.wikipedia.org/wiki/Kyle_Cranmer')
 )
 
 # Social
@@ -138,6 +139,11 @@ ABOUT_ME = None
 
 # Social sharing
 ADDTHIS_PROFILE = 'ra-5332e76b5340f5f3'
+
+# Open Graph and Twitter Cards for social media previews
+TWITTER_CARDS = True
+TWITTER_USERNAME = 'kylecranmer'
+OPEN_GRAPH_IMAGE = 'images/Kyle-Cranmer-headshot-cropped-square-web.jpeg'
 
 # Analytics
 GOOGLE_ANALYTICS = 'UA-3337202-1'

@@ -296,8 +296,8 @@ figure.floatcenter, .align-center {
 .fa-inspire:before {
     content: "";
     display: inline-block;
-    width: 0.75em;
-    height: 0.75em;
+    width: 0.9em;
+    height: 0.9em;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 50'%3E%3Ccircle cx='25' cy='25' r='22' fill='%232c3e50'/%3E%3Ctext x='25' y='32' text-anchor='middle' font-family='Arial, sans-serif' font-size='20' font-weight='bold' fill='white'%3EiN%3C/text%3E%3C/svg%3E");
     background-size: contain;
     background-repeat: no-repeat;
