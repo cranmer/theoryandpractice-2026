@@ -106,6 +106,7 @@
     function filterPublications() {
         var catFilter = document.getElementById('filter-category').value;
         var yearFilter = document.getElementById('filter-year').value;
+        var highlightFilter = document.getElementById('filter-highlight').checked;
 
         // Filter categories
         document.querySelectorAll('.pub-category').forEach(function(cat) {
@@ -117,10 +118,20 @@
             }
         });
 
-        // Filter individual publications by year
+        // Filter individual publications by year and highlight
         document.querySelectorAll('.publications-list li').forEach(function(pub) {
             var pubYear = pub.getAttribute('data-year');
+            var isHighlight = pub.classList.contains('highlight');
+            var hidden = false;
+
             if (yearFilter && pubYear !== yearFilter) {
+                hidden = true;
+            }
+            if (highlightFilter && !isHighlight) {
+                hidden = true;
+            }
+
+            if (hidden) {
                 pub.classList.add('hidden');
             } else {
                 pub.classList.remove('hidden');
@@ -140,6 +151,7 @@
     function resetFilters() {
         document.getElementById('filter-category').value = '';
         document.getElementById('filter-year').value = '';
+        document.getElementById('filter-highlight').checked = false;
         filterPublications();
     }
 </script>
@@ -192,6 +204,11 @@
             <option value="{{ year }}">{{ year }}</option>
             {% endfor %}
         </select>
+
+        <label for="filter-highlight" style="margin-left: 10px;">
+            <input type="checkbox" id="filter-highlight" onchange="filterPublications()">
+            <span class="highlight-star">&#9733;</span> Starred only
+        </label>
 
         <button class="btn btn-sm btn-default" onclick="resetFilters()">Reset</button>
     </div>

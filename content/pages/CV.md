@@ -8,11 +8,13 @@ Summary: Kyle Cranmer's academic CV - experience, education, awards, and highlig
 <a href="/downloads/files/Cranmer-CV-2025.pdf" class="btn btn-primary"><i class="fa fa-download"></i> Download Full CV (PDF)</a>
 </div>
 
-## Experience
+<br />
+
+### Experience
 
 **David R. Anderson Director, Data Science Institute, UW-Madison** — 2022-Present
-*Professor of Physics with Affiliate Appointments in Computer Science & Statistics*
 
+ - *Professor of Physics with Affiliate Appointments in Computer Science & Statistics*
 - Leads the Data Science Institute, a key to the university's strategic initiative in data science
 - Leads UW-Madison's RISE-AI Headquarters
 
@@ -38,18 +40,30 @@ Summary: Kyle Cranmer's academic CV - experience, education, awards, and highlig
 
 ---
 
-## Education
+### Education
 
 - **PhD Physics**, University of Wisconsin—Madison — 2005
 - **BA in Physics & Mathematics**, Rice University — 1999
 
 ---
 
-## Publication Highlights
+### Awards
 
-- **>1,200 publications** with >344,000 citations ([Google Scholar](http://scholar.google.com/citations?user=EZjSxgwAAAAJ)); h-index 239
-  - 9th highest citation in Google Scholar for "Deep Learning"
-  - 10 authors or less: 95 papers, >13,000 citations ([INSPIRE](https://inspirehep.net/literature?sort=mostrecent&size=25&page=1&q=a%3Ak.s.cranmer.1%20and%20ac%201-%3E10&ui-citation-summary=true))
+- **Inaugural Margot and Tom Pritzker Prize** for AI in Science Research Excellence — 2025
+- **Breakthrough Prize in Fundamental Physics** — 2025
+- **Fellow of the American Physical Society** — 2021
+- **Kavli Frontiers of Science Fellow** — 2018 & 2009
+- **Visiting Junior Faculty**, Institute for Advanced Study — 2018
+- **Chaire Georges Lemaître** 2017, Université Catholique de Louvain, Belgium
+- **Presidential Early Career Award for Science and Engineering (PECASE)** — 2007
+
+---
+
+### Publication Highlights
+
+- **>1,200 publications** with >349,000 citations ([Google Scholar](http://scholar.google.com/citations?user=EZjSxgwAAAAJ)); h-index 241
+  - 9th highest citation in Google Scholar for "[Deep Learning](https://scholar.google.com/citations?view_op=search_authors&hl=en&mauthors=label:deep_learning)"
+  - 10 authors or less: 99 papers, >13,000 citations ([INSPIRE](https://inspirehep.net/literature?sort=mostrecent&size=25&page=1&q=a%3Ak.s.cranmer.1%20and%20ac%201-%3E10&ui-citation-summary=true))
 - **Higgs discovery paper** (1 of 9 core authors), 2012 — 24,000 citations
 - **Key paper** establishing statistical procedures for particle physics — >10,000 citations
 - **Standard citation** for Simulation-Based Inference in PNAS, 2020 — 1,000 citations
@@ -60,7 +74,7 @@ Summary: Kyle Cranmer's academic CV - experience, education, awards, and highlig
 
 ---
 
-## Speaking Highlights
+### Speaking Highlights
 
 - **Keynote speaker** ADSA Data Science and AI Leadership Summit — 2025
 - **Keynote speaker** Helmholtz AI (Germany's largest research organization) — 2024
@@ -75,7 +89,7 @@ Summary: Kyle Cranmer's academic CV - experience, education, awards, and highlig
 
 ---
 
-## Public Engagement Highlights
+### Public Engagement Highlights
 
 - 18K Twitter followers
 - Webby award for Crayfis citizen science project — 2015
@@ -88,7 +102,7 @@ Summary: Kyle Cranmer's academic CV - experience, education, awards, and highlig
 
 ---
 
-## Professional Service Highlights
+### Professional Service Highlights
 
 - **Editor-in-Chief** Machine Learning: Science and Technology (IOP Publishing) — 2022-present
 - **Action Editor** Journal of Machine Learning Research (JMLR) — 2024-present
@@ -102,12 +116,3 @@ Summary: Kyle Cranmer's academic CV - experience, education, awards, and highlig
 
 ---
 
-## Awards
-
-- **Inaugural Margot and Tom Pritzker Prize** for AI in Science Research Excellence — 2025
-- **Breakthrough Prize in Fundamental Physics** — 2025
-- **Fellow of the American Physical Society** — 2021
-- **Kavli Frontiers of Science Fellow** — 2018 & 2009
-- **Visiting Junior Faculty**, Institute for Advanced Study — 2018
-- **Chaire Georges Lemaître** 2017, Université Catholique de Louvain, Belgium
-- **Presidential Early Career Award for Science and Engineering (PECASE)** — 2007

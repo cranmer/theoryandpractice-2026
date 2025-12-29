@@ -43,7 +43,7 @@ Recently, I've been particularly interested in inference in the context of intra
 - [Google Scholar](http://scholar.google.com/citations?user=EZjSxgwAAAAJ)
 - [ORCID : 0000-0002-5769-7094](http://orcid.org/0000-0002-5769-7094)
 - [ImpactStory](https://impactstory.org/u/0000-0002-5769-7094)
-- [figshare](http://figshare.com/authors/Kyle%20Cranmer/432748)
+- [figshare](https://figshare.com/authors/Kyle_Cranmer/432748)
 
 
 
