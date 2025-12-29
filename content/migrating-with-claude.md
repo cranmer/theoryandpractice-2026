@@ -1,8 +1,8 @@
 Title: Migrating with Claude
-date: 2025-12-27
+date: 2025-12-29
 Slug: migrating-with-claude
 Category: Blog
-Tags: website, Claude, agentic AI 
+Tags: website, Claude, agentic AI
 Authors: Kyle Cranmer
 Summary: I migrated my personal website from Pelican 3.7 to Pelican 4.11 using Claude Code, Anthropic's agentic AI coding tool. Here's what changed and how it went.
 
@@ -32,12 +32,21 @@ This repository is a fresh migration of the original [TheoryAndPractice](https:/
 - Fresh repository migrated from Pelican 3.7 to Pelican 4.11
 - pixi environment management for reproducible builds
 - GitHub Actions deployment workflow to cranmer.github.io
+- **CV page** (`/pages/cv.html`) with bio, experience, education, awards, and professional highlights
+- **Selected Publications page** (`/selected-publications.html`) with thematic categories
+  - Custom `pelican-selected-publications` plugin for YAML-driven publication organization
+  - Filter by category, year, and highlighted papers
+  - Publication metrics section displaying total papers, citations, and h-index
+  - Profile icons linking to Google Scholar, INSPIRE, arXiv, OpenAlex, and ORCiD
+  - Collapsible Altmetric badges for each publication with global toggle
+  - Official arXiv logomark icon
 - Publications page (`/publications.html`) generated from BibTeX
 - Presentations page (`/presentations.html`) displaying 113 talks with video icons, compatible with [IRIS-HEP format](https://iris-hep.org/presentations/byperson.html)
 - Custom `pelican-presentations` plugin for parsing YAML presentation data
 - [Pagefind](https://pagefind.app/) search with instant client-side search across all pages
 - Bluesky social link with custom butterfly icon
-- Custom SVG icons for Google Scholar, ORCiD, and INSPIRE-HEP (Font Awesome 4.x lacks these)
+- Custom SVG icons for Google Scholar, ORCiD, INSPIRE-HEP, arXiv, and OpenAlex (Font Awesome 4.x lacks these)
+- Custom navbar hover color (#EE9F43 orange)
 - Open Graph and Twitter Card support for social media preview cards
 - BibTeX modal popups with copy-to-clipboard functionality
 - Markdown rendering inside HTML blocks (`md_in_html` extension)
@@ -60,6 +69,8 @@ The migration required modifications to several plugins:
 
 **pelican-presentations**: A new plugin created during this migration to generate a presentations page from YAML data. It's compatible with the IRIS-HEP presentations format, groups talks by year, and displays video icons for presentations with recordings.
 
+**pelican-selected-publications**: Another new plugin that generates a curated publications page organized by research themes. Publications are defined in a YAML file that references BibTeX keys, allowing thematic grouping with category descriptions. Features include filtering by category/year/highlights, publication metrics display, profile icons, and collapsible Altmetric badges.
+
 ## Working with Claude Code
 
 This entire migration was done in collaboration with Claude Code. The AI agent was able to:
@@ -68,9 +79,12 @@ This entire migration was done in collaboration with Claude Code. The AI agent w
 - Set up the new pixi environment and Pelican 4.11 configuration
 - Migrate and modify plugins to work with the new Pelican version
 - Create a new `pelican-presentations` plugin from scratch, compatible with IRIS-HEP's format
+- Create a new `pelican-selected-publications` plugin for thematic publication organization with Altmetric integration
+- Build a comprehensive CV page from PDF content
 - Debug issues with template rendering and markdown processing
 - Create the GitHub Actions deployment workflow
-- Add new features like the BibTeX modals, presentations page, Pagefind search, custom social icons, and social media preview cards
+- Add new features like the BibTeX modals, presentations page, Pagefind search, custom social icons, publication metrics, and social media preview cards
+- Implement custom CSS icons for services not supported by Font Awesome 4.x (arXiv, OpenAlex, Google Scholar, ORCiD, INSPIRE)
 
 It was a genuinely collaborative process—I would describe what I wanted, Claude would implement it, and we'd iterate on the details together.
 
