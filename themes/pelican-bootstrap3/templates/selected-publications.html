@@ -121,12 +121,17 @@
         color: #EE9F43;
     }
     .selected-pubs-header {
-        margin-top: 30px;
+        margin-top: 10px;
         margin-bottom: 20px;
     }
     .pub-intro {
         color: #666;
         margin-bottom: 20px;
+    }
+    .section-divider {
+        width: 50%;
+        margin: 30px auto 10px auto;
+        border-top: 1px solid #ccc;
     }
     /* Altmetric toggle and container */
     .altmetric-toggle {
@@ -326,6 +331,7 @@
     </div>
     {% endif %}
 
+    <hr class="section-divider">
     <h2 class="selected-pubs-header">Selected Publications</h2>
 
     {% if selected_publications and selected_publications.categories %}

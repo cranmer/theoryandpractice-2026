@@ -30,9 +30,9 @@ AUTHOR_FEED_RSS = None
 DISPLAY_PAGES_ON_MENU = False
 MENUITEMS = (
     ('CV', '/pages/cv.html'),
-    ('Projects', '/pages/projects.html'),
-    ('Talks', '/presentations.html'),
     ('Publications', '/selected-publications.html'),
+    ('Talks', '/presentations.html'),
+    ('Projects', '/pages/projects.html'),
     ('Media & Outreach', '/pages/in-the-news.html'),
 )
 
