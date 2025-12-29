@@ -945,6 +945,11 @@ presentations:
     meeting: "US LUA Annual Meeting"
     meetingurl: https://indico.slac.stanford.edu/event/9140/timetable/
     location: SLAC National Accelerator Laboratory
+  - title: "Data and AI for Agriculture"
+    meeting: 2025 AgriBuisness Classic
+    meetingurl: https://www.wiagribusiness.org
+    location: Wisconsin Dells, WI
+    date: 2025-01-13
   - title: "Vision for the next 25 years based on experiences"
     date: 2025-01-16
     url: https://indico.cern.ch/event/1465837/
@@ -963,10 +968,92 @@ presentations:
     url: https://physikseminar.desy.de/hamburg/colloquia_in_2025/18_february_2025/
     meeting: "DESY Physics Colloquium"
     meetingurl: https://physikseminar.desy.de/hamburg/colloquia_in_2025/
-    location: DESY Hamburg
-  - title: TBD
+    location: DESY, Hamburg
+    video: https://indico.desy.de/event/47804/attachments/95031/133937/2025-02-18%20Physics%20Colloquium.mp4
+  - title: "Using AI to for scattering amplitudes"
+    meeting: UW Applied Math Seminar
+    location: Madison, WI
+    date: 2025-02-27
+  - title: "Artificial Intelligence is here: what you need to know"
+    meeting: "Founders Day event for Tucson Chapter of UW-Madison Alumni Association"
+    location: Tucson, AZ
+    date: 2025-03-11
+  - title: "AI and the Legacy of the LHC"
     date: 2025-03-18
     url: https://summit.aps.org/events/APR-C10/1
     meeting: "APS Global Physics Summit 2025"
     meetingurl: https://summit.aps.org/
     location: Anaheim, CA
+  - title: "Keynote: Data Science in the Age of AI"
+    meeting: "Academic Data Science Alliance (ADSA) Leadership Summit"
+    meetingurl: https://alliance4datascience.ai/events/adsa-meetings/2025-data-science-leadership-summit/
+    location: "The Ohio State University's Translational Data Analytics Institute"
+    date: 2025-03-31    
+  - title: "Simulation-based Inference and the 5th Paradigm of Scientific Discovery"
+    meeting: Science Cafe
+    location:  Artificial Intelligence Town, Hangzhou, China
+    date: 2025-04-24
+  - title: "Emerging Patterns in AI for Science"
+    meeting: Seminar
+    location: T.D. Lee Institute, Shanghai
+    date: 2025-04-26
+  - title: "Emerging Patterns in AI for Science"
+    meeting: "IOP Publishing's AI-driven discoveries: Machine Learning for the Physical Sciences workshop"
+    location: Fudan University, Shanghai
+    date: 2025-04-27
+  - title: "Emerging Patterns in AI for Science"
+    meeting: Seminar
+    location: Hong Kong University, Shenzhen
+    date: 2025-04-28
+  - title: "Simulation-Based Inference"
+    meeting: BFF9
+    meetingurl: https://www.stat.purdue.edu/news/2024/bff9.html
+    location: Purdue Indy
+    date: 2025-05-13
+  - title: "Artificial Intelligence is here: what you need to know"
+    meeting: "Tampa Chapter of UW-Madison Alumni Association"
+    location: Tampa, FL
+    date: 2025-06-09
+  - title: "How AI is revolutionizing Science"
+    meeting: "Badger Talk / Wisconsin PBS"
+    location: Neville Public Museum, Green Bay, WI
+    date: 2025-06-10
+    video: https://www.youtube.com/live/7V3ue6VxQv4?si=kNtgkLMx3b7z4cDQ
+  - title: "Hot Topic Panel: AI for Science"
+    meeting: Heidelberg Laureate Forum
+    meetingurl: https://www.heidelberg-laureate-forum.org/forum/12th-hlf-2025-1/
+    location: Heidelberg, Germany
+    date: 2025-09-13
+    video: https://youtu.be/I-Ye-rMhRws?si=lEWrqKuPTJ-rMnwL
+  - title: "Leveraging Generative AI (Artificial Intelligence) for Local Government - A Practical
+Introduction"
+    meeting: Wisconsin Counties Association Annual Convention
+    meetingurl: https://www.wcaconference.com/_files/ugd/1190ad_5871000c101f4b80b469a67850632b95.pdf
+    location: Wisconsin Dells, WI
+    date: 2025-09-23
+  - title: "Navigating the Design Space of Simulation-Based Inference"
+    meeting: "STAMPS workshop on neural simulaiton-based inference"
+    meetingurl: https://www.cmu.edu/dietrich/statistics-datascience/stamps/workshop/schedule.html
+    location: Carnegie Mellon University, Pittsburg
+    date: 2025-10-04
+    video: https://youtu.be/2FGXAlUATs0?si=EQ49ZJZU9HXpQK79
+  - title: "Leveraging Generative AI (Artificial Intelligence) for Local Government - A Practical
+Introduction"
+    meeting: Wisconsin Towns Association Annual Convention
+    meetingurl: https://www.wisctowns.com/documents/2025-convention-book.pdf
+    location: Wisconsin Dells, WI
+    date: 2025-10-13
+  - title: "10 years of Simulation-Based Inference"
+    meeting: Pritzker Prize at AI+Science Conference
+    meetingurl: https://aiscienceconference.caltech.edu/program
+    location: Caltech, Pasadena, CA
+    date: 2025-11-10
+    video: https://youtu.be/GNtPdf17w7E?si=R0EWi5fhWeP5glhT
+  - title: "Emerging Patterns in AI for Science"
+    meeting: U. Michigan Annual Data and AI Summit
+    meetingurl: https://midas.umich.edu/events/midas-summit-2025/
+    location: MIDAS, University of Michigan
+    date: 2025-11-17
+    video: https://www.youtube.com/watch?v=DeMgDoWGKVU&list=PL0iUdEecI6UH1-2i1lk0yUmu062Iywx3R&index=3
+
+    
