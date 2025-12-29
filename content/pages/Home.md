@@ -30,7 +30,7 @@ Stylesheets: FeedEk.css
 
 
 <div markdown="1">
-<img src="/images/Kyle-Cranmer-headshot-cropped-square-web.jpeg" width="55%" Alt="Kyle Cranmer" style="float:left; padding-left:15px; padding-right:15px; padding-top:0; padding-bottom:15px" />
+<img src="/images/Kyle-Cranmer-headshot-cropped-square-web.jpeg" width="45%" Alt="Kyle Cranmer" style="float:left; padding-left:15px; padding-right:15px; padding-top:0; padding-bottom:15px" />
 
 My name is Kyle Cranmer, and this is my personal website. I'm a Professor of Physics and the David R. Anderson Director of the University of Wisconsin-Madison's Data Science Institute (I also have courtesy appointments in Statistics and Computer Science). I moved to Madison in 2022, after 15 fantastic years at NYU. The first part of my career was focused on the experimental particle physics with the ATLAS experiment at the Large Hadron Collider (LHC) at CERN. I was very involved with the discovery of the Higgs boson in 2012, and specialized in statistical techniques, the interface between theory and experiment, and the development of analysis software tools for the field. Deep learning really took off around the time of the Higgs discovery, and while on sabbatical I pivoted professionally to think about how machine learning and AI could be used to advance science. While I still work on fundamental physics, most of my work these days is related to statistics, data science, and AI/ML. I'm also passionate about open science, cyberinfrastructure, and science communication to the broader public.
 
