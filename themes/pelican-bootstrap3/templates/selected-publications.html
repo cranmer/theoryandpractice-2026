@@ -128,7 +128,27 @@
         color: #666;
         margin-bottom: 20px;
     }
+    /* Altmetric toggle and container */
+    .altmetric-toggle {
+        cursor: pointer;
+        color: #888;
+    }
+    .altmetric-toggle:hover {
+        color: #EE9F43;
+    }
+    .altmetric-container {
+        display: none;
+        margin-top: 10px;
+        padding: 10px;
+        background: #f8f9fa;
+        border-radius: 4px;
+    }
+    .altmetric-container.show {
+        display: block;
+    }
 </style>
+<!-- Altmetric embed script -->
+<script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
 {% endblock %}
 
 {% block content %}
@@ -202,6 +222,22 @@
         document.getElementById('filter-year').value = '';
         document.getElementById('filter-highlight').checked = false;
         filterPublications();
+    }
+
+    function toggleAltmetric(key) {
+        var container = document.getElementById('altmetric-' + key);
+        var link = document.getElementById('altmetric-link-' + key);
+        if (container.classList.contains('show')) {
+            container.classList.remove('show');
+            link.textContent = 'show altmetrics';
+        } else {
+            container.classList.add('show');
+            link.textContent = 'hide altmetrics';
+            // Trigger altmetric to render if not already done
+            if (typeof _altmetric_embed_init === 'function') {
+                _altmetric_embed_init();
+            }
+        }
     }
 </script>
 
@@ -334,7 +370,21 @@
                     [<a href="{{ pub.pdf }}" target="_blank">PDF</a>]
                     {% endif %}
                     [<a href="javascript:void(0);" onclick="showBibtex(decodeURIComponent('{{ pub.bibtex|urlencode }}'));">BibTeX</a>]
+                    {% if pub.doi or pub.eprint %}
+                    [<a href="javascript:void(0);" id="altmetric-link-{{ pub.key }}" class="altmetric-toggle" onclick="toggleAltmetric('{{ pub.key }}');">show altmetrics</a>]
+                    {% endif %}
                 </span>
+                {% if pub.doi or pub.eprint %}
+                <div id="altmetric-{{ pub.key }}" class="altmetric-container">
+                    <div class="altmetric-embed"
+                         data-badge-type="donut"
+                         data-badge-details="right"
+                         data-hide-no-mentions="true"
+                         {% if pub.doi %}data-doi="{{ pub.doi }}"{% endif %}
+                         {% if pub.eprint and not pub.doi %}data-arxiv-id="{{ pub.eprint|replace('arXiv:', '') }}"{% endif %}>
+                    </div>
+                </div>
+                {% endif %}
             </li>
         {% endfor %}
         </ol>
