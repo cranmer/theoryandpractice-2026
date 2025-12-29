@@ -32,17 +32,17 @@ This repository is a fresh migration of the original [TheoryAndPractice](https:/
 - Fresh repository migrated from Pelican 3.7 to Pelican 4.11
 - pixi environment management for reproducible builds
 - GitHub Actions deployment workflow to cranmer.github.io
-- **CV page** (`/pages/cv.html`) with bio, experience, education, awards, and professional highlights
-- **Selected Publications page** (`/selected-publications.html`) with thematic categories
-  - Custom `pelican-selected-publications` plugin for YAML-driven publication organization
-  - Filter by category, year, and highlighted papers
-  - Publication metrics section displaying total papers, citations, and h-index
-  - Profile icons linking to Google Scholar, INSPIRE, arXiv, OpenAlex, and ORCiD
-  - Collapsible Altmetric badges for each publication with global toggle
-  - Official arXiv logomark icon
-- Publications page (`/publications.html`) generated from BibTeX
-- Presentations page (`/presentations.html`) displaying 113 talks with video icons, compatible with [IRIS-HEP format](https://iris-hep.org/presentations/byperson.html)
-- Custom `pelican-presentations` plugin for parsing YAML presentation data
+- **New** CV page (`/pages/cv.html`) with bio, experience, education, awards, and professional highlights
+- **New** Selected Publications page (`/selected-publications.html`) with thematic categories
+    - Replaces old Publications page (`/publications.html`) generated from by `pelican-bibtex`
+    - Custom `pelican-selected-publications` plugin for YAML-driven publication organization
+    - Filter by category, year, and highlighted papers
+    - Publication metrics section displaying total papers, citations, and h-index
+    - Profile icons linking to Google Scholar, INSPIRE, arXiv, OpenAlex, and ORCiD
+    - Collapsible Altmetric badges for each publication with global toggle
+    - Official arXiv logomark icon
+- **New** Talks page (`/presentations.html`) displaying 113 talks with video icons, compatible with [IRIS-HEP format](https://iris-hep.org/presentations/byperson.html)
+    - Custom `pelican-presentations` plugin for parsing YAML presentation data
 - [Pagefind](https://pagefind.app/) search with instant client-side search across all pages
 - Bluesky social link with custom butterfly icon
 - Custom SVG icons for Google Scholar, ORCiD, INSPIRE-HEP, arXiv, and OpenAlex (Font Awesome 4.x lacks these)
@@ -57,7 +57,7 @@ This repository is a fresh migration of the original [TheoryAndPractice](https:/
 - Floating images appearing in blog index summaries
 - BibTeX popup windows blocked by modern browsers (replaced with Bootstrap modals)
 
-### Plugin Modifications
+### Plugin Modifications and Additions
 
 The migration required modifications to several plugins:
 
