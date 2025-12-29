@@ -333,6 +333,11 @@ figure.floatcenter, .align-center {
    Navbar Hover Color Override
    Change hover color from Flatly's default #18bc9c to custom orange #EE9F43
    ========================================================================== */
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+    color: #EE9F43;
+}
+
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
     color: #EE9F43;
