@@ -22,6 +22,7 @@ YAML format:
 
 import logging
 import os
+import re
 
 from pelican import signals
 
@@ -65,6 +66,19 @@ def format_publication(entry, key, plain_style, html_backend):
     text = text.replace('\\}', '&#125;')
     text = text.replace('{', '')
     text = text.replace('}', '')
+
+    # Replace the title's bibtex-protected span with pub-title class
+    # Get the title from the entry and find its span
+    title = entry.fields.get('title', '')
+    # Clean title for matching (remove braces)
+    clean_title = title.replace('{', '').replace('}', '')
+    if clean_title:
+        # Escape special regex characters in title
+        escaped_title = re.escape(clean_title)
+        # Replace the span containing the title with pub-title class
+        pattern = r'<span class="bibtex-protected">' + escaped_title + r'</span>'
+        replacement = r'<span class="pub-title">' + clean_title + r'</span>'
+        text = re.sub(pattern, replacement, text, count=1)
 
     # Generate BibTeX string
     bib_buf = StringIO()
