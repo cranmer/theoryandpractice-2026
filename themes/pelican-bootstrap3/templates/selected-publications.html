@@ -114,7 +114,7 @@
         gap: 15px;
     }
     .metrics-profiles a {
-        font-size: 2em;
+        font-size: 3em;
         color: #2c3e50;
     }
     .metrics-profiles a:hover {
@@ -125,6 +125,10 @@
         margin-bottom: 20px;
         padding-bottom: 10px;
         border-bottom: 2px solid #2c3e50;
+    }
+    .pub-intro {
+        color: #666;
+        margin-bottom: 20px;
     }
 </style>
 {% endblock %}
@@ -225,6 +229,8 @@
 <section id="content" class="body">
     <h1 class="entry-title">Publications</h1>
 
+    <p class="pub-intro">This page includes links to my publication history, some aggregate bibliometrics, and some selected publications organized by research theme.</p>
+
     <!-- Publication Metrics -->
     {% if PUBLICATION_METRICS or PUBLICATION_PROFILES %}
     <div class="pub-metrics">
@@ -289,12 +295,14 @@
             {% endfor %}
         </select>
 
-        <label for="filter-highlight" style="margin-left: 10px;">
-            <input type="checkbox" id="filter-highlight" onchange="filterPublications()">
-            <span class="highlight-star">&#9733;</span> Highlights
-        </label>
-
         <button class="btn btn-sm btn-default" onclick="resetFilters()">Reset</button>
+
+        <div style="margin-top: 10px;">
+            <label for="filter-highlight">
+                <input type="checkbox" id="filter-highlight" onchange="filterPublications()">
+                <span class="highlight-star">&#9733;</span> Highlights only
+            </label>
+        </div>
     </div>
 
     <!-- Publications by Category -->
