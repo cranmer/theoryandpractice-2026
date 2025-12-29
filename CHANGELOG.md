@@ -15,6 +15,10 @@ All notable changes to theoryandpractice.org are documented in this file.
 - Pagefind search (`/search.html`) with instant client-side search across all pages
 - Search icon (magnifying glass) in navbar
 - Bluesky social link with custom butterfly icon
+- Custom SVG icons for Google Scholar, ORCiD, and INSPIRE-HEP
+- Instagram social link
+- Open Graph and Twitter Card meta tags for social media preview cards
+- Theory & Practice logo for social media previews
 - BibTeX modal popups with copy-to-clipboard functionality
 - Markdown rendering inside HTML blocks (`md_in_html` extension)
 - Custom `pelican-cite.css` stylesheet placeholder
@@ -59,6 +63,7 @@ All notable changes to theoryandpractice.org are documented in this file.
 - Added `presentations.html` template with video icon support
 - Added Bluesky to social icon whitelist
 - Added custom CSS for Bluesky butterfly icon (SVG-based)
+- Added custom SVG icons for Google Scholar, ORCiD, and INSPIRE-HEP (Font Awesome 4.x lacks these)
 
 ## [Pre-Migration] - Original TheoryAndPractice
 
