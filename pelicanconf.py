@@ -30,7 +30,6 @@ AUTHOR_FEED_RSS = None
 DISPLAY_PAGES_ON_MENU = False
 MENUITEMS = (
     ('CV', '/pages/cv.html'),
-    ('Research', '/pages/Research.html'),
     ('Projects', '/pages/projects.html'),
     ('Talks', '/presentations.html'),
     ('Publications', '/selected-publications.html'),
