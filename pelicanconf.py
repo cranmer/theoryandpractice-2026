@@ -93,6 +93,20 @@ PUBLICATIONS_SRC = 'content/cranmer-2025-lt20authors.bib'
 # Selected Publications (pelican-selected-publications) - curated thematic list
 SELECTED_PUBLICATIONS_SRC = 'content/selected-publications.yml'
 
+# Publication metrics (manually updated)
+PUBLICATION_METRICS = {
+    'total_publications': 450,
+    'total_citations': 130000,
+    'h_index': 95,
+}
+
+# Publication profile links
+PUBLICATION_PROFILES = (
+    ('Google Scholar', 'http://scholar.google.com/citations?user=EZjSxgwAAAAJ', 'google-scholar'),
+    ('INSPIRE', 'https://inspirehep.net/authors/1023993', 'inspire'),
+    ('OpenAlex', 'https://openalex.org/works?filter=authorships.author.id:a5108167175', 'openaccess'),
+)
+
 # Plugin configuration
 PLUGIN_PATHS = ['plugins']
 PLUGINS = [

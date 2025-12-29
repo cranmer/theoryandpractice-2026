@@ -79,6 +79,47 @@
     .hidden {
         display: none !important;
     }
+    /* Publication metrics section */
+    .pub-metrics {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #f8f9fa;
+        padding: 15px 20px;
+        margin-bottom: 15px;
+        border-radius: 4px;
+        border-left: 4px solid #18bc9c;
+    }
+    .metrics-stats {
+        display: flex;
+        gap: 30px;
+    }
+    .metric {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .metric-value {
+        font-size: 1.5em;
+        font-weight: bold;
+        color: #2c3e50;
+    }
+    .metric-label {
+        font-size: 0.85em;
+        color: #666;
+        text-transform: uppercase;
+    }
+    .metrics-profiles {
+        display: flex;
+        gap: 15px;
+    }
+    .metrics-profiles a {
+        font-size: 1.5em;
+        color: #2c3e50;
+    }
+    .metrics-profiles a:hover {
+        color: #EE9F43;
+    }
 </style>
 {% endblock %}
 
@@ -177,6 +218,41 @@
 
 <section id="content" class="body">
     <h1 class="entry-title">Selected Publications</h1>
+
+    <!-- Publication Metrics -->
+    {% if PUBLICATION_METRICS or PUBLICATION_PROFILES %}
+    <div class="pub-metrics">
+        {% if PUBLICATION_METRICS %}
+        <div class="metrics-stats">
+            {% if PUBLICATION_METRICS.total_publications %}
+            <span class="metric">
+                <span class="metric-value">{{ PUBLICATION_METRICS.total_publications }}</span>
+                <span class="metric-label">Publications</span>
+            </span>
+            {% endif %}
+            {% if PUBLICATION_METRICS.total_citations %}
+            <span class="metric">
+                <span class="metric-value">{{ "{:,}".format(PUBLICATION_METRICS.total_citations) }}</span>
+                <span class="metric-label">Citations</span>
+            </span>
+            {% endif %}
+            {% if PUBLICATION_METRICS.h_index %}
+            <span class="metric">
+                <span class="metric-value">{{ PUBLICATION_METRICS.h_index }}</span>
+                <span class="metric-label">h-index</span>
+            </span>
+            {% endif %}
+        </div>
+        {% endif %}
+        {% if PUBLICATION_PROFILES %}
+        <div class="metrics-profiles">
+            {% for name, url, icon in PUBLICATION_PROFILES %}
+            <a href="{{ url }}" target="_blank" title="{{ name }}"><i class="fa fa-{{ icon }}"></i></a>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+    {% endif %}
 
     {% if selected_publications and selected_publications.categories %}
     <!-- Filters -->
