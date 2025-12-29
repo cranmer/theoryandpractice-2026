@@ -33,7 +33,7 @@ MENUITEMS = (
     ('Research', '/pages/Research.html'),
     ('Projects', '/pages/projects.html'),
     ('Talks', '/presentations.html'),
-    ('Publications', '/publications.html'),
+    ('Publications', '/selected-publications.html'),
     ('Media & Outreach', '/pages/in-the-news.html'),
 )
 
@@ -87,8 +87,11 @@ CODE_DIR = 'downloads/code'
 # NOTEBOOK_DIR must be empty because the paths in content already include full path
 NOTEBOOK_DIR = ''
 
-# Publications (pelican-bibtex)
+# Publications (pelican-bibtex) - full list with ≤20 authors
 PUBLICATIONS_SRC = 'content/cranmer-2025-lt20authors.bib'
+
+# Selected Publications (pelican-selected-publications) - curated thematic list
+SELECTED_PUBLICATIONS_SRC = 'content/selected-publications.yml'
 
 # Plugin configuration
 PLUGIN_PATHS = ['plugins']
@@ -104,6 +107,7 @@ PLUGINS = [
     'pelican_javascript',
     'pelican-cite',
     'pelican-bibtex',
+    'pelican-selected-publications',
 ]
 
 # Liquid tags configuration - enable specific tags
@@ -163,7 +167,7 @@ MARKDOWN = {
 }
 
 # Direct templates (for publications, presentations, and search pages)
-DIRECT_TEMPLATES = ['index', 'categories', 'authors', 'archives', 'publications', 'presentations', 'search']
+DIRECT_TEMPLATES = ['index', 'categories', 'authors', 'archives', 'publications', 'selected-publications', 'presentations', 'search']
 
 # Presentations (pelican-presentations plugin)
 PRESENTATIONS_SRC = 'content/presentations.yml'

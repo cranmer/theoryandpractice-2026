@@ -1,0 +1,223 @@
+{% extends "base.html" %}
+{% block title %}Selected Publications{% endblock %}
+
+{% block head %}
+{{ super() }}
+<style>
+    .pub-filters {
+        background: #f8f9fa;
+        padding: 15px;
+        margin-bottom: 25px;
+        border-radius: 4px;
+    }
+    .pub-filters label {
+        margin-right: 8px;
+        font-weight: bold;
+    }
+    .pub-filters select {
+        margin-right: 20px;
+        padding: 5px 10px;
+    }
+    .pub-category {
+        margin-bottom: 40px;
+    }
+    .pub-category h2 {
+        border-bottom: 2px solid #2c3e50;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+    }
+    .category-description {
+        color: #666;
+        font-style: italic;
+        margin-bottom: 20px;
+    }
+    .publications-list {
+        list-style-type: decimal;
+        padding-left: 25px;
+    }
+    .publications-list li {
+        margin-bottom: 15px;
+        padding: 10px;
+        border-left: 3px solid transparent;
+    }
+    .publications-list li.highlight {
+        border-left-color: #f39c12;
+        background: #fffef5;
+    }
+    .pub-text {
+        display: block;
+        margin-bottom: 5px;
+    }
+    .pub-links {
+        font-size: 0.9em;
+    }
+    .pub-links a {
+        margin-right: 5px;
+    }
+    .highlight-star {
+        color: #f39c12;
+        margin-right: 5px;
+    }
+    .hidden {
+        display: none !important;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<script type="text/javascript">
+    function showBibtex(bibtex) {
+        var formatted = bibtex.replace(/\\n/g, '\n');
+        document.getElementById('bibtex-content').textContent = formatted;
+        $('#bibtexModal').modal('show');
+    }
+
+    function copyBibtex() {
+        var bibtexText = document.getElementById('bibtex-content').textContent;
+        navigator.clipboard.writeText(bibtexText).then(function() {
+            var btn = document.getElementById('copy-btn');
+            btn.textContent = 'Copied!';
+            btn.className = 'btn btn-success';
+            setTimeout(function() {
+                btn.textContent = 'Copy to Clipboard';
+                btn.className = 'btn btn-primary';
+            }, 2000);
+        });
+    }
+
+    function filterPublications() {
+        var catFilter = document.getElementById('filter-category').value;
+        var yearFilter = document.getElementById('filter-year').value;
+
+        // Filter categories
+        document.querySelectorAll('.pub-category').forEach(function(cat) {
+            var catId = cat.getAttribute('data-category');
+            if (catFilter && catId !== catFilter) {
+                cat.classList.add('hidden');
+            } else {
+                cat.classList.remove('hidden');
+            }
+        });
+
+        // Filter individual publications by year
+        document.querySelectorAll('.publications-list li').forEach(function(pub) {
+            var pubYear = pub.getAttribute('data-year');
+            if (yearFilter && pubYear !== yearFilter) {
+                pub.classList.add('hidden');
+            } else {
+                pub.classList.remove('hidden');
+            }
+        });
+
+        // Hide categories with no visible publications
+        document.querySelectorAll('.pub-category').forEach(function(cat) {
+            if (cat.classList.contains('hidden')) return;
+            var visiblePubs = cat.querySelectorAll('.publications-list li:not(.hidden)');
+            if (visiblePubs.length === 0) {
+                cat.classList.add('hidden');
+            }
+        });
+    }
+
+    function resetFilters() {
+        document.getElementById('filter-category').value = '';
+        document.getElementById('filter-year').value = '';
+        filterPublications();
+    }
+</script>
+
+<!-- Bootstrap Modal for BibTeX -->
+<div class="modal fade" id="bibtexModal" tabindex="-1" role="dialog" aria-labelledby="bibtexModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="bibtexModalLabel">BibTeX Entry</h4>
+      </div>
+      <div class="modal-body">
+        <pre id="bibtex-content" style="white-space: pre-wrap; word-wrap: break-word; background: #f5f5f5; padding: 15px; border-radius: 4px;"></pre>
+      </div>
+      <div class="modal-footer">
+        <button type="button" id="copy-btn" class="btn btn-primary" onclick="copyBibtex()">Copy to Clipboard</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section id="content" class="body">
+    <h1 class="entry-title">Selected Publications</h1>
+
+    {% if selected_publications and selected_publications.categories %}
+    <!-- Filters -->
+    <div class="pub-filters">
+        <label for="filter-category">Category:</label>
+        <select id="filter-category" onchange="filterPublications()">
+            <option value="">All Categories</option>
+            {% for cat in selected_publications.categories %}
+            <option value="{{ cat.id }}">{{ cat.title }}</option>
+            {% endfor %}
+        </select>
+
+        <label for="filter-year">Year:</label>
+        <select id="filter-year" onchange="filterPublications()">
+            <option value="">All Years</option>
+            {% set years = [] %}
+            {% for cat in selected_publications.categories %}
+                {% for pub in cat.publications %}
+                    {% if pub.year and pub.year not in years %}
+                        {% set _ = years.append(pub.year) %}
+                    {% endif %}
+                {% endfor %}
+            {% endfor %}
+            {% for year in years|sort(reverse=true) %}
+            <option value="{{ year }}">{{ year }}</option>
+            {% endfor %}
+        </select>
+
+        <button class="btn btn-sm btn-default" onclick="resetFilters()">Reset</button>
+    </div>
+
+    <!-- Publications by Category -->
+    {% for cat in selected_publications.categories %}
+    <section class="pub-category" id="cat-{{ cat.id }}" data-category="{{ cat.id }}">
+        <h2>{{ cat.title }}</h2>
+        {% if cat.description %}
+        <p class="category-description">{{ cat.description }}</p>
+        {% endif %}
+
+        <ol class="publications-list">
+        {% for pub in cat.publications %}
+            <li class="{% if pub.highlight %}highlight{% endif %}"
+                data-year="{{ pub.year }}"
+                data-key="{{ pub.key }}">
+                <span class="pub-text">
+                    {% if pub.highlight %}<span class="highlight-star" title="Highlighted publication">&#9733;</span>{% endif %}
+                    {{ pub.text }}
+                </span>
+                <span class="pub-links">
+                    {% if pub.eprint %}
+                    [<a href="https://arxiv.org/abs/{{ pub.eprint }}" target="_blank">arXiv</a>]
+                    {% endif %}
+                    {% if pub.doi %}
+                    [<a href="https://doi.org/{{ pub.doi }}" target="_blank">DOI</a>]
+                    {% endif %}
+                    {% if pub.url and not pub.doi %}
+                    [<a href="{{ pub.url }}" target="_blank">URL</a>]
+                    {% endif %}
+                    {% if pub.pdf %}
+                    [<a href="{{ pub.pdf }}" target="_blank">PDF</a>]
+                    {% endif %}
+                    [<a href="javascript:void(0);" onclick="showBibtex(decodeURIComponent('{{ pub.bibtex|urlencode }}'));">BibTeX</a>]
+                </span>
+            </li>
+        {% endfor %}
+        </ol>
+    </section>
+    {% endfor %}
+
+    {% else %}
+    <p>No selected publications configured. Add a <code>SELECTED_PUBLICATIONS_SRC</code> setting pointing to a YAML file.</p>
+    {% endif %}
+</section>
+{% endblock %}

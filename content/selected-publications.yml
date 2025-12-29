@@ -1,0 +1,148 @@
+# Selected Publications Configuration
+# ====================================
+# Categories and publication assignments for the selected publications page.
+# BibTeX keys reference entries in the bibtex_file.
+
+bibtex_file: "selected-publications.bib"
+
+# Papers to highlight with a star
+highlights:
+  - Cranmer:2019eaq      # Frontier of SBI (PNAS)
+  - Cowan:2010js         # Asymptotic formulae (10k+ citations)
+  - ATLAS:2012yve        # Higgs discovery
+  - Carleo:2019ptp       # ML and physical sciences review
+  - Cranmer:2023xbe      # Nature Reviews Physics on lattice
+
+categories:
+  - id: sbi
+    title: "Simulation-based Inference Methodology"
+    description: "Developing statistical methods for inference when likelihoods are intractable but simulators are available."
+    publications:
+      - Cranmer:2019eaq      # The frontier of simulation-based inference
+      - Brehmer:2018hga      # Mining gold from implicit models
+      - Brehmer:2018eca      # Constraining Effective Field Theories
+      - Brehmer:2018kdj      # A Guide to Constraining EFTs
+      - Stoye:2018ovl        # Likelihood-free inference improved cross-entropy
+      - Louppe:2017lwp       # Adversarial Variational Optimization
+      - Cranmer:2015bka      # Unifying generative models
+
+  - id: flows
+    title: "Generative Models: Normalizing Flows on Manifolds"
+    description: "Neural density estimation on non-Euclidean spaces."
+    publications:
+      - Brehmer:2020vwc      # Flows for simultaneous manifold learning
+      - Rezende:2020hrd      # Normalizing Flows on Tori and Spheres
+
+  - id: lattice
+    title: "AI-Enhanced Sampling for Lattice Field Theory"
+    description: "Machine learning approaches to sampling in lattice QCD and other field theories."
+    publications:
+      - Cranmer:2023xbe      # Nature Reviews Physics
+      - Albergo:2022qfi      # Flow-based sampling at criticality
+      - Boyda:2020hsi        # Sampling using SU(N) gauge equivariant flows
+      - Hackett:2021idh      # Flow-based sampling for multimodal distributions
+      - Albergo:2021bna      # Flow-based sampling for fermionic theories
+      - Albergo:2021vyo      # Introduction to Normalizing Flows for Lattice
+      - Kanwar:2020xzo       # Equivariant flow-based sampling
+
+  - id: astro
+    title: "AI for Astrophysics"
+    description: "Machine learning methods for astrophysical inference and dark matter searches."
+    publications:
+      - MishraSharma:2021oxe  # Galactic Center gamma-ray excess
+      - MishraSharma:2020wys  # Semi-parametric gamma-ray modeling
+      - Brehmer:2019jyt       # Mining for Dark Matter Substructure
+
+  - id: jets
+    title: "Sets, Graphs, and Trees: AI for or Inspired by Jet Physics"
+    description: "Novel neural network architectures motivated by the hierarchical structure of particle jets."
+    publications:
+      - Macaluso:2021cgp     # The Quantum Trellis
+      - Cranmer:2021urp      # Reframing Jet Physics
+      - Greenberg:2021ynh    # Exact and Approximate Hierarchical Clustering
+      - Brehmer:2020cvb      # Hierarchical clustering through RL
+      - Greenberg:2020heb    # Data Structures & Algorithms for Hierarchical Clustering
+      - Shlomi:2020gdn       # Secondary vertex finding with neural networks
+      - Serviansky:2020qwa   # Set2Graph
+      - Louppe:2017ipp       # QCD-Aware Recursive Neural Networks
+      - Henrion:2017nips     # Neural Message Passing for Jet Physics
+
+  - id: ppl
+    title: "Universal Probabilistic Programming"
+    description: "Probabilistic programming approaches for scientific simulators."
+    publications:
+      - Baydin:2019pml       # Etalumis
+      - Baydin:2018tpf       # Efficient Probabilistic Inference
+      - LezcanoCasado:2017   # Improvements to Inference Compilation
+
+  - id: dynamical
+    title: "Graph Networks and Neuro-Symbolic Approaches for Dynamical Systems"
+    description: "Combining neural networks with physical structure for modeling dynamical systems."
+    publications:
+      - Cranmer:2020wew      # Discovering Symbolic Models
+      - SanchezGonzalez:2019 # Hamiltonian Graph Networks
+
+  - id: misc-ai
+    title: "Miscellaneous AI for Science"
+    description: "Other applications of machine learning to scientific problems."
+    publications:
+      - Cai:2024znx          # Transforming the bootstrap
+      - Gandrakota:2024ruu   # Robust anomaly detection
+      - Cranmer:2019efw      # Inferring the quantum density matrix
+      - Golkar:2018obb       # Backdrop: Stochastic Backpropagation
+      - Frate:2017mai        # Modeling Smooth Backgrounds with GPs
+      - Louppe:2016ylz       # Learning to Pivot
+      - Baldi:2016fzo        # Parameterized neural networks
+
+  - id: reviews
+    title: "AI/ML Reviews"
+    description: "Review articles on machine learning for science."
+    publications:
+      - PDG:2024             # Review of Particle Physics, ML chapter
+      - Carleo:2019ptp       # Machine learning and the physical sciences
+      - Guest:2018yhq        # Deep Learning and its Application to LHC Physics
+
+  - id: statistics
+    title: "Statistics / Classical Machine Learning"
+    description: "Statistical methods and classical machine learning for particle physics."
+    publications:
+      - Cowan:2010js         # Asymptotic formulae for likelihood-based tests
+      - Cranmer:2003yx       # Frequentist hypothesis testing
+      - Cranmer:2003zz       # Multivariate analysis from a statistical POV
+      - Cranmer:2007zza      # Statistics for the LHC
+      - Cranmer:2005hi       # Statistical challenges for searches
+      - Cranmer:2000du       # Kernel estimation in HEP
+      - Cranmer:2003zq       # Challenges in moving LEP Higgs stats to LHC
+      - Cranmer:2004gj       # PhysicsGP
+      - Cranmer:2003td       # Multivariate analysis and the search for new particles
+
+  - id: pheno
+    title: "High-Energy Physics - Phenomenology"
+    description: "Theoretical and phenomenological studies in particle physics."
+    publications:
+      - Brehmer:2019xox      # Effective LHC measurements with matrix elements
+      - Brehmer:2016nyr      # Better Higgs measurements through info geometry
+      - Allanach:2007qj      # Natural priors, CMSSM fits
+      - Cranmer:2006ky       # Maximum significance and Higgs to muons
+      - Bridges:2010de       # Coverage Study of CMSSM
+      - Cranmer:2004hha      # Prospects for Higgs via VBF
+
+  - id: software
+    title: "High-Energy Physics - Software and Infrastructure"
+    description: "Software tools and infrastructure for particle physics analysis."
+    publications:
+      - ATLAS:2024nnj        # Implementation of neural SBI in ATLAS
+      - Brehmer:2019jyt2     # MadMiner
+      - Cranmer:2010hk       # RECAST
+      - Moneta:2010pm        # The RooStats Project
+      - Cranmer:2007zz       # The ATLAS analysis architecture
+
+  - id: experiment
+    title: "High-Energy Physics - Experiment (selected highlights)"
+    description: "Selected experimental results from particle physics collaborations."
+    publications:
+      - ATLAS:2024ynn        # Off-shell Higgs measurement with neural SBI
+      - Bhatti:2024sxm       # Active Learning in ATLAS
+      - ATLAS:2012yve        # Higgs discovery
+      - CDF:2011af           # Search for High Mass Resonances
+      - ALEPH:2010aa         # Higgs to Four Taus
