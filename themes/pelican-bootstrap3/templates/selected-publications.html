@@ -20,7 +20,7 @@
     .pub-category {
         margin-bottom: 40px;
     }
-    .pub-category h3 {
+    .pub-category h4 {
         border-bottom: 2px solid #2c3e50;
         padding-bottom: 10px;
         margin-bottom: 10px;
@@ -123,8 +123,6 @@
     .selected-pubs-header {
         margin-top: 30px;
         margin-bottom: 20px;
-        padding-bottom: 10px;
-        border-bottom: 2px solid #2c3e50;
     }
     .pub-intro {
         color: #666;
@@ -308,7 +306,7 @@
     <!-- Publications by Category -->
     {% for cat in selected_publications.categories %}
     <section class="pub-category" id="cat-{{ cat.id }}" data-category="{{ cat.id }}">
-        <h3>{{ cat.title }}</h3>
+        <h4>{{ cat.title }}</h4>
         {% if cat.description %}
         <p class="category-description">{{ cat.description }}</p>
         {% endif %}
