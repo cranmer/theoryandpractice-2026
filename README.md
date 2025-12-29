@@ -133,6 +133,34 @@ The site uses [pelican-bootstrap3](https://github.com/getpelican/pelican-themes/
 - Added `publications.html` template for bibliography page
 - Added `presentations.html` template for talks/presentations page with video icons
 
+### pelican-selected-publications
+
+A custom plugin (in `plugins/pelican-selected-publications`) that generates a curated publications page organized by research themes.
+
+**Features:**
+- YAML-driven category organization with BibTeX keys
+- Filter by category, year, and highlighted papers
+- Publication metrics display (total papers, citations, h-index)
+- Profile icons linking to Google Scholar, INSPIRE, arXiv, OpenAlex, ORCiD
+- Collapsible Altmetric badges for each publication
+- BibTeX modal with copy-to-clipboard
+
+**Configuration:**
+```python
+SELECTED_PUBLICATIONS_SRC = 'content/selected-publications.yml'
+PUBLICATION_METRICS = {
+    'total_publications': 1200,
+    'total_citations': 349000,
+    'h_index': 241,
+}
+PUBLICATION_PROFILES = (
+    ('Google Scholar', 'http://scholar.google.com/...', 'google-scholar'),
+    ('INSPIRE', 'https://inspirehep.net/...', 'inspire'),
+    ...
+)
+DIRECT_TEMPLATES = [..., 'selected-publications']
+```
+
 ### pelican-presentations
 
 A custom plugin (in separate repository `../pelican-presentations`) that generates a presentations page from YAML data, compatible with the [IRIS-HEP](https://iris-hep.org/presentations/byperson.html) presentations format.

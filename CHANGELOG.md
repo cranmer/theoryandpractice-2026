@@ -2,6 +2,34 @@
 
 All notable changes to theoryandpractice.org are documented in this file.
 
+## [2025-12-29] - CV and Publications Enhancements
+
+### Added
+- **CV page** (`/pages/cv.html`) with bio, experience, education, awards, and highlights
+- **Selected Publications page** (`/selected-publications.html`) with thematic categories
+  - `pelican-selected-publications` plugin for YAML-driven publication organization
+  - Filter by category, year, and highlighted papers
+  - Publication metrics section (total papers, citations, h-index)
+  - Profile icons: Google Scholar, INSPIRE, arXiv, OpenAlex, ORCiD
+  - Official arXiv logomark icon
+  - Collapsible Altmetric badges for each publication
+  - Global "Show altmetrics" toggle to expand all badges
+  - BibTeX modal with copy-to-clipboard
+- Bio section at top of CV page
+- Custom navbar hover color (#EE9F43 orange)
+
+### Changed
+- Publications menu item now links to Selected Publications page
+- Removed "Research" from navigation (content moved to CV bio)
+- Publication titles styled in teal (#18bc9c)
+- Category headings use h4 for better hierarchy
+
+### Theme
+- Added `selected-publications.html` template
+- Added section divider styling (teal, 50% width)
+- Added Altmetric embed integration
+- Added custom icons for arXiv and OpenAlex
+
 ## [2025-12-27] - Migration Complete
 
 ### Added
