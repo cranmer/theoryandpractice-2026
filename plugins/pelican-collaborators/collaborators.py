@@ -44,10 +44,57 @@ YAML format:
 
 import logging
 import os
+import json
 
 from pelican import signals
 
 logger = logging.getLogger(__name__)
+
+# Try to import requests for Bluesky API calls
+try:
+    import requests
+    REQUESTS_AVAILABLE = True
+except ImportError:
+    REQUESTS_AVAILABLE = False
+    logger.warning('pelican-collaborators: requests not available, Bluesky avatars disabled')
+
+# Simple cache for Bluesky avatars to avoid repeated API calls
+_bluesky_avatar_cache = {}
+
+
+def get_bluesky_avatar(handle):
+    """Fetch avatar URL from Bluesky public API.
+
+    Args:
+        handle: Bluesky handle (e.g., 'alice.bsky.social' or 'alice.com')
+
+    Returns:
+        Avatar URL string or None if not available
+    """
+    if not REQUESTS_AVAILABLE:
+        return None
+
+    # Check cache first
+    if handle in _bluesky_avatar_cache:
+        return _bluesky_avatar_cache[handle]
+
+    try:
+        url = f'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor={handle}'
+        response = requests.get(url, timeout=5)
+        if response.status_code == 200:
+            data = response.json()
+            avatar_url = data.get('avatar')
+            _bluesky_avatar_cache[handle] = avatar_url
+            return avatar_url
+        else:
+            logger.debug(f'pelican-collaborators: Bluesky API returned {response.status_code} for {handle}')
+            _bluesky_avatar_cache[handle] = None
+            return None
+    except Exception as e:
+        logger.debug(f'pelican-collaborators: failed to fetch Bluesky avatar for {handle}: {e}')
+        _bluesky_avatar_cache[handle] = None
+        return None
+
 
 try:
     import yaml
@@ -109,12 +156,22 @@ def add_collaborators(generator):
         if 'links' not in person:
             person['links'] = {}
 
-        # Auto-generate photo URL from GitHub if not specified
+        # Auto-generate photo URL from social profiles if not specified
+        # Priority: explicit photo > GitHub > Bluesky
         if not person.get('photo'):
-            github_username = person.get('links', {}).get('github')
+            links = person.get('links', {})
+
+            # Try GitHub first (no API call needed)
+            github_username = links.get('github')
             if github_username:
-                # GitHub provides avatars at /{username}.png with optional size
                 person['photo'] = f'https://github.com/{github_username}.png?size=200'
+
+            # Try Bluesky if no GitHub (requires API call)
+            elif links.get('bluesky'):
+                bluesky_handle = links.get('bluesky')
+                avatar_url = get_bluesky_avatar(bluesky_handle)
+                if avatar_url:
+                    person['photo'] = avatar_url
 
     # Group people by category
     people_by_category = []
