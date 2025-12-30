@@ -184,6 +184,33 @@ python scripts/fetch-collaborator-photos.py --force
 
 Photos are saved to `content/images/collaborators/{name-slug}.jpg`
 
+### Updating Collaboration Years from Publication Data
+
+A helper script is available to automatically populate `start_year` and `end_year` fields based on co-authored publications. The script searches both OpenAlex and INSPIRE APIs to find papers co-authored with Kyle Cranmer.
+
+```bash
+# Preview changes without modifying files
+pixi run update-collaborator-years --dry-run
+
+# Apply changes
+pixi run update-collaborator-years
+
+# Or run directly
+python scripts/update_collaborator_years.py [--dry-run]
+```
+
+**How it works:**
+1. For each collaborator without `start_year` or `end_year` set, searches OpenAlex and INSPIRE for co-authored papers
+2. Sets `start_year` to the year of the earliest co-authored paper
+3. Sets `end_year` to the year of the most recent co-authored paper (only if it's more than 2 years ago)
+4. If `end_year` is set and recent, automatically sets `current: false`
+
+**Data sources:**
+- **OpenAlex** - Primary source, good coverage across disciplines
+- **INSPIRE** - Fallback, excellent for high-energy physics papers
+
+The script is polite to APIs with rate limiting and identifies itself via User-Agent headers.
+
 ## Template
 
 Create `templates/collaborators.html` in your theme. The plugin provides:

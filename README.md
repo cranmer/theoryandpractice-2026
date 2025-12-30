@@ -179,6 +179,34 @@ pixi run update-citations
 ```
 This fetches citation counts from OpenAlex (with Semantic Scholar as fallback) and saves them to `content/citations.json`. Manual overrides can be added to `content/citations-manual.json`.
 
+### pelican-collaborators
+
+A custom plugin (in `plugins/pelican-collaborators`) that generates a collaborators/team page with photos organized by category. See the [plugin README](plugins/pelican-collaborators/README.md) for full documentation.
+
+**Features:**
+- YAML-driven configuration (`content/collaborators.yml`)
+- Category grouping (students, postdocs, scientists, collaborators)
+- Current/Former filtering with JavaScript toggle
+- Auto-fetch avatars from GitHub and Bluesky
+- Rich metadata (roles, affiliations, thesis info, current positions)
+- Automatic sorting (active first, then by year)
+
+**Configuration:**
+```python
+COLLABORATORS_SRC = 'content/collaborators.yml'
+DIRECT_TEMPLATES = [..., 'collaborators']
+```
+
+**Helper Scripts:**
+```bash
+# Update start_year/end_year from co-authored publications
+pixi run update-collaborator-years
+
+# Preview changes without modifying
+pixi run update-collaborator-years --dry-run
+```
+The script searches OpenAlex and INSPIRE to find co-authored papers and automatically sets collaboration date ranges.
+
 ### pelican-presentations
 
 A custom plugin (in separate repository `../pelican-presentations`) that generates a presentations page from YAML data, compatible with the [IRIS-HEP](https://iris-hep.org/presentations/byperson.html) presentations format.

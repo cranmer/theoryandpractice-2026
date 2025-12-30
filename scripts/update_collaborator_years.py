@@ -5,8 +5,8 @@ Update collaborator start_year and end_year based on co-authored publications.
 Usage:
     python scripts/update_collaborator_years.py [--dry-run]
 
-Searches OpenAlex API to find papers co-authored with Kyle Cranmer for each
-collaborator and updates start_year/end_year based on first/last publication.
+Searches OpenAlex and INSPIRE APIs to find papers co-authored with Kyle Cranmer
+for each collaborator and updates start_year/end_year based on first/last publication.
 
 Only updates fields that are not already set.
 """
@@ -25,8 +25,12 @@ import yaml
 # Kyle Cranmer's OpenAlex author ID
 KYLE_CRANMER_OPENALEX_ID = "A5108167175"
 
-# OpenAlex API endpoint
+# Kyle Cranmer's INSPIRE author record ID
+KYLE_CRANMER_INSPIRE_ID = "1009880"  # Kyle Cranmer's INSPIRE ID
+
+# API endpoints
 OPENALEX_API = "https://api.openalex.org"
+INSPIRE_API = "https://inspirehep.net/api"
 
 # Be polite - identify ourselves
 USER_AGENT = "TheoryAndPractice/1.0 (https://theoryandpractice.org; mailto:kyle.cranmer@wisc.edu)"
@@ -90,37 +94,98 @@ def get_coauthored_works(author_id, kyle_id=KYLE_CRANMER_OPENALEX_ID):
         return []
 
 
+def search_inspire_coauthored(collaborator_name):
+    """
+    Search INSPIRE for papers co-authored with Kyle Cranmer.
+
+    Returns list of years from co-authored papers.
+    """
+    # Extract last name and first initial for search
+    name_parts = collaborator_name.split()
+    if len(name_parts) >= 2:
+        last_name = name_parts[-1]
+        first_initial = name_parts[0][0].lower()
+    else:
+        last_name = collaborator_name
+        first_initial = ""
+
+    # Normalize the last name
+    last_name = normalize_name(last_name)
+
+    # INSPIRE search: author name AND Kyle Cranmer with author count filter
+    # Using format: a lastname,initial to be more specific
+    # ac 1->30 filters out large collaboration papers (ATLAS, CMS, etc.)
+    if first_initial:
+        query = f"a cranmer,k and a {last_name},{first_initial} and ac 1->30"
+    else:
+        query = f"a cranmer,k and a {last_name} and ac 1->30"
+    encoded_query = urllib.parse.quote(query)
+
+    url = f"{INSPIRE_API}/literature?q={encoded_query}&size=250&sort=earliest_date&fields=earliest_date"
+
+    try:
+        req = urllib.request.Request(url)
+        req.add_header('User-Agent', USER_AGENT)
+        req.add_header('Accept', 'application/json')
+
+        with urllib.request.urlopen(req, timeout=30) as response:
+            data = json.loads(response.read().decode('utf-8'))
+            hits = data.get('hits', {}).get('hits', [])
+
+            years = []
+            for hit in hits:
+                metadata = hit.get('metadata', {})
+                earliest_date = metadata.get('earliest_date', '')
+                if earliest_date:
+                    # Extract year from date string (format: YYYY-MM-DD or YYYY)
+                    year_match = re.match(r'(\d{4})', earliest_date)
+                    if year_match:
+                        years.append(int(year_match.group(1)))
+
+            return years
+    except Exception as e:
+        return []
+
+
 def get_collaboration_years(collaborator_name):
     """
     Find the first and last year of co-authored papers with Kyle Cranmer.
 
-    Returns (start_year, end_year, num_papers) or (None, None, 0) if not found.
+    Searches both OpenAlex and INSPIRE, combining results from both sources.
+
+    Returns (start_year, end_year, num_papers, source) or (None, None, 0, None) if not found.
     """
-    # Search for the author
-    author = search_openalex_author(collaborator_name)
-    if not author:
-        return None, None, 0
-
-    author_id = author.get('id', '').replace('https://openalex.org/', '')
-    if not author_id:
-        return None, None, 0
-
-    # Get co-authored works
-    works = get_coauthored_works(author_id)
-    if not works:
-        return None, None, 0
-
-    # Extract years
     years = []
-    for work in works:
-        year = work.get('publication_year')
-        if year:
-            years.append(year)
+    sources_used = []
+
+    # Try OpenAlex first
+    author = search_openalex_author(collaborator_name)
+    if author:
+        author_id = author.get('id', '').replace('https://openalex.org/', '')
+        if author_id:
+            works = get_coauthored_works(author_id)
+            for work in works:
+                year = work.get('publication_year')
+                if year:
+                    years.append(year)
+            if works:
+                sources_used.append('OpenAlex')
+
+    # Also try INSPIRE (better for physics papers)
+    inspire_years = search_inspire_coauthored(collaborator_name)
+    if inspire_years:
+        years.extend(inspire_years)
+        if 'INSPIRE' not in sources_used:
+            sources_used.append('INSPIRE')
+
+    # Remove duplicates and invalid years
+    years = list(set(y for y in years if y and 1990 <= y <= 2030))
 
     if not years:
-        return None, None, 0
+        return None, None, 0, None
 
-    return min(years), max(years), len(years)
+    source_str = '+'.join(sources_used) if sources_used else 'unknown'
+    return min(years), max(years), len(years), source_str
 
 
 def load_yaml_preserve_style(yaml_path):
@@ -178,39 +243,29 @@ def update_yaml_entry(content, name, start_year=None, end_year=None):
                 modified = True
                 break
 
-    # Check and add end_year if not present and collaboration has ended
-    # We consider it ended if the last paper was more than 2 years ago
-    import datetime
-    current_year = datetime.datetime.now().year
-
+    # Check and add end_year if not present
+    # end_year reflects the most recent co-authored paper
     if end_year and 'end_year:' not in entry_text:
-        # Only add end_year if last collaboration was > 2 years ago
-        if end_year < current_year - 1:
-            # Find start_year line and add end_year after it
-            if 'start_year:' in entry_text:
-                entry_text = re.sub(
-                    r'(    start_year: \d+\n)',
-                    r'\1    end_year: ' + str(end_year) + '\n',
-                    entry_text,
-                    count=1
-                )
-                modified = True
-            else:
-                # Add after current_position or affiliation
-                insert_patterns = [
-                    (r'(    current_position: [^\n]+\n)', r'\1    end_year: ' + str(end_year) + '\n'),
-                    (r'(    affiliation: [^\n]+\n)', r'\1    end_year: ' + str(end_year) + '\n'),
-                ]
-                for pattern, replacement in insert_patterns:
-                    if re.search(pattern, entry_text):
-                        entry_text = re.sub(pattern, replacement, entry_text, count=1)
-                        modified = True
-                        break
-
-    # Also update current: false if end_year was added
-    if modified and end_year and end_year < current_year - 1:
-        if 'current: true' in entry_text:
-            entry_text = entry_text.replace('current: true', 'current: false')
+        # Find start_year line and add end_year after it
+        if 'start_year:' in entry_text:
+            entry_text = re.sub(
+                r'(    start_year: \d+\n)',
+                r'\1    end_year: ' + str(end_year) + '\n',
+                entry_text,
+                count=1
+            )
+            modified = True
+        else:
+            # Add after current_position or affiliation
+            insert_patterns = [
+                (r'(    current_position: [^\n]+\n)', r'\1    end_year: ' + str(end_year) + '\n'),
+                (r'(    affiliation: [^\n]+\n)', r'\1    end_year: ' + str(end_year) + '\n'),
+            ]
+            for pattern, replacement in insert_patterns:
+                if re.search(pattern, entry_text):
+                    entry_text = re.sub(pattern, replacement, entry_text, count=1)
+                    modified = True
+                    break
 
     if modified:
         content = content[:entry_start] + entry_text + content[entry_end:]
@@ -219,7 +274,7 @@ def update_yaml_entry(content, name, start_year=None, end_year=None):
 
 
 def main():
-    parser = argparse.ArgumentParser(description='Update collaborator years from OpenAlex')
+    parser = argparse.ArgumentParser(description='Update collaborator years from OpenAlex and INSPIRE')
     parser.add_argument('--dry-run', action='store_true', help='Show what would be changed without modifying files')
     args = parser.parse_args()
 
@@ -250,7 +305,12 @@ def main():
         name = person.get('name', '')
         category = person.get('category', '')
 
-        # Skip if already has both years
+        # Only process collaborators category (not students, postdocs, scientists)
+        if category != 'collaborators':
+            skipped_count += 1
+            continue
+
+        # Skip if already has both years set
         has_start = person.get('start_year') is not None
         has_end = person.get('end_year') is not None
 
@@ -260,8 +320,8 @@ def main():
 
         print(f"  [{i+1}/{len(people)}] {name}...", end=" ", flush=True)
 
-        # Search OpenAlex
-        start_year, end_year, num_papers = get_collaboration_years(name)
+        # Search OpenAlex and INSPIRE
+        start_year, end_year, num_papers, source = get_collaboration_years(name)
 
         if num_papers == 0:
             print("no co-authored papers found")
@@ -278,14 +338,14 @@ def main():
         )
 
         if modified:
-            print(f"{num_papers} papers, {start_year}-{end_year}")
+            print(f"{num_papers} papers, {start_year}-{end_year} ({source})")
             updated_count += 1
         else:
-            print(f"{num_papers} papers (already set)")
+            print(f"{num_papers} papers (already set) ({source})")
             skipped_count += 1
 
-        # Be polite to the API
-        time.sleep(0.3)
+        # Be polite to the APIs
+        time.sleep(0.4)
 
     print(f"\nSummary:")
     print(f"  Updated: {updated_count}")

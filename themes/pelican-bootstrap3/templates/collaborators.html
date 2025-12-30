@@ -32,6 +32,8 @@
         border-radius: 8px;
         transition: transform 0.2s, box-shadow 0.2s;
         border-top: 3px solid #dee2e6;
+        display: flex;
+        flex-direction: column;
     }
     .collaborator-card.current {
         border-top-color: #18bc9c;
@@ -155,6 +157,24 @@
     .collaborator-links a:hover {
         color: #18bc9c;
     }
+    .collaborator-footer {
+        margin-top: auto;
+    }
+    .collaborator-coauthored {
+        padding-top: 8px;
+        border-top: 1px solid #e9ecef;
+    }
+    .collaborator-coauthored a {
+        color: #95a5a6;
+        font-size: 0.85em;
+        text-decoration: none;
+    }
+    .collaborator-coauthored a:hover {
+        color: #18bc9c;
+    }
+    .collaborator-coauthored i {
+        margin-right: 4px;
+    }
     /* Filter controls */
     .collaborator-filters {
         background: #f8f9fa;
@@ -256,24 +276,32 @@
                 <div class="collaborator-current-position">Now: {{ person.current_position }}</div>
                 {% endif %}
 
-                <div class="collaborator-links">
-                    {% if person.links %}
-                        {% if person.links.website %}
-                        <a href="{{ person.links.website }}" target="_blank" title="Website"><i class="fa fa-globe"></i></a>
+                <div class="collaborator-footer">
+                    <div class="collaborator-links">
+                        {% if person.links %}
+                            {% if person.links.website %}
+                            <a href="{{ person.links.website }}" target="_blank" title="Website"><i class="fa fa-globe"></i></a>
+                            {% endif %}
+                            {% if person.links.github %}
+                            <a href="https://github.com/{{ person.links.github }}" target="_blank" title="GitHub"><i class="fa fa-github"></i></a>
+                            {% endif %}
+                            {% if person.links.scholar %}
+                            <a href="https://scholar.google.com/citations?user={{ person.links.scholar }}" target="_blank" title="Google Scholar"><i class="fa fa-google-scholar"></i></a>
+                            {% endif %}
+                            {% if person.links.twitter %}
+                            <a href="https://twitter.com/{{ person.links.twitter }}" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a>
+                            {% endif %}
+                            {% if person.links.linkedin %}
+                            <a href="https://linkedin.com/in/{{ person.links.linkedin }}" target="_blank" title="LinkedIn"><i class="fa fa-linkedin"></i></a>
+                            {% endif %}
                         {% endif %}
-                        {% if person.links.github %}
-                        <a href="https://github.com/{{ person.links.github }}" target="_blank" title="GitHub"><i class="fa fa-github"></i></a>
-                        {% endif %}
-                        {% if person.links.scholar %}
-                        <a href="https://scholar.google.com/citations?user={{ person.links.scholar }}" target="_blank" title="Google Scholar"><i class="fa fa-google-scholar"></i></a>
-                        {% endif %}
-                        {% if person.links.twitter %}
-                        <a href="https://twitter.com/{{ person.links.twitter }}" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a>
-                        {% endif %}
-                        {% if person.links.linkedin %}
-                        <a href="https://linkedin.com/in/{{ person.links.linkedin }}" target="_blank" title="LinkedIn"><i class="fa fa-linkedin"></i></a>
-                        {% endif %}
-                    {% endif %}
+                    </div>
+
+                    <div class="collaborator-coauthored">
+                        <a href="https://scholar.google.com/scholar?hl=en&as_sdt=0%2C50&q={{ person.name | urlencode }}+and+Kyle+Cranmer&btnG=" target="_blank" title="Co-authored papers on Google Scholar">
+                            <i class="fa fa-handshake-o"></i> Co-authored
+                        </a>
+                    </div>
                 </div>
             </div>
         {% endfor %}

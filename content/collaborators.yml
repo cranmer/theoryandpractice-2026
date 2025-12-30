@@ -83,7 +83,7 @@ people:
   # Former PhD Students (NYU)
   - name: "Lukas Heinrich"
     category: students
-    current: false
+    current: true
     role: "PhD Student"
     affiliation: "New York University"
     start_year: 2014
@@ -98,7 +98,7 @@ people:
 
   - name: "Sven Kreiss"
     category: students
-    current: false
+    current: true
     role: "PhD Student"
     affiliation: "New York University"
     start_year: 2010
@@ -116,7 +116,7 @@ people:
 
   - name: "James Beacham"
     category: students
-    current: false
+    current: true
     role: "PhD Student"
     affiliation: "New York University"
     start_year: 2009
@@ -131,7 +131,7 @@ people:
 
   - name: "George Herbert Lewis"
     category: students
-    current: false
+    current: true
     role: "PhD Student"
     affiliation: "New York University"
     start_year: 2008
@@ -229,7 +229,7 @@ people:
   # Former Postdocs
   - name: "Johann Brehmer"
     category: postdocs
-    current: false
+    current: true
     role: "Postdoctoral Researcher"
     affiliation: "New York University"
     start_year: 2018
@@ -242,7 +242,7 @@ people:
 
   - name: "Sebastian Macaluso"
     category: postdocs
-    current: false
+    current: true
     role: "Postdoctoral Researcher"
     affiliation: "New York University"
     start_year: 2018
@@ -363,21 +363,19 @@ people:
 
   - name: "Alexander Held"
     category: scientists
-    current: false
+    current: true
     role: "Postdoctoral Researcher"
     affiliation: "University of Wisconsin-Madison"
     start_year: 2023
-    end_year: 2023
     links:
       github: "alexander-held"
 
   - name: "Matthew Feickert"
     category: scientists
-    current: false
+    current: true
     role: "Research Scientist"
     affiliation: "University of Wisconsin-Madison"
     start_year: 2023
-    end_year: 2022
     photo: "https://images.squarespace-cdn.com/content/v1/535ddd66e4b0e268e3eae4cf/e8c0acb6-6537-4245-9670-cc2fc5dd39d5/2024-07-12-Matthew+Feickert-scipy-portrait-crop.jpg"
     links:
       website: "https://www.matthewfeickert.com"
@@ -401,7 +399,7 @@ people:
 
   - name: "Taoli Cheng"
     category: collaborators
-    current: false
+    current: true
     role: "Postdoc at MILA (co-advised)"
     affiliation: "MILA / NYU"
     start_year: 2019
@@ -569,10 +567,12 @@ people:
   # NYU Collaborators
   - name: "Kyunghyun Cho"
     category: collaborators
-    current: true
+    current: false
     role: "Professor"
     affiliation: "New York University"
     current_position: "Glen de Vries Professor; Executive Director at Genentech Prescient Design"
+    start_year: 2011
+    end_year: 2017
     photo: "/images/collaborators/kyunghyun-cho.jpg"
     links:
       website: "https://kyunghyuncho.me/"
@@ -625,9 +625,11 @@ people:
 
   - name: "Jonathan Shlomi"
     category: collaborators
-    current: true
+    current: false
     role: "Researcher"
     affiliation: "Weizmann Institute of Science"
+    start_year: 2017
+    end_year: 2024
 
   - name: "Sanmay Ganguly"
     category: collaborators
@@ -680,10 +682,11 @@ people:
   # Statistics Collaborators
   - name: "Glen Cowan"
     category: collaborators
-    current: true
+    current: false
     role: "Professor"
     affiliation: "Royal Holloway, University of London"
     start_year: 2010
+    end_year: 2024
     links:
       website: "https://www.pp.rhul.ac.uk/~cowan/"
       scholar: "ljQwt8QAAAAJ"
@@ -694,6 +697,7 @@ people:
     role: "Professor"
     affiliation: "Harvard University"
     current_position: "Whipple V. N. Jones Professor of Statistics; Founding Editor of Harvard Data Science Review"
+    start_year: 2010
     links:
       scholar: "4Qr8tRgAAAAJ"
 
@@ -757,32 +761,38 @@ people:
     affiliation: "Fermilab"
     current_position: "Co-founder of fast machine learning organization"
     start_year: 2024
+    end_year: 2024
     links:
       scholar: "ZTqZD80AAAAJ"
 
   - name: "Abhijith Gandrakota"
     category: collaborators
-    current: true
+    current: false
     role: "Research Associate"
     affiliation: "Fermilab"
     start_year: 2023
+    end_year: 2024
     links:
       scholar: "Gau3JTYAAAAJ"
 
   # UCI
   - name: "Daniel Whiteson"
     category: collaborators
-    current: true
+    current: false
     role: "Professor"
     affiliation: "University of California, Irvine"
+    start_year: 2009
+    end_year: 2025
     links:
       website: "https://sites.uci.edu/daniel/"
 
   - name: "Pierre Baldi"
     category: collaborators
-    current: true
+    current: false
     role: "Distinguished Professor"
     affiliation: "University of California, Irvine"
+    start_year: 2016
+    end_year: 2016
     links:
       website: "https://www.igb.uci.edu/~pfbaldi/"
       scholar: "RhFhIIgAAAAJ"
@@ -896,14 +906,18 @@ people:
     role: "Former Data & Analytics Group Lead"
     affiliation: "NERSC (formerly)"
     current_position: "Transitioned to industry in 2020 after 13 years at LBNL"
+    start_year: 2017
+    end_year: 2017
 
   # UCI (additional)
   - name: "Dan Guest"
     category: collaborators
-    current: true
+    current: false
     role: "Researcher"
     affiliation: "University of California, Irvine"
     current_position: "Deep learning for LHC physics, ATLAS experiment"
+    start_year: 2011
+    end_year: 2024
 
   - name: "Meghan Frate"
     category: collaborators
@@ -911,6 +925,8 @@ people:
     role: "Former PhD Student"
     affiliation: "UC Irvine (formerly)"
     current_position: "Software Engineer at LinkedIn"
+    start_year: 2015
+    end_year: 2022
 
   - name: "Alexander Vandenberg-Rodes"
     category: collaborators
@@ -1008,10 +1024,12 @@ people:
 
   - name: "Tim Smith"
     category: collaborators
-    current: true
+    current: false
     role: "Coordinator of IT Communication and Outreach"
     affiliation: "CERN"
     current_position: "Coordinator of Open Quantum Institute; drove launch of CERN Open Data Portal"
+    start_year: 2000
+    end_year: 2018
     links:
       website: "https://tjs.web.cern.ch/tjs/"
 
@@ -1035,19 +1053,22 @@ people:
 
   - name: "Sebastian Neubert"
     category: collaborators
-    current: true
+    current: false
     role: "Professor"
     affiliation: "University of Bonn"
     current_position: "Leader of LHCb Open Data project; formerly Heidelberg"
+    start_year: 2018
+    end_year: 2024
 
   # AI Research / Industry
   - name: "Niklas Nolte"
     category: collaborators
-    current: true
+    current: false
     role: "Researcher"
     affiliation: "Anthropic"
     current_position: "Works on finetuning; formerly Meta AI (FAIR), MIT, CERN/LHCb"
     start_year: 2024
+    end_year: 2024
     links:
       website: "https://nolte.dev/"
       github: "niklasnolte"
@@ -1079,13 +1100,16 @@ people:
     role: "Researcher"
     affiliation: "Niels Bohr Institute, University of Copenhagen"
     current_position: "Works on scattering amplitudes; organizer of Amplitudes 2021"
-
+    start_year: 2010
+    
   - name: "Tianji Cai"
     category: collaborators
-    current: true
+    current: false
     role: "Distinguished Researcher"
     affiliation: "Tongji University"
     current_position: "AI for physics; formerly SLAC postdoc and UCSB PhD"
+    start_year: 2003
+    end_year: 2025
     links:
       scholar: "KBaK_w0AAAAJ"
       github: "TianjiCai"
@@ -1129,29 +1153,35 @@ people:
 
   - name: "Rui Xu"
     category: collaborators
-    current: true
+    current: false
     role: "Researcher"
     affiliation: "Microsoft GenAI"
     current_position: "Co-author on symbolic regression from deep learning; formerly Princeton"
+    start_year: 2000
+    end_year: 2020
     links:
       scholar: "_W5wq18AAAAJ"
 
   # Notre Dame / CMS
   - name: "Michael Hildreth"
     category: collaborators
-    current: true
+    current: false
     role: "Professor"
     affiliation: "University of Notre Dame"
     current_position: "Vice President and Dean of Graduate School; leads US-CMS computing R&D"
+    start_year: 2005
+    end_year: 2022
     links:
       website: "https://physics.nd.edu/people/mike-hildreth/"
 
   - name: "Matthias Wolf"
     category: collaborators
-    current: true
+    current: false
     role: "Researcher"
     affiliation: "CMS Experiment"
     current_position: "PhD from Notre Dame; developed Lobster computing framework"
+    start_year: 2000
+    end_year: 2023
     links:
       scholar: "DCNguIcAAAAJ"
 
@@ -1262,10 +1292,12 @@ people:
 
   - name: "Diego Rodriguez Rodriguez"
     category: collaborators
-    current: true
+    current: false
     role: "Software Engineer"
     affiliation: "CERN"
     current_position: "Contributor to CERN Analysis Preservation and Open Data services"
+    start_year: 2003
+    end_year: 2018
 
   - name: "Kevin Belasco"
     category: collaborators
@@ -1278,10 +1310,12 @@ people:
 
   - name: "Xiaoli Chen"
     category: collaborators
-    current: true
+    current: false
     role: "FAIR Workflow Project Lead"
     affiliation: "DataCite"
     current_position: "Formerly at CERN Scientific Information Service; co-author on analysis preservation"
+    start_year: 2000
+    end_year: 2018
 
   # Digital Preservation / Archives
   - name: "Margaret Hedstrom"
@@ -1377,10 +1411,11 @@ people:
   # NYU Machine Learning
   - name: "Andrew Gordon Wilson"
     category: collaborators
-    current: true
+    current: false
     role: "Professor"
     affiliation: "NYU"
     current_position: "Courant Institute & Center for Data Science; NSF CAREER & ICML Best Paper"
+    start_year: 2003
     links:
       website: "https://cims.nyu.edu/~andrewgw/"
       scholar: "twWX2LIAAAAJ"
@@ -1388,11 +1423,12 @@ people:
 
   - name: "Rajesh Ranganath"
     category: collaborators
-    current: true
+    current: false
     role: "Assistant Professor"
     affiliation: "NYU"
     current_position: "Computer Science & Data Science; ML for healthcare; NSF CAREER"
     start_year: 2024
+    end_year: 2024
     links:
       website: "https://cims.nyu.edu/~rajeshr/"
       scholar: "kddKBCsAAAAJ"
@@ -1414,17 +1450,19 @@ people:
     role: "Professor"
     affiliation: "NYU"
     current_position: "ATLAS experiment; MET triggers; Golden Dozen teaching award"
-    start_year: 2011
-    end_year: 2011
+    start_year: 2007
+    end_year: 2022
     links:
       website: "https://physics.nyu.edu/~am3/"
 
   - name: "Andrew Haas"
     category: collaborators
-    current: true
+    current: false
     role: "Associate Professor"
     affiliation: "NYU"
     current_position: "ATLAS long-lived particle searches; milliQan co-spokesperson; HiggsHunters founder"
+    start_year: 2009
+    end_year: 2022
 
   # Meta FAIR
   - name: "Léon Bottou"
@@ -1439,10 +1477,11 @@ people:
 
   - name: "Ricky T. Q. Chen"
     category: collaborators
-    current: true
+    current: false
     role: "Research Scientist"
     affiliation: "Meta FAIR"
     current_position: "Neural ODEs (NeurIPS Best Paper); Flow Matching; torchdiffeq creator"
+    start_year: 2000
     links:
       website: "https://rtqichen.github.io/"
       scholar: "7MxQd6UAAAAJ"
@@ -1455,6 +1494,7 @@ people:
     role: "Researcher"
     affiliation: "UW-Madison"
     current_position: "ML for physics and choreography; former Chamberlain Fellow at LBNL"
+    start_year: 2018
     links:
       website: "https://marielpettee.com/"
       github: "mariel-pettee"
@@ -1475,6 +1515,7 @@ people:
     role: "Professor"
     affiliation: "UW-Madison"
     current_position: "String theory, cosmology; Guggenheim Fellow; APS/AAAS Fellow"
+    start_year: 2022
     links:
       website: "https://shiu.physics.wisc.edu/"
       scholar: "7_B0r5MAAAAJ"
@@ -1482,10 +1523,12 @@ people:
   # Flatiron Institute
   - name: "Helen Qu"
     category: collaborators
-    current: true
+    current: false
     role: "Research Fellow"
     affiliation: "Flatiron Institute"
     current_position: "ML for supernova cosmology; foundation models for science"
+    start_year: 2017
+    end_year: 2019
     links:
       website: "https://helenqu.com/"
       scholar: "FWPJDb4AAAAJ"
