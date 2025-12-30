@@ -1409,3 +1409,16 @@ people:
     role: "Staff Physicist"
     affiliation: "CERN"
     current_position: "CMS ML for particle flow; ERC Consolidator Grant; anomaly detection"
+
+  # Theory Physics
+  - name: "Lance J. Dixon"
+    category: collaborators
+    current: true
+    role: "Professor"
+    affiliation: "SLAC / Stanford University"
+    current_position: "Chair of Particle Physics & Astrophysics; Sakurai Prize winner; NAS member"
+    photo: "/images/collaborators/lance-dixon.jpg"
+    links:
+      website: "https://www.slac.stanford.edu/~lance/"
+      scholar: "WFR45vUAAAAJ"
+      orcid: "0000-0003-4985-7518"
