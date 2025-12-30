@@ -27,6 +27,59 @@ people:
   # Students
   # ==================
 
+  # Current PhD Students
+  - name: "Raheem Hashmani"
+    category: students
+    current: true
+    role: "PhD Student"
+    affiliation: "University of Wisconsin-Madison"
+    start_year: 2023
+    photo: "https://rkhashmani.me/authors/admin/avatar_hu14d0eabce56bfc3665c796ac60d5ad60_410493_270x270_fill_q75_lanczos_center.jpeg"
+    links:
+      website: "https://rkhashmani.me"
+      github: "RKHashmani"
+      twitter: "RaheemHashmani"
+      bluesky: "rkhashmani.me"
+      linkedin: "raheemhashmani"
+      scholar: "LgmqE2QAAAAJ"
+
+  - name: "Haotian Cao"
+    category: students
+    current: true
+    role: "PhD Student"
+    affiliation: "University of Wisconsin-Madison"
+    start_year: 2024
+    photo: "/images/collaborators/haotian-cao.jpg"
+    links:
+      linkedin: "haotian-cao-2aab431a3"
+
+  - name: "Zubair Bhatti"
+    category: students
+    current: true
+    role: "PhD Student"
+    affiliation: "New York University"
+    start_year: 2019
+    links:
+      github: "zbhatti"
+
+  - name: "Matthew Drnevich"
+    category: students
+    current: true
+    role: "PhD Student"
+    affiliation: "New York University"
+    start_year: 2020
+    links:
+      github: "mdkdrnevich"
+
+  - name: "Edison Weik"
+    category: students
+    current: true
+    role: "PhD Student"
+    affiliation: "New York University"
+    start_year: 2020
+    links:
+      github: "eweik"
+
   # Former PhD Students (NYU)
   - name: "Lukas Heinrich"
     category: students
@@ -53,9 +106,13 @@ people:
     graduation_year: 2014
     thesis_title: "Higgs Boson Discovery and First Property Measurements with the H -> ZZ -> 4l Channel and the Combination"
     current_position: "Facebook Reality Labs"
+    photo: "https://www.svenkreiss.com/images/me2022_square_small.jpeg"
     links:
+      website: "https://www.svenkreiss.com/"
+      github: "svenkreiss"
       twitter: "svenkreiss"
-      website: "https://svenkreiss.com/"
+      linkedin: "svenkreiss"
+      scholar: "SnjnSVEAAAAJ"
 
   - name: "James Beacham"
     category: students
@@ -67,6 +124,7 @@ people:
     graduation_year: 2014
     thesis_title: "Exotic Higgs, Rare Z, and a Dark Photon: Searching for New Physics at the LHC, LEP, and Jefferson Lab"
     current_position: "Postdoc at Duke University"
+    photo: "https://images.squarespace-cdn.com/content/v1/561e8e98e4b08e2972a76f87/f997e8c4-d8fb-4b50-a858-44eda0456fe5/Beacham_Headshot_v02_sm.jpg"
     links:
       twitter: "jbbeacham"
       website: "https://jbbeacham.com/"
@@ -81,24 +139,94 @@ people:
     graduation_year: 2013
     thesis_title: "Measurements and Searches for New Physics Using Top Quarks at the LHC"
     current_position: "Google"
+    photo: "https://unavatar.io/twitter/HerbieLewis"
     links:
       twitter: "HerbieLewis"
+
+  # Former PhD Students (Data Science, co-advised)
+  - name: "Irina Espejo Morales"
+    category: students
+    current: false
+    role: "PhD Student (Data Science)"
+    affiliation: "New York University"
+    start_year: 2018
+    end_year: 2023
+    graduation_year: 2023
+    current_position: "Postdoc at Polymathic AI"
+    links:
+      github: "irinaespejo"
+
+  - name: "Michael Albergo"
+    category: students
+    current: false
+    role: "PhD Student (Data Science)"
+    affiliation: "New York University"
+    start_year: 2018
+    end_year: 2023
+    graduation_year: 2023
+    current_position: "Junior Fellow, Harvard University and IAFAI Fellow, MIT"
+    links:
+      github: "malbergo"
+      twitter: "msalbergo"
+      website: "http://malbergo.me/"
+
+  - name: "Lily Zhang"
+    category: students
+    current: false
+    role: "PhD Student (Data Science)"
+    affiliation: "New York University"
+    start_year: 2018
+    end_year: 2023
+    graduation_year: 2023
+    current_position: "Researcher at Google DeepMind"
+    photo: "https://lhz1029.github.io/images/lily_bio_2019_square.jpg"
+    links:
+      website: "https://lhz1029.github.io/"
+      github: "lhz1029"
+      twitter: "lilyhzhang"
+      linkedin: "lilyhzhang"
+      scholar: "fmCi9ZQAAAAJ"
+
+  - name: "Swapneel Mehta"
+    category: students
+    current: false
+    role: "PhD Student (Data Science)"
+    affiliation: "New York University"
+    start_year: 2018
+    end_year: 2023
+    graduation_year: 2023
+    current_position: "Postdoc at Boston University and MIT"
+    links:
+      github: "SwapneelM"
+      website: "https://swapneelm.github.io/"
 
   # ==================
   # Postdocs
   # ==================
 
-  - name: "Alexander Held"
+  # Current Postdocs
+  - name: "Garrett Merz"
     category: postdocs
-    current: false
+    current: true
     role: "Postdoctoral Researcher"
-    affiliation: "New York University"
-    start_year: 2019
-    end_year: 2023
-    current_position: "Postdoc at the University of Wisconsin, Madison"
+    affiliation: "University of Wisconsin-Madison"
+    start_year: 2024
+    photo: "https://GarrettMerz.github.io/images/profile.jpeg"
     links:
-      github: "alexander-held"
+      website: "https://garrettmerz.github.io"
+      github: "GarrettMerz"
 
+  - name: "Jay Sandesara"
+    category: postdocs
+    current: true
+    role: "Postdoctoral Researcher"
+    affiliation: "University of Wisconsin-Madison"
+    start_year: 2024
+    links:
+      github: "JaySandesara"
+      twitter: "SandesaraJay"
+
+  # Former Postdocs
   - name: "Johann Brehmer"
     category: postdocs
     current: false
@@ -149,6 +277,27 @@ people:
       github: "leonoravesterbacka"
       linkedin: "leonora-vesterbacka"
 
+  - name: "Patrick Rieck"
+    category: postdocs
+    current: false
+    role: "Research Scientist"
+    affiliation: "New York University"
+    start_year: 2018
+    end_year: 2023
+    photo: "https://physics.nyu.edu/experimentalparticle/images/patrick-cropped.png"
+    links:
+      twitter: "patrick_rieck"
+
+  - name: "Catrin Bernius"
+    category: postdocs
+    current: false
+    role: "Research Scientist"
+    affiliation: "New York University"
+    start_year: 2012
+    end_year: 2016
+    current_position: "Computing Professional at SLAC"
+    photo: "https://physics.nyu.edu/experimentalparticle/images/catrin-smaller.jpg"
+
   - name: "Diego Casadei"
     category: postdocs
     current: false
@@ -157,6 +306,7 @@ people:
     start_year: 2008
     end_year: 2012
     current_position: "FHNW School of Engineering and UCL Department of Physics"
+    photo: "https://physics.nyu.edu/experimentalparticle/images/diego.jpg"
     links:
       website: "http://www.physics.nyu.edu/people/casadei.diego.html"
 
@@ -168,6 +318,7 @@ people:
     start_year: 2010
     end_year: 2014
     current_position: "Research Assistant Professor at Hong Kong University of Science & Technology"
+    photo: "https://physics.nyu.edu/experimentalparticle/images/Kirill.jpg"
 
   - name: "Attila Krasznahorkay"
     category: postdocs
@@ -177,60 +328,50 @@ people:
     start_year: 2009
     end_year: 2012
     current_position: "CERN Fellow"
+    photo: "https://physics.nyu.edu/experimentalparticle/images/Attila_small.jpg"
 
   # ==================
-  # Scientists (Former Affiliated - Data Science PhDs co-advised)
+  # Scientists
   # ==================
 
-  - name: "Irina Espejo Morales"
+  - name: "Alexander Held"
     category: scientists
-    current: false
-    role: "PhD Student (Data Science)"
-    affiliation: "New York University"
-    start_year: 2018
-    end_year: 2023
-    current_position: "Postdoc at Polymathic AI"
+    current: true
+    role: "Postdoctoral Researcher"
+    affiliation: "University of Wisconsin-Madison"
+    start_year: 2023
     links:
-      github: "irinaespejo"
+      github: "alexander-held"
 
-  - name: "Michael Albergo"
+  - name: "Matthew Feickert"
     category: scientists
-    current: false
-    role: "PhD Student (Data Science)"
-    affiliation: "New York University"
-    start_year: 2018
-    end_year: 2023
-    current_position: "Junior Fellow, Harvard University and IAFAI Fellow, MIT"
+    current: true
+    role: "Research Scientist"
+    affiliation: "University of Wisconsin-Madison"
+    start_year: 2023
+    photo: "https://images.squarespace-cdn.com/content/v1/535ddd66e4b0e268e3eae4cf/e8c0acb6-6537-4245-9670-cc2fc5dd39d5/2024-07-12-Matthew+Feickert-scipy-portrait-crop.jpg"
     links:
-      github: "malbergo"
-      twitter: "msalbergo"
-      website: "http://malbergo.me/"
+      website: "https://www.matthewfeickert.com"
+      github: "matthewfeickert"
+      twitter: "HEPfeickert"
+      linkedin: "matthew-feickert-87232675"
 
-  - name: "Lily Zhang"
+  - name: "Nils Krumnack"
     category: scientists
-    current: false
-    role: "PhD Student (Data Science)"
-    affiliation: "New York University"
-    start_year: 2018
-    end_year: 2023
-    current_position: "Researcher at Google DeepMind"
+    current: true
+    role: "Research Software Engineer"
+    affiliation: "University of Wisconsin-Madison"
+    start_year: 2024
+    photo: "https://dsi.wisc.edu/wp-content/uploads/sites/1922/2024/12/krumnack-540x540-1-300x300.jpg"
     links:
-      website: "https://lhz1029.github.io/"
+      website: "https://dsi.wisc.edu/staff/krumnack-nils/"
 
-  - name: "Swapneel Mehta"
-    category: scientists
-    current: false
-    role: "PhD Student (Data Science)"
-    affiliation: "New York University"
-    start_year: 2018
-    end_year: 2023
-    current_position: "Postdoc at Boston University and MIT"
-    links:
-      github: "SwapneelM"
-      website: "https://swapneelm.github.io/"
+  # ==================
+  # Collaborators
+  # ==================
 
   - name: "Taoli Cheng"
-    category: scientists
+    category: collaborators
     current: false
     role: "Postdoc at MILA (co-advised)"
     affiliation: "MILA / NYU"
@@ -240,17 +381,3 @@ people:
     links:
       github: "taolicheng"
       website: "https://taolicheng.github.io/"
-
-  # ==================
-  # Collaborators
-  # ==================
-  # Add your frequent research collaborators here
-  # Example:
-  # - name: "Prof. Collaborator Name"
-  #   category: collaborators
-  #   current: true
-  #   role: "Professor"
-  #   affiliation: "University Name"
-  #   image_shape: rectangular
-  #   links:
-  #     website: "https://..."
