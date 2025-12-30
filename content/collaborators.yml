@@ -277,6 +277,33 @@ people:
       github: "leonoravesterbacka"
       linkedin: "leonora-vesterbacka"
 
+  - name: "Siddharth Mishra-Sharma"
+    category: postdocs
+    current: false
+    role: "Postdoctoral Researcher"
+    affiliation: "New York University"
+    start_year: 2019
+    end_year: 2022
+    current_position: "Member of Technical Staff at Anthropic; Assistant Professor at Boston University"
+    photo: "https://smsharma.io/assets/siddharth_headshot_small.jpg"
+    links:
+      website: "https://smsharma.io"
+      github: "smsharma"
+      twitter: "kdqg1"
+      scholar: "hJVjhlwAAAAJ"
+
+  - name: "Duccio Pappadopulo"
+    category: postdocs
+    current: false
+    role: "Postdoctoral Researcher"
+    affiliation: "New York University"
+    start_year: 2014
+    end_year: 2017
+    photo: "https://unavatar.io/twitter/ducciolvp"
+    links:
+      twitter: "ducciolvp"
+      linkedin: "ducciop"
+
   - name: "Patrick Rieck"
     category: postdocs
     current: false
