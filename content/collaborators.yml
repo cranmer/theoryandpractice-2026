@@ -1,0 +1,75 @@
+# Collaborators Configuration
+# ===========================
+
+settings:
+  default_image_shape: circular  # or rectangular
+  image_size: 120px
+
+categories:
+  - id: current-students
+    title: "Current Students"
+    description: "PhD students currently working with me."
+
+  - id: former-students
+    title: "Former Students"
+    description: "PhD students who have graduated."
+
+  - id: postdocs
+    title: "Postdocs"
+    description: "Current and former postdoctoral researchers."
+
+  - id: collaborators
+    title: "Key Collaborators"
+    description: "Frequent research collaborators."
+
+# Example entries - replace with real data
+people:
+  # Current Students
+  - name: "Example Student"
+    category: current-students
+    role: "PhD Student"
+    affiliation: "University of Wisconsin-Madison"
+    start_year: 2022
+    photo: null  # /images/collaborators/example.jpg
+    links:
+      github: "example"
+    publications: []
+    projects: []
+
+  # Former Students
+  # - name: "Former Student Name"
+  #   category: former-students
+  #   role: "PhD Student"
+  #   affiliation: "New York University"
+  #   start_year: 2015
+  #   end_year: 2020
+  #   graduation_year: 2020
+  #   thesis_title: "Thesis Title Here"
+  #   thesis_url: "https://..."
+  #   current_position: "Assistant Professor at University X"
+  #   photo: /images/collaborators/former.jpg
+  #   links:
+  #     website: "https://..."
+  #     scholar: "abc123"
+  #   publications:
+  #     - Cranmer:2020wew
+  #   projects:
+  #     - madminer
+
+  # Postdocs
+  # - name: "Postdoc Name"
+  #   category: postdocs
+  #   role: "Postdoctoral Researcher"
+  #   affiliation: "University of Wisconsin-Madison"
+  #   start_year: 2023
+  #   photo: /images/collaborators/postdoc.jpg
+
+  # Collaborators
+  # - name: "Collaborator Name"
+  #   category: collaborators
+  #   role: "Professor"
+  #   affiliation: "Another University"
+  #   image_shape: rectangular
+  #   photo: /images/collaborators/collab.jpg
+  #   links:
+  #     website: "https://..."

@@ -1,0 +1,259 @@
+{% extends "base.html" %}
+{% block title %}Collaborators{% endblock %}
+
+{% block extra_stylesheets %}
+<style>
+    .collaborators-intro {
+        color: #666;
+        margin-bottom: 30px;
+    }
+    .collaborator-category {
+        margin-bottom: 50px;
+    }
+    .collaborator-category h3 {
+        border-bottom: 2px solid #18bc9c;
+        padding-bottom: 10px;
+        margin-bottom: 25px;
+    }
+    .category-description {
+        color: #666;
+        font-style: italic;
+        margin-bottom: 20px;
+    }
+    .collaborators-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        gap: 25px;
+    }
+    .collaborator-card {
+        text-align: center;
+        padding: 15px;
+        background: #f8f9fa;
+        border-radius: 8px;
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .collaborator-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .collaborator-photo {
+        width: 120px;
+        height: 120px;
+        object-fit: cover;
+        margin-bottom: 12px;
+    }
+    .collaborator-photo.circular {
+        border-radius: 50%;
+    }
+    .collaborator-photo.rectangular {
+        border-radius: 8px;
+    }
+    .collaborator-photo-placeholder {
+        width: 120px;
+        height: 120px;
+        margin: 0 auto 12px auto;
+        background: #dee2e6;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #6c757d;
+        font-size: 2.5em;
+    }
+    .collaborator-photo-placeholder.circular {
+        border-radius: 50%;
+    }
+    .collaborator-photo-placeholder.rectangular {
+        border-radius: 8px;
+    }
+    .collaborator-name {
+        font-weight: bold;
+        font-size: 1.05em;
+        color: #2c3e50;
+        margin-bottom: 4px;
+    }
+    .collaborator-name a {
+        color: #2c3e50;
+    }
+    .collaborator-name a:hover {
+        color: #18bc9c;
+    }
+    .collaborator-role {
+        font-size: 0.9em;
+        color: #18bc9c;
+        margin-bottom: 4px;
+    }
+    .collaborator-affiliation {
+        font-size: 0.85em;
+        color: #666;
+        margin-bottom: 8px;
+    }
+    .collaborator-years {
+        font-size: 0.8em;
+        color: #888;
+        margin-bottom: 8px;
+    }
+    .collaborator-current-position {
+        font-size: 0.8em;
+        color: #666;
+        font-style: italic;
+        margin-bottom: 8px;
+    }
+    .collaborator-thesis {
+        font-size: 0.8em;
+        color: #666;
+        margin-bottom: 8px;
+    }
+    .collaborator-thesis a {
+        color: #18bc9c;
+    }
+    .collaborator-links {
+        font-size: 1.2em;
+    }
+    .collaborator-links a {
+        color: #6c757d;
+        margin: 0 5px;
+    }
+    .collaborator-links a:hover {
+        color: #18bc9c;
+    }
+    /* Filter controls */
+    .collaborator-filters {
+        background: #f8f9fa;
+        padding: 15px;
+        margin-bottom: 25px;
+        border-radius: 4px;
+    }
+    .collaborator-filters label {
+        margin-right: 8px;
+        font-weight: bold;
+    }
+    .collaborator-filters select {
+        padding: 5px 10px;
+        margin-right: 20px;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<section id="content" class="body">
+    <h1 class="entry-title">Collaborators</h1>
+
+    <p class="collaborators-intro">Current and former students, postdocs, and research collaborators.</p>
+
+    {% if collaborators and collaborators.categories %}
+
+    <!-- Filters -->
+    <div class="collaborator-filters">
+        <label for="filter-category">Category:</label>
+        <select id="filter-category" onchange="filterCollaborators()">
+            <option value="">All</option>
+            {% for cat in collaborators.categories %}
+            <option value="{{ cat.id }}">{{ cat.title }}</option>
+            {% endfor %}
+        </select>
+    </div>
+
+    <!-- Collaborators by Category -->
+    {% for cat in collaborators.categories %}
+    {% if cat.people %}
+    <section class="collaborator-category" id="cat-{{ cat.id }}" data-category="{{ cat.id }}">
+        <h3>{{ cat.title }}</h3>
+        {% if cat.description %}
+        <p class="category-description">{{ cat.description }}</p>
+        {% endif %}
+
+        <div class="collaborators-grid">
+        {% for person in cat.people %}
+            <div class="collaborator-card" data-name="{{ person.name }}">
+                {% if person.photo %}
+                <img src="{{ person.photo }}" alt="{{ person.name }}" class="collaborator-photo {{ person.image_shape }}">
+                {% else %}
+                <div class="collaborator-photo-placeholder {{ person.image_shape }}">
+                    <i class="fa fa-user"></i>
+                </div>
+                {% endif %}
+
+                <div class="collaborator-name">
+                    {% if person.links and person.links.website %}
+                    <a href="{{ person.links.website }}" target="_blank">{{ person.name }}</a>
+                    {% else %}
+                    {{ person.name }}
+                    {% endif %}
+                </div>
+
+                {% if person.role %}
+                <div class="collaborator-role">{{ person.role }}</div>
+                {% endif %}
+
+                {% if person.affiliation %}
+                <div class="collaborator-affiliation">{{ person.affiliation }}</div>
+                {% endif %}
+
+                {% if person.start_year %}
+                <div class="collaborator-years">
+                    {{ person.start_year }}{% if person.end_year %} – {{ person.end_year }}{% elif not person.graduation_year %} – present{% endif %}
+                    {% if person.graduation_year %}(PhD {{ person.graduation_year }}){% endif %}
+                </div>
+                {% endif %}
+
+                {% if person.thesis_title %}
+                <div class="collaborator-thesis">
+                    Thesis:
+                    {% if person.thesis_url %}
+                    <a href="{{ person.thesis_url }}" target="_blank">{{ person.thesis_title }}</a>
+                    {% else %}
+                    <em>{{ person.thesis_title }}</em>
+                    {% endif %}
+                </div>
+                {% endif %}
+
+                {% if person.current_position %}
+                <div class="collaborator-current-position">Now: {{ person.current_position }}</div>
+                {% endif %}
+
+                <div class="collaborator-links">
+                    {% if person.links %}
+                        {% if person.links.website %}
+                        <a href="{{ person.links.website }}" target="_blank" title="Website"><i class="fa fa-globe"></i></a>
+                        {% endif %}
+                        {% if person.links.github %}
+                        <a href="https://github.com/{{ person.links.github }}" target="_blank" title="GitHub"><i class="fa fa-github"></i></a>
+                        {% endif %}
+                        {% if person.links.scholar %}
+                        <a href="https://scholar.google.com/citations?user={{ person.links.scholar }}" target="_blank" title="Google Scholar"><i class="fa fa-google-scholar"></i></a>
+                        {% endif %}
+                        {% if person.links.twitter %}
+                        <a href="https://twitter.com/{{ person.links.twitter }}" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a>
+                        {% endif %}
+                        {% if person.links.linkedin %}
+                        <a href="https://linkedin.com/in/{{ person.links.linkedin }}" target="_blank" title="LinkedIn"><i class="fa fa-linkedin"></i></a>
+                        {% endif %}
+                    {% endif %}
+                </div>
+            </div>
+        {% endfor %}
+        </div>
+    </section>
+    {% endif %}
+    {% endfor %}
+
+    {% else %}
+    <p>No collaborators configured. Add a <code>COLLABORATORS_SRC</code> setting pointing to a YAML file.</p>
+    {% endif %}
+</section>
+
+<script>
+function filterCollaborators() {
+    var catFilter = document.getElementById('filter-category').value;
+
+    document.querySelectorAll('.collaborator-category').forEach(function(cat) {
+        var catId = cat.getAttribute('data-category');
+        if (catFilter && catId !== catFilter) {
+            cat.style.display = 'none';
+        } else {
+            cat.style.display = 'block';
+        }
+    });
+}
+</script>
+{% endblock %}
