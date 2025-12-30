@@ -109,6 +109,13 @@ def add_collaborators(generator):
         if 'links' not in person:
             person['links'] = {}
 
+        # Auto-generate photo URL from GitHub if not specified
+        if not person.get('photo'):
+            github_username = person.get('links', {}).get('github')
+            if github_username:
+                # GitHub provides avatars at /{username}.png with optional size
+                person['photo'] = f'https://github.com/{github_username}.png?size=200'
+
     # Group people by category
     people_by_category = []
     for cat_data in categories_data:
