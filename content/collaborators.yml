@@ -1299,3 +1299,113 @@ people:
       website: "https://rtqichen.github.io/"
       scholar: "7MxQd6UAAAAJ"
       github: "rtqichen"
+
+  # UW-Madison
+  - name: "Mariel Pettee"
+    category: collaborators
+    current: true
+    role: "Researcher"
+    affiliation: "UW-Madison"
+    current_position: "ML for physics and choreography; former Chamberlain Fellow at LBNL"
+    links:
+      website: "https://marielpettee.com/"
+      github: "mariel-pettee"
+
+  - name: "Moritz Münchmeyer"
+    category: collaborators
+    current: true
+    role: "Assistant Professor"
+    affiliation: "UW-Madison"
+    current_position: "Computational cosmology; ML for CMB and large-scale structure"
+    links:
+      website: "https://www.moritzmunchmeyer.com/"
+      scholar: "rRZtQ9QAAAAJ"
+
+  - name: "Gary Shiu"
+    category: collaborators
+    current: true
+    role: "Professor"
+    affiliation: "UW-Madison"
+    current_position: "String theory, cosmology; Guggenheim Fellow; APS/AAAS Fellow"
+    links:
+      website: "https://shiu.physics.wisc.edu/"
+      scholar: "7_B0r5MAAAAJ"
+
+  # Flatiron Institute
+  - name: "Helen Qu"
+    category: collaborators
+    current: true
+    role: "Research Fellow"
+    affiliation: "Flatiron Institute"
+    current_position: "ML for supernova cosmology; foundation models for science"
+    links:
+      website: "https://helenqu.com/"
+      scholar: "FWPJDb4AAAAJ"
+
+  # European Physics
+  - name: "Sabine Kraml"
+    category: collaborators
+    current: true
+    role: "CNRS Researcher"
+    affiliation: "LPSC Grenoble"
+    current_position: "BSM phenomenology; LHC Reinterpretation Forum co-lead"
+    links:
+      website: "http://kraml.home.cern.ch/kraml/"
+      scholar: "WqBKDGsAAAAJ"
+
+  - name: "Philip Bechtle"
+    category: collaborators
+    current: true
+    role: "Senior Researcher"
+    affiliation: "University of Bonn"
+    current_position: "ATLAS experiment; HiggsBounds/HiggsSignals developer"
+
+  - name: "Nicholas Wardle"
+    category: collaborators
+    current: true
+    role: "Associate Professor"
+    affiliation: "Imperial College London"
+    current_position: "CMS Higgs physics group co-convener (2020-2022)"
+    links:
+      website: "https://www.imperial.ac.uk/people/n.wardle09"
+
+  - name: "Juan Rojo"
+    category: collaborators
+    current: true
+    role: "Professor"
+    affiliation: "VU Amsterdam / Nikhef"
+    current_position: "NNPDF collaboration; parton distribution functions"
+
+  - name: "Sezen Sekmen"
+    category: collaborators
+    current: true
+    role: "Researcher"
+    affiliation: "Kyungpook National University"
+    current_position: "CMS SUSY searches; fast simulation; LHC reinterpretation"
+
+  # US Physics
+  - name: "Harrison B. Prosper"
+    category: collaborators
+    current: true
+    role: "Kirby W. Kemper Endowed Professor"
+    affiliation: "Florida State University"
+    current_position: "Bayesian statistics for HEP; top quark discovery; AAAS Fellow"
+    links:
+      website: "http://web2.physics.fsu.edu/~prosper/bio.html"
+
+  - name: "Mark S. Neubauer"
+    category: collaborators
+    current: true
+    role: "Professor"
+    affiliation: "University of Illinois Urbana-Champaign"
+    current_position: "ATLAS Higgs physics; ML for HEP; Breakthrough Prize recipient"
+    links:
+      website: "https://www.marksneubauer.com/"
+      github: "msneubauer"
+
+  - name: "Maurizio Pierini"
+    category: collaborators
+    current: true
+    role: "Staff Physicist"
+    affiliation: "CERN"
+    current_position: "CMS ML for particle flow; ERC Consolidator Grant; anomaly detection"
