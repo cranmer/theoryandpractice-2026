@@ -179,13 +179,13 @@ def add_collaborators(generator):
         cat_id = cat_data['id']
         cat_people = [p for p in people if p.get('category') == cat_id]
 
-        # Sort by: active first (no end_year), then end_year desc, then start_year desc, then name
+        # Sort by: current first, then end_year desc, then start_year desc, then name
         def sort_key(p):
-            end_year = p.get('end_year')
+            is_current = p.get('current', False)
+            end_year = p.get('end_year') or 9999
             start_year = p.get('start_year') or 0
-            # Active (no end_year) sorts first with -inf, former sort by -end_year (most recent first)
-            end_sort = float('-inf') if end_year is None else -end_year
-            return (end_sort, -start_year, p.get('name', ''))
+            # Current people first (0 sorts before 1), then by end_year desc, start_year desc
+            return (0 if is_current else 1, -end_year, -start_year, p.get('name', ''))
         cat_people.sort(key=sort_key)
 
         people_by_category.append({

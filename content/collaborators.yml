@@ -399,7 +399,7 @@ people:
 
   - name: "Taoli Cheng"
     category: collaborators
-    current: true
+    current: false
     role: "Postdoc at MILA (co-advised)"
     affiliation: "MILA / NYU"
     start_year: 2019
@@ -722,23 +722,21 @@ people:
 
   - name: "Peter Elmer"
     category: collaborators
-    current: false
+    current: true
     role: "Senior Research Physicist"
     affiliation: "Princeton University"
     current_position: "Executive Director and PI of IRIS-HEP"
-    start_year: 2016
-    end_year: 2019
+    start_year: 1999
     links:
       website: "https://elmer.scholar.princeton.edu/"
 
   - name: "Gordon Watts"
     category: collaborators
-    current: false
+    current: true
     role: "Professor"
     affiliation: "University of Washington"
     current_position: "Deputy Executive Director of IRIS-HEP"
-    start_year: 2018
-    end_year: 2018
+    start_year: 2005
     links:
       website: "https://gordonwatts.wordpress.com/"
       github: "gordonwatts"
@@ -778,11 +776,10 @@ people:
   # UCI
   - name: "Daniel Whiteson"
     category: collaborators
-    current: false
+    current: true
     role: "Professor"
     affiliation: "University of California, Irvine"
     start_year: 2009
-    end_year: 2025
     links:
       website: "https://sites.uci.edu/daniel/"
 
@@ -800,11 +797,10 @@ people:
   # European Physics Collaborators
   - name: "Tilman Plehn"
     category: collaborators
-    current: false
+    current: true
     role: "Professor"
     affiliation: "Universität Heidelberg"
     start_year: 2004
-    end_year: 2023
     links:
       website: "https://www.thphys.uni-heidelberg.de/~plehn/"
       scholar: "r3zfvh0AAAAJ"
@@ -1058,7 +1054,7 @@ people:
     affiliation: "University of Bonn"
     current_position: "Leader of LHCb Open Data project; formerly Heidelberg"
     start_year: 2018
-    end_year: 2024
+    end_year: 2019
 
   # AI Research / Industry
   - name: "Niklas Nolte"
@@ -1145,7 +1141,7 @@ people:
     affiliation: "NYU Courant Institute"
     current_position: "Co-founder of MaD group; NSF CAREER and Sloan Fellow"
     start_year: 2017
-    end_year: 2017
+    end_year: 2022
     links:
       website: "https://cims.nyu.edu/~bruna/"
       scholar: "L4bNmsMAAAAJ"
@@ -1165,12 +1161,11 @@ people:
   # Notre Dame / CMS
   - name: "Michael Hildreth"
     category: collaborators
-    current: false
+    current: true
     role: "Professor"
     affiliation: "University of Notre Dame"
     current_position: "Vice President and Dean of Graduate School; leads US-CMS computing R&D"
     start_year: 2005
-    end_year: 2022
     links:
       website: "https://physics.nd.edu/people/mike-hildreth/"
 
@@ -1365,36 +1360,33 @@ people:
   # Machine Learning
   - name: "Neil D. Lawrence"
     category: collaborators
-    current: false
+    current: true
     role: "DeepMind Professor of Machine Learning"
     affiliation: "University of Cambridge"
     current_position: "Academic lead of ai@cam; author of 'The Atomic Human'; founder of GP Summer School"
-    start_year: 2023
-    end_year: 2023
+    start_year: 2021
     links:
       website: "https://inverseprobability.com/"
       scholar: "r3SJcvoAAAAJ"
 
   - name: "Philipp Berens"
     category: collaborators
-    current: false
+    current: true
     role: "Full Professor"
     affiliation: "University of Tübingen"
     current_position: "Director of Hertie Institute for AI in Brain Health; ERC Starting Grant recipient"
-    start_year: 2023
-    end_year: 2023
+    start_year: 2021
     links:
       website: "https://philippberens.wordpress.com/"
       scholar: "lPQLk3QAAAAJ"
 
   - name: "Ulrike von Luxburg"
     category: collaborators
-    current: false
+    current: true
     role: "Full Professor"
     affiliation: "University of Tübingen"
     current_position: "Theory of Machine Learning; Leopoldina member; Bernoulli Prize winner"
-    start_year: 2023
-    end_year: 2023
+    start_year: 2021
     links:
       website: "http://tml.cs.uni-tuebingen.de/team/luxburg/"
       scholar: "mMifMdoAAAAJ"
@@ -1405,6 +1397,7 @@ people:
     role: "Executive Director"
     affiliation: "University of Cambridge"
     current_position: "Director of AI@Cam and Accelerate Programme for Scientific Discovery"
+    start_year: 2021
     links:
       website: "https://science.ai.cam.ac.uk/team/jessica-montgomery.html"
 
@@ -1415,7 +1408,8 @@ people:
     role: "Professor"
     affiliation: "NYU"
     current_position: "Courant Institute & Center for Data Science; NSF CAREER & ICML Best Paper"
-    start_year: 2003
+    start_year: 2013
+    end_year: 2022
     links:
       website: "https://cims.nyu.edu/~andrewgw/"
       scholar: "twWX2LIAAAAJ"
@@ -1427,7 +1421,7 @@ people:
     role: "Assistant Professor"
     affiliation: "NYU"
     current_position: "Computer Science & Data Science; ML for healthcare; NSF CAREER"
-    start_year: 2024
+    start_year: 2017
     end_year: 2024
     links:
       website: "https://cims.nyu.edu/~rajeshr/"
@@ -1435,10 +1429,12 @@ people:
 
   - name: "Yann LeCun"
     category: collaborators
-    current: true
+    current: false
     role: "Professor & Chief AI Scientist"
     affiliation: "NYU / Meta"
     current_position: "Turing Award winner; founder of NYU Center for Data Science; pioneer of CNNs"
+    start_year: 2007
+    end_year: 2022
     links:
       website: "http://yann.lecun.com/"
       scholar: "WLN3QrAAAAAJ"
@@ -1467,10 +1463,12 @@ people:
   # Meta FAIR
   - name: "Léon Bottou"
     category: collaborators
-    current: true
+    current: false
     role: "Research Lead"
     affiliation: "Meta FAIR"
     current_position: "Pioneer of stochastic gradient descent; NeurIPS Test of Time Award"
+    start_year: 2009
+    end_year: 2022
     links:
       website: "https://leon.bottou.org/"
       scholar: "kbN88gsAAAAJ"
@@ -1481,7 +1479,8 @@ people:
     role: "Research Scientist"
     affiliation: "Meta FAIR"
     current_position: "Neural ODEs (NeurIPS Best Paper); Flow Matching; torchdiffeq creator"
-    start_year: 2000
+    start_year: 2022
+    end_year: 2022
     links:
       website: "https://rtqichen.github.io/"
       scholar: "7MxQd6UAAAAJ"
@@ -1523,12 +1522,11 @@ people:
   # Flatiron Institute
   - name: "Helen Qu"
     category: collaborators
-    current: false
+    current: true
     role: "Research Fellow"
     affiliation: "Flatiron Institute"
     current_position: "ML for supernova cosmology; foundation models for science"
-    start_year: 2017
-    end_year: 2019
+    start_year: 2024
     links:
       website: "https://helenqu.com/"
       scholar: "FWPJDb4AAAAJ"
@@ -1557,12 +1555,11 @@ people:
 
   - name: "Nicholas Wardle"
     category: collaborators
-    current: false
+    current: true
     role: "Associate Professor"
     affiliation: "Imperial College London"
     current_position: "CMS Higgs physics group co-convener (2020-2022)"
     start_year: 2021
-    end_year: 2022
     links:
       website: "https://www.imperial.ac.uk/people/n.wardle09"
 
@@ -1603,7 +1600,7 @@ people:
     affiliation: "University of Illinois Urbana-Champaign"
     current_position: "ATLAS Higgs physics; ML for HEP; Breakthrough Prize recipient"
     start_year: 2018
-    end_year: 2022
+    end_year: 2024
     links:
       website: "https://www.marksneubauer.com/"
       github: "msneubauer"
