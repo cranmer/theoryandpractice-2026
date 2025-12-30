@@ -172,6 +172,39 @@
         padding: 3px 10px;
         font-size: 0.85em;
     }
+    /* Sort toggle buttons */
+    .sort-buttons {
+        display: inline-block;
+        margin-left: 20px;
+    }
+    .sort-buttons .btn {
+        padding: 5px 12px;
+        margin-right: 5px;
+    }
+    .sort-buttons .btn.active {
+        background-color: #18bc9c;
+        border-color: #18bc9c;
+        color: white;
+    }
+    /* Flat list view for date/citation sorting */
+    .flat-publications-list {
+        list-style-type: decimal;
+        padding-left: 25px;
+    }
+    .flat-publications-list li {
+        margin-bottom: 15px;
+        padding: 10px;
+        border-left: 3px solid transparent;
+    }
+    .flat-publications-list li.highlight {
+        border-left-color: #f39c12;
+        background: #fffef5;
+    }
+    .pub-meta {
+        font-size: 0.8em;
+        color: #888;
+        margin-left: 10px;
+    }
 </style>
 <!-- Altmetric embed script -->
 <script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
@@ -291,6 +324,59 @@
             });
         }
     }
+
+    var currentSortMode = 'category';
+
+    function setSortMode(mode) {
+        currentSortMode = mode;
+
+        // Update button states
+        document.querySelectorAll('.sort-buttons .btn').forEach(function(btn) {
+            btn.classList.remove('active');
+        });
+        document.getElementById('sort-' + mode).classList.add('active');
+
+        // Show/hide appropriate views
+        var categoryView = document.getElementById('category-view');
+        var flatView = document.getElementById('flat-view');
+
+        if (mode === 'category') {
+            categoryView.style.display = 'block';
+            flatView.style.display = 'none';
+        } else {
+            categoryView.style.display = 'none';
+            flatView.style.display = 'block';
+            sortFlatList(mode);
+        }
+    }
+
+    function sortFlatList(mode) {
+        var list = document.getElementById('flat-publications-list');
+        var items = Array.from(list.querySelectorAll('li'));
+
+        items.sort(function(a, b) {
+            if (mode === 'date') {
+                var yearA = parseInt(a.getAttribute('data-year')) || 0;
+                var yearB = parseInt(b.getAttribute('data-year')) || 0;
+                return yearB - yearA; // Most recent first
+            } else if (mode === 'citations') {
+                var citesA = parseInt(a.getAttribute('data-citations')) || 0;
+                var citesB = parseInt(b.getAttribute('data-citations')) || 0;
+                return citesB - citesA; // Most cited first
+            }
+            return 0;
+        });
+
+        // Re-append items in sorted order
+        items.forEach(function(item) {
+            list.appendChild(item);
+        });
+
+        // Re-number the list
+        items.forEach(function(item, index) {
+            item.setAttribute('value', index + 1);
+        });
+    }
 </script>
 
 <!-- Bootstrap Modal for BibTeX -->
@@ -389,6 +475,15 @@
     {% if selected_publications and selected_publications.categories %}
     <!-- Filters -->
     <div class="pub-filters">
+        <div style="margin-bottom: 10px;">
+            <label>Sort by:</label>
+            <span class="sort-buttons">
+                <button id="sort-category" class="btn btn-sm btn-default active" onclick="setSortMode('category')">Category</button>
+                <button id="sort-date" class="btn btn-sm btn-default" onclick="setSortMode('date')">Date</button>
+                <button id="sort-citations" class="btn btn-sm btn-default" onclick="setSortMode('citations')">Citations</button>
+            </span>
+        </div>
+
         <label for="filter-category">Category:</label>
         <select id="filter-category" onchange="filterPublications()">
             <option value="">All Categories</option>
@@ -427,7 +522,8 @@
         </div>
     </div>
 
-    <!-- Publications by Category -->
+    <!-- Category View (default) -->
+    <div id="category-view">
     {% for cat in selected_publications.categories %}
     <section class="pub-category" id="cat-{{ cat.id }}" data-category="{{ cat.id }}">
         <h4>{{ cat.title }}</h4>
@@ -483,6 +579,60 @@
         </ol>
     </section>
     {% endfor %}
+    </div>
+
+    <!-- Flat View (for date/citation sorting) -->
+    <div id="flat-view" style="display: none;">
+        <ol id="flat-publications-list" class="flat-publications-list">
+        {% for pub in selected_publications.all_publications %}
+            <li class="{% if pub.highlight %}highlight{% endif %}"
+                data-year="{{ pub.year }}"
+                data-key="{{ pub.key }}"
+                data-citations="{{ pub.citations }}"
+                data-category="{{ pub.category_id }}">
+                <span class="pub-text">
+                    {% if pub.highlight %}<span class="highlight-star" title="Highlighted publication">&#9733;</span>{% endif %}
+                    {{ pub.text }}
+                    <span class="pub-meta">({{ pub.year }}{% if pub.citations > 0 %}, {{ pub.citations }} citations{% endif %})</span>
+                </span>
+                <span class="pub-links">
+                    {% if pub.citations > 0 and pub.citation_url %}
+                    [<a href="{{ pub.citation_url }}" target="_blank">{{ pub.citations }} citations</a>]
+                    {% elif pub.citations > 0 %}
+                    [{{ pub.citations }} citations]
+                    {% endif %}
+                    {% if pub.eprint %}
+                    [<a href="https://arxiv.org/abs/{{ pub.eprint }}" target="_blank">arXiv</a>]
+                    {% endif %}
+                    {% if pub.doi %}
+                    [<a href="https://doi.org/{{ pub.doi }}" target="_blank">DOI</a>]
+                    {% endif %}
+                    {% if pub.url and not pub.doi %}
+                    [<a href="{{ pub.url }}" target="_blank">URL</a>]
+                    {% endif %}
+                    {% if pub.pdf %}
+                    [<a href="{{ pub.pdf }}" target="_blank">PDF</a>]
+                    {% endif %}
+                    [<a href="javascript:void(0);" onclick="showBibtex(decodeURIComponent('{{ pub.bibtex|urlencode }}'));">BibTeX</a>]
+                    {% if pub.doi or pub.eprint %}
+                    [<a href="javascript:void(0);" id="altmetric-link-flat-{{ pub.key }}" class="altmetric-toggle" onclick="toggleAltmetric('flat-{{ pub.key }}');">show altmetrics</a>]
+                    {% endif %}
+                </span>
+                {% if pub.doi or pub.eprint %}
+                <div id="altmetric-flat-{{ pub.key }}" class="altmetric-container">
+                    <div class="altmetric-embed"
+                         data-badge-type="donut"
+                         data-badge-details="right"
+                         data-hide-no-mentions="true"
+                         {% if pub.doi %}data-doi="{{ pub.doi }}"{% endif %}
+                         {% if pub.eprint and not pub.doi %}data-arxiv-id="{{ pub.eprint|replace('arXiv:', '') }}"{% endif %}>
+                    </div>
+                </div>
+                {% endif %}
+            </li>
+        {% endfor %}
+        </ol>
+    </div>
 
     {% else %}
     <p>No selected publications configured. Add a <code>SELECTED_PUBLICATIONS_SRC</code> setting pointing to a YAML file.</p>
