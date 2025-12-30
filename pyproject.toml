@@ -48,7 +48,11 @@ publish = "pelican content -o output -s publishconf.py && npm exec pagefind -- -
 clean = "rm -rf output cache"
 # Development server (clean, build, then serve)
 serve = "rm -rf output cache && pelican content -o output -s pelicanconf.py && npm exec pagefind -- --site output && python -m http.server 8000 -d output"
-# Watch for changes, rebuild, and serve with live reload
-dev = "pelican content -o output -s pelicanconf.py --autoreload --listen"
+# Update citation counts from OpenAlex
+update-citations = "python scripts/update_citations.py"
+# Build and serve (no autoreload - run 'pixi run build' to rebuild)
+dev = "pelican content -o output -s pelicanconf.py && python -m http.server 8000 -d output"
+# Dev server with debug output to see build order
+dev-debug = "pelican content -o output -s pelicanconf.py && pelican content -o output -s pelicanconf.py --autoreload --listen --debug"
 # Watch for changes and rebuild (run in separate terminal)
 watch = "pelican content -o output -s pelicanconf.py --autoreload"
