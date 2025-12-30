@@ -10,7 +10,8 @@
     "year": "2012"
   },
   "ATLAS:2024nnj": {
-    "cited_by_count": 0,
+    "cited_by_count": 21,
+    "semantic_scholar_id": "https://www.semanticscholar.org/paper/bc7f95e18d5b3158964bd92c5d97f28feaa605cb",
     "year": "2024"
   },
   "ATLAS:2024ynn": {
@@ -18,12 +19,12 @@
     "year": "2024"
   },
   "Albergo:2021bna": {
-    "cited_by_count": 0,
+    "cited_by_count": 46,
+    "semantic_scholar_id": "https://www.semanticscholar.org/paper/fa8294b7ed4345251d4cc5efe4c5134808b9298a",
     "year": "2021"
   },
   "Albergo:2021vyo": {
-    "cited_by_count": 63,
-    "semantic_scholar_id": "https://www.semanticscholar.org/paper/bb41162e1283783057ea04cea17f20bbfcd3f9a6",
+    "cited_by_count": 0,
     "year": "2021"
   },
   "Albergo:2022qfi": {
@@ -42,8 +43,7 @@
     "year": "2016"
   },
   "Baydin:2018tpf": {
-    "cited_by_count": 32,
-    "semantic_scholar_id": "https://www.semanticscholar.org/paper/9ecbc88c1cbf9709c0a26ecb4430223d9ec9aef4",
+    "cited_by_count": 0,
     "year": "2020"
   },
   "Baydin:2019pml": {
@@ -102,8 +102,7 @@
     "year": "2020"
   },
   "Brehmer:2020vwc": {
-    "cited_by_count": 175,
-    "semantic_scholar_id": "https://www.semanticscholar.org/paper/319136a7230dcbde683f3d432524bf5dfa11fa10",
+    "cited_by_count": 0,
     "year": "2020"
   },
   "Bridges:2010de": {
@@ -196,7 +195,7 @@
     "year": "2015"
   },
   "Cranmer:2019eaq": {
-    "cited_by_count": 1037,
+    "cited_by_count": 1040,
     "semantic_scholar_id": "https://www.semanticscholar.org/paper/562ec6a04929d9382bc401d3e7f35efc2effed4c",
     "year": "2020"
   },
@@ -209,6 +208,11 @@
     "cited_by_count": 571,
     "semantic_scholar_id": "https://www.semanticscholar.org/paper/643ac3ef063c77eb02a3d52637c11fe028bfae28",
     "year": "2020"
+  },
+  "Cranmer:2021pub": {
+    "cited_by_count": 48,
+    "openalex_id": "https://openalex.org/W3200145371",
+    "year": "2022"
   },
   "Cranmer:2021urp": {
     "cited_by_count": 15,
@@ -231,17 +235,16 @@
     "year": "2024"
   },
   "Golkar:2018obb": {
-    "cited_by_count": 2,
-    "semantic_scholar_id": "https://www.semanticscholar.org/paper/e6736b2b46b0b154d66a07397249924dd73e39c6",
+    "cited_by_count": 0,
     "year": "2018"
   },
   "Greenberg:2020heb": {
-    "cited_by_count": 3,
-    "semantic_scholar_id": "https://www.semanticscholar.org/paper/b8438a10174ab4ec77bbe7e6b1d7ae25ef5c11c5",
+    "cited_by_count": 0,
     "year": "2021"
   },
   "Greenberg:2021ynh": {
-    "cited_by_count": 0,
+    "cited_by_count": 3,
+    "semantic_scholar_id": "https://www.semanticscholar.org/paper/fc3fc2f2027ce75af777eb70b9d522efa18506b3",
     "year": "2021"
   },
   "Guest:2018yhq": {
@@ -250,8 +253,7 @@
     "year": "2018"
   },
   "Hackett:2021idh": {
-    "cited_by_count": 46,
-    "semantic_scholar_id": "https://www.semanticscholar.org/paper/269b112bbf6871e0e883325c41841ce9f0752ef9",
+    "cited_by_count": 0,
     "year": "2021"
   },
   "Henrion:2017nips": {
@@ -278,11 +280,13 @@
     "year": "2019"
   },
   "Louppe:2017lwp": {
-    "cited_by_count": 0,
+    "cited_by_count": 69,
+    "semantic_scholar_id": "https://www.semanticscholar.org/paper/c24405ad1e5f6eee2c3aaa4db74a803b05638f44",
     "year": "2019"
   },
   "Macaluso:2021cgp": {
-    "cited_by_count": 0,
+    "cited_by_count": 4,
+    "semantic_scholar_id": "https://www.semanticscholar.org/paper/73fbad51780e2e61e6d095ca592c27ad9282379f",
     "year": "2021"
   },
   "MishraSharma:2020wys": {
@@ -305,12 +309,12 @@
     "year": "2024"
   },
   "Rezende:2020hrd": {
-    "cited_by_count": 0,
+    "cited_by_count": 171,
+    "semantic_scholar_id": "https://www.semanticscholar.org/paper/bc4470af94d0dd449e30df3fd11191fa03fca370",
     "year": "2020"
   },
   "SanchezGonzalez:2019": {
-    "cited_by_count": 187,
-    "semantic_scholar_id": "https://www.semanticscholar.org/paper/57784e5db3504d549d16382de8f7f4ad222b3d71",
+    "cited_by_count": 0,
     "year": "2019"
   },
   "Serviansky:2020qwa": {

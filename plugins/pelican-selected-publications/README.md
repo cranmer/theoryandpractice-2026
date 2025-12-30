@@ -112,6 +112,19 @@ This will:
 2. Look up each paper in OpenAlex (primary) and Semantic Scholar (fallback)
 3. Save results to `content/citations.json`
 
+### Incremental Updates (New Entries Only)
+
+When adding new publications, use the incremental script to only fetch citations
+for entries not already in `citations.json`:
+
+```bash
+pixi run update-citations-new
+# or directly:
+python scripts/update_citations_new.py
+```
+
+This is faster and avoids unnecessary API calls when you've just added a few new papers.
+
 ### Data Sources (Priority Order)
 
 1. **Manual overrides** (`content/citations-manual.json`) - highest priority

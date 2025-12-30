@@ -50,6 +50,8 @@ clean = "rm -rf output cache"
 serve = "rm -rf output cache && pelican content -o output -s pelicanconf.py && npm exec pagefind -- --site output && python -m http.server 8000 -d output"
 # Update citation counts from OpenAlex
 update-citations = "python scripts/update_citations.py"
+# Update citations for NEW entries only (not already in citations.json)
+update-citations-new = "python scripts/update_citations_new.py"
 # Build and serve (no autoreload - run 'pixi run build' to rebuild)
 dev = "pelican content -o output -s pelicanconf.py && python -m http.server 8000 -d output"
 # Dev server with debug output to see build order

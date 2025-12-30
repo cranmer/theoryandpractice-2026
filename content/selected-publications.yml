@@ -136,6 +136,7 @@ categories:
       - Cranmer:2010hk       # RECAST
       - Moneta:2010pm        # The RooStats Project
       - Cranmer:2007zz       # The ATLAS analysis architecture
+      - Cranmer:2021pub      # publishing likelihoods
 
   - id: experiment
     title: "High-Energy Physics - Experiment (selected highlights)"
