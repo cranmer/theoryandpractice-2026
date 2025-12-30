@@ -122,3 +122,125 @@ Kyle Cranmer is the David R. Anderson Director of the UW-Madison Data Science In
 
 ---
 
+### Research Funding
+
+<style>
+.funding-list { list-style: none; padding: 0; }
+.funding-item {
+    border-left: 4px solid #337ab7;
+    padding: 12px 15px;
+    margin-bottom: 12px;
+    background: linear-gradient(to right, #f8f9fa, #fff);
+    border-radius: 0 4px 4px 0;
+}
+.funding-item:hover { background: linear-gradient(to right, #e9ecef, #fff); }
+.funding-title { font-weight: 600; color: #2c3e50; margin-bottom: 4px; }
+.funding-meta { font-size: 0.9em; color: #666; }
+.funding-amount {
+    font-weight: 600;
+    color: #28a745;
+    float: right;
+    font-size: 1.05em;
+}
+.funding-years {
+    display: inline-block;
+    background: #337ab7;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 3px;
+    font-size: 0.85em;
+    margin-right: 8px;
+}
+.funding-agency { font-style: italic; }
+</style>
+
+<ul class="funding-list">
+<li class="funding-item">
+    <span class="funding-amount">$383,073</span>
+    <div class="funding-title">IUCRC Phase I: Center for Interdisciplinary Research on Convective Storms (CIRCS)</div>
+    <div class="funding-meta"><span class="funding-years">2025–2030</span> <span class="funding-agency">National Science Foundation</span></div>
+</li>
+<li class="funding-item">
+    <span class="funding-amount">$469,440</span>
+    <div class="funding-title">ATLAS - Krumnack</div>
+    <div class="funding-meta"><span class="funding-years">2024–2027</span> <span class="funding-agency">Brookhaven National Laboratory</span></div>
+</li>
+<li class="funding-item">
+    <span class="funding-amount">$300,000</span>
+    <div class="funding-title">ReDDDoT Phase 1: Novel Cellular Technologies in Ecosystem Preservation</div>
+    <div class="funding-meta"><span class="funding-years">2024–2026</span> <span class="funding-agency">National Science Foundation</span></div>
+</li>
+<li class="funding-item">
+    <span class="funding-amount">$579,036</span>
+    <div class="funding-title">Collaborative Research: FAIROS-HEP, Research Coordination Network for Particle Physics</div>
+    <div class="funding-meta"><span class="funding-years">2022–2026</span> <span class="funding-agency">National Science Foundation</span></div>
+</li>
+<li class="funding-item">
+    <span class="funding-amount">$430,870 subaward</span>
+    <div class="funding-title">AI for Scattering Amplitudes</div>
+    <div class="funding-meta"><span class="funding-years">2022–2026</span> <span class="funding-agency">Department of Energy</span></div>
+</li>
+<li class="funding-item">
+    <span class="funding-amount">~$4M subaward</span>
+    <div class="funding-title">IRIS-HEP: Institute for Research and Innovation in Software for High Energy Physics (Phase 2)</div>
+    <div class="funding-meta"><span class="funding-years">2023–2028</span> <span class="funding-agency">National Science Foundation</span></div>
+</li>
+<li class="funding-item">
+    <span class="funding-amount">$20,000</span>
+    <div class="funding-title">IUCRC Planning Grant: Center for Interdisciplinary Research on Convective Storms (CIRCS)</div>
+    <div class="funding-meta"><span class="funding-years">2024–2025</span> <span class="funding-agency">National Science Foundation</span></div>
+</li>
+<li class="funding-item">
+    <span class="funding-amount">~$1.5M subaward</span>
+    <div class="funding-title">IRIS-HEP: Institute for Research and Innovation in Software for High Energy Physics</div>
+    <div class="funding-meta"><span class="funding-years">2018–2024</span> <span class="funding-agency">National Science Foundation</span></div>
+</li>
+<li class="funding-item">
+    <span class="funding-amount">$1,755,000</span>
+    <div class="funding-title">NSF-BSF: Elementary Particle Physics with ATLAS</div>
+    <div class="funding-meta"><span class="funding-years">2021–2025</span> <span class="funding-agency">National Science Foundation</span></div>
+</li>
+<li class="funding-item">
+    <span class="funding-amount">$201,408</span>
+    <div class="funding-title">EAGER: ADAPT: AI-Enhanced Sampling for Lattice Field Theory and Beyond</div>
+    <div class="funding-meta"><span class="funding-years">2021–2023</span> <span class="funding-agency">National Science Foundation</span></div>
+</li>
+<li class="funding-item">
+    <span class="funding-amount">$1,940,000</span>
+    <div class="funding-title">NSF-BSF: Elementary Particle Physics with ATLAS</div>
+    <div class="funding-meta"><span class="funding-years">2018–2022</span> <span class="funding-agency">National Science Foundation</span></div>
+</li>
+<li class="funding-item">
+    <span class="funding-amount">$486,879</span>
+    <div class="funding-title">Collaborative Research: SCAILFIN (Scalable CyberInfrastructure for AI and Likelihood Free Inference)</div>
+    <div class="funding-meta"><span class="funding-years">2018–2021</span> <span class="funding-agency">National Science Foundation</span></div>
+</li>
+<li class="funding-item">
+    <span class="funding-amount">$939,189</span>
+    <div class="funding-title">Collaborative Research: DIANA/HEP (Data-Intensive Analysis for High Energy Physics)</div>
+    <div class="funding-meta"><span class="funding-years">2015–2021</span> <span class="funding-agency">National Science Foundation</span></div>
+</li>
+<li class="funding-item">
+    <span class="funding-amount">$2,438,646</span>
+    <div class="funding-title">Elementary Particle Physics with ATLAS <span style="font-weight:normal; color:#666;">(Co-PI)</span></div>
+    <div class="funding-meta"><span class="funding-years">2015–2019</span> <span class="funding-agency">National Science Foundation</span></div>
+</li>
+<li class="funding-item">
+    <span class="funding-amount">$1,746,000</span>
+    <div class="funding-title">Elementary Particle Physics with ATLAS <span style="font-weight:normal; color:#666;">(Co-PI)</span></div>
+    <div class="funding-meta"><span class="funding-years">2012–2016</span> <span class="funding-agency">National Science Foundation</span></div>
+</li>
+<li class="funding-item">
+    <span class="funding-amount">$400,000</span>
+    <div class="funding-title">CAREER: Applying New Tools to the Discovery and Measurement of the New Standard Model</div>
+    <div class="funding-meta"><span class="funding-years">2010–2016</span> <span class="funding-agency">National Science Foundation</span></div>
+</li>
+<li class="funding-item">
+    <span class="funding-amount">$1,980,000</span>
+    <div class="funding-title">Elementary Particle Physics with ATLAS <span style="font-weight:normal; color:#666;">(Co-PI)</span></div>
+    <div class="funding-meta"><span class="funding-years">2009–2012</span> <span class="funding-agency">National Science Foundation</span></div>
+</li>
+</ul>
+
+---
+
