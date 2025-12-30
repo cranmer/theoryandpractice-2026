@@ -1228,3 +1228,74 @@ people:
     current_position: "Director of AI@Cam and Accelerate Programme for Scientific Discovery"
     links:
       website: "https://science.ai.cam.ac.uk/team/jessica-montgomery.html"
+
+  # NYU Machine Learning
+  - name: "Andrew Gordon Wilson"
+    category: collaborators
+    current: true
+    role: "Professor"
+    affiliation: "NYU"
+    current_position: "Courant Institute & Center for Data Science; NSF CAREER & ICML Best Paper"
+    links:
+      website: "https://cims.nyu.edu/~andrewgw/"
+      scholar: "twWX2LIAAAAJ"
+      github: "andrewgordonwilson"
+
+  - name: "Rajesh Ranganath"
+    category: collaborators
+    current: true
+    role: "Assistant Professor"
+    affiliation: "NYU"
+    current_position: "Computer Science & Data Science; ML for healthcare; NSF CAREER"
+    links:
+      website: "https://cims.nyu.edu/~rajeshr/"
+      scholar: "kddKBCsAAAAJ"
+
+  - name: "Yann LeCun"
+    category: collaborators
+    current: true
+    role: "Professor & Chief AI Scientist"
+    affiliation: "NYU / Meta"
+    current_position: "Turing Award winner; founder of NYU Center for Data Science; pioneer of CNNs"
+    links:
+      website: "http://yann.lecun.com/"
+      scholar: "WLN3QrAAAAAJ"
+
+  # NYU Physics
+  - name: "Allen Mincer"
+    category: collaborators
+    current: true
+    role: "Professor"
+    affiliation: "NYU"
+    current_position: "ATLAS experiment; MET triggers; Golden Dozen teaching award"
+    links:
+      website: "https://physics.nyu.edu/~am3/"
+
+  - name: "Andrew Haas"
+    category: collaborators
+    current: true
+    role: "Associate Professor"
+    affiliation: "NYU"
+    current_position: "ATLAS long-lived particle searches; milliQan co-spokesperson; HiggsHunters founder"
+
+  # Meta FAIR
+  - name: "Léon Bottou"
+    category: collaborators
+    current: true
+    role: "Research Lead"
+    affiliation: "Meta FAIR"
+    current_position: "Pioneer of stochastic gradient descent; NeurIPS Test of Time Award"
+    links:
+      website: "https://leon.bottou.org/"
+      scholar: "kbN88gsAAAAJ"
+
+  - name: "Ricky T. Q. Chen"
+    category: collaborators
+    current: true
+    role: "Research Scientist"
+    affiliation: "Meta FAIR"
+    current_position: "Neural ODEs (NeurIPS Best Paper); Flow Matching; torchdiffeq creator"
+    links:
+      website: "https://rtqichen.github.io/"
+      scholar: "7MxQd6UAAAAJ"
+      github: "rtqichen"
