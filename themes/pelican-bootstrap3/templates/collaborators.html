@@ -31,10 +31,49 @@
         background: #f8f9fa;
         border-radius: 8px;
         transition: transform 0.2s, box-shadow 0.2s;
+        border-top: 3px solid #dee2e6;
+    }
+    .collaborator-card.current {
+        border-top-color: #18bc9c;
+    }
+    .collaborator-card.former {
+        border-top-color: #95a5a6;
+        opacity: 0.9;
     }
     .collaborator-card:hover {
         transform: translateY(-3px);
         box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .status-badge {
+        display: inline-block;
+        font-size: 0.7em;
+        padding: 2px 8px;
+        border-radius: 10px;
+        margin-bottom: 8px;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    .status-badge.current {
+        background: #18bc9c;
+        color: white;
+    }
+    .status-badge.former {
+        background: #95a5a6;
+        color: white;
+    }
+    .status-toggle {
+        display: inline-block;
+        margin-left: 20px;
+    }
+    .status-toggle .btn {
+        padding: 2px 10px;
+        font-size: 0.85em;
+        margin-right: 5px;
+    }
+    .status-toggle .btn.active {
+        background-color: #18bc9c;
+        border-color: #18bc9c;
+        color: white;
     }
     .collaborator-photo {
         width: 120px;
@@ -151,6 +190,13 @@
             <option value="{{ cat.id }}">{{ cat.title }}</option>
             {% endfor %}
         </select>
+
+        <label>Status:</label>
+        <span class="status-toggle">
+            <button class="btn btn-default active" data-status="" onclick="setStatusFilter(this, '')">All</button>
+            <button class="btn btn-default" data-status="current" onclick="setStatusFilter(this, 'current')">Current</button>
+            <button class="btn btn-default" data-status="former" onclick="setStatusFilter(this, 'former')">Former</button>
+        </span>
     </div>
 
     <!-- Collaborators by Category -->
@@ -164,7 +210,7 @@
 
         <div class="collaborators-grid">
         {% for person in cat.people %}
-            <div class="collaborator-card" data-name="{{ person.name }}">
+            <div class="collaborator-card {{ 'current' if person.current else 'former' }}" data-name="{{ person.name }}" data-current="{{ 'true' if person.current else 'false' }}">
                 {% if person.photo %}
                 <img src="{{ person.photo }}" alt="{{ person.name }}" class="collaborator-photo {{ person.image_shape }}">
                 {% else %}
@@ -191,8 +237,7 @@
 
                 {% if person.start_year %}
                 <div class="collaborator-years">
-                    {{ person.start_year }}{% if person.end_year %} – {{ person.end_year }}{% elif not person.graduation_year %} – present{% endif %}
-                    {% if person.graduation_year %}(PhD {{ person.graduation_year }}){% endif %}
+                    {{ person.start_year }}{% if person.end_year %} – {{ person.end_year }}{% elif not person.graduation_year %} – present{% endif %}{% if person.graduation_year %} (PhD {{ person.graduation_year }}){% endif %}
                 </div>
                 {% endif %}
 
@@ -243,15 +288,50 @@
 </section>
 
 <script>
+var currentStatusFilter = '';
+
+function setStatusFilter(btn, status) {
+    currentStatusFilter = status;
+    // Update active button
+    document.querySelectorAll('.status-toggle .btn').forEach(function(b) {
+        b.classList.remove('active');
+    });
+    btn.classList.add('active');
+    filterCollaborators();
+}
+
 function filterCollaborators() {
     var catFilter = document.getElementById('filter-category').value;
 
     document.querySelectorAll('.collaborator-category').forEach(function(cat) {
         var catId = cat.getAttribute('data-category');
-        if (catFilter && catId !== catFilter) {
+        var catVisible = !catFilter || catId === catFilter;
+
+        if (!catVisible) {
             cat.style.display = 'none';
         } else {
             cat.style.display = 'block';
+
+            // Filter cards within category by status
+            var visibleCount = 0;
+            cat.querySelectorAll('.collaborator-card').forEach(function(card) {
+                var isCurrent = card.getAttribute('data-current') === 'true';
+                var statusMatch = !currentStatusFilter ||
+                    (currentStatusFilter === 'current' && isCurrent) ||
+                    (currentStatusFilter === 'former' && !isCurrent);
+
+                if (statusMatch) {
+                    card.style.display = 'block';
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            // Hide category if no cards visible
+            if (visibleCount === 0) {
+                cat.style.display = 'none';
+            }
         }
     });
 }

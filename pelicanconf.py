@@ -32,7 +32,7 @@ MENUITEMS = (
     ('CV', '/pages/cv.html'),
     ('Publications', '/selected-publications.html'),
     ('Talks', '/presentations.html'),
-    ('Collaborators', '/collaborators.html'),
+    ('Group', '/collaborators.html'),
     ('Projects', '/pages/projects.html'),
     ('Media & Outreach', '/pages/in-the-news.html'),
 )

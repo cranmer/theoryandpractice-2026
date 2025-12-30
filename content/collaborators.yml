@@ -6,70 +6,330 @@ settings:
   image_size: 120px
 
 categories:
-  - id: current-students
-    title: "Current Students"
-    description: "PhD students currently working with me."
-
-  - id: former-students
-    title: "Former Students"
-    description: "PhD students who have graduated."
+  - id: students
+    title: "Students"
+    description: "PhD students and undergraduate researchers."
 
   - id: postdocs
     title: "Postdocs"
-    description: "Current and former postdoctoral researchers."
+    description: "Postdoctoral researchers."
+
+  - id: scientists
+    title: "Scientists"
+    description: "Research scientists and staff."
 
   - id: collaborators
-    title: "Key Collaborators"
+    title: "Collaborators"
     description: "Frequent research collaborators."
 
-# Example entries - replace with real data
 people:
-  # Current Students
-  - name: "Example Student"
-    category: current-students
+  # ==================
+  # Students
+  # ==================
+  # Current PhD Students
+  - name: "Alice Chen"
+    category: students
+    current: true
+    role: "PhD Student"
+    affiliation: "University of Wisconsin-Madison"
+    start_year: 2023
+    photo: null
+    links:
+      github: "alicechen"
+
+  - name: "Bob Martinez"
+    category: students
+    current: true
     role: "PhD Student"
     affiliation: "University of Wisconsin-Madison"
     start_year: 2022
-    photo: null  # /images/collaborators/example.jpg
+    photo: null
     links:
-      github: "example"
-    publications: []
-    projects: []
+      github: "bobmartinez"
+      website: "https://bobmartinez.com"
+
+  - name: "Carol Johnson"
+    category: students
+    current: true
+    role: "PhD Student"
+    affiliation: "University of Wisconsin-Madison"
+    start_year: 2022
+    photo: null
+    links:
+      github: "caroljohnson"
+
+  - name: "David Kim"
+    category: students
+    current: true
+    role: "PhD Student"
+    affiliation: "University of Wisconsin-Madison"
+    start_year: 2021
+    photo: null
+    links:
+      github: "davidkim"
+      scholar: "abc123"
+
+  - name: "Emma Wilson"
+    category: students
+    current: true
+    role: "PhD Student"
+    affiliation: "University of Wisconsin-Madison"
+    start_year: 2020
+    photo: null
+    links:
+      github: "emmawilson"
+
+  # Current Undergrads
+  - name: "Zoe Adams"
+    category: students
+    current: true
+    role: "Undergraduate Researcher"
+    affiliation: "University of Wisconsin-Madison"
+    start_year: 2024
+    photo: null
+    links:
+      github: "zoeadams"
+
+  - name: "Ryan Cooper"
+    category: students
+    current: true
+    role: "Undergraduate Researcher"
+    affiliation: "University of Wisconsin-Madison"
+    start_year: 2023
+    photo: null
+    links:
+      github: "ryancooper"
 
   # Former Students
-  # - name: "Former Student Name"
-  #   category: former-students
-  #   role: "PhD Student"
-  #   affiliation: "New York University"
-  #   start_year: 2015
-  #   end_year: 2020
-  #   graduation_year: 2020
-  #   thesis_title: "Thesis Title Here"
-  #   thesis_url: "https://..."
-  #   current_position: "Assistant Professor at University X"
-  #   photo: /images/collaborators/former.jpg
-  #   links:
-  #     website: "https://..."
-  #     scholar: "abc123"
-  #   publications:
-  #     - Cranmer:2020wew
-  #   projects:
-  #     - madminer
+  - name: "Frank Liu"
+    category: students
+    current: false
+    role: "PhD Student"
+    affiliation: "New York University"
+    start_year: 2016
+    end_year: 2021
+    graduation_year: 2021
+    thesis_title: "Machine Learning Methods for Particle Physics"
+    thesis_url: "https://example.com/thesis/liu"
+    current_position: "Research Scientist at Meta AI"
+    photo: null
+    links:
+      github: "frankliu"
+      scholar: "def456"
 
+  - name: "Grace Park"
+    category: students
+    current: false
+    role: "PhD Student"
+    affiliation: "New York University"
+    start_year: 2015
+    end_year: 2020
+    graduation_year: 2020
+    thesis_title: "Statistical Methods for the Higgs Boson"
+    current_position: "Assistant Professor at Stanford"
+    photo: null
+    links:
+      website: "https://gracepark.stanford.edu"
+      scholar: "ghi789"
+
+  - name: "Henry Zhang"
+    category: students
+    current: false
+    role: "PhD Student"
+    affiliation: "New York University"
+    start_year: 2014
+    end_year: 2019
+    graduation_year: 2019
+    thesis_title: "Simulation-Based Inference for Particle Physics"
+    current_position: "Postdoc at CERN"
+    photo: null
+    links:
+      github: "henryzhang"
+
+  - name: "Iris Thompson"
+    category: students
+    current: false
+    role: "PhD Student"
+    affiliation: "New York University"
+    start_year: 2013
+    end_year: 2018
+    graduation_year: 2018
+    thesis_title: "Neural Networks for Jet Physics"
+    current_position: "Data Scientist at Google"
+    photo: null
+    links:
+      linkedin: "iristhompson"
+
+  - name: "Jack Brown"
+    category: students
+    current: false
+    role: "PhD Student"
+    affiliation: "New York University"
+    start_year: 2012
+    end_year: 2017
+    graduation_year: 2017
+    thesis_title: "Searches for New Physics at the LHC"
+    current_position: "Staff Scientist at SLAC"
+    photo: null
+    links:
+      website: "https://jackbrown.slac.stanford.edu"
+
+  # ==================
   # Postdocs
-  # - name: "Postdoc Name"
-  #   category: postdocs
-  #   role: "Postdoctoral Researcher"
-  #   affiliation: "University of Wisconsin-Madison"
-  #   start_year: 2023
-  #   photo: /images/collaborators/postdoc.jpg
+  # ==================
+  # Current Postdocs
+  - name: "Kate Anderson"
+    category: postdocs
+    current: true
+    role: "Postdoctoral Researcher"
+    affiliation: "University of Wisconsin-Madison"
+    start_year: 2023
+    photo: null
+    links:
+      github: "kateanderson"
+      scholar: "jkl012"
 
+  - name: "Liam O'Brien"
+    category: postdocs
+    current: true
+    role: "Postdoctoral Researcher"
+    affiliation: "University of Wisconsin-Madison"
+    start_year: 2022
+    photo: null
+    links:
+      github: "liamobrien"
+
+  # Former Postdocs
+  - name: "Maya Singh"
+    category: postdocs
+    current: false
+    role: "Postdoctoral Researcher"
+    affiliation: "New York University"
+    start_year: 2019
+    end_year: 2022
+    current_position: "Assistant Professor at MIT"
+    photo: null
+    links:
+      website: "https://mayasingh.mit.edu"
+
+  - name: "Nathan Lee"
+    category: postdocs
+    current: false
+    role: "Postdoctoral Researcher"
+    affiliation: "New York University"
+    start_year: 2018
+    end_year: 2021
+    current_position: "Senior Research Scientist at DeepMind"
+    photo: null
+    links:
+      github: "nathanlee"
+      twitter: "nathanlee_ai"
+
+  - name: "Olivia Garcia"
+    category: postdocs
+    current: false
+    role: "Postdoctoral Researcher"
+    affiliation: "New York University"
+    start_year: 2016
+    end_year: 2019
+    current_position: "Associate Professor at UC Berkeley"
+    photo: null
+    links:
+      website: "https://oliviagarcia.berkeley.edu"
+      scholar: "mno345"
+
+  # ==================
+  # Scientists
+  # ==================
+  # Current Scientists
+  - name: "Dr. Patricia Moore"
+    category: scientists
+    current: true
+    role: "Research Scientist"
+    affiliation: "University of Wisconsin-Madison"
+    start_year: 2021
+    photo: null
+    links:
+      github: "patriciamoore"
+      scholar: "xyz123"
+
+  - name: "Dr. Quentin Harris"
+    category: scientists
+    current: true
+    role: "Senior Research Scientist"
+    affiliation: "University of Wisconsin-Madison"
+    start_year: 2019
+    photo: null
+    links:
+      website: "https://quentinharris.wisc.edu"
+
+  # Former Scientists
+  - name: "Dr. Rachel Green"
+    category: scientists
+    current: false
+    role: "Research Scientist"
+    affiliation: "New York University"
+    start_year: 2015
+    end_year: 2020
+    current_position: "Director of ML at Spotify"
+    photo: null
+    links:
+      linkedin: "rachelgreen"
+
+  # ==================
   # Collaborators
-  # - name: "Collaborator Name"
-  #   category: collaborators
-  #   role: "Professor"
-  #   affiliation: "Another University"
-  #   image_shape: rectangular
-  #   photo: /images/collaborators/collab.jpg
-  #   links:
-  #     website: "https://..."
+  # ==================
+  # Current Collaborators
+  - name: "Prof. Sarah Miller"
+    category: collaborators
+    current: true
+    role: "Professor"
+    affiliation: "MIT"
+    photo: null
+    image_shape: rectangular
+    links:
+      website: "https://sarahmiller.mit.edu"
+      scholar: "pqr678"
+
+  - name: "Prof. Thomas Wright"
+    category: collaborators
+    current: true
+    role: "Professor"
+    affiliation: "UC Berkeley"
+    photo: null
+    image_shape: rectangular
+    links:
+      website: "https://thomaswright.berkeley.edu"
+
+  - name: "Dr. Uma Patel"
+    category: collaborators
+    current: true
+    role: "Senior Research Scientist"
+    affiliation: "Google DeepMind"
+    photo: null
+    image_shape: rectangular
+    links:
+      github: "umapatel"
+      twitter: "uma_patel"
+
+  # Former Collaborators
+  - name: "Prof. Victor Santos"
+    category: collaborators
+    current: false
+    role: "Professor"
+    affiliation: "ETH Zurich"
+    photo: null
+    image_shape: rectangular
+    links:
+      website: "https://victorsantos.ethz.ch"
+
+  - name: "Dr. Wendy Taylor"
+    category: collaborators
+    current: false
+    role: "Staff Scientist"
+    affiliation: "CERN"
+    photo: null
+    image_shape: rectangular
+    links:
+      website: "https://home.cern/people/wendy-taylor"
+      scholar: "stu901"
