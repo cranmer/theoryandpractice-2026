@@ -18,8 +18,13 @@ YAML format:
           - BibtexKey2
     highlights:
       - BibtexKey1  # Optional: mark specific papers as highlights
+
+Citation data (optional):
+    Run `pixi run update-citations` to fetch citation counts from OpenAlex.
+    Data is stored in content/citations.json and used for sorting.
 """
 
+import json
 import logging
 import os
 import re
@@ -149,6 +154,17 @@ def add_selected_publications(generator):
         logger.error(f'pelican-selected-publications: failed to parse {bibtex_file}: {e}')
         return
 
+    # Load citation data if available
+    citations_file = os.path.join(os.path.dirname(yaml_path), 'citations.json')
+    citations = {}
+    if os.path.exists(citations_file):
+        try:
+            with open(citations_file, 'r', encoding='utf-8') as f:
+                citations = json.load(f)
+            logger.info(f'pelican-selected-publications: loaded {len(citations)} citation records')
+        except Exception as e:
+            logger.warning(f'pelican-selected-publications: failed to load citations: {e}')
+
     # Initialize pybtex formatting
     plain_style = plain.Style()
     html_backend = html.Backend()
@@ -173,6 +189,17 @@ def add_selected_publications(generator):
             entry = bibdata.entries[key]
             pub = format_publication(entry, key, plain_style, html_backend)
             pub['highlight'] = key in highlights
+            # Add citation data if available
+            if key in citations:
+                pub['citations'] = citations[key].get('cited_by_count', 0)
+                # Use OpenAlex ID if available, otherwise Semantic Scholar
+                pub['citation_url'] = (
+                    citations[key].get('openalex_id', '') or
+                    citations[key].get('semantic_scholar_id', '')
+                )
+            else:
+                pub['citations'] = 0
+                pub['citation_url'] = ''
             publications.append(pub)
 
         categories.append({
@@ -182,13 +209,26 @@ def add_selected_publications(generator):
             'publications': publications,
         })
 
+    # Create flat list of all publications (for sorting)
+    all_publications = []
+    seen_keys = set()
+    for cat in categories:
+        for pub in cat['publications']:
+            if pub['key'] not in seen_keys:
+                pub_copy = pub.copy()
+                pub_copy['category'] = cat['title']
+                pub_copy['category_id'] = cat['id']
+                all_publications.append(pub_copy)
+                seen_keys.add(pub['key'])
+
     # Add to context
     generator.context['selected_publications'] = {
         'categories': categories,
         'highlights': highlights,
+        'all_publications': all_publications,
     }
 
-    logger.info(f'pelican-selected-publications: loaded {sum(len(c["publications"]) for c in categories)} publications in {len(categories)} categories')
+    logger.info(f'pelican-selected-publications: loaded {len(all_publications)} publications in {len(categories)} categories')
 
 
 def register():

@@ -47,6 +47,9 @@ pixi run clean
 
 # Build for production
 pixi run publish
+
+# Update citation counts from OpenAlex/Semantic Scholar
+pixi run update-citations
 ```
 
 The local server runs at http://localhost:8000
@@ -135,31 +138,46 @@ The site uses [pelican-bootstrap3](https://github.com/getpelican/pelican-themes/
 
 ### pelican-selected-publications
 
-A custom plugin (in `plugins/pelican-selected-publications`) that generates a curated publications page organized by research themes.
+A custom plugin (in `plugins/pelican-selected-publications`) that generates a curated publications page organized by research themes. See the [plugin README](plugins/pelican-selected-publications/README.md) for full documentation.
 
 **Features:**
 - YAML-driven category organization with BibTeX keys
 - Filter by category, year, and highlighted papers
+- Sort by category, date, or citation count
 - Publication metrics display (total papers, citations, h-index)
 - Profile icons linking to Google Scholar, INSPIRE, arXiv, OpenAlex, ORCiD
+- Citation counts fetched from OpenAlex (with Semantic Scholar fallback)
 - Collapsible Altmetric badges for each publication
 - BibTeX modal with copy-to-clipboard
 
 **Configuration:**
 ```python
 SELECTED_PUBLICATIONS_SRC = 'content/selected-publications.yml'
-PUBLICATION_METRICS = {
+
+# Aggregate metrics (displayed in two boxes)
+ALL_PUBLICATION_METRICS = {
     'total_publications': 1200,
     'total_citations': 349000,
     'h_index': 241,
 }
+SMALL_AUTHOR_METRICS = {
+    'total_publications': 119,
+    'total_citations': 14000,
+    'h_index': 41,
+}
+
 PUBLICATION_PROFILES = (
     ('Google Scholar', 'http://scholar.google.com/...', 'google-scholar'),
     ('INSPIRE', 'https://inspirehep.net/...', 'inspire'),
     ...
 )
-DIRECT_TEMPLATES = [..., 'selected-publications']
 ```
+
+**Updating Citation Counts:**
+```bash
+pixi run update-citations
+```
+This fetches citation counts from OpenAlex (with Semantic Scholar as fallback) and saves them to `content/citations.json`. Manual overrides can be added to `content/citations-manual.json`.
 
 ### pelican-presentations
 

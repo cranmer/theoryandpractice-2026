@@ -1,0 +1,8 @@
+{
+  "_comment": "Manual citation overrides. These take precedence over OpenAlex data.",
+  "_example": {
+    "cited_by_count": 100,
+    "openalex_id": "https://openalex.org/W1234567890",
+    "year": "2020"
+  }
+}

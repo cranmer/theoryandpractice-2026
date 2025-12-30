@@ -58,11 +58,11 @@ SOCIAL = (
 )
 
 CC_LICENSE = "CC-BY-NC"
-DEFAULT_PAGINATION = 6
 
 # URL structure (maintain compatibility with old site)
 ARTICLE_URL = '{date:%Y}/{date:%m}/{slug}/'
 ARTICLE_SAVE_AS = '{date:%Y}/{date:%m}/{slug}/index.html'
+
 
 # Static paths
 STATIC_PATHS = [
@@ -93,10 +93,23 @@ PUBLICATIONS_SRC = 'content/cranmer-2025-lt20authors.bib'
 SELECTED_PUBLICATIONS_SRC = 'content/selected-publications.yml'
 
 # Publication metrics (manually updated)
+# Keep PUBLICATION_METRICS for backwards compatibility (required for homepage to work correctly)
 PUBLICATION_METRICS = {
     'total_publications': 1200,
     'total_citations': 349000,
     'h_index': 241,
+}
+# All publications (including large collaborations like ATLAS)
+ALL_PUBLICATION_METRICS = {
+    'total_publications': 1200,
+    'total_citations': 349000,
+    'h_index': 241,
+}
+# Publications with fewer than 20 authors
+SMALL_AUTHOR_METRICS = {
+    'total_publications': 119,
+    'total_citations': 14000,
+    'h_index': 41,
 }
 
 # Publication profile links
@@ -121,7 +134,7 @@ PLUGINS = [
     'i18n_init',  # Minimal i18n for theme (replaces pelican-i18n-subsites)
     'pelican_javascript',
     'pelican-cite',
-    'pelican-bibtex',
+    #'pelican-bibtex',
     'pelican-selected-publications',
 ]
 
@@ -182,7 +195,19 @@ MARKDOWN = {
 }
 
 # Direct templates (for publications, presentations, and search pages)
+# Note: tried excluding 'index' since the homepage comes from Home.md with save_as: index.html
+# Blog listing is generated separately via category pages
 DIRECT_TEMPLATES = ['index', 'categories', 'authors', 'archives', 'publications', 'selected-publications', 'presentations', 'search']
+
+# 
+#INDEX_SAVE_AS = 'blog/index.html'
+#INDEX_URL = 'blog/index.html'
+
+# Disable pagination for all templates 
+#PAGINATED_TEMPLATES = {}
+#PAGINATED_TEMPLATES = {'index': None, 'tag': None, 'category': None, 'author': None, 'blog': None}
+
+DEFAULT_PAGINATION = 6
 
 # Presentations (pelican-presentations plugin)
 PRESENTATIONS_SRC = 'content/presentations.yml'

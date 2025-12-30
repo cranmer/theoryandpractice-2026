@@ -76,7 +76,7 @@ categories:
       - LezcanoCasado:2017   # Improvements to Inference Compilation
 
   - id: dynamical
-    title: "Graph Networks and Neuro-Symbolic Approaches for Dynamical Systems"
+    title: "Graph and Neuro-Symbolic Approaches for Dynamical Systems"
     description: "Combining neural networks with physical structure for modeling dynamical systems."
     publications:
       - Cranmer:2020wew      # Discovering Symbolic Models

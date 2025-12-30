@@ -1,11 +1,9 @@
 Title: 
 date: 2014-03-21 10:53
-URL:
+URL: 
 save_as: index.html
 Authors: Kyle Cranmer
 Summary: try to set a new home page
-JavaScripts:  https://code.jquery.com/jquery-1.9.1.min.js, FeedEk.js, FeedEk.min.js, test-FeedEk.js, test-FeedEk-minimal.js
-Stylesheets: FeedEk.css
 
 
 <!--
@@ -27,6 +25,7 @@ Stylesheets: FeedEk.css
 -->
 
 <!--{% img /images/kyle-andys-party-miras-photo.jpg 300 200 Me %}-->
+
 
 
 <div markdown="1">
