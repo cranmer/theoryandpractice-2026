@@ -1188,3 +1188,43 @@ people:
     role: "Researcher"
     affiliation: "Harvard Statistics (formerly)"
     current_position: "First winner of Dempster Prize; worked with Xiao-Li Meng on genomic data preprocessing"
+
+  # Machine Learning
+  - name: "Neil D. Lawrence"
+    category: collaborators
+    current: true
+    role: "DeepMind Professor of Machine Learning"
+    affiliation: "University of Cambridge"
+    current_position: "Academic lead of ai@cam; author of 'The Atomic Human'; founder of GP Summer School"
+    links:
+      website: "https://inverseprobability.com/"
+      scholar: "r3SJcvoAAAAJ"
+
+  - name: "Philipp Berens"
+    category: collaborators
+    current: true
+    role: "Full Professor"
+    affiliation: "University of Tübingen"
+    current_position: "Director of Hertie Institute for AI in Brain Health; ERC Starting Grant recipient"
+    links:
+      website: "https://philippberens.wordpress.com/"
+      scholar: "lPQLk3QAAAAJ"
+
+  - name: "Ulrike von Luxburg"
+    category: collaborators
+    current: true
+    role: "Full Professor"
+    affiliation: "University of Tübingen"
+    current_position: "Theory of Machine Learning; Leopoldina member; Bernoulli Prize winner"
+    links:
+      website: "http://tml.cs.uni-tuebingen.de/team/luxburg/"
+      scholar: "mMifMdoAAAAJ"
+
+  - name: "Jessica Montgomery"
+    category: collaborators
+    current: true
+    role: "Executive Director"
+    affiliation: "University of Cambridge"
+    current_position: "Director of AI@Cam and Accelerate Programme for Scientific Discovery"
+    links:
+      website: "https://science.ai.cam.ac.uk/team/jessica-montgomery.html"
