@@ -39,10 +39,11 @@ MENUITEMS = (
 
 # Links
 LINKS = (
+    ('Stats & Data Science Book','https://theoryandpractice.org/stats-ds-book/intro.html'),
     ('Data Science Institute', 'https://dsi.wisc.edu'),
     ('My UW Physics webpage', 'https://www.physics.wisc.edu/directory/cranmer-kyle/'),
     ('IRIS-HEP', 'https://iris-hep.org/'),
-    ('wikipedia', 'https://en.wikipedia.org/wiki/Kyle_Cranmer')
+    ('Wikipedia', 'https://en.wikipedia.org/wiki/Kyle_Cranmer'),
 )
 
 # Social
