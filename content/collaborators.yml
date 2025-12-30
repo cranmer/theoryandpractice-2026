@@ -541,9 +541,11 @@ people:
     current: true
     role: "Professor"
     affiliation: "New York University"
-    current_position: "Professor of Computer Science and Data Science at NYU; Executive Director at Genentech"
+    current_position: "Glen de Vries Professor; Executive Director at Genentech Prescient Design"
+    photo: "/images/collaborators/kyunghyun-cho.jpg"
     links:
       website: "https://kyunghyuncho.me/"
+      twitter: "kchonyc"
       scholar: "0RAmmIAAAAAJ"
 
   - name: "David Hogg"
