@@ -159,7 +159,7 @@ people:
   - name: "Michael Albergo"
     category: students
     current: false
-    role: "PhD Student (Data Science)"
+    role: "PhD Student"
     affiliation: "New York University"
     start_year: 2018
     end_year: 2023
