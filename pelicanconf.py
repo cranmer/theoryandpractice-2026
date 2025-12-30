@@ -54,7 +54,7 @@ SOCIAL = (
     ('github', 'http://github.com/cranmer'),
     ('linkedin', 'http://www.linkedin.com/in/kylecranmer'),
     ('youtube', 'https://www.youtube.com/channel/UCKl2VoIJiPYp3QhuK22b7xQ'),
-    ('INSPIRE (≤ 10 authors)', 'https://inspirehep.net/literature?sort=mostrecent&size=25&page=1&q=a%3Ak.s.cranmer.1%20and%20ac%201-%3E10&ui-citation-summary=true', 'inspire'),
+    ('INSPIRE', 'https://inspirehep.net/literature?sort=mostrecent&size=25&page=1&q=a%3Ak.s.cranmer.1%20and%20ac%201-%3E10&ui-citation-summary=true', 'inspire'),
     ('Google Scholar', 'http://scholar.google.com/citations?user=EZjSxgwAAAAJ', 'google-scholar'),
     ('ORCiD', 'https://orcid.org/0000-0002-5769-7094', 'orcid'),
 )
