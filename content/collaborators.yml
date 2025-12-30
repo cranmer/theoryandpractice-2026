@@ -363,19 +363,21 @@ people:
 
   - name: "Alexander Held"
     category: scientists
-    current: true
+    current: false
     role: "Postdoctoral Researcher"
     affiliation: "University of Wisconsin-Madison"
     start_year: 2023
+    end_year: 2023
     links:
       github: "alexander-held"
 
   - name: "Matthew Feickert"
     category: scientists
-    current: true
+    current: false
     role: "Research Scientist"
     affiliation: "University of Wisconsin-Madison"
     start_year: 2023
+    end_year: 2022
     photo: "https://images.squarespace-cdn.com/content/v1/535ddd66e4b0e268e3eae4cf/e8c0acb6-6537-4245-9670-cc2fc5dd39d5/2024-07-12-Matthew+Feickert-scipy-portrait-crop.jpg"
     links:
       website: "https://www.matthewfeickert.com"
@@ -412,49 +414,60 @@ people:
   # ML/Physics Collaborators - DeepMind & Industry
   - name: "Danilo Jimenez Rezende"
     category: collaborators
-    current: true
+    current: false
     role: "VP of AI Research"
     affiliation: "Ellison Institute of Technology"
     current_position: "VP AI Research at EIT; former Research Director at Google DeepMind"
+    start_year: 2020
+    end_year: 2023
     links:
       website: "https://danilorezende.com/about/"
       scholar: "rvW4j38AAAAJ"
 
   - name: "George Papamakarios"
     category: collaborators
-    current: true
+    current: false
     role: "Research Scientist"
     affiliation: "Google DeepMind"
+    start_year: 2020
+    end_year: 2020
     links:
       scholar: "wHcpf58AAAAJ"
 
   - name: "Sébastien Racanière"
     category: collaborators
-    current: true
+    current: false
     role: "Staff Research Engineer"
     affiliation: "Google DeepMind"
+    start_year: 2020
+    end_year: 2023
     links:
       scholar: "o-h0vrQAAAAJ"
 
   - name: "Peter Battaglia"
     category: collaborators
-    current: true
+    current: false
     role: "Research Scientist"
     affiliation: "Google DeepMind"
+    start_year: 2019
+    end_year: 2020
     links:
       scholar: "nQ7Ij30AAAAJ"
 
   - name: "Alvaro Sanchez-Gonzalez"
     category: collaborators
-    current: true
+    current: false
     role: "Staff Research Engineer"
     affiliation: "Google DeepMind"
+    start_year: 2019
+    end_year: 2020
 
   - name: "François Charton"
     category: collaborators
     current: true
     role: "Research Engineer"
     affiliation: "Axiom Math (formerly Meta AI)"
+    start_year: 2024
     links:
       twitter: "f_charton"
       scholar: "1tMnd-4AAAAJ"
@@ -462,10 +475,12 @@ people:
   # Flatiron Institute / Simons Foundation
   - name: "Siavash Golkar"
     category: collaborators
-    current: true
+    current: false
     role: "Research Scientist"
     affiliation: "New York University / Flatiron Institute"
     current_position: "Research Scientist at NYU; co-investigator of Polymathic AI"
+    start_year: 2018
+    end_year: 2019
     links:
       github: "golkar"
       scholar: "UzaZt7MAAAAJ"
@@ -473,65 +488,81 @@ people:
 
   - name: "Shirley Ho"
     category: collaborators
-    current: true
+    current: false
     role: "Group Leader"
     affiliation: "Flatiron Institute"
     current_position: "Group Leader of Cosmology & Machine Learning at Flatiron; Research Professor at NYU"
+    start_year: 2020
+    end_year: 2020
     links:
       website: "https://www.shirleyho.me/"
       scholar: "fhOi--4AAAAJ"
 
   - name: "David Spergel"
     category: collaborators
-    current: true
+    current: false
     role: "President"
     affiliation: "Simons Foundation"
     current_position: "President of Simons Foundation; Emeritus Professor at Princeton"
+    start_year: 2020
+    end_year: 2020
     links:
       website: "https://www.astro.princeton.edu/~dns/"
 
   # MIT / Lattice QCD Collaborators
   - name: "Phiala Shanahan"
     category: collaborators
-    current: true
+    current: false
     role: "Associate Professor"
     affiliation: "MIT"
+    start_year: 2020
+    end_year: 2023
     links:
       scholar: "GWBSOj4AAAAJ"
 
   - name: "Gurtej Kanwar"
     category: collaborators
-    current: true
+    current: false
     role: "Postdoctoral Researcher"
     affiliation: "University of Bern"
+    start_year: 2020
+    end_year: 2023
 
   - name: "Denis Boyda"
     category: collaborators
-    current: true
+    current: false
     role: "IAIFI Fellow"
     affiliation: "MIT"
+    start_year: 2020
+    end_year: 2023
     links:
       scholar: "LRXX-0gAAAAJ"
 
   - name: "Daniel Hackett"
     category: collaborators
-    current: true
+    current: false
     role: "Postdoctoral Researcher"
     affiliation: "Fermilab"
+    start_year: 2023
+    end_year: 2023
     links:
       scholar: "9ZDR9jYAAAAJ"
 
   - name: "Fernando Romero-López"
     category: collaborators
-    current: true
+    current: false
     role: "Researcher"
     affiliation: "MIT / Universitat de València"
+    start_year: 2022
+    end_year: 2023
 
   - name: "Julian Urban"
     category: collaborators
-    current: true
+    current: false
     role: "Researcher"
     affiliation: "Universität Heidelberg"
+    start_year: 2021
+    end_year: 2023
     links:
       github: "julian-urban"
 
@@ -550,10 +581,12 @@ people:
 
   - name: "David Hogg"
     category: collaborators
-    current: true
+    current: false
     role: "Professor"
     affiliation: "New York University / Flatiron Institute"
     current_position: "Professor of Physics and Data Science at NYU; Senior Research Scientist at Flatiron"
+    start_year: 2014
+    end_year: 2015
     links:
       website: "https://cosmo.nyu.edu/hogg/"
       scholar: "hcmW-W0AAAAJ"
@@ -561,28 +594,34 @@ people:
   # Weizmann Institute Collaborators
   - name: "Eilam Gross"
     category: collaborators
-    current: true
+    current: false
     role: "Professor"
     affiliation: "Weizmann Institute of Science"
     current_position: "Head of the Nella and Leon Benoziyo Center for High Energy Physics"
+    start_year: 2012
+    end_year: 2023
     links:
       scholar: "iibZFkYAAAAJ"
       website: "https://www.weizmann.ac.il/particle/gross/"
 
   - name: "Yaron Lipman"
     category: collaborators
-    current: true
+    current: false
     role: "Professor"
     affiliation: "Weizmann Institute of Science"
+    start_year: 2020
+    end_year: 2020
     links:
       website: "https://www.wisdom.weizmann.ac.il/~ylipman/"
       scholar: "vyteiT4AAAAJ"
 
   - name: "Ofer Vitells"
     category: collaborators
-    current: true
+    current: false
     role: "Researcher"
     affiliation: "Weizmann Institute of Science"
+    start_year: 2010
+    end_year: 2013
 
   - name: "Jonathan Shlomi"
     category: collaborators
@@ -592,18 +631,22 @@ people:
 
   - name: "Sanmay Ganguly"
     category: collaborators
-    current: true
+    current: false
     role: "Assistant Professor"
     affiliation: "IIT Kanpur"
     current_position: "Assistant Professor at IIT Kanpur; formerly at Weizmann Institute"
+    start_year: 2022
+    end_year: 2023
     links:
       github: "sanmayphy"
 
   - name: "Haggai Maron"
     category: collaborators
-    current: true
+    current: false
     role: "Assistant Professor"
     affiliation: "Technion / NVIDIA Research"
+    start_year: 2020
+    end_year: 2020
     links:
       website: "https://haggaim.github.io/"
       scholar: "4v8uJrIAAAAJ"
@@ -611,9 +654,11 @@ people:
   # Cambridge / Oxford
   - name: "Miles Cranmer"
     category: collaborators
-    current: true
+    current: false
     role: "Assistant Professor"
     affiliation: "University of Cambridge"
+    start_year: 2020
+    end_year: 2020
     links:
       website: "https://astroautomata.com/"
       scholar: "10WfwCQAAAAJ"
@@ -621,10 +666,12 @@ people:
 
   - name: "Atılım Güneş Baydin"
     category: collaborators
-    current: true
+    current: false
     role: "Departmental Lecturer"
     affiliation: "University of Oxford"
     current_position: "Lecturer in Machine Learning; leads Oxford AI4Science Lab"
+    start_year: 2017
+    end_year: 2021
     links:
       website: "http://gbaydin.github.io/"
       scholar: "GWBSOj4AAAAJ"
@@ -636,6 +683,7 @@ people:
     current: true
     role: "Professor"
     affiliation: "Royal Holloway, University of London"
+    start_year: 2010
     links:
       website: "https://www.pp.rhul.ac.uk/~cowan/"
       scholar: "ljQwt8QAAAAJ"
@@ -652,33 +700,41 @@ people:
   # CERN / ROOT / Software
   - name: "Wouter Verkerke"
     category: collaborators
-    current: true
+    current: false
     role: "Researcher"
     affiliation: "NIKHEF"
     current_position: "Co-developer of RooFit"
+    start_year: 2010
+    end_year: 2014
 
   - name: "Lorenzo Moneta"
     category: collaborators
-    current: true
+    current: false
     role: "Senior Applied Scientist"
     affiliation: "CERN"
     current_position: "ROOT Math Work Package lead"
+    start_year: 2010
+    end_year: 2014
 
   - name: "Peter Elmer"
     category: collaborators
-    current: true
+    current: false
     role: "Senior Research Physicist"
     affiliation: "Princeton University"
     current_position: "Executive Director and PI of IRIS-HEP"
+    start_year: 2016
+    end_year: 2019
     links:
       website: "https://elmer.scholar.princeton.edu/"
 
   - name: "Gordon Watts"
     category: collaborators
-    current: true
+    current: false
     role: "Professor"
     affiliation: "University of Washington"
     current_position: "Deputy Executive Director of IRIS-HEP"
+    start_year: 2018
+    end_year: 2018
     links:
       website: "https://gordonwatts.wordpress.com/"
       github: "gordonwatts"
@@ -686,9 +742,11 @@ people:
   # Fermilab / SLAC
   - name: "Michael Kagan"
     category: collaborators
-    current: true
+    current: false
     role: "Panofsky Fellow"
     affiliation: "SLAC National Accelerator Laboratory"
+    start_year: 2016
+    end_year: 2023
     links:
       scholar: "Gau3JTYAAAAJ"
 
@@ -698,6 +756,7 @@ people:
     role: "Associate Scientist"
     affiliation: "Fermilab"
     current_position: "Co-founder of fast machine learning organization"
+    start_year: 2024
     links:
       scholar: "ZTqZD80AAAAJ"
 
@@ -706,6 +765,7 @@ people:
     current: true
     role: "Research Associate"
     affiliation: "Fermilab"
+    start_year: 2023
     links:
       scholar: "Gau3JTYAAAAJ"
 
@@ -730,57 +790,69 @@ people:
   # European Physics Collaborators
   - name: "Tilman Plehn"
     category: collaborators
-    current: true
+    current: false
     role: "Professor"
     affiliation: "Universität Heidelberg"
+    start_year: 2004
+    end_year: 2023
     links:
       website: "https://www.thphys.uni-heidelberg.de/~plehn/"
       scholar: "r3zfvh0AAAAJ"
 
   - name: "Felix Kling"
     category: collaborators
-    current: true
+    current: false
     role: "Research Fellow"
     affiliation: "DESY"
+    start_year: 2017
+    end_year: 2023
     links:
       scholar: "CdKKXWcAAAAJ"
 
   # ML Theory / Quantum
   - name: "Giuseppe Carleo"
     category: collaborators
-    current: true
+    current: false
     role: "Professor"
     affiliation: "EPFL"
     current_position: "Head of Laboratory of Computational Quantum Science"
+    start_year: 2019
+    end_year: 2019
     links:
       website: "https://people.epfl.ch/giuseppe.carleo"
       scholar: "e9I38PEAAAAJ"
 
   - name: "Lenka Zdeborová"
     category: collaborators
-    current: true
+    current: false
     role: "Associate Professor"
     affiliation: "EPFL"
     current_position: "Head of Laboratory of Statistical Physics of Computation"
+    start_year: 2019
+    end_year: 2019
     links:
       website: "https://people.epfl.ch/lenka.zdeborova"
       scholar: "gkCjy_UAAAAJ"
 
   - name: "Ignacio Cirac"
     category: collaborators
-    current: true
+    current: false
     role: "Director"
     affiliation: "Max Planck Institute of Quantum Optics"
+    start_year: 2019
+    end_year: 2019
     links:
       website: "https://www.mpq.mpg.de/ignacio-cirac"
       scholar: "gPGlTbgAAAAJ"
 
   - name: "Frank Wood"
     category: collaborators
-    current: true
+    current: false
     role: "Professor"
     affiliation: "University of British Columbia"
     current_position: "Professor at UBC; CEO of Inverted AI"
+    start_year: 2019
+    end_year: 2019
     links:
       website: "https://www.cs.ubc.ca/~fwood/"
       scholar: "d4yNzXIAAAAJ"
@@ -788,15 +860,19 @@ people:
   # Clustering / Hierarchical Methods
   - name: "Craig Greenberg"
     category: collaborators
-    current: true
+    current: false
     role: "Researcher"
     affiliation: "UMass Amherst"
+    start_year: 2020
+    end_year: 2021
 
   - name: "Nicholas Monath"
     category: collaborators
-    current: true
+    current: false
     role: "Research Scientist"
     affiliation: "Google"
+    start_year: 2020
+    end_year: 2021
     links:
       website: "https://nmonath.github.io/"
       scholar: "PTfhfCQAAAAJ"
@@ -805,10 +881,12 @@ people:
   # LBNL / Scientific Computing
   - name: "Wahid Bhimji"
     category: collaborators
-    current: true
+    current: false
     role: "Division Deputy for AI and Science"
     affiliation: "NERSC, Lawrence Berkeley National Laboratory"
     current_position: "Leads Data and AI Services Group at NERSC; PI of FAIR Universe project"
+    start_year: 2017
+    end_year: 2019
     links:
       website: "https://www.nersc.gov/about/nersc-staff/data-analytics-services/wahid-bhimji/"
 
@@ -836,10 +914,12 @@ people:
 
   - name: "Alexander Vandenberg-Rodes"
     category: collaborators
-    current: true
+    current: false
     role: "Senior Principal ML Researcher"
     affiliation: "Obsidian Security"
     current_position: "Former Visiting Assistant Professor at UC Irvine"
+    start_year: 2017
+    end_year: 2017
     links:
       website: "https://www.math.uci.edu/~vandenbe/"
       scholar: "NNYJZZEAAAAJ"
@@ -847,68 +927,82 @@ people:
   # Harvard / Data Science
   - name: "Ana Trisovic"
     category: collaborators
-    current: true
+    current: false
     role: "Sloan Postdoctoral Fellow"
     affiliation: "Harvard IQSS"
     current_position: "Research on computational reproducibility and data provenance"
+    start_year: 2018
+    end_year: 2018
     links:
       website: "https://anatrisovic.com/"
 
   - name: "Alyssa Goodman"
     category: collaborators
-    current: true
+    current: false
     role: "Professor"
     affiliation: "Harvard University"
     current_position: "Robert Wheeler Willson Professor of Applied Astronomy; PI of Glue software project"
+    start_year: 2014
+    end_year: 2015
     links:
       website: "https://scholar.harvard.edu/agoodman/home"
       scholar: "0LoCGasAAAAJ"
 
   - name: "Mercè Crosas"
     category: collaborators
-    current: true
+    current: false
     role: "President of CODATA"
     affiliation: "Barcelona Supercomputing Center"
     current_position: "Head of Computational Social Sciences; formerly Chief Data Science Officer at Harvard IQSS"
+    start_year: 2014
+    end_year: 2014
     links:
       scholar: "0LoCGasAAAAJ"
 
   # Open Science / Publishing
   - name: "Alberto Pepe"
     category: collaborators
-    current: true
+    current: false
     role: "Director of Strategy and Innovation"
     affiliation: "Atypon"
     current_position: "Co-founder of Authorea; former CERN IT and Harvard postdoc"
+    start_year: 2014
+    end_year: 2015
     links:
       website: "https://www.authorea.com/users/3-alberto-pepe"
 
   # Quantum Machine Learning
   - name: "Maria Schuld"
     category: collaborators
-    current: true
+    current: false
     role: "Quantum Machine Learning Research Lead"
     affiliation: "Xanadu"
     current_position: "Co-developer of PennyLane; author of 'Machine Learning with Quantum Computers'"
+    start_year: 2019
+    end_year: 2019
     links:
       scholar: "_ih_hwUAAAAJ"
 
   # CERN Software & Infrastructure
   - name: "Danilo Piparo"
     category: collaborators
-    current: true
+    current: false
     role: "ROOT Project Leader"
     affiliation: "CERN"
     current_position: "Leads the ROOT data analysis framework since 2023"
+    start_year: 2010
+    end_year: 2010
     links:
       github: "dpiparo"
 
   - name: "Tibor Šimko"
     category: collaborators
-    current: true
+    current: false
     role: "Project Leader"
     affiliation: "CERN"
     current_position: "Founder of CERN Open Data Portal, CERN Analysis Preservation, and REANA platform"
+    start_year: 2018
+    end_year: 2018
     links:
       github: "tiborsimko"
 
@@ -923,17 +1017,21 @@ people:
 
   - name: "Sünje Dallmeier-Tiessen"
     category: collaborators
-    current: true
+    current: false
     role: "Open Science Expert"
     affiliation: "CERN"
     current_position: "Research data publishing and open science initiatives"
+    start_year: 2012
+    end_year: 2019
 
   - name: "Kati Lassila-Perini"
     category: collaborators
-    current: true
+    current: false
     role: "CMS Data Preservation Lead"
     affiliation: "Helsinki Institute of Physics / CERN"
     current_position: "Leads CMS Open Data and data preservation efforts"
+    start_year: 2012
+    end_year: 2018
 
   - name: "Sebastian Neubert"
     category: collaborators
@@ -949,26 +1047,31 @@ people:
     role: "Researcher"
     affiliation: "Anthropic"
     current_position: "Works on finetuning; formerly Meta AI (FAIR), MIT, CERN/LHCb"
+    start_year: 2024
     links:
       website: "https://nolte.dev/"
       github: "niklasnolte"
 
   - name: "Laurent Daudet"
     category: collaborators
-    current: true
+    current: false
     role: "Co-CEO"
     affiliation: "LightOn"
     current_position: "Co-founder of LightOn; on leave from Professor of Physics at Université Paris Cité"
+    start_year: 2019
+    end_year: 2019
     links:
       scholar: "PCIAcfUAAAAJ"
 
   # Physics Theory
   - name: "Itay Yavin"
     category: collaborators
-    current: true
+    current: false
     role: "Associate Professor"
     affiliation: "McMaster University / Perimeter Institute"
     current_position: "Expert in physics beyond Standard Model and dark matter"
+    start_year: 2010
+    end_year: 2012
 
   - name: "Matthias Wilhelm"
     category: collaborators
@@ -990,29 +1093,35 @@ people:
   # Weizmann (additional)
   - name: "Hadar Serviansky"
     category: collaborators
-    current: true
+    current: false
     role: "MS Student"
     affiliation: "Weizmann Institute"
     current_position: "Research in deep learning and graph neural networks"
+    start_year: 2020
+    end_year: 2020
     links:
       scholar: "-jVU-vQAAAAJ"
 
   - name: "Nimrod Segol"
     category: collaborators
-    current: true
+    current: false
     role: "PhD Student"
     affiliation: "Weizmann Institute"
     current_position: "Machine learning with applications to physics"
+    start_year: 2020
+    end_year: 2020
     links:
       scholar: "dTuhEVsAAAAJ"
 
   # NYU (additional)
   - name: "Joan Bruna"
     category: collaborators
-    current: true
+    current: false
     role: "Full Professor"
     affiliation: "NYU Courant Institute"
     current_position: "Co-founder of MaD group; NSF CAREER and Sloan Fellow"
+    start_year: 2017
+    end_year: 2017
     links:
       website: "https://cims.nyu.edu/~bruna/"
       scholar: "L4bNmsMAAAAJ"
@@ -1049,20 +1158,24 @@ people:
   # Scientific Workflows / AI for Science
   - name: "Yolanda Gil"
     category: collaborators
-    current: true
+    current: false
     role: "Research Professor"
     affiliation: "USC Information Sciences Institute"
     current_position: "Fellow of AAAI; former AAAI President; National Science Board member"
+    start_year: 2014
+    end_year: 2014
     links:
       website: "https://knowledgecaptureanddiscovery.github.io/yolanda_gil_website/"
       scholar: "NDmGsCgAAAAJ"
 
   - name: "Paul Groth"
     category: collaborators
-    current: true
+    current: false
     role: "Professor"
     affiliation: "University of Amsterdam"
     current_position: "Professor of Algorithmic Data Science; co-chair of W3C Provenance Working Group"
+    start_year: 2014
+    end_year: 2015
     links:
       website: "https://pgroth.com/"
       scholar: "0tHSHCIAAAAJ"
@@ -1070,57 +1183,69 @@ people:
   # Astronomy / Data Science
   - name: "Ashish Mahabal"
     category: collaborators
-    current: true
+    current: false
     role: "Sr. Research Scientist"
     affiliation: "Caltech"
     current_position: "Deputy Director of Center for Data Driven Discovery; leads ZTF ML group"
+    start_year: 2014
+    end_year: 2015
     links:
       website: "https://ashishmahabal.net/"
       scholar: "Ww9DSqAAAAAJ"
 
   - name: "Rosanne Di Stefano"
     category: collaborators
-    current: true
+    current: false
     role: "Senior Astrophysicist"
     affiliation: "Center for Astrophysics | Harvard & Smithsonian"
     current_position: "Expert in gravitational lensing, X-ray astronomy, and extragalactic planet detection"
+    start_year: 2014
+    end_year: 2015
     links:
       website: "http://rosanne-distefano.org/"
 
   - name: "Vinay Kashyap"
     category: collaborators
-    current: true
+    current: false
     role: "Senior Astrophysicist"
     affiliation: "Center for Astrophysics | Harvard & Smithsonian"
     current_position: "Chandra X-ray calibration scientist; founding member of CHASC AstroStatistics"
+    start_year: 2014
+    end_year: 2015
     links:
       website: "https://hea-www.harvard.edu/~kashyap/"
 
   - name: "Aneta Siemiginowska"
     category: collaborators
-    current: true
+    current: false
     role: "Senior Astrophysicist"
     affiliation: "Center for Astrophysics | Harvard & Smithsonian"
     current_position: "X-ray astronomy expert; President of International Astrostatistics Association"
+    start_year: 2014
+    end_year: 2015
     links:
       website: "https://hea-www.harvard.edu/~aneta/HomePage.html"
 
   # Data Science & Information Science
   - name: "Christine Borgman"
     category: collaborators
-    current: true
+    current: false
     role: "Distinguished Research Professor"
     affiliation: "UCLA"
     current_position: "Director of Center for Knowledge Infrastructures; author of 'Big Data, Little Data, No Data'"
+    start_year: 2014
+    end_year: 2015
     links:
       website: "https://christineborgman.info/"
 
   - name: "Aleksandra Slavkovic"
     category: collaborators
-    current: true
+    current: false
     role: "Professor"
     affiliation: "Penn State"
     current_position: "Huck Chair in Data Privacy; Associate Dean for Research; ASA and IMS Fellow"
+    start_year: 2014
+    end_year: 2015
     links:
       website: "https://science.psu.edu/stat/people/abs12"
       scholar: "plbHxNUAAAAJ"
@@ -1128,10 +1253,12 @@ people:
   # CERN Open Science (additional)
   - name: "Salvatore Mele"
     category: collaborators
-    current: true
+    current: false
     role: "Head of Open Access"
     affiliation: "CERN"
     current_position: "Strategic Director of INSPIRE; co-architect of SCOAP3 Open Access initiative"
+    start_year: 2012
+    end_year: 2018
 
   - name: "Diego Rodriguez Rodriguez"
     category: collaborators
@@ -1146,6 +1273,8 @@ people:
     role: "Former Researcher"
     affiliation: "Princeton University (formerly)"
     current_position: "Contributed to RooStats and MCMC in ROOT framework"
+    start_year: 2010
+    end_year: 2010
 
   - name: "Xiaoli Chen"
     category: collaborators
@@ -1157,10 +1286,12 @@ people:
   # Digital Preservation / Archives
   - name: "Margaret Hedstrom"
     category: collaborators
-    current: true
+    current: false
     role: "Professor Emerita"
     affiliation: "University of Michigan"
     current_position: "Digital Preservation Pioneer (Library of Congress); led CAMiLEON and SEAD projects"
+    start_year: 2014
+    end_year: 2015
     links:
       website: "https://www.si.umich.edu/people/margaret-hedstrom"
       scholar: "cmWGmOgAAAAJ"
@@ -1172,52 +1303,64 @@ people:
     role: "Professor (deceased)"
     affiliation: "Hebrew University of Jerusalem"
     current_position: "Pioneer of Information Bottleneck theory for deep learning (1952-2021)"
+    start_year: 2019
+    end_year: 2019
 
   # Computational Chemistry
   - name: "Leslie Vogt-Maranto"
     category: collaborators
-    current: true
+    current: false
     role: "Postdoctoral Fellow"
     affiliation: "NYU"
     current_position: "Machine learning for quantum chemistry; Tuckerman Group"
+    start_year: 2019
+    end_year: 2019
     links:
       scholar: "H6WcIUQAAAAJ"
 
   # Statistics / Data Science
   - name: "Alexander Blocker"
     category: collaborators
-    current: true
+    current: false
     role: "Researcher"
     affiliation: "Harvard Statistics (formerly)"
     current_position: "First winner of Dempster Prize; worked with Xiao-Li Meng on genomic data preprocessing"
+    start_year: 2014
+    end_year: 2015
 
   # Machine Learning
   - name: "Neil D. Lawrence"
     category: collaborators
-    current: true
+    current: false
     role: "DeepMind Professor of Machine Learning"
     affiliation: "University of Cambridge"
     current_position: "Academic lead of ai@cam; author of 'The Atomic Human'; founder of GP Summer School"
+    start_year: 2023
+    end_year: 2023
     links:
       website: "https://inverseprobability.com/"
       scholar: "r3SJcvoAAAAJ"
 
   - name: "Philipp Berens"
     category: collaborators
-    current: true
+    current: false
     role: "Full Professor"
     affiliation: "University of Tübingen"
     current_position: "Director of Hertie Institute for AI in Brain Health; ERC Starting Grant recipient"
+    start_year: 2023
+    end_year: 2023
     links:
       website: "https://philippberens.wordpress.com/"
       scholar: "lPQLk3QAAAAJ"
 
   - name: "Ulrike von Luxburg"
     category: collaborators
-    current: true
+    current: false
     role: "Full Professor"
     affiliation: "University of Tübingen"
     current_position: "Theory of Machine Learning; Leopoldina member; Bernoulli Prize winner"
+    start_year: 2023
+    end_year: 2023
     links:
       website: "http://tml.cs.uni-tuebingen.de/team/luxburg/"
       scholar: "mMifMdoAAAAJ"
@@ -1249,6 +1392,7 @@ people:
     role: "Assistant Professor"
     affiliation: "NYU"
     current_position: "Computer Science & Data Science; ML for healthcare; NSF CAREER"
+    start_year: 2024
     links:
       website: "https://cims.nyu.edu/~rajeshr/"
       scholar: "kddKBCsAAAAJ"
@@ -1266,10 +1410,12 @@ people:
   # NYU Physics
   - name: "Allen Mincer"
     category: collaborators
-    current: true
+    current: false
     role: "Professor"
     affiliation: "NYU"
     current_position: "ATLAS experiment; MET triggers; Golden Dozen teaching award"
+    start_year: 2011
+    end_year: 2011
     links:
       website: "https://physics.nyu.edu/~am3/"
 
@@ -1347,70 +1493,86 @@ people:
   # European Physics
   - name: "Sabine Kraml"
     category: collaborators
-    current: true
+    current: false
     role: "CNRS Researcher"
     affiliation: "LPSC Grenoble"
     current_position: "BSM phenomenology; LHC Reinterpretation Forum co-lead"
+    start_year: 2013
+    end_year: 2023
     links:
       website: "http://kraml.home.cern.ch/kraml/"
       scholar: "WqBKDGsAAAAJ"
 
   - name: "Philip Bechtle"
     category: collaborators
-    current: true
+    current: false
     role: "Senior Researcher"
     affiliation: "University of Bonn"
     current_position: "ATLAS experiment; HiggsBounds/HiggsSignals developer"
+    start_year: 2022
+    end_year: 2022
 
   - name: "Nicholas Wardle"
     category: collaborators
-    current: true
+    current: false
     role: "Associate Professor"
     affiliation: "Imperial College London"
     current_position: "CMS Higgs physics group co-convener (2020-2022)"
+    start_year: 2021
+    end_year: 2022
     links:
       website: "https://www.imperial.ac.uk/people/n.wardle09"
 
   - name: "Juan Rojo"
     category: collaborators
-    current: true
+    current: false
     role: "Professor"
     affiliation: "VU Amsterdam / Nikhef"
     current_position: "NNPDF collaboration; parton distribution functions"
+    start_year: 2021
+    end_year: 2023
 
   - name: "Sezen Sekmen"
     category: collaborators
-    current: true
+    current: false
     role: "Researcher"
     affiliation: "Kyungpook National University"
     current_position: "CMS SUSY searches; fast simulation; LHC reinterpretation"
+    start_year: 2013
+    end_year: 2022
 
   # US Physics
   - name: "Harrison B. Prosper"
     category: collaborators
-    current: true
+    current: false
     role: "Kirby W. Kemper Endowed Professor"
     affiliation: "Florida State University"
     current_position: "Bayesian statistics for HEP; top quark discovery; AAAS Fellow"
+    start_year: 2013
+    end_year: 2022
     links:
       website: "http://web2.physics.fsu.edu/~prosper/bio.html"
 
   - name: "Mark S. Neubauer"
     category: collaborators
-    current: true
+    current: false
     role: "Professor"
     affiliation: "University of Illinois Urbana-Champaign"
     current_position: "ATLAS Higgs physics; ML for HEP; Breakthrough Prize recipient"
+    start_year: 2018
+    end_year: 2022
     links:
       website: "https://www.marksneubauer.com/"
       github: "msneubauer"
 
   - name: "Maurizio Pierini"
     category: collaborators
-    current: true
+    current: false
     role: "Staff Physicist"
     affiliation: "CERN"
     current_position: "CMS ML for particle flow; ERC Consolidator Grant; anomaly detection"
+    start_year: 2021
+    end_year: 2022
 
   # Theory Physics
   - name: "Lance J. Dixon"
@@ -1419,6 +1581,7 @@ people:
     role: "Professor"
     affiliation: "SLAC / Stanford University"
     current_position: "Chair of Particle Physics & Astrophysics; Sakurai Prize winner; NAS member"
+    start_year: 2024
     photo: "/images/collaborators/lance-dixon.jpg"
     links:
       website: "https://www.slac.stanford.edu/~lance/"

@@ -52,6 +52,8 @@ serve = "rm -rf output cache && pelican content -o output -s pelicanconf.py && n
 update-citations = "python scripts/update_citations.py"
 # Update citations for NEW entries only (not already in citations.json)
 update-citations-new = "python scripts/update_citations_new.py"
+# Update collaborator start_year/end_year from OpenAlex co-authorship data
+update-collaborator-years = "python scripts/update_collaborator_years.py"
 # Build and serve (no autoreload - run 'pixi run build' to rebuild)
 dev = "pelican content -o output -s pelicanconf.py && python -m http.server 8000 -d output"
 # Dev server with debug output to see build order
