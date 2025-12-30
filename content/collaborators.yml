@@ -408,3 +408,783 @@ people:
     links:
       github: "taolicheng"
       website: "https://taolicheng.github.io/"
+
+  # ML/Physics Collaborators - DeepMind & Industry
+  - name: "Danilo Jimenez Rezende"
+    category: collaborators
+    current: true
+    role: "VP of AI Research"
+    affiliation: "Ellison Institute of Technology"
+    current_position: "VP AI Research at EIT; former Research Director at Google DeepMind"
+    links:
+      website: "https://danilorezende.com/about/"
+      scholar: "rvW4j38AAAAJ"
+
+  - name: "George Papamakarios"
+    category: collaborators
+    current: true
+    role: "Research Scientist"
+    affiliation: "Google DeepMind"
+    links:
+      scholar: "wHcpf58AAAAJ"
+
+  - name: "Sébastien Racanière"
+    category: collaborators
+    current: true
+    role: "Staff Research Engineer"
+    affiliation: "Google DeepMind"
+    links:
+      scholar: "o-h0vrQAAAAJ"
+
+  - name: "Peter Battaglia"
+    category: collaborators
+    current: true
+    role: "Research Scientist"
+    affiliation: "Google DeepMind"
+    links:
+      scholar: "nQ7Ij30AAAAJ"
+
+  - name: "Alvaro Sanchez-Gonzalez"
+    category: collaborators
+    current: true
+    role: "Staff Research Engineer"
+    affiliation: "Google DeepMind"
+
+  - name: "François Charton"
+    category: collaborators
+    current: true
+    role: "Research Engineer"
+    affiliation: "Axiom Math (formerly Meta AI)"
+    links:
+      twitter: "f_charton"
+      scholar: "1tMnd-4AAAAJ"
+
+  # Flatiron Institute / Simons Foundation
+  - name: "Siavash Golkar"
+    category: collaborators
+    current: true
+    role: "Research Scientist"
+    affiliation: "New York University / Flatiron Institute"
+    current_position: "Research Scientist at NYU; co-investigator of Polymathic AI"
+    links:
+      github: "golkar"
+      scholar: "UzaZt7MAAAAJ"
+      website: "https://polymathic-ai.org/members/siavash-golkar"
+
+  - name: "Shirley Ho"
+    category: collaborators
+    current: true
+    role: "Group Leader"
+    affiliation: "Flatiron Institute"
+    current_position: "Group Leader of Cosmology & Machine Learning at Flatiron; Research Professor at NYU"
+    links:
+      website: "https://www.shirleyho.me/"
+      scholar: "fhOi--4AAAAJ"
+
+  - name: "David Spergel"
+    category: collaborators
+    current: true
+    role: "President"
+    affiliation: "Simons Foundation"
+    current_position: "President of Simons Foundation; Emeritus Professor at Princeton"
+    links:
+      website: "https://www.astro.princeton.edu/~dns/"
+
+  # MIT / Lattice QCD Collaborators
+  - name: "Phiala Shanahan"
+    category: collaborators
+    current: true
+    role: "Associate Professor"
+    affiliation: "MIT"
+    links:
+      scholar: "GWBSOj4AAAAJ"
+
+  - name: "Gurtej Kanwar"
+    category: collaborators
+    current: true
+    role: "Postdoctoral Researcher"
+    affiliation: "University of Bern"
+
+  - name: "Denis Boyda"
+    category: collaborators
+    current: true
+    role: "IAIFI Fellow"
+    affiliation: "MIT"
+    links:
+      scholar: "LRXX-0gAAAAJ"
+
+  - name: "Daniel Hackett"
+    category: collaborators
+    current: true
+    role: "Postdoctoral Researcher"
+    affiliation: "Fermilab"
+    links:
+      scholar: "9ZDR9jYAAAAJ"
+
+  - name: "Fernando Romero-López"
+    category: collaborators
+    current: true
+    role: "Researcher"
+    affiliation: "MIT / Universitat de València"
+
+  - name: "Julian Urban"
+    category: collaborators
+    current: true
+    role: "Researcher"
+    affiliation: "Universität Heidelberg"
+    links:
+      github: "julian-urban"
+
+  # NYU Collaborators
+  - name: "Kyunghyun Cho"
+    category: collaborators
+    current: true
+    role: "Professor"
+    affiliation: "New York University"
+    current_position: "Professor of Computer Science and Data Science at NYU; Executive Director at Genentech"
+    links:
+      website: "https://kyunghyuncho.me/"
+      scholar: "0RAmmIAAAAAJ"
+
+  - name: "David Hogg"
+    category: collaborators
+    current: true
+    role: "Professor"
+    affiliation: "New York University / Flatiron Institute"
+    current_position: "Professor of Physics and Data Science at NYU; Senior Research Scientist at Flatiron"
+    links:
+      website: "https://cosmo.nyu.edu/hogg/"
+      scholar: "hcmW-W0AAAAJ"
+
+  # Weizmann Institute Collaborators
+  - name: "Eilam Gross"
+    category: collaborators
+    current: true
+    role: "Professor"
+    affiliation: "Weizmann Institute of Science"
+    current_position: "Head of the Nella and Leon Benoziyo Center for High Energy Physics"
+    links:
+      scholar: "iibZFkYAAAAJ"
+      website: "https://www.weizmann.ac.il/particle/gross/"
+
+  - name: "Yaron Lipman"
+    category: collaborators
+    current: true
+    role: "Professor"
+    affiliation: "Weizmann Institute of Science"
+    links:
+      website: "https://www.wisdom.weizmann.ac.il/~ylipman/"
+      scholar: "vyteiT4AAAAJ"
+
+  - name: "Ofer Vitells"
+    category: collaborators
+    current: true
+    role: "Researcher"
+    affiliation: "Weizmann Institute of Science"
+
+  - name: "Jonathan Shlomi"
+    category: collaborators
+    current: true
+    role: "Researcher"
+    affiliation: "Weizmann Institute of Science"
+
+  - name: "Sanmay Ganguly"
+    category: collaborators
+    current: true
+    role: "Assistant Professor"
+    affiliation: "IIT Kanpur"
+    current_position: "Assistant Professor at IIT Kanpur; formerly at Weizmann Institute"
+    links:
+      github: "sanmayphy"
+
+  - name: "Haggai Maron"
+    category: collaborators
+    current: true
+    role: "Assistant Professor"
+    affiliation: "Technion / NVIDIA Research"
+    links:
+      website: "https://haggaim.github.io/"
+      scholar: "4v8uJrIAAAAJ"
+
+  # Cambridge / Oxford
+  - name: "Miles Cranmer"
+    category: collaborators
+    current: true
+    role: "Assistant Professor"
+    affiliation: "University of Cambridge"
+    links:
+      website: "https://astroautomata.com/"
+      scholar: "10WfwCQAAAAJ"
+      github: "MilesCranmer"
+
+  - name: "Atılım Güneş Baydin"
+    category: collaborators
+    current: true
+    role: "Departmental Lecturer"
+    affiliation: "University of Oxford"
+    current_position: "Lecturer in Machine Learning; leads Oxford AI4Science Lab"
+    links:
+      website: "http://gbaydin.github.io/"
+      scholar: "GWBSOj4AAAAJ"
+      github: "gbaydin"
+
+  # Statistics Collaborators
+  - name: "Glen Cowan"
+    category: collaborators
+    current: true
+    role: "Professor"
+    affiliation: "Royal Holloway, University of London"
+    links:
+      website: "https://www.pp.rhul.ac.uk/~cowan/"
+      scholar: "ljQwt8QAAAAJ"
+
+  - name: "Xiao-Li Meng"
+    category: collaborators
+    current: true
+    role: "Professor"
+    affiliation: "Harvard University"
+    current_position: "Whipple V. N. Jones Professor of Statistics; Founding Editor of Harvard Data Science Review"
+    links:
+      scholar: "4Qr8tRgAAAAJ"
+
+  # CERN / ROOT / Software
+  - name: "Wouter Verkerke"
+    category: collaborators
+    current: true
+    role: "Researcher"
+    affiliation: "NIKHEF"
+    current_position: "Co-developer of RooFit"
+
+  - name: "Lorenzo Moneta"
+    category: collaborators
+    current: true
+    role: "Senior Applied Scientist"
+    affiliation: "CERN"
+    current_position: "ROOT Math Work Package lead"
+
+  - name: "Peter Elmer"
+    category: collaborators
+    current: true
+    role: "Senior Research Physicist"
+    affiliation: "Princeton University"
+    current_position: "Executive Director and PI of IRIS-HEP"
+    links:
+      website: "https://elmer.scholar.princeton.edu/"
+
+  - name: "Gordon Watts"
+    category: collaborators
+    current: true
+    role: "Professor"
+    affiliation: "University of Washington"
+    current_position: "Deputy Executive Director of IRIS-HEP"
+    links:
+      website: "https://gordonwatts.wordpress.com/"
+      github: "gordonwatts"
+
+  # Fermilab / SLAC
+  - name: "Michael Kagan"
+    category: collaborators
+    current: true
+    role: "Panofsky Fellow"
+    affiliation: "SLAC National Accelerator Laboratory"
+    links:
+      scholar: "Gau3JTYAAAAJ"
+
+  - name: "Jennifer Ngadiuba"
+    category: collaborators
+    current: true
+    role: "Associate Scientist"
+    affiliation: "Fermilab"
+    current_position: "Co-founder of fast machine learning organization"
+    links:
+      scholar: "ZTqZD80AAAAJ"
+
+  - name: "Abhijith Gandrakota"
+    category: collaborators
+    current: true
+    role: "Research Associate"
+    affiliation: "Fermilab"
+    links:
+      scholar: "Gau3JTYAAAAJ"
+
+  # UCI
+  - name: "Daniel Whiteson"
+    category: collaborators
+    current: true
+    role: "Professor"
+    affiliation: "University of California, Irvine"
+    links:
+      website: "https://sites.uci.edu/daniel/"
+
+  - name: "Pierre Baldi"
+    category: collaborators
+    current: true
+    role: "Distinguished Professor"
+    affiliation: "University of California, Irvine"
+    links:
+      website: "https://www.igb.uci.edu/~pfbaldi/"
+      scholar: "RhFhIIgAAAAJ"
+
+  # European Physics Collaborators
+  - name: "Tilman Plehn"
+    category: collaborators
+    current: true
+    role: "Professor"
+    affiliation: "Universität Heidelberg"
+    links:
+      website: "https://www.thphys.uni-heidelberg.de/~plehn/"
+      scholar: "r3zfvh0AAAAJ"
+
+  - name: "Felix Kling"
+    category: collaborators
+    current: true
+    role: "Research Fellow"
+    affiliation: "DESY"
+    links:
+      scholar: "CdKKXWcAAAAJ"
+
+  # ML Theory / Quantum
+  - name: "Giuseppe Carleo"
+    category: collaborators
+    current: true
+    role: "Professor"
+    affiliation: "EPFL"
+    current_position: "Head of Laboratory of Computational Quantum Science"
+    links:
+      website: "https://people.epfl.ch/giuseppe.carleo"
+      scholar: "e9I38PEAAAAJ"
+
+  - name: "Lenka Zdeborová"
+    category: collaborators
+    current: true
+    role: "Associate Professor"
+    affiliation: "EPFL"
+    current_position: "Head of Laboratory of Statistical Physics of Computation"
+    links:
+      website: "https://people.epfl.ch/lenka.zdeborova"
+      scholar: "gkCjy_UAAAAJ"
+
+  - name: "Ignacio Cirac"
+    category: collaborators
+    current: true
+    role: "Director"
+    affiliation: "Max Planck Institute of Quantum Optics"
+    links:
+      website: "https://www.mpq.mpg.de/ignacio-cirac"
+      scholar: "gPGlTbgAAAAJ"
+
+  - name: "Frank Wood"
+    category: collaborators
+    current: true
+    role: "Professor"
+    affiliation: "University of British Columbia"
+    current_position: "Professor at UBC; CEO of Inverted AI"
+    links:
+      website: "https://www.cs.ubc.ca/~fwood/"
+      scholar: "d4yNzXIAAAAJ"
+
+  # Clustering / Hierarchical Methods
+  - name: "Craig Greenberg"
+    category: collaborators
+    current: true
+    role: "Researcher"
+    affiliation: "UMass Amherst"
+
+  - name: "Nicholas Monath"
+    category: collaborators
+    current: true
+    role: "Research Scientist"
+    affiliation: "Google"
+    links:
+      website: "https://nmonath.github.io/"
+      scholar: "PTfhfCQAAAAJ"
+      github: "nmonath"
+
+  # LBNL / Scientific Computing
+  - name: "Wahid Bhimji"
+    category: collaborators
+    current: true
+    role: "Division Deputy for AI and Science"
+    affiliation: "NERSC, Lawrence Berkeley National Laboratory"
+    current_position: "Leads Data and AI Services Group at NERSC; PI of FAIR Universe project"
+    links:
+      website: "https://www.nersc.gov/about/nersc-staff/data-analytics-services/wahid-bhimji/"
+
+  - name: "Prabhat"
+    category: collaborators
+    current: false
+    role: "Former Data & Analytics Group Lead"
+    affiliation: "NERSC (formerly)"
+    current_position: "Transitioned to industry in 2020 after 13 years at LBNL"
+
+  # UCI (additional)
+  - name: "Dan Guest"
+    category: collaborators
+    current: true
+    role: "Researcher"
+    affiliation: "University of California, Irvine"
+    current_position: "Deep learning for LHC physics, ATLAS experiment"
+
+  - name: "Meghan Frate"
+    category: collaborators
+    current: false
+    role: "Former PhD Student"
+    affiliation: "UC Irvine (formerly)"
+    current_position: "Software Engineer at LinkedIn"
+
+  - name: "Alexander Vandenberg-Rodes"
+    category: collaborators
+    current: true
+    role: "Senior Principal ML Researcher"
+    affiliation: "Obsidian Security"
+    current_position: "Former Visiting Assistant Professor at UC Irvine"
+    links:
+      website: "https://www.math.uci.edu/~vandenbe/"
+      scholar: "NNYJZZEAAAAJ"
+
+  # Harvard / Data Science
+  - name: "Ana Trisovic"
+    category: collaborators
+    current: true
+    role: "Sloan Postdoctoral Fellow"
+    affiliation: "Harvard IQSS"
+    current_position: "Research on computational reproducibility and data provenance"
+    links:
+      website: "https://anatrisovic.com/"
+
+  - name: "Alyssa Goodman"
+    category: collaborators
+    current: true
+    role: "Professor"
+    affiliation: "Harvard University"
+    current_position: "Robert Wheeler Willson Professor of Applied Astronomy; PI of Glue software project"
+    links:
+      website: "https://scholar.harvard.edu/agoodman/home"
+      scholar: "0LoCGasAAAAJ"
+
+  - name: "Mercè Crosas"
+    category: collaborators
+    current: true
+    role: "President of CODATA"
+    affiliation: "Barcelona Supercomputing Center"
+    current_position: "Head of Computational Social Sciences; formerly Chief Data Science Officer at Harvard IQSS"
+    links:
+      scholar: "0LoCGasAAAAJ"
+
+  # Open Science / Publishing
+  - name: "Alberto Pepe"
+    category: collaborators
+    current: true
+    role: "Director of Strategy and Innovation"
+    affiliation: "Atypon"
+    current_position: "Co-founder of Authorea; former CERN IT and Harvard postdoc"
+    links:
+      website: "https://www.authorea.com/users/3-alberto-pepe"
+
+  # Quantum Machine Learning
+  - name: "Maria Schuld"
+    category: collaborators
+    current: true
+    role: "Quantum Machine Learning Research Lead"
+    affiliation: "Xanadu"
+    current_position: "Co-developer of PennyLane; author of 'Machine Learning with Quantum Computers'"
+    links:
+      scholar: "_ih_hwUAAAAJ"
+
+  # CERN Software & Infrastructure
+  - name: "Danilo Piparo"
+    category: collaborators
+    current: true
+    role: "ROOT Project Leader"
+    affiliation: "CERN"
+    current_position: "Leads the ROOT data analysis framework since 2023"
+    links:
+      github: "dpiparo"
+
+  - name: "Tibor Šimko"
+    category: collaborators
+    current: true
+    role: "Project Leader"
+    affiliation: "CERN"
+    current_position: "Founder of CERN Open Data Portal, CERN Analysis Preservation, and REANA platform"
+    links:
+      github: "tiborsimko"
+
+  - name: "Tim Smith"
+    category: collaborators
+    current: true
+    role: "Coordinator of IT Communication and Outreach"
+    affiliation: "CERN"
+    current_position: "Coordinator of Open Quantum Institute; drove launch of CERN Open Data Portal"
+    links:
+      website: "https://tjs.web.cern.ch/tjs/"
+
+  - name: "Sünje Dallmeier-Tiessen"
+    category: collaborators
+    current: true
+    role: "Open Science Expert"
+    affiliation: "CERN"
+    current_position: "Research data publishing and open science initiatives"
+
+  - name: "Kati Lassila-Perini"
+    category: collaborators
+    current: true
+    role: "CMS Data Preservation Lead"
+    affiliation: "Helsinki Institute of Physics / CERN"
+    current_position: "Leads CMS Open Data and data preservation efforts"
+
+  - name: "Sebastian Neubert"
+    category: collaborators
+    current: true
+    role: "Professor"
+    affiliation: "University of Bonn"
+    current_position: "Leader of LHCb Open Data project; formerly Heidelberg"
+
+  # AI Research / Industry
+  - name: "Niklas Nolte"
+    category: collaborators
+    current: true
+    role: "Researcher"
+    affiliation: "Anthropic"
+    current_position: "Works on finetuning; formerly Meta AI (FAIR), MIT, CERN/LHCb"
+    links:
+      website: "https://nolte.dev/"
+      github: "niklasnolte"
+
+  - name: "Laurent Daudet"
+    category: collaborators
+    current: true
+    role: "Co-CEO"
+    affiliation: "LightOn"
+    current_position: "Co-founder of LightOn; on leave from Professor of Physics at Université Paris Cité"
+    links:
+      scholar: "PCIAcfUAAAAJ"
+
+  # Physics Theory
+  - name: "Itay Yavin"
+    category: collaborators
+    current: true
+    role: "Associate Professor"
+    affiliation: "McMaster University / Perimeter Institute"
+    current_position: "Expert in physics beyond Standard Model and dark matter"
+
+  - name: "Matthias Wilhelm"
+    category: collaborators
+    current: true
+    role: "Researcher"
+    affiliation: "Niels Bohr Institute, University of Copenhagen"
+    current_position: "Works on scattering amplitudes; organizer of Amplitudes 2021"
+
+  - name: "Tianji Cai"
+    category: collaborators
+    current: true
+    role: "Distinguished Researcher"
+    affiliation: "Tongji University"
+    current_position: "AI for physics; formerly SLAC postdoc and UCSB PhD"
+    links:
+      scholar: "KBaK_w0AAAAJ"
+      github: "TianjiCai"
+
+  # Weizmann (additional)
+  - name: "Hadar Serviansky"
+    category: collaborators
+    current: true
+    role: "MS Student"
+    affiliation: "Weizmann Institute"
+    current_position: "Research in deep learning and graph neural networks"
+    links:
+      scholar: "-jVU-vQAAAAJ"
+
+  - name: "Nimrod Segol"
+    category: collaborators
+    current: true
+    role: "PhD Student"
+    affiliation: "Weizmann Institute"
+    current_position: "Machine learning with applications to physics"
+    links:
+      scholar: "dTuhEVsAAAAJ"
+
+  # NYU (additional)
+  - name: "Joan Bruna"
+    category: collaborators
+    current: true
+    role: "Full Professor"
+    affiliation: "NYU Courant Institute"
+    current_position: "Co-founder of MaD group; NSF CAREER and Sloan Fellow"
+    links:
+      website: "https://cims.nyu.edu/~bruna/"
+      scholar: "L4bNmsMAAAAJ"
+      github: "joanbruna"
+
+  - name: "Rui Xu"
+    category: collaborators
+    current: true
+    role: "Researcher"
+    affiliation: "Microsoft GenAI"
+    current_position: "Co-author on symbolic regression from deep learning; formerly Princeton"
+    links:
+      scholar: "_W5wq18AAAAJ"
+
+  # Notre Dame / CMS
+  - name: "Michael Hildreth"
+    category: collaborators
+    current: true
+    role: "Professor"
+    affiliation: "University of Notre Dame"
+    current_position: "Vice President and Dean of Graduate School; leads US-CMS computing R&D"
+    links:
+      website: "https://physics.nd.edu/people/mike-hildreth/"
+
+  - name: "Matthias Wolf"
+    category: collaborators
+    current: true
+    role: "Researcher"
+    affiliation: "CMS Experiment"
+    current_position: "PhD from Notre Dame; developed Lobster computing framework"
+    links:
+      scholar: "DCNguIcAAAAJ"
+
+  # Scientific Workflows / AI for Science
+  - name: "Yolanda Gil"
+    category: collaborators
+    current: true
+    role: "Research Professor"
+    affiliation: "USC Information Sciences Institute"
+    current_position: "Fellow of AAAI; former AAAI President; National Science Board member"
+    links:
+      website: "https://knowledgecaptureanddiscovery.github.io/yolanda_gil_website/"
+      scholar: "NDmGsCgAAAAJ"
+
+  - name: "Paul Groth"
+    category: collaborators
+    current: true
+    role: "Professor"
+    affiliation: "University of Amsterdam"
+    current_position: "Professor of Algorithmic Data Science; co-chair of W3C Provenance Working Group"
+    links:
+      website: "https://pgroth.com/"
+      scholar: "0tHSHCIAAAAJ"
+
+  # Astronomy / Data Science
+  - name: "Ashish Mahabal"
+    category: collaborators
+    current: true
+    role: "Sr. Research Scientist"
+    affiliation: "Caltech"
+    current_position: "Deputy Director of Center for Data Driven Discovery; leads ZTF ML group"
+    links:
+      website: "https://ashishmahabal.net/"
+      scholar: "Ww9DSqAAAAAJ"
+
+  - name: "Rosanne Di Stefano"
+    category: collaborators
+    current: true
+    role: "Senior Astrophysicist"
+    affiliation: "Center for Astrophysics | Harvard & Smithsonian"
+    current_position: "Expert in gravitational lensing, X-ray astronomy, and extragalactic planet detection"
+    links:
+      website: "http://rosanne-distefano.org/"
+
+  - name: "Vinay Kashyap"
+    category: collaborators
+    current: true
+    role: "Senior Astrophysicist"
+    affiliation: "Center for Astrophysics | Harvard & Smithsonian"
+    current_position: "Chandra X-ray calibration scientist; founding member of CHASC AstroStatistics"
+    links:
+      website: "https://hea-www.harvard.edu/~kashyap/"
+
+  - name: "Aneta Siemiginowska"
+    category: collaborators
+    current: true
+    role: "Senior Astrophysicist"
+    affiliation: "Center for Astrophysics | Harvard & Smithsonian"
+    current_position: "X-ray astronomy expert; President of International Astrostatistics Association"
+    links:
+      website: "https://hea-www.harvard.edu/~aneta/HomePage.html"
+
+  # Data Science & Information Science
+  - name: "Christine Borgman"
+    category: collaborators
+    current: true
+    role: "Distinguished Research Professor"
+    affiliation: "UCLA"
+    current_position: "Director of Center for Knowledge Infrastructures; author of 'Big Data, Little Data, No Data'"
+    links:
+      website: "https://christineborgman.info/"
+
+  - name: "Aleksandra Slavkovic"
+    category: collaborators
+    current: true
+    role: "Professor"
+    affiliation: "Penn State"
+    current_position: "Huck Chair in Data Privacy; Associate Dean for Research; ASA and IMS Fellow"
+    links:
+      website: "https://science.psu.edu/stat/people/abs12"
+      scholar: "plbHxNUAAAAJ"
+
+  # CERN Open Science (additional)
+  - name: "Salvatore Mele"
+    category: collaborators
+    current: true
+    role: "Head of Open Access"
+    affiliation: "CERN"
+    current_position: "Strategic Director of INSPIRE; co-architect of SCOAP3 Open Access initiative"
+
+  - name: "Diego Rodriguez Rodriguez"
+    category: collaborators
+    current: true
+    role: "Software Engineer"
+    affiliation: "CERN"
+    current_position: "Contributor to CERN Analysis Preservation and Open Data services"
+
+  - name: "Kevin Belasco"
+    category: collaborators
+    current: false
+    role: "Former Researcher"
+    affiliation: "Princeton University (formerly)"
+    current_position: "Contributed to RooStats and MCMC in ROOT framework"
+
+  - name: "Xiaoli Chen"
+    category: collaborators
+    current: true
+    role: "FAIR Workflow Project Lead"
+    affiliation: "DataCite"
+    current_position: "Formerly at CERN Scientific Information Service; co-author on analysis preservation"
+
+  # Digital Preservation / Archives
+  - name: "Margaret Hedstrom"
+    category: collaborators
+    current: true
+    role: "Professor Emerita"
+    affiliation: "University of Michigan"
+    current_position: "Digital Preservation Pioneer (Library of Congress); led CAMiLEON and SEAD projects"
+    links:
+      website: "https://www.si.umich.edu/people/margaret-hedstrom"
+      scholar: "cmWGmOgAAAAJ"
+
+  # Information Bottleneck / Deep Learning Theory
+  - name: "Naftali Tishby"
+    category: collaborators
+    current: false
+    role: "Professor (deceased)"
+    affiliation: "Hebrew University of Jerusalem"
+    current_position: "Pioneer of Information Bottleneck theory for deep learning (1952-2021)"
+
+  # Computational Chemistry
+  - name: "Leslie Vogt-Maranto"
+    category: collaborators
+    current: true
+    role: "Postdoctoral Fellow"
+    affiliation: "NYU"
+    current_position: "Machine learning for quantum chemistry; Tuckerman Group"
+    links:
+      scholar: "H6WcIUQAAAAJ"
+
+  # Statistics / Data Science
+  - name: "Alexander Blocker"
+    category: collaborators
+    current: true
+    role: "Researcher"
+    affiliation: "Harvard Statistics (formerly)"
+    current_position: "First winner of Dempster Prize; worked with Xiao-Li Meng on genomic data preprocessing"
