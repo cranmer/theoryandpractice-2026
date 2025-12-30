@@ -1627,3 +1627,15 @@ people:
       website: "https://www.slac.stanford.edu/~lance/"
       scholar: "WFR45vUAAAAJ"
       orcid: "0000-0003-4985-7518"
+
+  - name: "Akira Shibata"
+    category: postdocs
+    current: false
+    role: "Postdoctoral Researcher"
+    affiliation: "New York University"
+    start_year: 2007
+    end_year: 2010
+    photo: "https://i0.wp.com/ashibata.com/wp-content/uploads/2020/10/e382b7e3838fe38299e382bfe381aee78fbee59ca8e381aebioe58699e79c9f-1.png?ssl=1"
+    links:
+      website: "https://ashibata.com"
+      linkedin: "akirashibata"
