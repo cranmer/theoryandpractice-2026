@@ -1,0 +1,212 @@
+# Projects Configuration
+# ======================
+
+settings:
+  default_card_style: image
+
+categories:
+  - id: software
+    title: "Software"
+    description: "Open source software projects for physics and machine learning."
+
+  - id: research
+    title: "Research"
+    description: "Research initiatives and collaborations."
+
+  - id: methodology
+    title: "Methodology"
+    description: "Statistical and machine learning methodology."
+
+  - id: teaching
+    title: "Teaching"
+    description: "Educational materials, courses, and tutorials."
+
+  - id: leadership
+    title: "Leadership"
+    description: "Leadership roles and institutional initiatives."
+
+  - id: community
+    title: "Community"
+    description: "Community building and collaborative efforts."
+
+  - id: publishing
+    title: "Publishing"
+    description: "Publications, journals, and editorial work."
+
+  - id: web
+    title: "Web"
+    description: "Web projects, tools, and visualizations."
+
+  - id: fun
+    title: "Fun"
+    description: "Side projects and experiments."
+
+projects:
+  # ==================
+  # Software
+  # ==================
+
+  - name: "pyhf"
+    category: software
+    status: active
+    featured: true
+    description: "Pure-Python implementation of HistFactory statistical models with auto-differentiation."
+    github: "scikit-hep/pyhf"
+    url: "https://pyhf.readthedocs.io"
+    tags: ["python", "statistics", "HEP"]
+    start_year: 2018
+    collaborators: ["Lukas Heinrich", "Matthew Feickert"]
+
+  - name: "nflows"
+    category: software
+    status: active
+    featured: true
+    description: "Normalizing flows in PyTorch for density estimation and generative modeling."
+    github: "bayesiains/nflows"
+    tags: ["python", "deep-learning", "normalizing-flows"]
+    start_year: 2019
+
+  - name: "MadMiner"
+    category: software
+    status: active
+    description: "Machine learning-based inference for particle physics with neural ratio estimation."
+    github: "madminer-tool/madminer"
+    url: "https://madminer.readthedocs.io"
+    tags: ["python", "simulation-based-inference", "HEP"]
+    start_year: 2018
+    collaborators: ["Johann Brehmer"]
+
+  - name: "RooFit"
+    category: software
+    status: active
+    description: "Statistical data analysis toolkit integrated with ROOT."
+    url: "https://root.cern/manual/roofit/"
+    tags: ["C++", "statistics", "CERN"]
+    start_year: 2003
+
+  # ==================
+  # Research
+  # ==================
+
+  - name: "ATLAS Experiment"
+    category: research
+    status: active
+    featured: true
+    description: "One of the two general-purpose particle physics experiments at the Large Hadron Collider."
+    url: "https://atlas.cern"
+    image: "/images/projects/atlas-detector.jpg"
+    tags: ["HEP", "CERN", "LHC"]
+    start_year: 2007
+
+  - name: "IRIS-HEP"
+    category: research
+    status: active
+    featured: true
+    description: "Institute for Research and Innovation in Software for High Energy Physics."
+    url: "https://iris-hep.org"
+    github: "iris-hep"
+    tags: ["software", "HEP", "NSF"]
+    start_year: 2018
+
+  # ==================
+  # Methodology
+  # ==================
+
+  - name: "Simulation-Based Inference"
+    category: methodology
+    status: active
+    featured: true
+    description: "Machine learning methods for likelihood-free inference with complex simulators."
+    url: "https://simulation-based-inference.org"
+    tags: ["machine-learning", "statistics", "simulation"]
+    start_year: 2016
+
+  - name: "HistFactory"
+    category: methodology
+    status: active
+    description: "A tool for building statistical models for measurements based on template histograms."
+    url: "https://cds.cern.ch/record/1456844"
+    tags: ["statistics", "HEP"]
+    start_year: 2012
+
+  # ==================
+  # Leadership
+  # ==================
+
+  - name: "UW-Madison Data Science Institute"
+    category: leadership
+    status: active
+    featured: true
+    description: "David R. Anderson Director of the Data Science Institute at UW-Madison."
+    url: "https://dsi.wisc.edu"
+    start_year: 2022
+
+  # ==================
+  # Community
+  # ==================
+
+  - name: "ML4PS Workshop"
+    category: community
+    status: active
+    description: "Machine Learning for Physical Sciences workshop series at NeurIPS."
+    url: "https://ml4physicalsciences.github.io"
+    tags: ["machine-learning", "physics", "NeurIPS"]
+    start_year: 2017
+
+  - name: "Hammers & Nails"
+    category: community
+    status: active
+    description: "Workshop series bridging machine learning and physical sciences."
+    tags: ["machine-learning", "physics", "workshop"]
+    start_year: 2017
+
+  # ==================
+  # Publishing
+  # ==================
+
+  - name: "Machine Learning: Science and Technology"
+    category: publishing
+    status: active
+    featured: true
+    description: "Editor-in-Chief of IOP Publishing's journal on ML for science."
+    url: "https://iopscience.iop.org/journal/2632-2153"
+    tags: ["journal", "machine-learning", "science"]
+    start_year: 2022
+
+  # ==================
+  # Teaching
+  # ==================
+
+  - name: "Statistics for Physicists"
+    category: teaching
+    status: completed
+    description: "Graduate course on statistical methods for particle physics."
+    tags: ["statistics", "education", "NYU"]
+    start_year: 2007
+    end_year: 2022
+
+  # ==================
+  # Web
+  # ==================
+
+  - name: "Theory and Practice"
+    category: web
+    status: active
+    description: "Personal website and blog on physics, statistics, and machine learning."
+    url: "https://theoryandpractice.org"
+    github: "cranmer/theoryandpractice-2026"
+    tags: ["blog", "pelican", "python"]
+    start_year: 2012
+
+  # ==================
+  # Fun
+  # ==================
+
+  - name: "Crayfis"
+    category: fun
+    status: completed
+    description: "Citizen science project using smartphone cameras to detect cosmic rays."
+    url: "https://crayfis.io"
+    tags: ["citizen-science", "mobile", "cosmic-rays"]
+    start_year: 2014
+    end_year: 2020
