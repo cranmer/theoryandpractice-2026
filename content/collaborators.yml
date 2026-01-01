@@ -1639,3 +1639,50 @@ people:
     links:
       website: "https://ashibata.com"
       linkedin: "akirashibata"
+
+  - name: "Maja Waldron"
+    category: collaborators
+    current: true
+    role: "Collaborator"
+    affiliation: "University of Wisconsin-Madison"
+    links:
+      website: "https://maja-waldron.github.io"
+      github: "mariru"
+      scholar: "QW_JZnsAAAAJ"
+
+  - name: "Stephen Wright"
+    category: collaborators
+    current: true
+    role: "Professor"
+    affiliation: "University of Wisconsin-Madison"
+    links:
+      website: "https://wrightstephen.github.io/sw_proj/"
+      scholar: "VFQRIOwAAAAJ"
+
+  - name: "Misha Khodak"
+    category: collaborators
+    current: true
+    role: "Collaborator"
+    affiliation: "University of Wisconsin-Madison"
+    links:
+      website: "https://pages.cs.wisc.edu/~khodak/"
+
+  - name: "Adelle Wright"
+    category: collaborators
+    current: true
+    role: "Collaborator"
+    affiliation: "University of Wisconsin-Madison"
+    links:
+      website: "https://wright-lab.notion.site/welcome"
+      linkedin: "adelle-m-wright"
+      twitter: "mini_space_dino"
+
+  - name: "Rogerio Jorge"
+    category: collaborators
+    current: true
+    role: "Collaborator"
+    affiliation: "University of Wisconsin-Madison"
+    links:
+      website: "https://rogeriojorge.com"
+      github: "rogeriojorge"
+      linkedin: "rogeriodejesusjorge"
