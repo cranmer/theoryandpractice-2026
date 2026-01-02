@@ -33,7 +33,7 @@ MENUITEMS = (
     ('Publications', '/selected-publications.html'),
     ('Talks', '/presentations.html'),
     ('Group', '/collaborators.html'),
-    ('Projects', '/pages/projects.html'),
+    ('Projects', '/projects.html'),
     ('Media & Outreach', '/pages/in-the-news.html'),
 )
 
@@ -207,7 +207,7 @@ MARKDOWN = {
 # Direct templates (for publications, presentations, and search pages)
 # Note: tried excluding 'index' since the homepage comes from Home.md with save_as: index.html
 # Blog listing is generated separately via category pages
-DIRECT_TEMPLATES = ['index', 'categories', 'authors', 'archives', 'publications', 'selected-publications', 'presentations', 'collaborators', 'projects', 'search']
+DIRECT_TEMPLATES = ['index', 'categories', 'authors', 'archives', 'publications', 'selected-publications', 'presentations', 'collaborators', 'projects', 'projects-draft', 'search']
 
 # 
 #INDEX_SAVE_AS = 'blog/index.html'

@@ -9,9 +9,13 @@ categories:
     title: "Software"
     description: "Open source software projects for physics and machine learning."
 
+  - id: collaborations
+    title: "Collaborations"
+    description: "Large-scale research collaborations and institutes."
+
   - id: research
     title: "Research"
-    description: "Research initiatives and collaborations."
+    description: "Research initiatives and projects."
 
   - id: methodology
     title: "Methodology"
@@ -53,18 +57,10 @@ projects:
     description: "Pure-Python implementation of HistFactory statistical models with auto-differentiation."
     github: "scikit-hep/pyhf"
     url: "https://pyhf.readthedocs.io"
+    image: "https://raw.githubusercontent.com/scikit-hep/pyhf/main/docs/_static/img/pyhf-logo.svg"
     tags: ["python", "statistics", "HEP"]
     start_year: 2018
     collaborators: ["Lukas Heinrich", "Matthew Feickert"]
-
-  - name: "nflows"
-    category: software
-    status: active
-    featured: true
-    description: "Normalizing flows in PyTorch for density estimation and generative modeling."
-    github: "bayesiains/nflows"
-    tags: ["python", "deep-learning", "normalizing-flows"]
-    start_year: 2019
 
   - name: "MadMiner"
     category: software
@@ -76,20 +72,28 @@ projects:
     start_year: 2018
     collaborators: ["Johann Brehmer"]
 
-  - name: "RooFit"
+  - name: "RooFit & RooStats"
     category: software
-    status: active
+    status: completed
     description: "Statistical data analysis toolkit integrated with ROOT."
     url: "https://root.cern/manual/roofit/"
     tags: ["C++", "statistics", "CERN"]
     start_year: 2003
 
+  - name: "HistFactory"
+    category: software
+    status: completed
+    description: "A tool for building statistical models for measurements based on template histograms."
+    url: "https://cds.cern.ch/record/1456844"
+    tags: ["C++", "statistics", "HEP"]
+    start_year: 2012
+
   # ==================
-  # Research
+  # Collaborations
   # ==================
 
   - name: "ATLAS Experiment"
-    category: research
+    category: collaborations
     status: active
     featured: true
     description: "One of the two general-purpose particle physics experiments at the Large Hadron Collider."
@@ -99,7 +103,7 @@ projects:
     start_year: 2007
 
   - name: "IRIS-HEP"
-    category: research
+    category: collaborations
     status: active
     featured: true
     description: "Institute for Research and Innovation in Software for High Energy Physics."
@@ -107,6 +111,56 @@ projects:
     github: "iris-hep"
     tags: ["software", "HEP", "NSF"]
     start_year: 2018
+
+  # ==================
+  # Research
+  # ==================
+
+  - name: "Discovery of the Higgs Boson"
+    category: research
+    status: completed
+    featured: true
+    description: "Observation of a new particle in the search for the Standard Model Higgs boson with the ATLAS detector at the LHC."
+    url: "https://doi.org/10.1016/j.physletb.2012.08.020"
+    image: "/images/projects/higgs-discovery.jpeg"
+    tags: ["HEP", "Higgs", "ATLAS", "discovery"]
+    start_year: 2012
+    end_year: 2012
+
+  - name: "AI for Lattice QCD"
+    category: research
+    status: completed
+    featured: true
+    description: "Machine learning approaches to sampling in lattice QCD and other field theories, including equivariant normalizing flows."
+    url: "https://www.nature.com/articles/s42254-023-00616-w"
+    tags: ["machine-learning", "lattice-QCD", "normalizing-flows"]
+    start_year: 2019
+
+  - name: "AI for Amplitudes"
+    category: research
+    status: active
+    description: "Using machine learning and transformers to bootstrap scattering amplitudes and explore the space of consistent quantum field theories."
+    url: "https://arxiv.org/abs/2407.11731"
+    tags: ["machine-learning", "amplitudes", "QFT"]
+    start_year: 2024
+
+  - name: "Precision EFT Measurements"
+    category: research
+    status: active
+    description: "Constraining Effective Field Theories with machine learning for precision measurements at the LHC."
+    url: "https://doi.org/10.1103/PhysRevLett.121.111801"
+    tags: ["machine-learning", "EFT", "HEP"]
+    start_year: 2018
+    collaborators: ["Johann Brehmer", "Gilles Louppe", "Juan Pavez"]
+
+  - name: "APEX Experiment"
+    category: research
+    status: completed
+    description: "Search for a new dark photon (A' boson) in the sub-GeV mass range at Jefferson Lab, looking for narrow bumps in the QED e+e- spectrum."
+    url: "https://doi.org/10.1103/PhysRevLett.107.191804"
+    tags: ["HEP", "dark-photon", "Jefferson-Lab"]
+    start_year: 2010
+    end_year: 2011
 
   # ==================
   # Methodology
@@ -121,13 +175,15 @@ projects:
     tags: ["machine-learning", "statistics", "simulation"]
     start_year: 2016
 
-  - name: "HistFactory"
+  - name: "Profile Likelihood Ratio"
     category: methodology
-    status: active
-    description: "A tool for building statistical models for measurements based on template histograms."
-    url: "https://cds.cern.ch/record/1456844"
-    tags: ["statistics", "HEP"]
-    start_year: 2012
+    status: completed
+    featured: true
+    description: "Asymptotic formulae for likelihood-based tests of new physics. Over 10,000 citations."
+    url: "https://doi.org/10.1140/epjc/s10052-011-1554-0"
+    tags: ["statistics", "HEP", "hypothesis-testing"]
+    start_year: 2011
+    collaborators: ["Glen Cowan", "Eilam Gross", "Ofer Vitells"]
 
   # ==================
   # Leadership
@@ -140,6 +196,14 @@ projects:
     description: "David R. Anderson Director of the Data Science Institute at UW-Madison."
     url: "https://dsi.wisc.edu"
     start_year: 2022
+
+  - name: "P5"
+    category: leadership
+    status: completed
+    description: "Particle Physics Project Prioritization Panel - shaping the future of U.S. particle physics."
+    url: "https://www.usparticlephysics.org/2023-p5-report/"
+    tags: ["HEP", "policy", "planning"]
+    start_year: 2023
 
   # ==================
   # Community
@@ -160,6 +224,14 @@ projects:
     tags: ["machine-learning", "physics", "workshop"]
     start_year: 2017
 
+  - name: "ML4Jets"
+    category: community
+    status: completed
+    description: "Workshop series on machine learning for jet physics."
+    url: "https://theoryandpractice.org/2020/01/ML4Jets%202020/"
+    tags: ["machine-learning", "jets", "HEP", "workshop"]
+    start_year: 2017
+
   # ==================
   # Publishing
   # ==================
@@ -173,17 +245,41 @@ projects:
     tags: ["journal", "machine-learning", "science"]
     start_year: 2022
 
+  - name: "INSPIRE"
+    category: publishing
+    status: active
+    description: "High Energy Physics literature database and information system."
+    url: "https://inspirehep.net"
+    tags: ["HEP", "literature", "database"]
+    start_year: 2010
+
+  - name: "RECAST"
+    category: publishing
+    status: active
+    description: "A framework for reinterpreting LHC analyses for new physics models."
+    url: "https://inspirehep.net/literature?sort=mostrecent&size=25&page=1&q=RECAST%20and%20%28cn%3Aatlas%20or%20a%3Acranmer%29&ui-citation-summary=true"
+    tags: ["reinterpretation", "HEP", "analysis-preservation"]
+    start_year: 2010
+
   # ==================
   # Teaching
   # ==================
 
-  - name: "Statistics for Physicists"
+  - name: "Statistics and Data Science for Physicists"
     category: teaching
     status: completed
-    description: "Graduate course on statistical methods for particle physics."
-    tags: ["statistics", "education", "NYU"]
+    description: "Graduate course on statistical methods and data science for particle physics."
+    url: "https://theoryandpractice.org/stats-ds-book/intro.html"
+    tags: ["statistics", "data-science", "education"]
     start_year: 2007
-    end_year: 2022
+
+  - name: "Machine Learning Chapter in PDG"
+    category: teaching
+    status: completed
+    description: "Chapter on machine learning methods in the Particle Data Group Review of Particle Physics."
+    url: "https://pdg.lbl.gov/2024/reviews/rpp2024-rev-machine-learning.pdf"
+    tags: ["machine-learning", "HEP", "PDG"]
+    start_year: 2021
 
   # ==================
   # Web
@@ -195,6 +291,7 @@ projects:
     description: "Personal website and blog on physics, statistics, and machine learning."
     url: "https://theoryandpractice.org"
     github: "cranmer/theoryandpractice-2026"
+    image: "/images/TheoryAndPractice-logo-byline-wide.png"
     tags: ["blog", "pelican", "python"]
     start_year: 2012
 
@@ -206,7 +303,26 @@ projects:
     category: fun
     status: completed
     description: "Citizen science project using smartphone cameras to detect cosmic rays."
-    url: "https://crayfis.io"
+    url: "https://www.newyorker.com/tech/annals-of-technology/seeking-source-cosmic-rays"
     tags: ["citizen-science", "mobile", "cosmic-rays"]
     start_year: 2014
     end_year: 2020
+
+  - name: "Vectorscope"
+    category: fun
+    status: active
+    description: "Interactive visualization tool for exploring high-dimensional vector embeddings."
+    github: "cranmer/vectorscope"
+    url: "http://theoryandpractice.org/vectorscope/"
+    image: "https://raw.githubusercontent.com/cranmer/vectorscope/main/logo.svg"
+    tags: ["python", "visualization", "embeddings"]
+    start_year: 2024
+
+  # Draft project example (not shown on main projects page)
+  - name: "Draft Project Example"
+    category: fun
+    status: active
+    draft: true
+    description: "This is a draft project for testing. It will only appear on projects-draft.html."
+    tags: ["draft", "test"]
+    start_year: 2025

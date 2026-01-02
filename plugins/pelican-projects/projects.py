@@ -6,6 +6,7 @@ Generates a projects page with cards organized by category.
 
 Configuration:
     PROJECTS_SRC: Path to YAML file with project definitions
+    PROJECTS_SHOW_DRAFTS: If True, include draft projects (default: False)
 
 YAML format:
     settings:
@@ -22,6 +23,7 @@ YAML format:
         category: software
         status: active  # active, completed, archived
         featured: true
+        draft: false  # if true, only shown when PROJECTS_SHOW_DRAFTS is True
         description: "Brief description"
         image: "/images/projects/project.png"
         url: "https://..."
@@ -96,9 +98,10 @@ def add_projects(generator):
     categories_data = data.get('categories', [])
     categories = {cat['id']: cat for cat in categories_data}
 
-    # Process projects
-    projects = data.get('projects', [])
-    for project in projects:
+    # Process all projects (including drafts)
+    all_projects = data.get('projects', [])
+
+    for project in all_projects:
         # Apply default card style if not specified
         if 'card_style' not in project:
             project['card_style'] = default_card_style
@@ -125,36 +128,52 @@ def add_projects(generator):
         if not project.get('image') and project.get('github'):
             project['image'] = get_github_social_image(project['github'])
 
-    # Group projects by category
-    projects_by_category = []
-    for cat_data in categories_data:
-        cat_id = cat_data['id']
-        cat_projects = [p for p in projects if p.get('category') == cat_id]
+    # Separate published and draft projects
+    published_projects = [p for p in all_projects if not p.get('draft', False)]
+    draft_count = len(all_projects) - len(published_projects)
 
-        # Sort by featured (first), then by start_year (most recent first), then by name
-        cat_projects.sort(key=lambda p: (
-            not p.get('featured', False),  # Featured first (False < True, so negate)
-            -(p.get('start_year') or 0),   # Most recent first
-            p.get('name', '')              # Alphabetical
-        ))
+    def group_by_category(project_list):
+        """Group projects by category and sort."""
+        result = []
+        for cat_data in categories_data:
+            cat_id = cat_data['id']
+            cat_projects = [p for p in project_list if p.get('category') == cat_id]
 
-        projects_by_category.append({
-            'id': cat_id,
-            'title': cat_data.get('title', cat_id),
-            'description': cat_data.get('description', ''),
-            'projects': cat_projects,
-        })
+            # Sort by featured (first), then by start_year (most recent first), then by name
+            cat_projects.sort(key=lambda p: (
+                not p.get('featured', False),  # Featured first
+                -(p.get('start_year') or 0),   # Most recent first
+                p.get('name', '')              # Alphabetical
+            ))
 
-    # Add to context
+            result.append({
+                'id': cat_id,
+                'title': cat_data.get('title', cat_id),
+                'description': cat_data.get('description', ''),
+                'projects': cat_projects,
+            })
+        return result
+
+    # Context for main projects page (published only)
     generator.context['projects'] = {
         'settings': {
             'default_card_style': default_card_style,
         },
-        'categories': projects_by_category,
-        'all_projects': projects,
+        'categories': group_by_category(published_projects),
+        'all_projects': published_projects,
     }
 
-    logger.info(f'pelican-projects: loaded {len(projects)} projects in {len(categories)} categories')
+    # Context for draft projects page (all projects including drafts)
+    generator.context['projects_draft'] = {
+        'settings': {
+            'default_card_style': default_card_style,
+        },
+        'categories': group_by_category(all_projects),
+        'all_projects': all_projects,
+        'draft_count': draft_count,
+    }
+
+    logger.info(f'pelican-projects: loaded {len(published_projects)} published, {draft_count} draft projects')
 
 
 def register():
