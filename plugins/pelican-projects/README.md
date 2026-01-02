@@ -6,9 +6,12 @@ A Pelican plugin for displaying projects organized by category with card-based l
 
 - **YAML-based configuration**: Define projects in a simple YAML file
 - **Category grouping**: Organize by software, research, teaching, etc.
+- **Card and list views**: Toggle between card grid and compact list view
+- **Status filtering**: Filter by All / Active / Completed status
 - **Draft mode**: Mark projects as drafts to hide them from production builds
 - **Auto-fetch images**: Automatically fetch social preview images from GitHub repos
-- **Flexible sorting**: Featured projects first, then by year
+- **SVG support**: SVG images automatically get white background and proper scaling
+- **Flexible sorting**: Featured projects first, then by year (active before completed)
 
 ## Installation
 

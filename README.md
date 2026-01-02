@@ -207,6 +207,30 @@ pixi run update-collaborator-years --dry-run
 ```
 The script searches OpenAlex and INSPIRE to find co-authored papers and automatically sets collaboration date ranges.
 
+### pelican-projects
+
+A custom plugin (in `plugins/pelican-projects`) that generates a projects page with card-based layout organized by category. See the [plugin README](plugins/pelican-projects/README.md) for full documentation.
+
+**Features:**
+- YAML-driven configuration (`content/projects.yml`)
+- Category grouping (software, research, methodology, community, etc.)
+- Card and list view toggle
+- Status filtering (All / Active / Completed)
+- Draft mode with separate preview page (`/projects-draft.html`)
+- Auto-fetch images from GitHub repos
+- SVG images get white background automatically
+- Featured projects highlighted with star badge
+
+**Configuration:**
+```python
+PROJECTS_SRC = 'content/projects.yml'
+DIRECT_TEMPLATES = [..., 'projects', 'projects-draft']
+```
+
+**Usage:**
+- `/projects.html` - Main projects page (in navigation), shows only published projects
+- `/projects-draft.html` - Preview page (not in navigation), shows all projects including drafts
+
 ### pelican-presentations
 
 A custom plugin (in separate repository `../pelican-presentations`) that generates a presentations page from YAML data, compatible with the [IRIS-HEP](https://iris-hep.org/presentations/byperson.html) presentations format.

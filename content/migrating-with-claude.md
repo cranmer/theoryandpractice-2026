@@ -43,6 +43,13 @@ This repository is a fresh migration of the original [TheoryAndPractice](https:/
     - Official arXiv logomark icon
 - **New** Talks page (`/presentations.html`) displaying 113 talks with video icons, compatible with [IRIS-HEP format](https://iris-hep.org/presentations/byperson.html)
     - Custom `pelican-presentations` plugin for parsing YAML presentation data
+- **New** Projects page (`/projects.html`) with card-based layout organized by category
+    - Custom `pelican-projects` plugin for YAML-driven project organization
+    - Card and list view toggle
+    - Category and status filtering (All/Active/Completed)
+    - Draft mode with separate preview page (`/projects-draft.html`) for unpublished projects
+    - Auto-fetch images from GitHub repos when not specified
+    - SVG images automatically get white backgrounds
 - [Pagefind](https://pagefind.app/) search with instant client-side search across all pages
 - Bluesky social link with custom butterfly icon
 - Custom SVG icons for Google Scholar, ORCiD, INSPIRE-HEP, arXiv, and OpenAlex (Font Awesome 4.x lacks these)
@@ -71,6 +78,8 @@ The migration required modifications to several plugins:
 
  * **pelican-selected-publications**: Another new plugin that generates a curated publications page organized by research themes. Publications are defined in a YAML file that references BibTeX keys, allowing thematic grouping with category descriptions. Features include filtering by category/year/highlights, publication metrics display, profile icons, and collapsible Altmetric badges.
 
+ * **pelican-projects**: A new plugin that generates a projects page with card-based layout. Projects are organized by category (software, research, collaborations, etc.) with card and list view options, status filtering, and draft mode support. Automatically fetches social preview images from GitHub repos and handles SVG images with white backgrounds.
+
 ## Working with Claude Code
 
 This entire migration was done in collaboration with Claude Code. The AI agent was able to:
@@ -80,6 +89,7 @@ This entire migration was done in collaboration with Claude Code. The AI agent w
 - Migrate and modify plugins to work with the new Pelican version
 - Create a new `pelican-presentations` plugin from scratch, compatible with IRIS-HEP's format
 - Create a new `pelican-selected-publications` plugin for thematic publication organization with Altmetric integration
+- Create a new `pelican-projects` plugin for card-based project display with draft mode support
 - Build a comprehensive CV page from PDF content
 - Debug issues with template rendering and markdown processing
 - Create the GitHub Actions deployment workflow
