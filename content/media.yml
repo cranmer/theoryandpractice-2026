@@ -113,7 +113,9 @@ items:
     outlet: "NPR Here and Now"
     category: podcasts
     date: 2015-12-16
+    description: "Discussion of the 750 GeV diphoton excess at the LHC"
     url: "https://www.wbur.org/hereandnow/2015/12/16/cern-fundamental-particle-nature"
+    image: "https://prod-eks-static-assets.npr.org/chrome_svg/npr-logo-2025.svg"
     embed:
       type: wbur
       slug: "hereandnow/2015/12/16/cern-fundamental-particle-nature"
@@ -124,6 +126,7 @@ items:
     date: 2015-03-30
     description: "Radio segment about the Crayfis cosmic ray detection app"
     url: "https://www.npr.org/2015/03/30/395800694/want-to-do-a-little-astrophysics-this-app-detects-cosmic-rays"
+    image: "https://prod-eks-static-assets.npr.org/chrome_svg/npr-logo-2025.svg"
 
   - title: "Please Explain: The Higgs Boson"
     outlet: "The Leonard Lopate Show (WNYC)"
