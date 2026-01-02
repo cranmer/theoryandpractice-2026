@@ -182,6 +182,10 @@
         padding: 15px;
         margin-bottom: 25px;
         border-radius: 4px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 15px;
     }
     .collaborator-filters label {
         margin-right: 8px;
@@ -189,7 +193,156 @@
     }
     .collaborator-filters select {
         padding: 5px 10px;
-        margin-right: 20px;
+    }
+    .filter-group {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+    .view-buttons {
+        display: flex;
+        gap: 5px;
+    }
+    .view-btn {
+        padding: 6px 14px;
+        border: 1px solid #18bc9c;
+        background: white;
+        color: #18bc9c;
+        cursor: pointer;
+        transition: all 0.2s;
+        border-radius: 4px;
+    }
+    .view-btn:hover {
+        background: #e8f8f5;
+    }
+    .view-btn.active {
+        background: #18bc9c;
+        color: white;
+    }
+
+    /* ==================
+       List View Styles
+       ================== */
+    .collaborators-list {
+        display: none;
+    }
+    .view-list .collaborators-grid {
+        display: none;
+    }
+    .view-list .collaborators-list {
+        display: block;
+    }
+    .collaborator-list-item {
+        display: flex;
+        align-items: center;
+        padding: 12px 15px;
+        border-bottom: 1px solid #eee;
+        transition: background 0.2s;
+    }
+    .collaborator-list-item:hover {
+        background: #f8f9fa;
+    }
+    .collaborator-list-item.former {
+        opacity: 0.75;
+    }
+    .collaborator-list-photo {
+        width: 40px;
+        height: 40px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-right: 15px;
+        flex-shrink: 0;
+    }
+    .collaborator-list-photo-placeholder {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: #dee2e6;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #6c757d;
+        font-size: 1.2em;
+        margin-right: 15px;
+        flex-shrink: 0;
+    }
+    .collaborator-list-status {
+        width: 70px;
+        flex-shrink: 0;
+    }
+    .collaborator-list-status span {
+        display: inline-block;
+        padding: 2px 8px;
+        border-radius: 10px;
+        font-size: 0.7em;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+    .collaborator-list-status .current {
+        background: #18bc9c;
+        color: white;
+    }
+    .collaborator-list-status .former {
+        background: #95a5a6;
+        color: white;
+    }
+    .collaborator-list-name {
+        flex: 1;
+        font-weight: 600;
+        color: #2c3e50;
+        min-width: 150px;
+    }
+    .collaborator-list-name a {
+        color: inherit;
+        text-decoration: none;
+    }
+    .collaborator-list-name a:hover {
+        color: #18bc9c;
+    }
+    .collaborator-list-role {
+        flex: 1;
+        color: #18bc9c;
+        font-size: 0.9em;
+    }
+    .collaborator-list-affiliation {
+        flex: 1.5;
+        color: #666;
+        font-size: 0.9em;
+    }
+    .collaborator-list-years {
+        width: 120px;
+        text-align: right;
+        color: #888;
+        font-size: 0.85em;
+        flex-shrink: 0;
+    }
+    .collaborator-list-links {
+        width: 100px;
+        text-align: right;
+        flex-shrink: 0;
+    }
+    .collaborator-list-links a {
+        color: #666;
+        margin-left: 8px;
+        font-size: 1.1em;
+    }
+    .collaborator-list-links a:hover {
+        color: #18bc9c;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .collaborator-filters {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .collaborator-list-role,
+        .collaborator-list-affiliation {
+            display: none;
+        }
+        .collaborator-list-item {
+            flex-wrap: wrap;
+        }
     }
 </style>
 {% endblock %}
@@ -204,20 +357,32 @@
 
     <!-- Filters -->
     <div class="collaborator-filters">
-        <label for="filter-category">Category:</label>
-        <select id="filter-category" onchange="filterCollaborators()">
-            <option value="">All</option>
-            {% for cat in collaborators.categories %}
-            <option value="{{ cat.id }}">{{ cat.title }}</option>
-            {% endfor %}
-        </select>
+        <div class="filter-group">
+            <label for="filter-category">Category:</label>
+            <select id="filter-category" onchange="filterCollaborators()">
+                <option value="">All</option>
+                {% for cat in collaborators.categories %}
+                <option value="{{ cat.id }}">{{ cat.title }}</option>
+                {% endfor %}
+            </select>
+        </div>
 
-        <label>Status:</label>
-        <span class="status-toggle">
-            <button class="btn btn-default active" data-status="" onclick="setStatusFilter(this, '')">All</button>
-            <button class="btn btn-default" data-status="current" onclick="setStatusFilter(this, 'current')">Current</button>
-            <button class="btn btn-default" data-status="former" onclick="setStatusFilter(this, 'former')">Former</button>
-        </span>
+        <div class="filter-group">
+            <label>Status:</label>
+            <span class="status-toggle">
+                <button class="btn btn-default active" data-status="" onclick="setStatusFilter(this, '')">All</button>
+                <button class="btn btn-default" data-status="current" onclick="setStatusFilter(this, 'current')">Current</button>
+                <button class="btn btn-default" data-status="former" onclick="setStatusFilter(this, 'former')">Former</button>
+            </span>
+        </div>
+
+        <div class="filter-group">
+            <label>View:</label>
+            <div class="view-buttons">
+                <button class="view-btn active" data-view="cards" onclick="setView('cards')" title="Card View"><i class="fa fa-th-large"></i></button>
+                <button class="view-btn" data-view="list" onclick="setView('list')" title="List View"><i class="fa fa-list"></i></button>
+            </div>
+        </div>
     </div>
 
     <!-- Collaborators by Category -->
@@ -307,6 +472,61 @@
             </div>
         {% endfor %}
         </div>
+
+        <!-- List View -->
+        <div class="collaborators-list">
+        {% for person in cat.people %}
+            <div class="collaborator-list-item {{ 'current' if person.current else 'former' }}" data-name="{{ person.name }}" data-current="{{ 'true' if person.current else 'false' }}">
+                {% if person.photo %}
+                <img src="{{ person.photo }}" alt="{{ person.name }}" class="collaborator-list-photo">
+                {% else %}
+                <div class="collaborator-list-photo-placeholder">
+                    <i class="fa fa-user"></i>
+                </div>
+                {% endif %}
+
+                <div class="collaborator-list-status">
+                    <span class="{{ 'current' if person.current else 'former' }}">{{ 'Current' if person.current else 'Former' }}</span>
+                </div>
+
+                <div class="collaborator-list-name">
+                    {% if person.links and person.links.website %}
+                    <a href="{{ person.links.website }}" target="_blank">{{ person.name }}</a>
+                    {% else %}
+                    {{ person.name }}
+                    {% endif %}
+                </div>
+
+                <div class="collaborator-list-role">
+                    {{ person.role if person.role else '' }}
+                </div>
+
+                <div class="collaborator-list-affiliation">
+                    {{ person.affiliation if person.affiliation else '' }}
+                </div>
+
+                <div class="collaborator-list-years">
+                    {% if person.start_year %}
+                    {{ person.start_year }}{% if person.end_year %} – {{ person.end_year }}{% elif not person.graduation_year %} – present{% endif %}
+                    {% endif %}
+                </div>
+
+                <div class="collaborator-list-links">
+                    {% if person.links %}
+                        {% if person.links.website %}
+                        <a href="{{ person.links.website }}" target="_blank" title="Website"><i class="fa fa-globe"></i></a>
+                        {% endif %}
+                        {% if person.links.github %}
+                        <a href="https://github.com/{{ person.links.github }}" target="_blank" title="GitHub"><i class="fa fa-github"></i></a>
+                        {% endif %}
+                        {% if person.links.scholar %}
+                        <a href="https://scholar.google.com/citations?user={{ person.links.scholar }}" target="_blank" title="Google Scholar"><i class="fa fa-google-scholar"></i></a>
+                        {% endif %}
+                    {% endif %}
+                </div>
+            </div>
+        {% endfor %}
+        </div>
     </section>
     {% endif %}
     {% endfor %}
@@ -318,6 +538,21 @@
 
 <script>
 var currentStatusFilter = '';
+var currentView = 'cards';
+
+function setView(view) {
+    currentView = view;
+
+    // Update button states
+    document.querySelectorAll('.view-btn').forEach(function(btn) {
+        btn.classList.toggle('active', btn.getAttribute('data-view') === view);
+    });
+
+    // Toggle view class on categories
+    document.querySelectorAll('.collaborator-category').forEach(function(section) {
+        section.classList.toggle('view-list', view === 'list');
+    });
+}
 
 function setStatusFilter(btn, status) {
     currentStatusFilter = status;
@@ -341,23 +576,23 @@ function filterCollaborators() {
         } else {
             cat.style.display = 'block';
 
-            // Filter cards within category by status
+            // Filter items within category by status (both views)
             var visibleCount = 0;
-            cat.querySelectorAll('.collaborator-card').forEach(function(card) {
-                var isCurrent = card.getAttribute('data-current') === 'true';
+            cat.querySelectorAll('.collaborator-card, .collaborator-list-item').forEach(function(item) {
+                var isCurrent = item.getAttribute('data-current') === 'true';
                 var statusMatch = !currentStatusFilter ||
                     (currentStatusFilter === 'current' && isCurrent) ||
                     (currentStatusFilter === 'former' && !isCurrent);
 
                 if (statusMatch) {
-                    card.style.display = 'block';
-                    visibleCount++;
+                    item.style.display = '';
+                    if (item.classList.contains('collaborator-card')) visibleCount++;
                 } else {
-                    card.style.display = 'none';
+                    item.style.display = 'none';
                 }
             });
 
-            // Hide category if no cards visible
+            // Hide category if no items visible
             if (visibleCount === 0) {
                 cat.style.display = 'none';
             }

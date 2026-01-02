@@ -68,6 +68,7 @@ projects:
     description: "Machine learning-based inference for particle physics with neural ratio estimation."
     github: "madminer-tool/madminer"
     url: "https://madminer.readthedocs.io"
+    image: "/images/madminer-card.001.png"
     tags: ["python", "simulation-based-inference", "HEP"]
     start_year: 2018
     collaborators: ["Johann Brehmer"]
@@ -164,6 +165,7 @@ projects:
     status: active
     description: "Constraining Effective Field Theories with machine learning for precision measurements at the LHC."
     url: "https://doi.org/10.1103/PhysRevLett.121.111801"
+    image: "/images/madminer-card.001.png"
     tags: ["machine-learning", "EFT", "HEP"]
     start_year: 2018
     collaborators: ["Johann Brehmer", "Gilles Louppe", "Juan Pavez"]
