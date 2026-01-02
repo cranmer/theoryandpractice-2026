@@ -5,9 +5,6 @@ settings:
   default_view: cards
 
 categories:
-  - id: videos
-    title: "Videos"
-    icon: "fa-video-camera"
   - id: podcasts
     title: "Podcasts & Radio"
     icon: "fa-podcast"
@@ -25,77 +22,6 @@ categories:
     icon: "fa-users"
 
 items:
-  # ==================
-  # Videos
-  # ==================
-
-  - title: "5-Word Speech at 19th Webby Awards"
-    outlet: "Webby Awards"
-    category: videos
-    date: 2015-05-18
-    description: "Acceptance speech for Crayfis at the Webby Awards"
-    embed:
-      type: youtube
-      id: "8Y3O5K_LtG0"
-
-  - title: "Higgs Boson: A Natural Disaster!"
-    outlet: "Aspen Public Talk"
-    category: videos
-    date: 2013-08-15
-    embed:
-      type: youtube
-      id: "2KJc8w7BonM"
-
-  - title: "TEDx: The Higgs Boson"
-    outlet: "TEDx"
-    category: videos
-    date: 2013-05-20
-    featured: true
-    embed:
-      type: youtube
-      id: "Pv_DtHuj5Ds"
-
-  - title: "My Story in the Higgs Discovery"
-    outlet: "Physics Slam on Ice"
-    category: videos
-    date: 2013-02-01
-    embed:
-      type: youtube
-      id: "b1q46oeuG4Q"
-      start: 3158
-
-  - title: "The Higgs Boson"
-    outlet: "CUNY Institute for Theoretical Sciences"
-    category: videos
-    date: 2012-10-01
-    embed:
-      type: fora
-      id: "17114"
-
-  - title: "NSF's Science Nation"
-    outlet: "National Science Foundation"
-    category: videos
-    date: 2012-09-01
-    embed:
-      type: youtube
-      id: "d5df1NVkYuQ"
-
-  - title: "Ask an Expert"
-    outlet: "SpaceLab"
-    category: videos
-    date: 2012-07-01
-    embed:
-      type: youtube
-      id: "DpuVrTWulv0"
-
-  - title: "The Higgs Sound"
-    outlet: "SpaceLab"
-    category: videos
-    date: 2012-07-01
-    embed:
-      type: youtube
-      id: "EwYmtFcg4Wk"
-
   # ==================
   # Podcasts & Radio
   # ==================
@@ -314,11 +240,78 @@ items:
     description: "Public lecture at Neville Public Museum on AI in scientific discovery"
     url: "https://www.youtube.com/live/7V3ue6VxQv4"
 
+  - title: "5-Word Speech at 19th Webby Awards"
+    outlet: "Webby Awards"
+    category: outreach
+    date: 2015-05-18
+    description: "Acceptance speech for Crayfis at the Webby Awards"
+    embed:
+      type: youtube
+      id: "8Y3O5K_LtG0"
+
   - title: "USA Science & Engineering Festival"
     outlet: "USA Science Festival"
     category: outreach
     date: 2014-04-26
     url: "http://www.flickr.com/photos/hoonynoo/sets/72157638481017703/"
+
+  - title: "Higgs Boson: A Natural Disaster!"
+    outlet: "Aspen Public Talk"
+    category: outreach
+    date: 2013-08-15
+    embed:
+      type: youtube
+      id: "2KJc8w7BonM"
+
+  - title: "TEDx: The Higgs Boson"
+    outlet: "TEDx"
+    category: outreach
+    date: 2013-05-20
+    featured: true
+    embed:
+      type: youtube
+      id: "Pv_DtHuj5Ds"
+
+  - title: "My Story in the Higgs Discovery"
+    outlet: "Physics Slam on Ice"
+    category: outreach
+    date: 2013-02-01
+    embed:
+      type: youtube
+      id: "b1q46oeuG4Q"
+      start: 3158
+
+  - title: "The Higgs Boson"
+    outlet: "CUNY Institute for Theoretical Sciences"
+    category: outreach
+    date: 2012-10-01
+    embed:
+      type: fora
+      id: "17114"
+
+  - title: "NSF's Science Nation"
+    outlet: "National Science Foundation"
+    category: outreach
+    date: 2012-09-01
+    embed:
+      type: youtube
+      id: "d5df1NVkYuQ"
+
+  - title: "Ask an Expert"
+    outlet: "SpaceLab"
+    category: outreach
+    date: 2012-07-01
+    embed:
+      type: youtube
+      id: "DpuVrTWulv0"
+
+  - title: "The Higgs Sound"
+    outlet: "SpaceLab"
+    category: outreach
+    date: 2012-07-01
+    embed:
+      type: youtube
+      id: "EwYmtFcg4Wk"
 
   - title: "Nifty Fifty Speaker"
     outlet: "USA Science & Engineering Festival"
