@@ -66,7 +66,7 @@ items:
     featured: true
     description: "Kyle joins Bill Nye the Science Guy, Eugene Mirman and Sara Vowell for a special episode dedicated to the Higgs discovery. Voted fan favorite for 2012."
     url: "http://www.startalkradio.net/show/startalk-live-the-particle-party-part-1/"
-    image: "http://www.startalkradio.net/wp-content/uploads/2012/11/Particle-Party-Backstage-Group-Shot1.jpg"
+    image: "/images/Particle-Party-Backstage-Group-Shot1.jpg"
 
   - title: "Please Explain: The Higgs Boson"
     outlet: "The Leonard Lopate Show (WNYC)"
