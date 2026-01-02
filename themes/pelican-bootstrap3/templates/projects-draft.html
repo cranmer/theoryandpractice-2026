@@ -346,27 +346,28 @@
 }
 
 .project-list-status {
-    width: 80px;
+    width: 24px;
     flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .project-list-status span {
     display: inline-block;
-    padding: 2px 8px;
-    border-radius: 10px;
-    font-size: 0.7em;
-    font-weight: 600;
-    text-transform: uppercase;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    font-size: 0;
+    text-indent: -9999px;
 }
 
 .project-list-status .active {
     background: #28a745;
-    color: white;
 }
 
 .project-list-status .completed {
-    background: #6c757d;
-    color: white;
+    background: #adb5bd;
 }
 
 .project-list-name {
@@ -595,7 +596,7 @@
              data-draft="{{ project.draft|default(false)|lower }}">
 
             <div class="project-list-status">
-                <span class="{{ project.status }}">{{ project.status }}</span>
+                <span class="{{ project.status }}" title="{{ project.status | capitalize }}">{{ project.status }}</span>
             </div>
 
             <div class="project-list-name">
