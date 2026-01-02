@@ -35,12 +35,12 @@
     min-width: 150px;
 }
 
-.status-buttons {
+.status-buttons, .view-buttons {
     display: flex;
     gap: 5px;
 }
 
-.status-btn {
+.status-btn, .view-btn {
     padding: 6px 14px;
     border: 1px solid #337ab7;
     background: white;
@@ -50,17 +50,13 @@
     border-radius: 4px;
 }
 
-.status-btn:hover {
+.status-btn:hover, .view-btn:hover {
     background: #e8f4fc;
 }
 
-.status-btn.active {
+.status-btn.active, .view-btn.active {
     background: #337ab7;
     color: white;
-}
-
-.sort-group select {
-    min-width: 180px;
 }
 
 /* Category Section */
@@ -121,10 +117,19 @@
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 
+.project-image.svg-image {
+    background: white;
+}
+
 .project-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.project-image img[src$=".svg"] {
+    object-fit: contain;
+    padding: 20px;
 }
 
 .project-image-placeholder {
@@ -273,6 +278,112 @@
     font-style: italic;
 }
 
+/* ==================
+   List View Styles
+   ================== */
+.projects-list {
+    display: none;
+}
+
+.view-list .projects-grid {
+    display: none;
+}
+
+.view-list .projects-list {
+    display: block;
+}
+
+.project-list-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    border-bottom: 1px solid #eee;
+    transition: background 0.2s;
+}
+
+.project-list-item:hover {
+    background: #f8f9fa;
+}
+
+.project-list-item.status-completed {
+    opacity: 0.75;
+}
+
+.project-list-status {
+    width: 80px;
+    flex-shrink: 0;
+}
+
+.project-list-status span {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 0.7em;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.project-list-status .active {
+    background: #28a745;
+    color: white;
+}
+
+.project-list-status .completed {
+    background: #6c757d;
+    color: white;
+}
+
+.project-list-name {
+    flex: 1;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.project-list-name a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.project-list-name a:hover {
+    color: #337ab7;
+}
+
+.project-list-name .featured-star {
+    color: #ffc107;
+    margin-left: 6px;
+}
+
+.project-list-description {
+    flex: 2;
+    color: #666;
+    font-size: 0.9em;
+    padding: 0 20px;
+}
+
+.project-list-year {
+    width: 100px;
+    text-align: right;
+    color: #888;
+    font-size: 0.85em;
+    flex-shrink: 0;
+}
+
+.project-list-links {
+    width: 80px;
+    text-align: right;
+    flex-shrink: 0;
+}
+
+.project-list-links a {
+    color: #666;
+    margin-left: 10px;
+    font-size: 1.1em;
+}
+
+.project-list-links a:hover {
+    color: #337ab7;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .projects-filters {
@@ -282,6 +393,14 @@
 
     .projects-grid {
         grid-template-columns: 1fr;
+    }
+
+    .project-list-description {
+        display: none;
+    }
+
+    .project-list-item {
+        flex-wrap: wrap;
     }
 }
 </style>
@@ -319,14 +438,12 @@
         </div>
     </div>
 
-    <div class="filter-group sort-group">
-        <label for="sort-select">Sort:</label>
-        <select id="sort-select" onchange="sortProjects()">
-            <option value="featured">Featured First</option>
-            <option value="newest">Newest First</option>
-            <option value="oldest">Oldest First</option>
-            <option value="alpha">Alphabetical</option>
-        </select>
+    <div class="filter-group">
+        <label>View:</label>
+        <div class="view-buttons">
+            <button class="view-btn active" data-view="cards" onclick="setView('cards')" title="Card View"><i class="fa fa-th-large"></i></button>
+            <button class="view-btn" data-view="list" onclick="setView('list')" title="List View"><i class="fa fa-list"></i></button>
+        </div>
     </div>
 </div>
 
@@ -339,6 +456,7 @@
     <p class="category-description">{{ cat.description }}</p>
     {% endif %}
 
+    <!-- Card View -->
     <div class="projects-grid">
     {% for project in cat.projects %}
         <div class="project-card status-{{ project.status }}"
@@ -347,7 +465,7 @@
              data-year="{{ project.start_year or 0 }}"
              data-name="{{ project.name }}">
 
-            <div class="project-image">
+            <div class="project-image{% if project.image and project.image.endswith('.svg') %} svg-image{% endif %}">
                 {% if project.image %}
                 <img src="{{ project.image }}" alt="{{ project.name }}" loading="lazy">
                 {% else %}
@@ -407,6 +525,50 @@
         </div>
     {% endfor %}
     </div>
+
+    <!-- List View -->
+    <div class="projects-list">
+    {% for project in cat.projects %}
+        <div class="project-list-item status-{{ project.status }}"
+             data-status="{{ project.status }}"
+             data-featured="{{ project.featured|lower }}"
+             data-year="{{ project.start_year or 0 }}"
+             data-name="{{ project.name }}">
+
+            <div class="project-list-status">
+                <span class="{{ project.status }}">{{ project.status }}</span>
+            </div>
+
+            <div class="project-list-name">
+                {% if project.url %}
+                <a href="{{ project.url }}" target="_blank">{{ project.name }}</a>
+                {% else %}
+                {{ project.name }}
+                {% endif %}
+                {% if project.featured %}<i class="fa fa-star featured-star" title="Featured"></i>{% endif %}
+            </div>
+
+            <div class="project-list-description">
+                {{ project.description | truncate(100) if project.description else '' }}
+            </div>
+
+            <div class="project-list-year">
+                {% if project.start_year %}
+                {{ project.start_year }}{% if project.end_year %} – {{ project.end_year }}{% elif project.status == 'active' %} – present{% endif %}
+                {% endif %}
+            </div>
+
+            <div class="project-list-links">
+                {% if project.url %}
+                <a href="{{ project.url }}" target="_blank" title="Website"><i class="fa fa-external-link"></i></a>
+                {% endif %}
+                {% if project.github %}
+                <a href="https://github.com/{{ project.github }}" target="_blank" title="GitHub"><i class="fa fa-github"></i></a>
+                {% endif %}
+            </div>
+        </div>
+    {% endfor %}
+    </div>
 </section>
 {% endif %}
 {% endfor %}
@@ -420,6 +582,21 @@
 <script>
 let currentStatus = 'all';
 let currentCategory = 'all';
+let currentView = 'cards';
+
+function setView(view) {
+    currentView = view;
+
+    // Update button states
+    document.querySelectorAll('.view-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.view === view);
+    });
+
+    // Toggle view class on categories
+    document.querySelectorAll('.projects-category').forEach(section => {
+        section.classList.toggle('view-list', view === 'list');
+    });
+}
 
 function setStatusFilter(status) {
     currentStatus = status;
@@ -442,43 +619,15 @@ function filterProjects() {
         section.classList.toggle('category-hidden', !showCategory);
 
         if (showCategory) {
-            // Filter individual projects within visible categories
+            // Filter individual projects within visible categories (both views)
             let visibleCount = 0;
-            section.querySelectorAll('.project-card').forEach(card => {
-                const status = card.dataset.status;
+            section.querySelectorAll('.project-card, .project-list-item').forEach(item => {
+                const status = item.dataset.status;
                 const showProject = currentStatus === 'all' || currentStatus === status;
-                card.classList.toggle('project-hidden', !showProject);
-                if (showProject) visibleCount++;
+                item.classList.toggle('project-hidden', !showProject);
+                if (showProject && item.classList.contains('project-card')) visibleCount++;
             });
         }
-    });
-}
-
-function sortProjects() {
-    const sortBy = document.getElementById('sort-select').value;
-
-    document.querySelectorAll('.projects-grid').forEach(grid => {
-        const cards = Array.from(grid.querySelectorAll('.project-card'));
-
-        cards.sort((a, b) => {
-            switch(sortBy) {
-                case 'featured':
-                    const aFeat = a.dataset.featured === 'true' ? 0 : 1;
-                    const bFeat = b.dataset.featured === 'true' ? 0 : 1;
-                    if (aFeat !== bFeat) return aFeat - bFeat;
-                    return parseInt(b.dataset.year) - parseInt(a.dataset.year);
-                case 'newest':
-                    return parseInt(b.dataset.year) - parseInt(a.dataset.year);
-                case 'oldest':
-                    return parseInt(a.dataset.year) - parseInt(b.dataset.year);
-                case 'alpha':
-                    return a.dataset.name.localeCompare(b.dataset.name);
-                default:
-                    return 0;
-            }
-        });
-
-        cards.forEach(card => grid.appendChild(card));
     });
 }
 

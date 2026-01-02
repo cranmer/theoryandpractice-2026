@@ -98,7 +98,7 @@ projects:
     featured: true
     description: "One of the two general-purpose particle physics experiments at the Large Hadron Collider."
     url: "https://atlas.cern"
-    image: "/images/projects/atlas-detector.jpg"
+    image: "https://atlas.cern/sites/default/files/2024-01/ATLAS-detector-overview.jpg"
     tags: ["HEP", "CERN", "LHC"]
     start_year: 2007
 
@@ -109,12 +109,30 @@ projects:
     description: "Institute for Research and Innovation in Software for High Energy Physics."
     url: "https://iris-hep.org"
     github: "iris-hep"
+    image: "https://iris-hep.org/assets/logos/Iris-hep-4-no-long-name.svg"
     tags: ["software", "HEP", "NSF"]
     start_year: 2018
 
   # ==================
   # Research
   # ==================
+
+  - name: "AI for Amplitudes"
+    category: research
+    status: active
+    description: "Using machine learning and transformers to bootstrap scattering amplitudes and explore the space of consistent quantum field theories."
+    url: "https://arxiv.org/abs/2407.11731"
+    tags: ["machine-learning", "amplitudes", "QFT"]
+    start_year: 2024
+
+  - name: "Precision EFT Measurements"
+    category: research
+    status: active
+    description: "Constraining Effective Field Theories with machine learning for precision measurements at the LHC."
+    url: "https://doi.org/10.1103/PhysRevLett.121.111801"
+    tags: ["machine-learning", "EFT", "HEP"]
+    start_year: 2018
+    collaborators: ["Johann Brehmer", "Gilles Louppe", "Juan Pavez"]
 
   - name: "Discovery of the Higgs Boson"
     category: research
@@ -135,23 +153,6 @@ projects:
     url: "https://www.nature.com/articles/s42254-023-00616-w"
     tags: ["machine-learning", "lattice-QCD", "normalizing-flows"]
     start_year: 2019
-
-  - name: "AI for Amplitudes"
-    category: research
-    status: active
-    description: "Using machine learning and transformers to bootstrap scattering amplitudes and explore the space of consistent quantum field theories."
-    url: "https://arxiv.org/abs/2407.11731"
-    tags: ["machine-learning", "amplitudes", "QFT"]
-    start_year: 2024
-
-  - name: "Precision EFT Measurements"
-    category: research
-    status: active
-    description: "Constraining Effective Field Theories with machine learning for precision measurements at the LHC."
-    url: "https://doi.org/10.1103/PhysRevLett.121.111801"
-    tags: ["machine-learning", "EFT", "HEP"]
-    start_year: 2018
-    collaborators: ["Johann Brehmer", "Gilles Louppe", "Juan Pavez"]
 
   - name: "APEX Experiment"
     category: research
@@ -214,6 +215,7 @@ projects:
     status: active
     description: "Machine Learning for Physical Sciences workshop series at NeurIPS."
     url: "https://ml4physicalsciences.github.io"
+    image: "/images/ml4ps-website.png"
     tags: ["machine-learning", "physics", "NeurIPS"]
     start_year: 2017
 
@@ -299,15 +301,6 @@ projects:
   # Fun
   # ==================
 
-  - name: "Crayfis"
-    category: fun
-    status: completed
-    description: "Citizen science project using smartphone cameras to detect cosmic rays."
-    url: "https://www.newyorker.com/tech/annals-of-technology/seeking-source-cosmic-rays"
-    tags: ["citizen-science", "mobile", "cosmic-rays"]
-    start_year: 2014
-    end_year: 2020
-
   - name: "Vectorscope"
     category: fun
     status: active
@@ -317,6 +310,15 @@ projects:
     image: "https://raw.githubusercontent.com/cranmer/vectorscope/main/logo.svg"
     tags: ["python", "visualization", "embeddings"]
     start_year: 2024
+
+  - name: "Crayfis"
+    category: fun
+    status: completed
+    description: "Citizen science project using smartphone cameras to detect cosmic rays."
+    url: "https://www.newyorker.com/tech/annals-of-technology/seeking-source-cosmic-rays"
+    tags: ["citizen-science", "mobile", "cosmic-rays"]
+    start_year: 2014
+    end_year: 2020
 
   # Draft project example (not shown on main projects page)
   - name: "Draft Project Example"
