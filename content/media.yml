@@ -134,6 +134,13 @@ items:
     description: "Radio interview on AI as a powerful tool for scientific inquiry"
     url: "https://www.wpr.org/shows/larry-meiller-show/ais-mixed-success-and-the-history-of-cartography"
 
+  - title: "A WALL-E Reality?"
+    outlet: "The SustainUW Podcast"
+    category: podcasts
+    date: 2024-05-29
+    description: "Two UW-Madison experts on AI and sustainability"
+    url: "https://creators.spotify.com/pod/profile/sustainuw/episodes/A-WALL-E-Reality--Two-UWMadison-Experts-on-AI-and-Sustainability-e2k92vq/a-abahs49"
+
   # ==================
   # News Articles
   # ==================
