@@ -133,7 +133,7 @@ projects:
     featured: true
     description: "One of the two general-purpose particle physics experiments at the Large Hadron Collider."
     url: "https://atlas.cern"
-    image: "https://atlas.cern/sites/default/files/2024-01/ATLAS-detector-overview.jpg"
+    image: "/images/atlas-experiment.jpg"
     tags: ["HEP", "CERN", "LHC"]
     start_year: 2007
 
