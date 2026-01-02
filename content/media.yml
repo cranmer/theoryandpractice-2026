@@ -127,6 +127,56 @@ items:
   # News Articles
   # ==================
 
+  - title: "Physicists Find Elusive Particle Seen as Key to Universe"
+    outlet: "New York Times"
+    category: articles
+    date: 2012-07-04
+    featured: true
+    description: "Coverage of the Higgs boson discovery at CERN"
+    url: "https://www.nytimes.com/2012/07/05/science/cern-physicists-may-have-discovered-higgs-boson-particle.html"
+
+  - title: "Conference on AI+Science at Caltech a Success"
+    outlet: "Caltech"
+    category: articles
+    date: 2025-11-21
+    featured: true
+    description: "Kyle Cranmer wins inaugural Pritzker Prize for AI in Science Research Excellence"
+    url: "https://www.caltech.edu/about/news/conference-on-aiscience-at-caltech-a-success"
+
+  - title: "Physicists discuss the future of machine learning and artificial intelligence"
+    outlet: "Physics World"
+    category: articles
+    date: 2025-11-12
+    description: "Interview as Editor-in-Chief of Machine Learning: Science and Technology"
+    url: "https://physicsworld.com/a/physicists-discuss-the-future-of-machine-learning-and-artificial-intelligence/"
+
+  - title: "RISE AI Collaboration HQ to build connections and advance research"
+    outlet: "UW-Madison News"
+    category: articles
+    date: 2025-09-17
+    url: "https://news.wisc.edu/rise-ai-collaboration-hq-to-build-connections-and-advance-research-teaching-and-engagement/"
+
+  - title: "Kyle Cranmer chosen to lead American Family Insurance Data Science Institute"
+    outlet: "UW-Madison News"
+    category: articles
+    date: 2021-10-22
+    featured: true
+    url: "https://news.wisc.edu/kyle-cranmer-chosen-to-lead-american-family-insurance-data-science-institute/"
+
+  - title: "Peter Higgs: science mourns giant of particle physics"
+    outlet: "Nature"
+    category: articles
+    date: 2024-04-10
+    description: "Tribute to Peter Higgs, featuring quotes from Kyle Cranmer"
+    url: "https://www.nature.com/articles/d41586-024-01069-6"
+
+  - title: "A Nobel Prize Party: Cheese, Bubbles, and a Boson"
+    outlet: "The New Yorker"
+    category: articles
+    date: 2013-10-09
+    description: "Coverage of the Nobel Prize celebration at NYU"
+    url: "http://www.newyorker.com/online/blogs/elements/2013/10/nobel-prize-party-at-nyu.html"
+
   - title: "Why physicists really, really want to find a new subatomic particle"
     outlet: "Vox"
     category: articles

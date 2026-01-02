@@ -62,3 +62,5 @@ dev-debug = "pelican content -o output -s pelicanconf.py && pelican content -o o
 watch = "pelican content -o output -s pelicanconf.py --autoreload"
 # Search for new media mentions
 search-media = "python scripts/search_media.py"
+# Parse Google Alerts from MBOX export
+parse-alerts = "python scripts/parse_google_alerts.py"

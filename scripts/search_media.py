@@ -32,6 +32,7 @@ from urllib.parse import quote_plus, urlparse
 
 import requests
 import yaml
+from bs4 import BeautifulSoup
 
 # Configuration
 YAML_PATH = "content/media.yml"
@@ -77,6 +78,47 @@ EXCLUDED_DOMAINS = [
     "researchgate.net",
     "academia.edu",
 ]
+
+
+def resolve_google_news_url(google_url: str) -> str:
+    """Resolve a Google News redirect URL to the actual article URL."""
+    if not google_url or "news.google.com" not in google_url:
+        return google_url
+
+    try:
+        # Google News uses JavaScript redirects, so we need to fetch the page
+        # and extract the actual URL from the page content
+        response = requests.get(google_url, timeout=15, headers={
+            "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
+        })
+
+        if response.status_code == 200:
+            # Try to find the actual URL in the page
+            soup = BeautifulSoup(response.text, 'html.parser')
+
+            # Look for meta refresh or canonical URL
+            canonical = soup.find('link', rel='canonical')
+            if canonical and canonical.get('href'):
+                href = canonical['href']
+                if "news.google.com" not in href:
+                    return href
+
+            # Look for data-url attribute
+            for tag in soup.find_all(attrs={'data-url': True}):
+                url = tag['data-url']
+                if url and "news.google.com" not in url:
+                    return url
+
+            # Look for the article link in the page
+            for a in soup.find_all('a', href=True):
+                href = a['href']
+                if href.startswith('http') and "news.google.com" not in href and "google.com" not in href:
+                    return href
+
+        return google_url
+    except Exception as e:
+        print(f"    Warning: Could not resolve URL: {e}")
+        return google_url
 
 
 def load_existing_media(yaml_path: Path) -> dict:
@@ -261,12 +303,138 @@ def format_yaml_entry(result: dict) -> dict:
     return entry
 
 
+def fetch_article_metadata(url: str) -> dict:
+    """Fetch metadata from an article URL."""
+    try:
+        response = requests.get(url, timeout=15, headers={
+            "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
+        })
+        response.raise_for_status()
+
+        soup = BeautifulSoup(response.text, 'html.parser')
+
+        # Extract title
+        title = None
+        og_title = soup.find('meta', property='og:title')
+        if og_title:
+            title = og_title.get('content', '')
+        if not title:
+            title_tag = soup.find('title')
+            title = title_tag.text.strip() if title_tag else ''
+
+        # Extract site name / outlet
+        outlet = None
+        og_site = soup.find('meta', property='og:site_name')
+        if og_site:
+            outlet = og_site.get('content', '')
+        if not outlet:
+            # Try to get from domain
+            domain = urlparse(url).netloc
+            outlet = domain.replace('www.', '').split('.')[0].title()
+
+        # Extract date
+        date = None
+        for meta in soup.find_all('meta'):
+            prop = meta.get('property', '') or meta.get('name', '')
+            if 'date' in prop.lower() or 'published' in prop.lower():
+                date_str = meta.get('content', '')
+                if date_str:
+                    # Try to parse various date formats
+                    for fmt in ['%Y-%m-%dT%H:%M:%S', '%Y-%m-%d', '%B %d, %Y', '%d %B %Y']:
+                        try:
+                            date = datetime.strptime(date_str[:19], fmt)
+                            break
+                        except ValueError:
+                            continue
+                    if date:
+                        break
+
+        # Extract description
+        description = None
+        og_desc = soup.find('meta', property='og:description')
+        if og_desc:
+            description = og_desc.get('content', '')
+        if not description:
+            meta_desc = soup.find('meta', attrs={'name': 'description'})
+            if meta_desc:
+                description = meta_desc.get('content', '')
+
+        # Extract image
+        image = None
+        og_image = soup.find('meta', property='og:image')
+        if og_image:
+            image = og_image.get('content', '')
+
+        return {
+            'title': title or 'Unknown Title',
+            'outlet': outlet or 'Unknown',
+            'url': url,
+            'date': date,
+            'description': description,
+            'image': image,
+        }
+    except Exception as e:
+        print(f"Error fetching {url}: {e}")
+        return {'url': url, 'title': 'Error fetching', 'outlet': 'Unknown'}
+
+
+def process_urls(urls: list) -> list:
+    """Process a list of URLs and return formatted entries."""
+    results = []
+    for url in urls:
+        print(f"Fetching: {url}")
+        metadata = fetch_article_metadata(url)
+        category = categorize_result(metadata)
+
+        entry = {
+            'title': metadata.get('title', ''),
+            'outlet': metadata.get('outlet', 'Unknown'),
+            'category': category,
+            'url': url,
+        }
+
+        if metadata.get('date'):
+            entry['date'] = metadata['date'].strftime('%Y-%m-%d')
+
+        if metadata.get('description'):
+            desc = metadata['description'][:200]
+            if len(metadata.get('description', '')) > 200:
+                desc += '...'
+            entry['description'] = desc
+
+        results.append(entry)
+        print(f"  -> {entry['title'][:60]}...")
+
+    return results
+
+
 def main():
     parser = argparse.ArgumentParser(description="Search for media mentions")
     parser.add_argument("--dry-run", action="store_true", help="Show results without saving")
     parser.add_argument("--days", type=int, default=30, help="Search last N days (default: 30)")
     parser.add_argument("--output", type=str, help="Output file for suggestions")
+    parser.add_argument("--urls", nargs='+', help="URLs to fetch metadata for (instead of searching)")
     args = parser.parse_args()
+
+    # If URLs provided, just process those
+    if args.urls:
+        print(f"Processing {len(args.urls)} URLs...")
+        print("=" * 60)
+        results = process_urls(args.urls)
+        print()
+        print("=" * 60)
+        print("YAML FORMAT (copy to media.yml items section):")
+        print("=" * 60)
+        print()
+        yaml_output = yaml.dump(results, default_flow_style=False, allow_unicode=True, sort_keys=False)
+        print(yaml_output)
+
+        if args.output:
+            output_path = Path(args.output)
+            with open(output_path, "w", encoding="utf-8") as f:
+                f.write(yaml_output)
+            print(f"Saved to: {output_path}")
+        return
 
     # Find project root
     script_dir = Path(__file__).parent
@@ -349,6 +517,19 @@ def main():
     if not filtered_results:
         print("No new media mentions found!")
         return
+
+    # Resolve Google News URLs to actual article URLs
+    print("Resolving article URLs...")
+    for result in filtered_results:
+        url = result.get("url", "")
+        if "news.google.com" in url:
+            resolved = resolve_google_news_url(url)
+            if resolved != url:
+                result["url"] = resolved
+                # Update domain for priority check
+                domain = urlparse(resolved).netloc.lower()
+                result["priority"] = any(priority in domain for priority in PRIORITY_DOMAINS)
+    print()
 
     # Display results
     print("=" * 60)
