@@ -447,6 +447,14 @@
                     <span class="media-link">
                         <a href="{{ item.url }}" target="_blank"><i class="fa fa-external-link"></i> View</a>
                     </span>
+                    {% elif item.embed and item.embed.type == 'youtube' %}
+                    <span class="media-link">
+                        <a href="https://www.youtube.com/watch?v={{ item.embed.id }}{% if item.embed.start %}&t={{ item.embed.start }}{% endif %}" target="_blank"><i class="fa fa-external-link"></i> View</a>
+                    </span>
+                    {% elif item.embed and item.embed.type == 'vimeo' %}
+                    <span class="media-link">
+                        <a href="https://vimeo.com/{{ item.embed.id }}" target="_blank"><i class="fa fa-external-link"></i> View</a>
+                    </span>
                     {% endif %}
                 </div>
             </div>
@@ -486,6 +494,10 @@
             <div class="media-list-link">
                 {% if item.url %}
                 <a href="{{ item.url }}" target="_blank" title="View"><i class="fa fa-external-link"></i></a>
+                {% elif item.embed and item.embed.type == 'youtube' %}
+                <a href="https://www.youtube.com/watch?v={{ item.embed.id }}{% if item.embed.start %}&t={{ item.embed.start }}{% endif %}" target="_blank" title="View"><i class="fa fa-external-link"></i></a>
+                {% elif item.embed and item.embed.type == 'vimeo' %}
+                <a href="https://vimeo.com/{{ item.embed.id }}" target="_blank" title="View"><i class="fa fa-external-link"></i></a>
                 {% endif %}
             </div>
         </div>
