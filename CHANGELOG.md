@@ -2,6 +2,34 @@
 
 All notable changes to theoryandpractice.org are documented in this file.
 
+## [2026-01-02] - Media & Outreach Plugin
+
+### Added
+- **New** Media & Outreach page (`/media.html`) with embedded videos, podcasts, and articles
+  - Custom `pelican-media` plugin for YAML-driven media organization
+  - Card and list view toggle (matching projects and collaborators pages)
+  - Category filtering (Videos, Podcasts, Articles, Interviews, Outreach)
+  - Year filtering
+  - Embedded YouTube and Vimeo video players
+  - Featured items highlighted with star badge
+  - Responsive grid layout
+- **New** `search_media.py` helper script to find new media mentions via Google News RSS
+  - Run with `pixi run search-media`
+  - Supports SerpAPI for enhanced results (optional)
+  - Outputs YAML suggestions for easy addition to `media.yml`
+
+### Changed
+- Navigation "Media & Outreach" now links to new `/media.html` (was `/pages/in-the-news.html`)
+- Migrated all media items from static markdown page to structured YAML
+
+### Theme
+- Added `media.html` template with card grid and list view styles
+
+## [2025-12-31] - Collaborators List View
+
+### Added
+- Card/list view toggle for collaborators page (matching projects page)
+
 ## [2025-12-29] - CV and Publications Enhancements
 
 ### Added

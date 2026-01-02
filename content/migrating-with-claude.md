@@ -50,6 +50,13 @@ This repository is a fresh migration of the original [TheoryAndPractice](https:/
     - Draft mode with separate preview page (`/projects-draft.html`) for unpublished projects
     - Auto-fetch images from GitHub repos when not specified
     - SVG images automatically get white backgrounds
+- **New** Media & Outreach page (`/media.html`) with embedded videos, podcasts, and articles
+    - Custom `pelican-media` plugin for YAML-driven media organization
+    - Card and list view toggle
+    - Category filtering (Videos, Podcasts, Articles, Interviews, Outreach)
+    - Year filtering
+    - Embedded YouTube and Vimeo video players
+    - Helper script to search Google News for new media mentions
 - [Pagefind](https://pagefind.app/) search with instant client-side search across all pages
 - Bluesky social link with custom butterfly icon
 - Custom SVG icons for Google Scholar, ORCiD, INSPIRE-HEP, arXiv, and OpenAlex (Font Awesome 4.x lacks these)
@@ -80,6 +87,8 @@ The migration required modifications to several plugins:
 
  * **pelican-projects**: A new plugin that generates a projects page with card-based layout. Projects are organized by category (software, research, collaborations, etc.) with card and list view options, status filtering, and draft mode support. Automatically fetches social preview images from GitHub repos and handles SVG images with white backgrounds.
 
+ * **pelican-media**: A new plugin that generates a media & outreach page from YAML data. Supports embedded YouTube/Vimeo videos, images, and audio. Features card and list view toggle, category and year filtering, and featured item highlighting. Includes a helper script (`search_media.py`) that searches Google News RSS for new media mentions and outputs YAML suggestions.
+
 ## Working with Claude Code
 
 This entire migration was done in collaboration with Claude Code. The AI agent was able to:
@@ -90,6 +99,7 @@ This entire migration was done in collaboration with Claude Code. The AI agent w
 - Create a new `pelican-presentations` plugin from scratch, compatible with IRIS-HEP's format
 - Create a new `pelican-selected-publications` plugin for thematic publication organization with Altmetric integration
 - Create a new `pelican-projects` plugin for card-based project display with draft mode support
+- Create a new `pelican-media` plugin for media & outreach with embedded videos and a helper script to search for new mentions
 - Build a comprehensive CV page from PDF content
 - Debug issues with template rendering and markdown processing
 - Create the GitHub Actions deployment workflow

@@ -133,11 +133,45 @@ Create `templates/media.html` in your theme. The plugin provides:
 
 ## Helper Script
 
-Use `scripts/search_media.py` to search for new media mentions:
+Use `scripts/search_media.py` to search for new media mentions via Google News RSS:
 
 ```bash
+# Basic search (last 30 days)
+pixi run search-media
+
+# Search last 60 days
+python scripts/search_media.py --days 60
+
+# Save suggestions to a file
+python scripts/search_media.py --output suggestions.yml
+
+# Dry run (show results without saving)
+python scripts/search_media.py --dry-run
+```
+
+### Search Configuration
+
+The script searches for predefined queries like:
+- `"Kyle Cranmer" physics`
+- `"Kyle Cranmer" AI`
+- `"Kyle Cranmer" machine learning`
+- etc.
+
+### Enhanced Search with SerpAPI
+
+For better results, you can use [SerpAPI](https://serpapi.com/) (requires API key):
+
+```bash
+export SERPAPI_KEY="your-api-key"
 pixi run search-media
 ```
+
+### Output
+
+The script outputs:
+1. A numbered list of potential new media mentions
+2. YAML-formatted entries ready to copy into `media.yml`
+3. Priority markers for major outlets (NYT, WIRED, etc.)
 
 ## License
 

@@ -231,6 +231,34 @@ DIRECT_TEMPLATES = [..., 'projects', 'projects-draft']
 - `/projects.html` - Main projects page (in navigation), shows only published projects
 - `/projects-draft.html` - Preview page (not in navigation), shows all projects including drafts
 
+### pelican-media
+
+A custom plugin (in `plugins/pelican-media`) that generates a media & outreach page with embedded videos, podcasts, articles, and interviews. See the [plugin README](plugins/pelican-media/README.md) for full documentation.
+
+**Features:**
+- YAML-driven configuration (`content/media.yml`)
+- Category grouping (videos, podcasts, articles, interviews, outreach)
+- Card and list view toggle
+- Category and year filtering
+- Embedded YouTube/Vimeo videos
+- Featured items highlighted
+- Helper script to search for new media mentions
+
+**Configuration:**
+```python
+MEDIA_SRC = 'content/media.yml'
+DIRECT_TEMPLATES = [..., 'media']
+```
+
+**Helper Script:**
+```bash
+# Search Google News for new media mentions
+pixi run search-media
+
+# With options
+python scripts/search_media.py --days 60 --output suggestions.yml
+```
+
 ### pelican-presentations
 
 A custom plugin (in separate repository `../pelican-presentations`) that generates a presentations page from YAML data, compatible with the [IRIS-HEP](https://iris-hep.org/presentations/byperson.html) presentations format.
