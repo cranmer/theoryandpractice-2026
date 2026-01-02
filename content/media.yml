@@ -74,6 +74,7 @@ items:
     date: 2012-07-19
     description: "Kyle Cranmer and Brian Greene explain the Higgs boson discovery"
     url: "https://www.wnyc.org/story/224063-please-explain-higgs-boson"
+    image: "https://upload.wikimedia.org/wikipedia/commons/0/0b/WNYC-Logo.svg"
     embed:
       type: wnyc
       id: "224063"
