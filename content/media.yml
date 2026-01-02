@@ -121,10 +121,11 @@ items:
   - title: "The Leonard Lopate Show"
     outlet: "WNYC"
     category: podcasts
-    date: 2012-07-04
+    date: 2012-07-19
+    url: "https://www.wnyc.org/story/224063-please-explain-higgs-boson"
     embed:
       type: wnyc
-      id: "224065"
+      id: "224063"
 
   - title: "AI's mixed success; and the history of cartography"
     outlet: "WPR Larry Meiller Show"
@@ -287,6 +288,13 @@ items:
   # ==================
   # Outreach
   # ==================
+
+  - title: "Badger Talks: How is AI Revolutionizing Science?"
+    outlet: "Neville Public Museum"
+    category: outreach
+    date: 2025-06-10
+    description: "Public lecture on AI in scientific discovery, recorded by PBS Wisconsin"
+    url: "https://www.youtube.com/live/7V3ue6VxQv4"
 
   - title: "USA Science & Engineering Festival"
     outlet: "USA Science Festival"
