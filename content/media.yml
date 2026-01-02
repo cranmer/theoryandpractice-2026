@@ -125,10 +125,11 @@ items:
     description: "Radio segment about the Crayfis cosmic ray detection app"
     url: "https://www.npr.org/2015/03/30/395800694/want-to-do-a-little-astrophysics-this-app-detects-cosmic-rays"
 
-  - title: "The Leonard Lopate Show"
-    outlet: "WNYC"
+  - title: "Please Explain: The Higgs Boson"
+    outlet: "The Leonard Lopate Show (WNYC)"
     category: podcasts
     date: 2012-07-19
+    description: "Kyle Cranmer and Brian Greene explain the Higgs boson discovery"
     url: "https://www.wnyc.org/story/224063-please-explain-higgs-boson"
     embed:
       type: wnyc
