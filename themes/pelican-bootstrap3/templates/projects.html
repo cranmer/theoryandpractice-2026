@@ -465,7 +465,7 @@
              data-year="{{ project.start_year or 0 }}"
              data-name="{{ project.name }}">
 
-            <div class="project-image{% if project.image and project.image.endswith('.svg') %} svg-image{% endif %}">
+            <div class="project-image{% if project.image and (project.image.endswith('.svg') or project.transparent_bg) %} svg-image{% endif %}">
                 {% if project.image %}
                 <img src="{{ project.image }}" alt="{{ project.name }}" loading="lazy">
                 {% else %}

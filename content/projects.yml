@@ -72,6 +72,16 @@ projects:
     start_year: 2018
     collaborators: ["Johann Brehmer"]
 
+  - name: "REANA"
+    category: software
+    status: active
+    description: "Reproducible research data analysis platform for containerized computational workflows."
+    github: "reanahub/reana"
+    url: "https://www.reana.io"
+    image: "https://docs.reana.io/images/logo-reana.svg"
+    tags: ["python", "reproducibility", "workflows", "containers"]
+    start_year: 2017
+
   - name: "RooFit & RooStats"
     category: software
     status: completed
@@ -87,6 +97,30 @@ projects:
     url: "https://cds.cern.ch/record/1456844"
     tags: ["C++", "statistics", "HEP"]
     start_year: 2012
+
+  - name: "Excursion"
+    category: software
+    status: completed
+    description: "Active learning for excursion set estimation with Gaussian processes."
+    github: "diana-hep/excursion"
+    tags: ["python", "active-learning", "Gaussian-processes"]
+    start_year: 2018
+
+  - name: "carl"
+    category: software
+    status: completed
+    description: "Toolbox for likelihood-free inference using calibrated classifiers and ratio estimation."
+    github: "diana-hep/carl"
+    tags: ["python", "likelihood-free-inference", "machine-learning"]
+    start_year: 2016
+
+  - name: "TreeNiN"
+    category: software
+    status: completed
+    description: "Network-in-Network architecture for jet physics with recursive neural networks."
+    github: "diana-hep/TreeNiN"
+    tags: ["python", "neural-networks", "jets", "HEP"]
+    start_year: 2017
 
   # ==================
   # Collaborations
@@ -198,6 +232,14 @@ projects:
     url: "https://dsi.wisc.edu"
     start_year: 2022
 
+  - name: "Open Source Program Office"
+    category: leadership
+    status: active
+    description: "UW-Madison's Open Source Program Office, promoting open source practices across campus."
+    url: "https://ospo.wisc.edu"
+    tags: ["open-source", "UW-Madison"]
+    start_year: 2024
+
   - name: "P5"
     category: leadership
     status: completed
@@ -205,6 +247,16 @@ projects:
     url: "https://www.usparticlephysics.org/2023-p5-report/"
     tags: ["HEP", "policy", "planning"]
     start_year: 2023
+
+  - name: "Moore-Sloan Data Science Environment"
+    category: leadership
+    status: completed
+    description: "NYU's Data Science Environment, part of the Moore-Sloan Data Science Environments initiative."
+    url: "https://zenodo.org/records/3934814"
+    image: "https://alliance4datascience.ai/wp-content/uploads/2023/01/Moore-Sloan-Data-Science.jpg"
+    tags: ["data-science", "NYU", "Moore-Sloan"]
+    start_year: 2014
+    end_year: 2019
 
   # ==================
   # Community
@@ -252,6 +304,7 @@ projects:
     status: active
     description: "High Energy Physics literature database and information system."
     url: "https://inspirehep.net"
+    image: "https://cdn.bsky.app/img/banner/plain/did:plc:hi2ifo6amrinbc7hcqlepetl/bafkreift7i5pmdlyoou7sumhjif5xaw2rgddkrg7bkcmuzhgszglymfpgq@jpeg"
     tags: ["HEP", "literature", "database"]
     start_year: 2010
 
@@ -259,9 +312,18 @@ projects:
     category: publishing
     status: active
     description: "A framework for reinterpreting LHC analyses for new physics models."
-    url: "https://inspirehep.net/literature?sort=mostrecent&size=25&page=1&q=RECAST%20and%20%28cn%3Aatlas%20or%20a%3Acranmer%29&ui-citation-summary=true"
+    url: "https://iris-hep.org/projects/recast.html"
+    image: "/images/recast-logo.png"
     tags: ["reinterpretation", "HEP", "analysis-preservation"]
     start_year: 2010
+
+  - name: "GitHub → Zenodo DOIs"
+    category: publishing
+    status: active
+    description: "Helped establish the GitHub-Zenodo integration for automatic DOI minting of software releases."
+    url: "https://x.com/KyleCranmer/status/1655693315629633538"
+    tags: ["software-citation", "DOI", "open-science"]
+    start_year: 2014
 
   # ==================
   # Teaching
@@ -311,11 +373,22 @@ projects:
     tags: ["python", "visualization", "embeddings"]
     start_year: 2024
 
+  - name: "UnicodeIt"
+    category: fun
+    status: completed
+    description: "Convert LaTeX markup to Unicode characters for use anywhere - email, Twitter, Slack, etc."
+    url: "https://www.unicodeit.net"
+    image: "/images/unicodeit-logo.png"
+    tags: ["LaTeX", "Unicode", "web-tool"]
+    start_year: 2010
+
   - name: "Crayfis"
     category: fun
     status: completed
     description: "Citizen science project using smartphone cameras to detect cosmic rays."
-    url: "https://www.newyorker.com/tech/annals-of-technology/seeking-source-cosmic-rays"
+    url: "https://theoryandpractice.org/2014/10/Crayfis/"
+    image: "/images/crayfis_logo.png"
+    transparent_bg: true
     tags: ["citizen-science", "mobile", "cosmic-rays"]
     start_year: 2014
     end_year: 2020

@@ -1686,3 +1686,14 @@ people:
       website: "https://rogeriojorge.com"
       github: "rogeriojorge"
       linkedin: "rogeriodejesusjorge"
+
+  - name: "Brian P. Bockelman"
+    category: collaborators
+    current: true
+    role: "Principal Investigator"
+    affiliation: "Morgridge Institute for Research"
+    current_position: "Leads Bockelman Group; IRIS-HEP collaborator on distributed computing infrastructure"
+    links:
+      website: "https://morgridge.org/research/labs/bockelman-group/"
+      scholar: "dcv26D4AAAAJ"
+      github: "bbockelm"
