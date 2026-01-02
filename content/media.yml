@@ -113,7 +113,7 @@ items:
     outlet: "NPR Here and Now"
     category: podcasts
     date: 2015-12-16
-    url: "http://hereandnow.wbur.org/2015/12/16/cern-fundamental-particle-nature"
+    url: "https://www.wbur.org/hereandnow/2015/12/16/cern-fundamental-particle-nature"
     embed:
       type: wbur
       slug: "hereandnow/2015/12/16/cern-fundamental-particle-nature"
