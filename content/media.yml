@@ -9,7 +9,7 @@ categories:
     title: "Videos"
     icon: "fa-video-camera"
   - id: podcasts
-    title: "Podcasts"
+    title: "Podcasts & Radio"
     icon: "fa-podcast"
   - id: articles
     title: "News Articles"
@@ -17,6 +17,9 @@ categories:
   - id: interviews
     title: "Interviews"
     icon: "fa-microphone"
+  - id: mentions
+    title: "Quoted In"
+    icon: "fa-quote-left"
   - id: outreach
     title: "Outreach"
     icon: "fa-users"
@@ -123,9 +126,44 @@ items:
       type: wnyc
       id: "224065"
 
+  - title: "AI's mixed success; and the history of cartography"
+    outlet: "WPR Larry Meiller Show"
+    category: podcasts
+    date: 2025-07-14
+    description: "Radio interview on AI as a powerful tool for scientific inquiry"
+    url: "https://www.wpr.org/shows/larry-meiller-show/ais-mixed-success-and-the-history-of-cartography"
+
   # ==================
   # News Articles
   # ==================
+
+  - title: "When AI Can Do It All, What Will Be Left for Human Mathematicians and Scientists?"
+    outlet: "Heidelberg Laureate Forum"
+    category: articles
+    date: 2025-12-17
+    description: "Panel discussion at HLF on AI's impact on mathematics and science"
+    url: "https://scilogs.spektrum.de/hlf/when-ai-can-do-it-all-what-will-be-left-for-human-mathematicians-and-scientists/"
+
+  - title: "Two Wisconsin Counties Using AI to Handle Non-Emergency Calls"
+    outlet: "Urban Milwaukee"
+    category: articles
+    date: 2025-12-03
+    description: "La Crosse County system has handled 40,000 calls so far"
+    url: "https://urbanmilwaukee.com/2025/12/03/two-wisconsin-counties-using-ai-to-handle-non-emergency-calls/"
+
+  - title: "Is AI Becoming a Scientific Collaborator, More Than a Tool?"
+    outlet: "Heidelberg Laureate Forum"
+    category: articles
+    date: 2025-11-05
+    description: "We could be on the verge of a golden age for scientific discovery"
+    url: "https://scilogs.spektrum.de/hlf/is-ai-becoming-a-scientific-collaborator-more-than-a-tool/"
+
+  - title: "The pros and cons of reinforcement learning in physical science"
+    outlet: "Physics World"
+    category: articles
+    date: 2025-09-17
+    description: "Interview on reinforcement learning in physics"
+    url: "https://physicsworld.com/a/the-pros-and-cons-of-reinforcement-learning-in-physical-science/"
 
   - title: "Physicists Find Elusive Particle Seen as Key to Universe"
     outlet: "New York Times"
@@ -227,6 +265,24 @@ items:
     description: "Featured in the documentary Particle Fever about the Higgs discovery"
     url: "https://particlefever.vhx.tv/buy/particle-fever"
     image: "/images/particle-fever.png"
+
+  # ==================
+  # Quoted In (Mentions)
+  # ==================
+
+  - title: "Would you trust AI to handle your money?"
+    outlet: "Channel 3000 (WISC-TV)"
+    category: mentions
+    date: 2025-06-11
+    description: "Quoted on growing trust in AI for financial management"
+    url: "http://www.channel3000.com/news/would-you-trust-ai-to-handle-your-money/article_a7c3d083-d483-4d2d-ac17-a92e35b54284.html"
+
+  - title: "UW-Madison ranked 6th nationally in research"
+    outlet: "Fox 47 Madison"
+    category: mentions
+    date: 2024-11-28
+    description: "Quoted on UW-Madison's rise to 6th place in NSF research rankings"
+    url: "https://fox47.com/news/local/uw-madison-ranked-6th-nationally-in-research"
 
   # ==================
   # Outreach
