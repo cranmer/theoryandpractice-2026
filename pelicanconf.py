@@ -33,7 +33,7 @@ MENUITEMS = (
     ('Publications', '/selected-publications.html'),
     ('Talks', '/presentations.html'),
     ('Group', '/collaborators.html'),
-    ('Projects', '/pages/projects.html'),
+    ('Projects', '/projects.html'),
     ('Media & Outreach', '/pages/in-the-news.html'),
 )
 
@@ -97,6 +97,9 @@ SELECTED_PUBLICATIONS_SRC = 'content/selected-publications.yml'
 # Collaborators (pelican-collaborators) - students, postdocs, collaborators
 COLLABORATORS_SRC = 'content/collaborators.yml'
 
+# Projects (pelican-projects) - research, software, teaching projects
+PROJECTS_SRC = 'content/projects.yml'
+
 # Publication metrics (manually updated)
 # Keep PUBLICATION_METRICS for backwards compatibility (required for homepage to work correctly)
 PUBLICATION_METRICS = {
@@ -142,6 +145,7 @@ PLUGINS = [
     #'pelican-bibtex',
     'pelican-selected-publications',
     'pelican-collaborators',
+    'pelican-projects',
 ]
 
 # Liquid tags configuration - enable specific tags
@@ -203,7 +207,7 @@ MARKDOWN = {
 # Direct templates (for publications, presentations, and search pages)
 # Note: tried excluding 'index' since the homepage comes from Home.md with save_as: index.html
 # Blog listing is generated separately via category pages
-DIRECT_TEMPLATES = ['index', 'categories', 'authors', 'archives', 'publications', 'selected-publications', 'presentations', 'collaborators', 'search']
+DIRECT_TEMPLATES = ['index', 'categories', 'authors', 'archives', 'publications', 'selected-publications', 'presentations', 'collaborators', 'projects', 'projects-draft', 'search']
 
 # 
 #INDEX_SAVE_AS = 'blog/index.html'

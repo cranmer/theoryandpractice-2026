@@ -1,0 +1,533 @@
+{% extends "base.html" %}
+
+{% block extra_stylesheets %}
+<style>
+/* Projects Page Styles */
+.projects-header {
+    margin-bottom: 30px;
+}
+
+.draft-notice {
+    background: #fff3cd;
+    border: 1px solid #ffc107;
+    border-radius: 4px;
+    padding: 15px 20px;
+    margin-bottom: 25px;
+    color: #856404;
+}
+
+.draft-notice strong {
+    color: #664d03;
+}
+
+.projects-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 30px;
+    align-items: center;
+}
+
+.filter-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.filter-group label {
+    font-weight: 600;
+    margin: 0;
+    white-space: nowrap;
+}
+
+.filter-group select {
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: white;
+    min-width: 150px;
+}
+
+.status-buttons {
+    display: flex;
+    gap: 5px;
+}
+
+.status-btn {
+    padding: 6px 14px;
+    border: 1px solid #337ab7;
+    background: white;
+    color: #337ab7;
+    cursor: pointer;
+    transition: all 0.2s;
+    border-radius: 4px;
+}
+
+.status-btn:hover {
+    background: #e8f4fc;
+}
+
+.status-btn.active {
+    background: #337ab7;
+    color: white;
+}
+
+.sort-group select {
+    min-width: 180px;
+}
+
+/* Category Section */
+.projects-category {
+    margin-bottom: 40px;
+}
+
+.projects-category h2 {
+    border-bottom: 2px solid #337ab7;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+.projects-category .category-description {
+    color: #666;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+/* Projects Grid */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+/* Project Card */
+.project-card {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    background: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.project-card.status-completed {
+    opacity: 0.85;
+}
+
+.project-card.status-archived {
+    opacity: 0.7;
+}
+
+/* Draft card styling */
+.project-card.is-draft {
+    border: 2px dashed #ffc107;
+}
+
+/* Card Image */
+.project-image {
+    position: relative;
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-image-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3em;
+    color: rgba(255,255,255,0.5);
+}
+
+/* Status Badge */
+.project-status {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.75em;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.project-status.active {
+    background: #28a745;
+    color: white;
+}
+
+.project-status.completed {
+    background: #6c757d;
+    color: white;
+}
+
+.project-status.archived {
+    background: #dc3545;
+    color: white;
+}
+
+/* Featured Badge */
+.project-featured {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #ffc107;
+    color: #212529;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.75em;
+    font-weight: 600;
+}
+
+/* Draft Badge */
+.project-draft-badge {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: #dc3545;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.75em;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* Card Content */
+.project-content {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-title {
+    font-size: 1.25em;
+    font-weight: 600;
+    margin: 0 0 10px 0;
+    color: #2c3e50;
+}
+
+.project-title a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.project-title a:hover {
+    color: #337ab7;
+}
+
+.project-description {
+    color: #666;
+    font-size: 0.95em;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    flex: 1;
+}
+
+/* Tags */
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 15px;
+}
+
+.project-tag {
+    background: #e9ecef;
+    color: #495057;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 0.8em;
+}
+
+/* Project Meta */
+.project-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+    font-size: 0.85em;
+    color: #888;
+}
+
+.project-year {
+    font-weight: 500;
+}
+
+/* Project Links */
+.project-links {
+    display: flex;
+    gap: 12px;
+}
+
+.project-links a {
+    color: #666;
+    font-size: 1.2em;
+    transition: color 0.2s;
+}
+
+.project-links a:hover {
+    color: #337ab7;
+}
+
+/* Hidden class for filtering */
+.project-hidden {
+    display: none !important;
+}
+
+.category-hidden {
+    display: none !important;
+}
+
+/* Empty state */
+.no-projects {
+    text-align: center;
+    padding: 40px;
+    color: #888;
+    font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .projects-filters {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+{% endblock %}
+
+{% block title %}Projects (Preview) - {{ SITENAME }}{% endblock %}
+
+{% block content %}
+<div class="projects-header">
+    <h1>Projects <small style="color: #888;">(Preview)</small></h1>
+    <p class="lead">A collection of research, software, and other projects.</p>
+</div>
+
+{% if projects_draft and projects_draft.all_projects %}
+
+<!-- Draft Notice -->
+<div class="draft-notice">
+    <i class="fa fa-eye"></i>
+    <strong>Preview Mode:</strong> This page includes {{ projects_draft.draft_count }} draft project(s) that are not visible on the public <a href="{{ SITEURL }}/projects.html">projects page</a>.
+    Draft projects are marked with a <span style="background: #dc3545; color: white; padding: 2px 6px; border-radius: 4px; font-size: 0.85em;">DRAFT</span> badge.
+</div>
+
+<!-- Filters -->
+<div class="projects-filters">
+    <div class="filter-group">
+        <label for="category-filter">Category:</label>
+        <select id="category-filter" onchange="filterProjects()">
+            <option value="all">All Categories</option>
+            {% for cat in projects_draft.categories %}
+            {% if cat.projects %}
+            <option value="{{ cat.id }}">{{ cat.title }} ({{ cat.projects|length }})</option>
+            {% endif %}
+            {% endfor %}
+        </select>
+    </div>
+
+    <div class="filter-group">
+        <label>Status:</label>
+        <div class="status-buttons">
+            <button class="status-btn active" data-status="all" onclick="setStatusFilter('all')">All</button>
+            <button class="status-btn" data-status="active" onclick="setStatusFilter('active')">Active</button>
+            <button class="status-btn" data-status="completed" onclick="setStatusFilter('completed')">Completed</button>
+        </div>
+    </div>
+
+    <div class="filter-group sort-group">
+        <label for="sort-select">Sort:</label>
+        <select id="sort-select" onchange="sortProjects()">
+            <option value="featured">Featured First</option>
+            <option value="newest">Newest First</option>
+            <option value="oldest">Oldest First</option>
+            <option value="alpha">Alphabetical</option>
+        </select>
+    </div>
+</div>
+
+<!-- Projects by Category -->
+{% for cat in projects_draft.categories %}
+{% if cat.projects %}
+<section class="projects-category" data-category="{{ cat.id }}">
+    <h2>{{ cat.title }}</h2>
+    {% if cat.description %}
+    <p class="category-description">{{ cat.description }}</p>
+    {% endif %}
+
+    <div class="projects-grid">
+    {% for project in cat.projects %}
+        <div class="project-card status-{{ project.status }}{% if project.draft %} is-draft{% endif %}"
+             data-status="{{ project.status }}"
+             data-featured="{{ project.featured|lower }}"
+             data-year="{{ project.start_year or 0 }}"
+             data-name="{{ project.name }}"
+             data-draft="{{ project.draft|default(false)|lower }}">
+
+            <div class="project-image">
+                {% if project.image %}
+                <img src="{{ project.image }}" alt="{{ project.name }}" loading="lazy">
+                {% else %}
+                <div class="project-image-placeholder">
+                    <i class="fa fa-folder-open"></i>
+                </div>
+                {% endif %}
+
+                {% if project.featured %}
+                <span class="project-featured"><i class="fa fa-star"></i> Featured</span>
+                {% endif %}
+
+                <span class="project-status {{ project.status }}">{{ project.status }}</span>
+
+                {% if project.draft %}
+                <span class="project-draft-badge"><i class="fa fa-pencil"></i> Draft</span>
+                {% endif %}
+            </div>
+
+            <div class="project-content">
+                <h3 class="project-title">
+                    {% if project.url %}
+                    <a href="{{ project.url }}" target="_blank">{{ project.name }}</a>
+                    {% else %}
+                    {{ project.name }}
+                    {% endif %}
+                </h3>
+
+                {% if project.description %}
+                <p class="project-description">{{ project.description }}</p>
+                {% endif %}
+
+                {% if project.tags %}
+                <div class="project-tags">
+                    {% for tag in project.tags %}
+                    <span class="project-tag">{{ tag }}</span>
+                    {% endfor %}
+                </div>
+                {% endif %}
+
+                <div class="project-meta">
+                    <span class="project-year">
+                        {% if project.start_year %}
+                        {{ project.start_year }}{% if project.end_year %} – {{ project.end_year }}{% elif project.status == 'active' %} – present{% endif %}
+                        {% endif %}
+                    </span>
+
+                    <div class="project-links">
+                        {% if project.url %}
+                        <a href="{{ project.url }}" target="_blank" title="Website"><i class="fa fa-external-link"></i></a>
+                        {% endif %}
+                        {% if project.github %}
+                        <a href="https://github.com/{{ project.github }}" target="_blank" title="GitHub"><i class="fa fa-github"></i></a>
+                        {% endif %}
+                        {% if project.docs %}
+                        <a href="{{ project.docs }}" target="_blank" title="Documentation"><i class="fa fa-book"></i></a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+</section>
+{% endif %}
+{% endfor %}
+
+{% else %}
+<div class="no-projects">
+    <p>No projects found.</p>
+</div>
+{% endif %}
+
+<script>
+let currentStatus = 'all';
+let currentCategory = 'all';
+
+function setStatusFilter(status) {
+    currentStatus = status;
+
+    // Update button states
+    document.querySelectorAll('.status-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.status === status);
+    });
+
+    filterProjects();
+}
+
+function filterProjects() {
+    currentCategory = document.getElementById('category-filter').value;
+
+    // Filter category sections
+    document.querySelectorAll('.projects-category').forEach(section => {
+        const catId = section.dataset.category;
+        const showCategory = currentCategory === 'all' || currentCategory === catId;
+        section.classList.toggle('category-hidden', !showCategory);
+
+        if (showCategory) {
+            // Filter individual projects within visible categories
+            let visibleCount = 0;
+            section.querySelectorAll('.project-card').forEach(card => {
+                const status = card.dataset.status;
+                const showProject = currentStatus === 'all' || currentStatus === status;
+                card.classList.toggle('project-hidden', !showProject);
+                if (showProject) visibleCount++;
+            });
+        }
+    });
+}
+
+function sortProjects() {
+    const sortBy = document.getElementById('sort-select').value;
+
+    document.querySelectorAll('.projects-grid').forEach(grid => {
+        const cards = Array.from(grid.querySelectorAll('.project-card'));
+
+        cards.sort((a, b) => {
+            switch(sortBy) {
+                case 'featured':
+                    const aFeat = a.dataset.featured === 'true' ? 0 : 1;
+                    const bFeat = b.dataset.featured === 'true' ? 0 : 1;
+                    if (aFeat !== bFeat) return aFeat - bFeat;
+                    return parseInt(b.dataset.year) - parseInt(a.dataset.year);
+                case 'newest':
+                    return parseInt(b.dataset.year) - parseInt(a.dataset.year);
+                case 'oldest':
+                    return parseInt(a.dataset.year) - parseInt(b.dataset.year);
+                case 'alpha':
+                    return a.dataset.name.localeCompare(b.dataset.name);
+                default:
+                    return 0;
+            }
+        });
+
+        cards.forEach(card => grid.appendChild(card));
+    });
+}
+
+// Initialize
+document.addEventListener('DOMContentLoaded', filterProjects);
+</script>
+{% endblock %}
