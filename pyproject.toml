@@ -60,3 +60,5 @@ dev = "pelican content -o output -s pelicanconf.py && python -m http.server 8000
 dev-debug = "pelican content -o output -s pelicanconf.py && pelican content -o output -s pelicanconf.py --autoreload --listen --debug"
 # Watch for changes and rebuild (run in separate terminal)
 watch = "pelican content -o output -s pelicanconf.py --autoreload"
+# Search for new media mentions
+search-media = "python scripts/search_media.py"

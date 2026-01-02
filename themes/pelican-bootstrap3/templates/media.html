@@ -1,0 +1,559 @@
+{% extends "base.html" %}
+
+{% block extra_stylesheets %}
+<style>
+/* Media Page Styles */
+.media-header {
+    margin-bottom: 30px;
+}
+
+.media-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 30px;
+    align-items: center;
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+.filter-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.filter-group label {
+    font-weight: 600;
+    margin: 0;
+    white-space: nowrap;
+}
+
+.filter-group select {
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: white;
+    min-width: 150px;
+}
+
+.view-buttons {
+    display: flex;
+    gap: 5px;
+}
+
+.view-btn {
+    padding: 6px 14px;
+    border: 1px solid #337ab7;
+    background: white;
+    color: #337ab7;
+    cursor: pointer;
+    transition: all 0.2s;
+    border-radius: 4px;
+}
+
+.view-btn:hover {
+    background: #e8f4fc;
+}
+
+.view-btn.active {
+    background: #337ab7;
+    color: white;
+}
+
+/* Category Section */
+.media-category {
+    margin-bottom: 40px;
+}
+
+.media-category h2 {
+    border-bottom: 2px solid #337ab7;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+.media-category h2 i {
+    margin-right: 10px;
+    color: #337ab7;
+}
+
+/* Media Grid */
+.media-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 25px;
+}
+
+/* Media Card */
+.media-card {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    background: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.media-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.media-card.featured {
+    border: 2px solid #ffc107;
+}
+
+/* Card Embed */
+.media-embed {
+    position: relative;
+    width: 100%;
+    background: #f0f0f0;
+}
+
+.media-embed.has-video {
+    padding-top: 56.25%; /* 16:9 aspect ratio */
+}
+
+.media-embed iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.media-embed img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.media-embed-placeholder {
+    width: 100%;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3em;
+    color: rgba(0,0,0,0.2);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: rgba(255,255,255,0.5);
+}
+
+/* Featured Badge */
+.media-featured {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #ffc107;
+    color: #212529;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.75em;
+    font-weight: 600;
+    z-index: 10;
+}
+
+/* Card Content */
+.media-content {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.media-outlet {
+    font-size: 0.85em;
+    color: #337ab7;
+    font-weight: 600;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.media-title {
+    font-size: 1.1em;
+    font-weight: 600;
+    margin: 0 0 10px 0;
+    color: #2c3e50;
+    line-height: 1.3;
+}
+
+.media-title a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.media-title a:hover {
+    color: #337ab7;
+}
+
+.media-description {
+    color: #666;
+    font-size: 0.9em;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    flex: 1;
+}
+
+/* Media Meta */
+.media-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+    font-size: 0.85em;
+    color: #888;
+}
+
+.media-date {
+    font-weight: 500;
+}
+
+.media-link a {
+    color: #337ab7;
+    text-decoration: none;
+}
+
+.media-link a:hover {
+    text-decoration: underline;
+}
+
+/* Hidden class for filtering */
+.media-hidden {
+    display: none !important;
+}
+
+.category-hidden {
+    display: none !important;
+}
+
+/* ==================
+   List View Styles
+   ================== */
+.media-list {
+    display: none;
+}
+
+.view-list .media-grid {
+    display: none;
+}
+
+.view-list .media-list {
+    display: block;
+}
+
+.media-list-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    border-bottom: 1px solid #eee;
+    transition: background 0.2s;
+}
+
+.media-list-item:hover {
+    background: #f8f9fa;
+}
+
+.media-list-item.featured {
+    border-left: 3px solid #ffc107;
+}
+
+.media-list-icon {
+    width: 40px;
+    text-align: center;
+    flex-shrink: 0;
+    color: #337ab7;
+    font-size: 1.3em;
+}
+
+.media-list-outlet {
+    width: 150px;
+    flex-shrink: 0;
+    font-weight: 600;
+    color: #337ab7;
+    font-size: 0.85em;
+}
+
+.media-list-title {
+    flex: 1;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.media-list-title a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.media-list-title a:hover {
+    color: #337ab7;
+}
+
+.media-list-title .featured-star {
+    color: #ffc107;
+    margin-left: 6px;
+}
+
+.media-list-date {
+    width: 100px;
+    text-align: right;
+    color: #888;
+    font-size: 0.85em;
+    flex-shrink: 0;
+}
+
+.media-list-link {
+    width: 60px;
+    text-align: right;
+    flex-shrink: 0;
+}
+
+.media-list-link a {
+    color: #666;
+    font-size: 1.1em;
+}
+
+.media-list-link a:hover {
+    color: #337ab7;
+}
+
+/* Empty state */
+.no-media {
+    text-align: center;
+    padding: 40px;
+    color: #888;
+    font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .media-filters {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .media-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .media-list-outlet {
+        display: none;
+    }
+
+    .media-list-item {
+        flex-wrap: wrap;
+    }
+}
+</style>
+{% endblock %}
+
+{% block title %}Media & Outreach - {{ SITENAME }}{% endblock %}
+
+{% block content %}
+<div class="media-header">
+    <h1>Media & Outreach</h1>
+    <p class="lead">Videos, podcasts, news articles, and outreach activities.</p>
+</div>
+
+{% if media and media.all_items %}
+<!-- Filters -->
+<div class="media-filters">
+    <div class="filter-group">
+        <label for="category-filter">Category:</label>
+        <select id="category-filter" onchange="filterMedia()">
+            <option value="all">All Categories</option>
+            {% for cat in media.all_categories %}
+            <option value="{{ cat.id }}">{{ cat.title }}</option>
+            {% endfor %}
+        </select>
+    </div>
+
+    <div class="filter-group">
+        <label for="year-filter">Year:</label>
+        <select id="year-filter" onchange="filterMedia()">
+            <option value="all">All Years</option>
+            {% for year in media.years %}
+            <option value="{{ year }}">{{ year }}</option>
+            {% endfor %}
+        </select>
+    </div>
+
+    <div class="filter-group">
+        <label>View:</label>
+        <div class="view-buttons">
+            <button class="view-btn active" data-view="cards" onclick="setView('cards')" title="Card View"><i class="fa fa-th-large"></i></button>
+            <button class="view-btn" data-view="list" onclick="setView('list')" title="List View"><i class="fa fa-list"></i></button>
+        </div>
+    </div>
+</div>
+
+<!-- Media by Category -->
+{% for cat in media.categories %}
+<section class="media-category" data-category="{{ cat.id }}">
+    <h2><i class="fa {{ cat.icon }}"></i>{{ cat.title }}</h2>
+
+    <!-- Card View -->
+    <div class="media-grid">
+    {% for item in cat.media_items %}
+        <div class="media-card{% if item.featured %} featured{% endif %}"
+             data-category="{{ item.category }}"
+             data-year="{{ item.year or '' }}"
+             data-featured="{{ item.featured|lower }}">
+
+            <div class="media-embed{% if item.embed and item.embed.type in ['youtube', 'vimeo'] %} has-video{% endif %}">
+                {% if item.featured %}
+                <span class="media-featured"><i class="fa fa-star"></i> Featured</span>
+                {% endif %}
+
+                {% if item.embed %}
+                    {% if item.embed.type == 'youtube' %}
+                    <iframe src="https://www.youtube.com/embed/{{ item.embed.id }}{% if item.embed.start %}?start={{ item.embed.start }}{% endif %}" allowfullscreen></iframe>
+                    {% elif item.embed.type == 'vimeo' %}
+                    <iframe src="https://player.vimeo.com/video/{{ item.embed.id }}" allowfullscreen></iframe>
+                    {% elif item.embed.type == 'image' %}
+                    <img src="{{ item.embed.src }}" alt="{{ item.title }}">
+                    {% endif %}
+                {% elif item.image %}
+                <img src="{{ item.image }}" alt="{{ item.title }}">
+                {% else %}
+                <div class="media-embed-placeholder">
+                    <i class="fa {{ cat.icon }}"></i>
+                </div>
+                {% endif %}
+            </div>
+
+            <div class="media-content">
+                <div class="media-outlet">{{ item.outlet }}</div>
+                <h3 class="media-title">
+                    {% if item.url %}
+                    <a href="{{ item.url }}" target="_blank">{{ item.title }}</a>
+                    {% else %}
+                    {{ item.title }}
+                    {% endif %}
+                </h3>
+
+                {% if item.description %}
+                <p class="media-description">{{ item.description }}</p>
+                {% endif %}
+
+                <div class="media-meta">
+                    <span class="media-date">
+                        {% if item.date %}{{ item.date }}{% endif %}
+                    </span>
+                    {% if item.url %}
+                    <span class="media-link">
+                        <a href="{{ item.url }}" target="_blank"><i class="fa fa-external-link"></i> View</a>
+                    </span>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+
+    <!-- List View -->
+    <div class="media-list">
+    {% for item in cat.media_items %}
+        <div class="media-list-item{% if item.featured %} featured{% endif %}"
+             data-category="{{ item.category }}"
+             data-year="{{ item.year or '' }}"
+             data-featured="{{ item.featured|lower }}">
+
+            <div class="media-list-icon">
+                <i class="fa {{ cat.icon }}"></i>
+            </div>
+
+            <div class="media-list-outlet">
+                {{ item.outlet }}
+            </div>
+
+            <div class="media-list-title">
+                {% if item.url %}
+                <a href="{{ item.url }}" target="_blank">{{ item.title }}</a>
+                {% else %}
+                {{ item.title }}
+                {% endif %}
+                {% if item.featured %}<i class="fa fa-star featured-star" title="Featured"></i>{% endif %}
+            </div>
+
+            <div class="media-list-date">
+                {% if item.date %}{{ item.date }}{% endif %}
+            </div>
+
+            <div class="media-list-link">
+                {% if item.url %}
+                <a href="{{ item.url }}" target="_blank" title="View"><i class="fa fa-external-link"></i></a>
+                {% endif %}
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+</section>
+{% endfor %}
+
+{% else %}
+<div class="no-media">
+    <p>No media items found.</p>
+</div>
+{% endif %}
+
+<script>
+let currentCategory = 'all';
+let currentYear = 'all';
+let currentView = 'cards';
+
+function setView(view) {
+    currentView = view;
+
+    // Update button states
+    document.querySelectorAll('.view-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.view === view);
+    });
+
+    // Toggle view class on categories
+    document.querySelectorAll('.media-category').forEach(section => {
+        section.classList.toggle('view-list', view === 'list');
+    });
+}
+
+function filterMedia() {
+    currentCategory = document.getElementById('category-filter').value;
+    currentYear = document.getElementById('year-filter').value;
+
+    // Filter category sections
+    document.querySelectorAll('.media-category').forEach(section => {
+        const catId = section.dataset.category;
+        const showCategory = currentCategory === 'all' || currentCategory === catId;
+
+        if (!showCategory) {
+            section.classList.add('category-hidden');
+        } else {
+            section.classList.remove('category-hidden');
+
+            // Filter individual items within visible categories (both views)
+            let visibleCount = 0;
+            section.querySelectorAll('.media-card, .media-list-item').forEach(item => {
+                const itemYear = item.dataset.year;
+                const showItem = currentYear === 'all' || itemYear === currentYear;
+
+                item.classList.toggle('media-hidden', !showItem);
+                if (showItem && item.classList.contains('media-card')) visibleCount++;
+            });
+
+            // Hide category if no items visible
+            if (visibleCount === 0) {
+                section.classList.add('category-hidden');
+            }
+        }
+    });
+}
+
+// Initialize
+document.addEventListener('DOMContentLoaded', filterMedia);
+</script>
+{% endblock %}

@@ -1,0 +1,196 @@
+# Media & Outreach Configuration
+# ===============================
+
+settings:
+  default_view: cards
+
+categories:
+  - id: videos
+    title: "Videos"
+    icon: "fa-video-camera"
+  - id: podcasts
+    title: "Podcasts"
+    icon: "fa-podcast"
+  - id: articles
+    title: "News Articles"
+    icon: "fa-newspaper-o"
+  - id: interviews
+    title: "Interviews"
+    icon: "fa-microphone"
+  - id: outreach
+    title: "Outreach"
+    icon: "fa-users"
+
+items:
+  # ==================
+  # Videos
+  # ==================
+
+  - title: "TEDx: The Higgs Boson"
+    outlet: "TEDx"
+    category: videos
+    date: 2013-05-20
+    featured: true
+    embed:
+      type: youtube
+      id: "Pv_DtHuj5Ds"
+
+  - title: "Higgs Boson: A Natural Disaster!"
+    outlet: "Aspen Public Talk"
+    category: videos
+    date: 2013-08-15
+    embed:
+      type: youtube
+      id: "2KJc8w7BonM"
+
+  - title: "My Story in the Higgs Discovery"
+    outlet: "Physics Slam on Ice"
+    category: videos
+    date: 2013-02-01
+    embed:
+      type: youtube
+      id: "b1q46oeuG4Q"
+      start: 3158
+
+  - title: "NSF's Science Nation"
+    outlet: "National Science Foundation"
+    category: videos
+    date: 2012-09-01
+    embed:
+      type: youtube
+      id: "d5df1NVkYuQ"
+
+  - title: "The Higgs Boson"
+    outlet: "CUNY Institute for Theoretical Sciences"
+    category: videos
+    date: 2012-10-01
+    embed:
+      type: fora
+      id: "17114"
+
+  - title: "Ask an Expert"
+    outlet: "SpaceLab"
+    category: videos
+    date: 2012-07-01
+    embed:
+      type: youtube
+      id: "DpuVrTWulv0"
+
+  - title: "The Higgs Sound"
+    outlet: "SpaceLab"
+    category: videos
+    date: 2012-07-01
+    embed:
+      type: youtube
+      id: "EwYmtFcg4Wk"
+
+  - title: "5-Word Speech at 19th Webby Awards"
+    outlet: "Webby Awards"
+    category: videos
+    date: 2015-05-18
+    description: "Acceptance speech for Crayfis at the Webby Awards"
+    embed:
+      type: youtube
+      id: "8Y3O5K_LtG0"
+
+  # ==================
+  # Podcasts
+  # ==================
+
+  - title: "StarTalk Live: The Particle Party"
+    outlet: "StarTalk with Neil deGrasse Tyson"
+    category: podcasts
+    date: 2012-11-01
+    featured: true
+    description: "Kyle joins Bill Nye the Science Guy, Eugene Mirman and Sara Vowell for a special episode dedicated to the Higgs discovery. Voted fan favorite for 2012."
+    url: "http://www.startalkradio.net/show/startalk-live-the-particle-party-part-1/"
+    image: "http://www.startalkradio.net/wp-content/uploads/2012/11/Particle-Party-Backstage-Group-Shot1.jpg"
+
+  - title: "Physicists May Have Found New Fundamental Particle"
+    outlet: "NPR Here and Now"
+    category: podcasts
+    date: 2015-12-16
+    url: "http://hereandnow.wbur.org/2015/12/16/cern-fundamental-particle-nature"
+    embed:
+      type: wbur
+      slug: "hereandnow/2015/12/16/cern-fundamental-particle-nature"
+
+  - title: "The Leonard Lopate Show"
+    outlet: "WNYC"
+    category: podcasts
+    date: 2012-07-04
+    embed:
+      type: wnyc
+      id: "224065"
+
+  # ==================
+  # News Articles
+  # ==================
+
+  - title: "Why physicists really, really want to find a new subatomic particle"
+    outlet: "Vox"
+    category: articles
+    date: 2016-09-21
+    url: "http://www.vox.com/2016/9/21/12691576/lhc-cern-new-subatomic-particle"
+
+  - title: "Did we just discover a new subatomic particle?"
+    outlet: "Vox"
+    category: articles
+    date: 2015-12-16
+    url: "http://www.vox.com/science-and-health/2015/12/16/10295962/new-subatomic-particle-cern-hadron"
+
+  - title: "Physicists in Europe Find Tantalizing Hints of a Mysterious New Particle"
+    outlet: "New York Times"
+    category: articles
+    date: 2015-12-16
+    url: "http://www.nytimes.com/2015/12/16/science/physicists-in-europe-find-tantalizing-hints-of-a-mysterious-new-particle.html"
+
+  - title: "How Three Guys With $10K and Decades-Old Data Almost Found the Higgs Boson First"
+    outlet: "WIRED"
+    category: articles
+    date: 2015-01-15
+    url: "https://www.wired.com/2015/01/higgs-discovery-hijack-attempt/"
+
+  - title: "Seeking the Source of Cosmic Rays"
+    outlet: "The New Yorker"
+    category: articles
+    date: 2014-10-15
+    description: "Article about the Crayfis citizen science project"
+    url: "https://www.newyorker.com/tech/annals-of-technology/seeking-source-cosmic-rays"
+
+  # ==================
+  # Interviews
+  # ==================
+
+  - title: "Charlie Rose Interview"
+    outlet: "Charlie Rose"
+    category: interviews
+    date: 2012-07-10
+    featured: true
+    url: "http://www.charlierose.com/view/interview/10943"
+    image: "/images/CharlieRose_forweb2-284x300.png"
+
+  - title: "This is Kyle Cranmer"
+    outlet: "Particle Fever"
+    category: interviews
+    date: 2014-03-05
+    description: "Featured in the documentary Particle Fever about the Higgs discovery"
+    url: "https://particlefever.vhx.tv/buy/particle-fever"
+    image: "/images/particle-fever.png"
+
+  # ==================
+  # Outreach
+  # ==================
+
+  - title: "USA Science & Engineering Festival"
+    outlet: "USA Science Festival"
+    category: outreach
+    date: 2014-04-26
+    url: "http://www.flickr.com/photos/hoonynoo/sets/72157638481017703/"
+
+  - title: "Nifty Fifty Speaker"
+    outlet: "USA Science & Engineering Festival"
+    category: outreach
+    date: 2012-04-28
+    description: "Selected as one of the 'Nifty Fifty' science speakers"
+    image: "/images/Kyle_Nifty_Fifty_2-small.jpeg"
