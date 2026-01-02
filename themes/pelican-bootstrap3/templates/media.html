@@ -410,14 +410,12 @@
                 <span class="media-featured"><i class="fa fa-star"></i> Featured</span>
                 {% endif %}
 
-                {% if item.embed %}
-                    {% if item.embed.type == 'youtube' %}
-                    <iframe src="https://www.youtube.com/embed/{{ item.embed.id }}{% if item.embed.start %}?start={{ item.embed.start }}{% endif %}" allowfullscreen></iframe>
-                    {% elif item.embed.type == 'vimeo' %}
-                    <iframe src="https://player.vimeo.com/video/{{ item.embed.id }}" allowfullscreen></iframe>
-                    {% elif item.embed.type == 'image' %}
-                    <img src="{{ item.embed.src }}" alt="{{ item.title }}">
-                    {% endif %}
+                {% if item.embed and item.embed.type == 'youtube' %}
+                <iframe src="https://www.youtube.com/embed/{{ item.embed.id }}{% if item.embed.start %}?start={{ item.embed.start }}{% endif %}" allowfullscreen></iframe>
+                {% elif item.embed and item.embed.type == 'vimeo' %}
+                <iframe src="https://player.vimeo.com/video/{{ item.embed.id }}" allowfullscreen></iframe>
+                {% elif item.embed and item.embed.type == 'image' %}
+                <img src="{{ item.embed.src }}" alt="{{ item.title }}">
                 {% elif item.image %}
                 <img src="{{ item.image }}" alt="{{ item.title }}">
                 {% else %}
