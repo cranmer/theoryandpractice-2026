@@ -118,6 +118,13 @@ items:
       type: wbur
       slug: "hereandnow/2015/12/16/cern-fundamental-particle-nature"
 
+  - title: "Want To Do A Little Astrophysics? This App Detects Cosmic Rays"
+    outlet: "NPR Joe's Big Idea"
+    category: podcasts
+    date: 2015-03-30
+    description: "Radio segment about the Crayfis cosmic ray detection app"
+    url: "https://www.npr.org/2015/03/30/395800694/want-to-do-a-little-astrophysics-this-app-detects-cosmic-rays"
+
   - title: "The Leonard Lopate Show"
     outlet: "WNYC"
     category: podcasts
