@@ -152,6 +152,87 @@ projects:
   # Research
   # ==================
 
+  - name: "Ginkgo-RL"
+    category: research
+    status: completed
+    description: "Reinforcement learning for clustering in Ginkgo particle shower simulator."
+    github: "cranmer/ginkgo-rl"
+    tags: ["reinforcement-learning", "HEP", "jets"]
+    start_year: 2020
+
+  - name: "Neural Unfolding"
+    category: research
+    status: completed
+    description: "Neural network approaches to detector unfolding in particle physics."
+    github: "cranmer/neural_unfolding"
+    tags: ["machine-learning", "unfolding", "HEP"]
+    start_year: 2018
+
+  - name: "Backdrop"
+    category: research
+    status: completed
+    description: "Implementation and demonstration of backdrop in PyTorch with GP dataset generator."
+    github: "cranmer/backdrop"
+    tags: ["machine-learning", "PyTorch", "Gaussian-processes"]
+    start_year: 2019
+
+  - name: "Expected Contours"
+    category: research
+    status: completed
+    description: "Exploring a subtle issue for expected contours in statistical inference."
+    github: "cranmer/expected-contours"
+    tags: ["statistics", "visualization"]
+    start_year: 2015
+
+  - name: "Active Sciencing"
+    category: research
+    status: completed
+    description: "Active learning + reusable workflows + likelihood-free inference."
+    github: "cranmer/active_sciencing"
+    tags: ["active-learning", "workflows", "simulation-based-inference"]
+    start_year: 2018
+
+  - name: "GP MC Template Smoother"
+    category: research
+    status: completed
+    description: "Gaussian process Monte Carlo template smoother for histogram smoothing."
+    github: "cranmer/gp-mc-template-smoother"
+    tags: ["Gaussian-processes", "statistics", "HEP"]
+    start_year: 2016
+
+  - name: "Ambient Fisher"
+    category: research
+    status: completed
+    description: "Ambient Fisher Information in the infinite spherical geometry of the space of all distributions."
+    github: "cranmer/ambient-fisher"
+    tags: ["statistics", "information-geometry"]
+    start_year: 2017
+
+  - name: "KEYS Historical"
+    category: research
+    status: completed
+    description: "Ancient kernel estimation code for PAW (Physics Analysis Workstation)."
+    github: "cranmer/KEYS-historical"
+    url: "https://inspirehep.net/literature/537082"
+    tags: ["statistics", "kernel-estimation", "PAW"]
+    start_year: 2000
+
+  - name: "Decoupled Demo"
+    category: research
+    status: completed
+    description: "Demo of recoupling a decoupled project with effective likelihoods and template parametrizations."
+    github: "cranmer/decoupledDemo"
+    tags: ["statistics", "HEP", "reinterpretation"]
+    start_year: 2014
+
+  - name: "Decouple"
+    category: research
+    status: completed
+    description: "Tools for decoupling and recoupling statistical models."
+    github: "cranmer/decouple"
+    tags: ["statistics", "HEP"]
+    start_year: 2014
+
   - name: "AI for Amplitudes"
     category: research
     status: active
@@ -260,6 +341,14 @@ projects:
     start_year: 2014
     end_year: 2019
 
+  - name: "DS3 Needs Assessment Survey"
+    category: leadership
+    status: completed
+    description: "Survey to assess data science needs and priorities within NYU faculty."
+    github: "ds3-nyu/Needs-Assessment-Survey"
+    tags: ["data-science", "NYU", "survey"]
+    start_year: 2016
+
   # ==================
   # Community
   # ==================
@@ -331,6 +420,22 @@ projects:
   # Teaching
   # ==================
 
+  - name: "Practical Statistics for LHC"
+    category: teaching
+    status: completed
+    description: "A living document on practical statistics for LHC physics analyses."
+    github: "cranmer/practical-statistics-for-LHC"
+    tags: ["statistics", "HEP", "education"]
+    start_year: 2015
+
+  - name: "Intro Experimental Physics II"
+    category: teaching
+    status: completed
+    description: "Companion materials for NYU Introduction to Experimental Physics II course."
+    github: "cranmer/intro-exp-phys-II"
+    tags: ["physics", "education", "NYU"]
+    start_year: 2014
+
   - name: "Statistics and Data Science for Physicists"
     category: teaching
     status: completed
@@ -364,6 +469,56 @@ projects:
   # ==================
   # Fun
   # ==================
+
+  - name: "Travel Map"
+    category: fun
+    status: active
+    description: "Interactive map visualization of travel history and destinations."
+    github: "cranmer/travel-map"
+    url: "https://theoryandpractice.org/travel-map/"
+    tags: ["visualization", "python", "maps"]
+    start_year: 2023
+
+  - name: "Cassville Checkers"
+    category: fun
+    status: active
+    description: "Claude Code project implementing a checkers game variant."
+    github: "cranmer/cassville-checkers"
+    url: "https://theoryandpractice.org/cassville-checkers/"
+    tags: ["game", "claude-code", "python"]
+    start_year: 2024
+
+  - name: "Claude Code First Attempt"
+    category: fun
+    status: completed
+    description: "A fun project to automatically align images using Claude Code."
+    github: "cranmer/claude-code-first-attempt"
+    tags: ["claude-code", "image-processing"]
+    start_year: 2024
+
+  - name: "Standard Model Graphic"
+    category: fun
+    status: completed
+    description: "TikZ version of the Standard Model graphic from Particle Fever documentary."
+    github: "cranmer/standard-model-graphic"
+    tags: ["visualization", "LaTeX", "TikZ", "physics"]
+    start_year: 2014
+
+  - name: "LIGO Binder"
+    category: fun
+    status: completed
+    description: "Binderized version of LIGO GW150914 gravitational wave tutorial."
+    github: "cranmer/ligo-binder"
+    tags: ["gravitational-waves", "LIGO", "Binder", "tutorial"]
+    start_year: 2016
+
+  - name: "Play"
+    category: fun
+    status: active
+    description: "Fun little experimental projects and sandbox."
+    github: "cranmer/play"
+    tags: ["experiments", "sandbox"]
+    start_year: 2020
 
   - name: "Vectorscope"
     category: fun
