@@ -94,6 +94,7 @@ items:
     outlet: "CERN Courier"
     category: articles
     date: 2021-04-28
+    featured: true
     description: "Coverage of pyhf and likelihood publishing in the May/June 2021 issue"
     url: "https://cerncourier.com/a/lhc-reinterpreters-think-long-term/"
 
@@ -101,6 +102,7 @@ items:
     outlet: "Symmetry Magazine"
     category: articles
     date: 2021-01-13
+    featured: true
     description: "ATLAS begins publishing likelihood functions for data reuse and reinterpretation"
     url: "https://www.symmetrymagazine.org/article/atlas-releases-full-orchestra-of-analysis-instruments"
 
@@ -108,7 +110,6 @@ items:
     outlet: "CERN"
     category: articles
     date: 2020-01-13
-    featured: true
     description: "Featured on CERN homepage: ATLAS releases full analysis likelihoods, a first for an LHC experiment"
     url: "https://home.cern/news/news/knowledge-sharing/new-open-release-allows-theorists-explore-lhc-data-new-way"
 
@@ -126,11 +127,18 @@ items:
     description: "La Crosse County system has handled 40,000 calls so far"
     url: "https://urbanmilwaukee.com/2025/12/03/two-wisconsin-counties-using-ai-to-handle-non-emergency-calls/"
 
+  - title: "DSI Director Kyle Cranmer awarded inaugural prize for AI in science"
+    outlet: "UW-Madison Data Science Institute"
+    category: articles
+    date: 2025-11-10
+    featured: true
+    description: "Received the inaugural Pritzker Prize in AI for Science for pioneering work in simulation-based inference"
+    url: "https://dsi.wisc.edu/2025/11/10/dsi-director-kyle-cranmer-awarded-inaugural-prize-for-ai-in-science/"
+
   - title: "Conference on AI+Science at Caltech a Success"
     outlet: "Caltech"
     category: articles
     date: 2025-11-21
-    featured: true
     description: "Kyle Cranmer wins inaugural Pritzker Prize for AI in Science Research Excellence"
     url: "https://www.caltech.edu/about/news/conference-on-aiscience-at-caltech-a-success"
 
@@ -197,6 +205,7 @@ items:
     outlet: "WIRED"
     category: articles
     date: 2015-01-15
+    featured: true
     url: "https://www.wired.com/2015/01/higgs-discovery-hijack-attempt/"
 
   - title: "Seeking the Source of Cosmic Rays"
@@ -267,6 +276,7 @@ items:
     outlet: "PBS Wisconsin"
     category: outreach
     date: 2025-06-10
+    featured: true
     description: "Public lecture at Neville Public Museum on AI in scientific discovery"
     url: "https://www.youtube.com/live/7V3ue6VxQv4"
 
