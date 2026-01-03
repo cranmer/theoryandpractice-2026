@@ -139,11 +139,12 @@ def add_projects(generator):
             cat_id = cat_data['id']
             cat_projects = [p for p in project_list if p.get('category') == cat_id]
 
-            # Sort by featured (first), then by start_year (most recent first), then by name
+            # Sort by status (active first), then by end_year (most recent first), then by start_year
             cat_projects.sort(key=lambda p: (
-                not p.get('featured', False),  # Featured first
-                -(p.get('start_year') or 0),   # Most recent first
-                p.get('name', '')              # Alphabetical
+                p.get('status', 'active') != 'active',  # Active projects first
+                -(p.get('end_year') or 9999),           # Most recent end_year first (active=9999)
+                -(p.get('start_year') or 0),            # Most recent start_year first
+                p.get('name', '')                       # Alphabetical
             ))
 
             result.append({
