@@ -53,7 +53,6 @@ projects:
   - name: "pyhf"
     category: software
     status: active
-    featured: true
     description: "Pure-Python implementation of HistFactory statistical models with auto-differentiation."
     github: "scikit-hep/pyhf"
     url: "https://iris-hep.org/projects/pyhf"
@@ -139,7 +138,6 @@ projects:
   - name: "ATLAS Experiment"
     category: collaborations
     status: active
-    featured: true
     description: "One of the two general-purpose particle physics experiments at the Large Hadron Collider."
     url: "https://atlas.cern"
     image: "/images/atlas-experiment.jpg"
@@ -149,7 +147,6 @@ projects:
   - name: "IRIS-HEP"
     category: collaborations
     status: active
-    featured: true
     description: "Institute for Research and Innovation in Software for High Energy Physics."
     url: "https://iris-hep.org"
     github: "iris-hep"
@@ -206,6 +203,7 @@ projects:
   - name: "Active Sciencing"
     category: research
     status: completed
+    featured: true
     description: "Active learning + reusable workflows + likelihood-free inference."
     github: "cranmer/active_sciencing"
     tags: ["active-learning", "workflows", "simulation-based-inference"]
@@ -255,6 +253,7 @@ projects:
   - name: "AI for Amplitudes"
     category: research
     status: active
+    featured: true
     description: "Using machine learning and transformers to bootstrap scattering amplitudes and explore the space of consistent quantum field theories."
     url: "https://arxiv.org/abs/2407.11731"
     tags: ["machine-learning", "amplitudes", "QFT"]
@@ -263,6 +262,7 @@ projects:
   - name: "Precision EFT Measurements"
     category: research
     status: active
+    featured: true
     description: "Constraining Effective Field Theories with machine learning for precision measurements at the LHC."
     url: "https://doi.org/10.1103/PhysRevLett.121.111801"
     image: "/images/madminer-card.001.png"
@@ -375,6 +375,7 @@ projects:
   - name: "ML4PS Workshop"
     category: community
     status: active
+    featured: true
     description: "Machine Learning for Physical Sciences workshop series at NeurIPS."
     url: "https://ml4physicalsciences.github.io"
     image: "/images/ml4ps-website.png"
@@ -421,6 +422,7 @@ projects:
   - name: "RECAST"
     category: publishing
     status: active
+    featured: true
     description: "A framework for reinterpreting LHC analyses for new physics models."
     url: "https://iris-hep.org/projects/recast.html"
     image: "/images/recast-logo.png"
@@ -438,6 +440,7 @@ projects:
   - name: "Publishing Statistical Models"
     category: publishing
     status: active
+    featured: true
     description: "Initiative to publish full statistical models from ATLAS analyses for reuse and reinterpretation."
     url: "https://www.symmetrymagazine.org/article/atlas-releases-full-orchestra-of-analysis-instruments"
     tags: ["open-science", "HEP", "statistics", "ATLAS"]
@@ -446,6 +449,14 @@ projects:
   # ==================
   # Teaching
   # ==================
+
+  - name: "SBI Tutorial"
+    category: teaching
+    status: active
+    description: "Tutorial on simulation-based inference methods."
+    github: "cranmer/sbi-tutorial"
+    tags: ["simulation-based-inference", "machine-learning", "tutorial"]
+    start_year: 2020
 
   - name: "Practical Statistics for LHC"
     category: teaching
