@@ -56,11 +56,20 @@ projects:
     featured: true
     description: "Pure-Python implementation of HistFactory statistical models with auto-differentiation."
     github: "scikit-hep/pyhf"
-    url: "https://pyhf.readthedocs.io"
+    url: "https://iris-hep.org/projects/pyhf"
     image: "https://raw.githubusercontent.com/scikit-hep/pyhf/main/docs/_static/img/pyhf-logo.svg"
     tags: ["python", "statistics", "HEP"]
     start_year: 2018
     collaborators: ["Lukas Heinrich", "Matthew Feickert"]
+
+  - name: "cabinetry"
+    category: software
+    status: active
+    description: "Design and steer profile likelihood fits with pyhf."
+    github: "scikit-hep/cabinetry"
+    url: "https://doi.org/10.1051/epjconf/202125103067"
+    tags: ["python", "statistics", "HEP", "pyhf"]
+    start_year: 2020
 
   - name: "MadMiner"
     category: software
@@ -147,6 +156,16 @@ projects:
     image: "https://iris-hep.org/assets/logos/Iris-hep-4-no-long-name.svg"
     tags: ["software", "HEP", "NSF"]
     start_year: 2018
+
+  - name: "Scikit-HEP"
+    category: collaborations
+    status: active
+    description: "Community-driven and community-oriented Python software for High Energy Physics."
+    url: "https://scikit-hep.org"
+    github: "scikit-hep"
+    image: "https://scikit-hep.org/assets/images/logo.png"
+    tags: ["python", "software", "HEP"]
+    start_year: 2016
 
   # ==================
   # Research
@@ -324,7 +343,7 @@ projects:
     start_year: 2024
 
   - name: "P5"
-    category: leadership
+    category: community
     status: completed
     description: "Particle Physics Project Prioritization Panel - shaping the future of U.S. particle physics."
     url: "https://www.usparticlephysics.org/2023-p5-report/"
@@ -415,6 +434,14 @@ projects:
     url: "https://x.com/KyleCranmer/status/1655693315629633538"
     tags: ["software-citation", "DOI", "open-science"]
     start_year: 2014
+
+  - name: "Publishing Statistical Models"
+    category: publishing
+    status: active
+    description: "Initiative to publish full statistical models from ATLAS analyses for reuse and reinterpretation."
+    url: "https://www.symmetrymagazine.org/article/atlas-releases-full-orchestra-of-analysis-instruments"
+    tags: ["open-science", "HEP", "statistics", "ATLAS"]
+    start_year: 2019
 
   # ==================
   # Teaching
@@ -540,7 +567,7 @@ projects:
     start_year: 2010
 
   - name: "Crayfis"
-    category: fun
+    category: research
     status: completed
     description: "Citizen science project using smartphone cameras to detect cosmic rays."
     url: "https://theoryandpractice.org/2014/10/Crayfis/"
