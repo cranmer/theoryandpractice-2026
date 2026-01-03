@@ -121,7 +121,7 @@ items:
 
   - title: "Two Wisconsin Counties Using AI to Handle Non-Emergency Calls"
     outlet: "Urban Milwaukee"
-    category: articles
+    category: mentions
     date: 2025-12-03
     description: "La Crosse County system has handled 40,000 calls so far"
     url: "https://urbanmilwaukee.com/2025/12/03/two-wisconsin-counties-using-ai-to-handle-non-emergency-calls/"
@@ -163,7 +163,7 @@ items:
 
   - title: "Peter Higgs: science mourns giant of particle physics"
     outlet: "Nature"
-    category: articles
+    category: mentions
     date: 2024-04-10
     description: "Tribute to Peter Higgs, featuring quotes from Kyle Cranmer"
     url: "https://www.nature.com/articles/d41586-024-01069-6"
@@ -177,19 +177,19 @@ items:
 
   - title: "Why physicists really, really want to find a new subatomic particle"
     outlet: "Vox"
-    category: articles
+    category: mentions
     date: 2016-09-21
     url: "http://www.vox.com/2016/9/21/12691576/lhc-cern-new-subatomic-particle"
 
   - title: "Did we just discover a new subatomic particle?"
     outlet: "Vox"
-    category: articles
+    category: mentions
     date: 2015-12-16
     url: "http://www.vox.com/science-and-health/2015/12/16/10295962/new-subatomic-particle-cern-hadron"
 
   - title: "Physicists in Europe Find Tantalizing Hints of a Mysterious New Particle"
     outlet: "New York Times"
-    category: articles
+    category: mentions
     date: 2015-12-16
     url: "http://www.nytimes.com/2015/12/16/science/physicists-in-europe-find-tantalizing-hints-of-a-mysterious-new-particle.html"
 
