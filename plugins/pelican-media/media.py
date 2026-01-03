@@ -147,9 +147,8 @@ def add_media(generator):
             item['category_title'] = cat_id
             item['category_icon'] = 'fa-file'
 
-    # Sort by featured (first), then by date (newest first)
+    # Sort by date (newest first)
     items.sort(key=lambda x: (
-        not x.get('featured', False),
         -(x.get('date_obj') or datetime.min).timestamp() if x.get('date_obj') else 0
     ))
 
