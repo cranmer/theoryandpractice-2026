@@ -177,7 +177,7 @@ projects:
     start_year: 2020
 
   - name: "Neural Unfolding"
-    category: research
+    category: methodology
     status: completed
     description: "Neural network approaches to detector unfolding in particle physics."
     github: "cranmer/neural_unfolding"
@@ -185,7 +185,7 @@ projects:
     start_year: 2018
 
   - name: "Backdrop"
-    category: research
+    category: methodology
     status: completed
     description: "Implementation and demonstration of backdrop in PyTorch with GP dataset generator."
     github: "cranmer/backdrop"
@@ -193,7 +193,7 @@ projects:
     start_year: 2019
 
   - name: "Expected Contours"
-    category: research
+    category: methodology
     status: completed
     description: "Exploring a subtle issue for expected contours in statistical inference."
     github: "cranmer/expected-contours"
@@ -201,7 +201,7 @@ projects:
     start_year: 2015
 
   - name: "Active Sciencing"
-    category: research
+    category: methodology
     status: completed
     featured: true
     description: "Active learning + reusable workflows + likelihood-free inference."
@@ -210,7 +210,7 @@ projects:
     start_year: 2018
 
   - name: "GP MC Template Smoother"
-    category: research
+    category: methodology
     status: completed
     description: "Gaussian process Monte Carlo template smoother for histogram smoothing."
     github: "cranmer/gp-mc-template-smoother"
@@ -218,7 +218,7 @@ projects:
     start_year: 2016
 
   - name: "Ambient Fisher"
-    category: research
+    category: methodology
     status: completed
     description: "Ambient Fisher Information in the infinite spherical geometry of the space of all distributions."
     github: "cranmer/ambient-fisher"
@@ -226,7 +226,7 @@ projects:
     start_year: 2017
 
   - name: "KEYS Historical"
-    category: research
+    category: methodology
     status: completed
     description: "Ancient kernel estimation code for PAW (Physics Analysis Workstation)."
     github: "cranmer/KEYS-historical"
@@ -235,7 +235,7 @@ projects:
     start_year: 2000
 
   - name: "Decoupled Demo"
-    category: research
+    category: methodology
     status: completed
     description: "Demo of recoupling a decoupled project with effective likelihoods and template parametrizations."
     github: "cranmer/decoupledDemo"
@@ -243,7 +243,7 @@ projects:
     start_year: 2014
 
   - name: "Decouple"
-    category: research
+    category: methodology
     status: completed
     description: "Tools for decoupling and recoupling statistical models."
     github: "cranmer/decouple"
