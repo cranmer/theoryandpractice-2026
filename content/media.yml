@@ -83,6 +83,35 @@ items:
   # News Articles
   # ==================
 
+  - title: "Automated Research Workflows Are Speeding Pace of Scientific Discovery"
+    outlet: "National Academies of Sciences"
+    category: articles
+    date: 2022-05-19
+    description: "Report covers probability model publishing in Chapter 3: Automated Research Workflows in Action"
+    url: "https://www.nationalacademies.org/news/2022/05/automated-research-workflows-are-speeding-pace-of-scientific-discovery-new-report-offers-recommendations-to-advance-their-development"
+
+  - title: "LHC reinterpreters think long-term"
+    outlet: "CERN Courier"
+    category: articles
+    date: 2021-04-28
+    description: "Coverage of pyhf and likelihood publishing in the May/June 2021 issue"
+    url: "https://cerncourier.com/a/lhc-reinterpreters-think-long-term/"
+
+  - title: "ATLAS releases 'full orchestra' of analysis instruments"
+    outlet: "Symmetry Magazine"
+    category: articles
+    date: 2021-01-13
+    description: "ATLAS begins publishing likelihood functions for data reuse and reinterpretation"
+    url: "https://www.symmetrymagazine.org/article/atlas-releases-full-orchestra-of-analysis-instruments"
+
+  - title: "New open release allows theorists to explore LHC data in a new way"
+    outlet: "CERN"
+    category: articles
+    date: 2020-01-13
+    featured: true
+    description: "Featured on CERN homepage: ATLAS releases full analysis likelihoods, a first for an LHC experiment"
+    url: "https://home.cern/news/news/knowledge-sharing/new-open-release-allows-theorists-explore-lhc-data-new-way"
+
   - title: "When AI Can Do It All, What Will Be Left for Human Mathematicians and Scientists?"
     outlet: "Heidelberg Laureate Forum"
     category: articles
