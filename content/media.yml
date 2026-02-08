@@ -304,6 +304,7 @@ items:
     outlet: "Aspen Center for Physics"
     category: outreach
     date: 2026-02-04
+    featured: true
     description: "Nick and Maggie DeWolf Public Lecture on AI's role in scientific research"
     url: "https://aspenphys.org/event/how-ai-is-and-isnt-revolutionizing-science/"
     embed:
