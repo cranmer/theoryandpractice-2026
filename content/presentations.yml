@@ -1070,15 +1070,25 @@ Introduction"
     meetingurl: https://aspenphys.org/event/how-ai-is-and-isnt-revolutionizing-science/
     location: Aspen Center for Physics
     date: 2026-02-04
-  - title: TBD
+    video: https://www.youtube.com/watch?v=dIsxqh0OHiI
+  - title: "Emerging Patterns in AI for Science"
     meeting: NCSA Colloquium
     meetingurl: https://calendars.illinois.edu/detail/7097?eventId=33537328
-    location: National Center for Supercomputing Applications
+    location: NCSA Building, Room 1040, Urbana, IL
     date: 2026-02-11
     video: https://www.youtube.com/playlist?list=PLO8UWE9gZTlAgHZPaxQbpUNY0T26zeL_f
-  - title: TBD
-    meeting: UIUC Physics Seminar
+  - title: "AI for HEP: a quickly evolving landscape of opportunity"
+    meeting: High Energy Physics Seminar
     meetingurl: https://calendars.illinois.edu/detail/5068?eventId=33540913
-    location: University of Illinois at Urbana-Champaign
+    location: Loomis 236, University of Illinois at Urbana-Champaign
     date: 2026-02-12
+  - title: TBD
+    meeting: "Accelerating Math and Theoretical Physics with AI"
+    meetingurl: https://www.ipam.ucla.edu/programs/special-events-and-conferences/accelerating-math-and-theoretical-physics-with-ai/?tab=schedule
+    location: IPAM, UCLA
+    date: 2026-03-04
+  - title: TBD
+    meeting: "AI+Science: Accelerating Discovery"
+    location: Stanford HAI/SDS
+    date: 2026-05-05
 

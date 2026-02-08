@@ -113,6 +113,13 @@ items:
     description: "Featured on CERN homepage: ATLAS releases full analysis likelihoods, a first for an LHC experiment"
     url: "https://home.cern/news/news/knowledge-sharing/new-open-release-allows-theorists-explore-lhc-data-new-way"
 
+  - title: "UW Regents meeting covers Mnookin farewell, AI efforts, pluralism, business partnerships"
+    outlet: "UW-Madison News"
+    category: articles
+    date: 2026-02-06
+    description: "Coverage of AI efforts presented at the UW Board of Regents meeting"
+    url: "https://news.wisc.edu/uw-regents-meeting-covers-mnookin-farewell-ai-efforts-pluralism-business-partnerships/"
+
   - title: "When AI Can Do It All, What Will Be Left for Human Mathematicians and Scientists?"
     outlet: "Heidelberg Laureate Forum"
     category: articles
@@ -234,6 +241,27 @@ items:
   # Interviews
   # ==================
 
+  - title: "AI for Particle Physics: Searching for Anomalies"
+    outlet: "IEEE Spectrum"
+    category: interviews
+    date: 2026-02-03
+    description: "Interview on AI applications in particle physics"
+    url: "https://spectrum.ieee.org/particle-physics-ai"
+
+  - title: "How will the growth of data centers impact Wisconsin?"
+    outlet: "WUWM 89.7 FM"
+    category: podcasts
+    date: 2026-01-16
+    description: "Interview on AI-driven data center expansion in Wisconsin"
+    url: "https://www.wuwm.com/growth-of-data-centers-impacts-wisconsin"
+
+  - title: "Two Wisconsin Counties Using AI to Handle Non-Emergency Calls"
+    outlet: "Wisconsin Public Radio"
+    category: interviews
+    date: 2025-12-03
+    description: "Interview on AI dispatch technology for non-emergency calls"
+    url: "https://urbanmilwaukee.com/2025/12/03/two-wisconsin-counties-using-ai-to-handle-non-emergency-calls/"
+
   - title: "This is Kyle Cranmer"
     outlet: "Particle Fever"
     category: interviews
@@ -272,6 +300,16 @@ items:
   # Outreach
   # ==================
 
+  - title: "How AI is and isn't Revolutionizing Science"
+    outlet: "Aspen Center for Physics"
+    category: outreach
+    date: 2026-02-04
+    description: "Nick and Maggie DeWolf Public Lecture on AI's role in scientific research"
+    url: "https://aspenphys.org/event/how-ai-is-and-isnt-revolutionizing-science/"
+    embed:
+      type: youtube
+      id: "dIsxqh0OHiI"
+
   - title: "Badger Talks: How is AI Revolutionizing Science?"
     outlet: "PBS Wisconsin"
     category: outreach
@@ -279,6 +317,9 @@ items:
     featured: true
     description: "Public lecture at Neville Public Museum on AI in scientific discovery"
     url: "https://www.youtube.com/live/7V3ue6VxQv4"
+    embed:
+      type: youtube
+      id: "7V3ue6VxQv4"
 
   - title: "5-Word Speech at 19th Webby Awards"
     outlet: "Webby Awards"
@@ -333,9 +374,7 @@ items:
     outlet: "National Science Foundation"
     category: outreach
     date: 2012-09-01
-    embed:
-      type: youtube
-      id: "d5df1NVkYuQ"
+    url: "https://www.youtube.com/watch?v=d5df1NVkYuQ"
 
   - title: "Ask an Expert"
     outlet: "SpaceLab"
