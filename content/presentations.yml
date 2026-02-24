@@ -1074,15 +1074,20 @@ Introduction"
   - title: "Emerging Patterns in AI for Science"
     meeting: NCSA Colloquium
     meetingurl: https://calendars.illinois.edu/detail/7097?eventId=33537328
-    location: NCSA Building, Room 1040, Urbana, IL
+    location: NCSA, Urbana, IL
     date: 2026-02-11
-    video: https://www.youtube.com/playlist?list=PLO8UWE9gZTlAgHZPaxQbpUNY0T26zeL_f
+    video: https://mediaspace.illinois.edu/media/t/1_ybwbydtf
   - title: "AI for HEP: a quickly evolving landscape of opportunity"
     meeting: High Energy Physics Seminar
     meetingurl: https://calendars.illinois.edu/detail/5068?eventId=33540913
-    location: Loomis 236, University of Illinois at Urbana-Champaign
+    location: University of Illinois at Urbana-Champaign
     date: 2026-02-12
-  - title: TBD
+  - title: "Where is AI today: AI for Science"
+    meeting: AI Meets Society Symposium
+    meetingurl: https://cdis.wisc.edu/ai-meets-society-aims-symposium/
+    location: UW-Madison
+    date: 2026-02-21
+  - title: Panel Discussion on AI for Math and Theoretical Physics
     meeting: "Accelerating Math and Theoretical Physics with AI"
     meetingurl: https://www.ipam.ucla.edu/programs/special-events-and-conferences/accelerating-math-and-theoretical-physics-with-ai/?tab=schedule
     location: IPAM, UCLA
