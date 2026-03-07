@@ -43,5 +43,6 @@ _nb_header.html
 .venv/
 
 # Claude
-.claude/
+.claude/*
+!.claude/commands/
 google_alerts.mbox
