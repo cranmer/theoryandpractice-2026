@@ -6,7 +6,7 @@ Tags: multimodal, foundation models, inference, deep learning
 Authors: Kyle Cranmer
 Summary: I describe an alternate approach to multimodal inference that is structurally very different from most approaches to multimodal foundation models and offers some advantages compared to them.
 
-I'm pretty excited about this alternate approach to multimodal inference that replaces the standard high-dimensional, task-agnostic representations used in multimodal foundation models with task-dependent scalar functions. The paper isn't ready for publication and my experiments are still running, but I'm excited to share the idea. This could be huge! 
+I'm pretty excited about this alternate approach to multimodal inference that replaces the standard high-dimensional, task-agnostic representations used in multimodal foundation models with task-dependent scalar functions. The paper isn't ready for publication and my experiments are still running, but I'm excited to share the idea as it's a big departure from the conventional approach. 
 
 Here's a [**link to the draft paper**](/downloads/files/multimodal-inference-scalar-bottleneck.pdf). </br>
 *(Note, I used ChatGPT to help me with the initial draft, and I've found some other relevant work as noted in the footnotes.)*
