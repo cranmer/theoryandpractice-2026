@@ -4,11 +4,12 @@ Slug: scalars-are-all-you-need
 Category: Blog
 Tags: multimodal, foundation models, inference, deep learning 
 Authors: Kyle Cranmer
-Summary: I describe an alternate approach to multimodal inference 
+Summary: I describe an alternate approach to multimodal inference that is structurally very different from most approaches to multimodal foundation models and offers some advantages compared to them.
 
 I'm pretty excited about this alternate approach to multimodal inference that replaces the standard high-dimensional, task-agnostic representations used in multimodal foundation models with task-dependent scalar functions. The paper isn't ready for publication and my experiments are still running, but I'm excited to share the idea. This could be huge! 
 
-Here's a [**link to the draft paper**](/downloads/files/multimodal-inference-scalar-bottleneck.pdf). 
+Here's a [**link to the draft paper**](/downloads/files/multimodal-inference-scalar-bottleneck.pdf). </br>
+*(Note, I used ChatGPT to help me with the initial draft, and I've found some other relevant work as noted in the footnotes.)*
 
 **Abstract** Multimodal foundation models integrate heterogeneous data sources into unified representations. This is particularly powerful in scientific settings as these unified representations can be used as the input to downstream statistical inference tasks such as hypothesis testing, parameter estimation, or other forms of inference of underlying  phenomena. Typically, contrastive learning or masked objectives are used to train task-agnostic representations followed by task-specific fine-tuning or the addition of task-specific heads. We propose an alternative framework for multimodal inference in which the task-specific training is applied to each modality individually. We show that the output representation for each modality can be reduced to a scalar function of the parameters and that these scalars can be aggregated additively without degrading performance. We show that, under conditional independence across modalities, this architecture enables permutation-invariant fusion, independent training of modality-specific encoders, and append-only extensibility. For regression tasks, predictive estimates can be extracted by passing this scalar function to a differentiable optimization layer. We show that in the limit of many observations, the resulting estimators achieve optimal properties. These results suggest that when representations are conditioned on the inferential context, high-dimensional multimodal embeddings are unnecessary: one scalar function per modality suffices.
 
