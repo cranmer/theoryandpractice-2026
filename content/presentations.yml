@@ -1061,7 +1061,7 @@ Introduction"
     location: MIDAS, University of Michigan
     date: 2025-11-17
     video: https://www.youtube.com/watch?v=Llpi-lvkOL4
-  - title: TBD
+  - title: "Overview of DSI and RISE-AI"
     meeting: Town and Gown
     location: UW-Madison
     date: 2026-01-13
@@ -1092,8 +1092,35 @@ Introduction"
     meetingurl: https://www.ipam.ucla.edu/programs/special-events-and-conferences/accelerating-math-and-theoretical-physics-with-ai/?tab=schedule
     location: IPAM, UCLA
     date: 2026-03-04
-  - title: TBD
+  - title: "Emerging Patterns in AI for Science"
+    meeting: Wine and Cheese Seminar
+    meetingurl: https://indico.fnal.gov/event/71500/
+    location: Fermilab
+    date: 2026-04-17
+  - title: "AI: The Good, the Bad, and the Complicated"
+    meeting: "Understanding AI: A Forum for Local & Tribal Governments"
+    meetingurl: https://extension.wisc.edu/aiforums/
+    location: Oshkosh, WI
+    date: 2026-04-22
+  - title: "AI: The Good, the Bad, and the Complicated"
+    meeting: Water@UW Spring Symposium
+    meetingurl: https://water.wisc.edu/event/spring-symposium-2026/
+    location: Frank Holt Center, UW-Madison
+    date: 2026-04-22
+  - title: "A Particle Physicist's Perspective"
     meeting: "AI+Science: Accelerating Discovery"
+    meetingurl: https://hai.stanford.edu/events/ai-science-accelerating-discovery
     location: Stanford HAI/SDS
     date: 2026-05-05
+    video: https://www.youtube.com/live/dBFm3zm_3l8?si=qViRqbnIB44GFs5n&t=18743
+  - title: "Standing Up and Sustaining Campus-Wide Research Institutes"
+    meeting: Alliance for Data Science and AI Builders Series
+    meetingurl: https://zoom.us/meeting/register/KfaBfVXASDCyuE4Xo6xq0g#/registration
+    location: virtual
+    date: 2026-05-07
+  - title: "Insights into the impact of data science on the dairy industry, agriculture, and society"
+    meeting: 2026 Dairy Symposium
+    meetingurl: https://sites.google.com/wisc.edu/2026-dairy-symposium/speakers?authuser=0
+    location: Madison, WI
+    date: 2026-05-12
 
