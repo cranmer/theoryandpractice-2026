@@ -1123,4 +1123,14 @@ Introduction"
     meetingurl: https://sites.google.com/wisc.edu/2026-dairy-symposium/speakers?authuser=0
     location: Madison, WI
     date: 2026-05-12
+  - title: "Leveraging physics and information theory for multimodal self-supervised learning"
+    meeting: "SciFM26, 3rd Conference on Foundation Models and AI Agents for Science"
+    meetingurl: https://www.scifmconferences.org
+    location: Chicago, IL
+    date: 2026-05-27
+  - title: "Deterministic and probabilistic surrogates for simulation and inverse problems"
+    meeting: "ERC Symposium: IC Engines and Power Generation: Technology, Simulation, and AI"
+    meetingurl: https://erc.wisc.edu/erc-symposium/
+    location: Madison, WI
+    date: 2026-06-03
 
