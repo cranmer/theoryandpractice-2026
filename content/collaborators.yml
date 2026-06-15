@@ -55,28 +55,34 @@ people:
 
   - name: "Zubair Bhatti"
     category: students
-    current: true
+    current: false
     role: "PhD Student"
     affiliation: "New York University"
     start_year: 2019
+    graduation_year: 2026
+    thesis_title: Enhancing searches for new particles through reinterpretation methods
     links:
       github: "zbhatti"
 
   - name: "Matthew Drnevich"
     category: students
-    current: true
+    current: false
     role: "PhD Student"
     affiliation: "New York University"
     start_year: 2020
+    graduation_year: 2026
+    thesis_title: Computational Methods for Systematic Uncertainties and Quasiprobabilistic Modeling in High-Energy Physics
     links:
       github: "mdkdrnevich"
 
   - name: "Edison Weik"
     category: students
-    current: true
+    current: false
     role: "PhD Student"
     affiliation: "New York University"
     start_year: 2020
+    graduation_year: 2026
+    thesis_title: Machine Learning for the ATLAS HLT MET Trigger and Unsupervised Anomaly Detection
     links:
       github: "eweik"
 
@@ -98,7 +104,7 @@ people:
 
   - name: "Sven Kreiss"
     category: students
-    current: true
+    current: false
     role: "PhD Student"
     affiliation: "New York University"
     start_year: 2010
@@ -116,7 +122,7 @@ people:
 
   - name: "James Beacham"
     category: students
-    current: true
+    current: false
     role: "PhD Student"
     affiliation: "New York University"
     start_year: 2009
@@ -131,7 +137,7 @@ people:
 
   - name: "George Herbert Lewis"
     category: students
-    current: true
+    current: false
     role: "PhD Student"
     affiliation: "New York University"
     start_year: 2008
@@ -229,7 +235,7 @@ people:
   # Former Postdocs
   - name: "Johann Brehmer"
     category: postdocs
-    current: true
+    current: false
     role: "Postdoctoral Researcher"
     affiliation: "New York University"
     start_year: 2018
@@ -242,7 +248,7 @@ people:
 
   - name: "Sebastian Macaluso"
     category: postdocs
-    current: true
+    current: false
     role: "Postdoctoral Researcher"
     affiliation: "New York University"
     start_year: 2018
