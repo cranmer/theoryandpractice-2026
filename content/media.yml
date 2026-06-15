@@ -26,6 +26,13 @@ items:
   # Podcasts & Radio
   # ==================
 
+  - title: "Research Develops Relationship Between Farmers & AI"
+    outlet: "Mid-West Farm Report"
+    category: podcasts
+    date: 2026-06-11
+    description: "How UW–Madison's Data Science Institute is applying AI and simulations to help Wisconsin dairy farmers"
+    url: "https://omny.fm/shows/mid-west-farm-report-madison/research-develops-relationship-between-farmers-ai"
+
   - title: "AI's mixed success; and the history of cartography"
     outlet: "WPR Larry Meiller Show"
     category: podcasts
