@@ -89,7 +89,7 @@ people:
   # Former PhD Students (NYU)
   - name: "Lukas Heinrich"
     category: students
-    current: true
+    current: false
     role: "PhD Student"
     affiliation: "New York University"
     start_year: 2014
