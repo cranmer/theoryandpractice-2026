@@ -517,6 +517,16 @@ projects:
     tags: ["visualization", "python", "maps"]
     start_year: 2023
 
+  - name: "4D Rubik's Cube"
+    category: fun
+    status: active
+    description: "A four-dimensional Rubik's cube, ported from a dormant ~11-year-old Java applet to a modern web app with Claude Code."
+    github: "cranmer/cube4d"
+    url: "https://theoryandpractice.org/cube4d/"
+    image: "/images/projects/cube4d.png"
+    tags: ["game", "claude-code", "geometry", "visualization"]
+    start_year: 2026
+
   - name: "Cassville Checkers"
     category: fun
     status: active
