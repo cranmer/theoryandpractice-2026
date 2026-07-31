@@ -57,6 +57,7 @@ categories:
     title: "Sets, Graphs, and Trees: AI for or Inspired by Jet Physics"
     description: "Novel neural network architectures motivated by the hierarchical structure of particle jets."
     publications:
+      - Rieck:2025xnh        # Self-supervised learning strategies for jet physics
       - Macaluso:2021cgp     # The Quantum Trellis
       - Cranmer:2021urp      # Reframing Jet Physics
       - Greenberg:2021ynh    # Exact and Approximate Hierarchical Clustering
@@ -82,11 +83,20 @@ categories:
       - Cranmer:2020wew      # Discovering Symbolic Models
       - SanchezGonzalez:2019 # Hamiltonian Graph Networks
 
+  - id: theory
+    title: "AI for Theoretical Particle Physics"
+    description: "Machine learning for formal and theoretical high-energy physics, including scattering amplitudes and conformal field theory."
+    publications:
+      - Cao:2026nsz          # Reconstructing CFT compositions with Transformers
+      - Cai:2025atc          # Recurrent features of amplitudes in N=4 SYM
+      - Cai:2024znx          # Transforming the bootstrap
+
   - id: misc-ai
     title: "Miscellaneous AI for Science"
     description: "Other applications of machine learning to scientific problems."
     publications:
-      - Cai:2024znx          # Transforming the bootstrap
+      - Drnevich:2025evh     # Quasiprobabilistic density ratio estimation
+      - Drnevich:2024vfj     # Neural quasiprobabilistic likelihood ratio (neg. weights)
       - Gandrakota:2024ruu   # Robust anomaly detection
       - Cranmer:2019efw      # Inferring the quantum density matrix
       - Golkar:2018obb       # Backdrop: Stochastic Backpropagation
@@ -106,6 +116,7 @@ categories:
     title: "Statistics / Classical Machine Learning"
     description: "Statistical methods and classical machine learning for particle physics."
     publications:
+      - Romero:2025rck       # Efficient estimation of unfactorizable systematics
       - Cowan:2010js         # Asymptotic formulae for likelihood-based tests
       - Cranmer:2003yx       # Frequentist hypothesis testing
       - Cranmer:2003zz       # Multivariate analysis from a statistical POV
@@ -120,6 +131,7 @@ categories:
     title: "High-Energy Physics - Phenomenology"
     description: "Theoretical and phenomenological studies in particle physics."
     publications:
+      - Castro:2022zpq       # LHC EFT WG Report: Experimental Measurements and Observables
       - Brehmer:2019xox      # Effective LHC measurements with matrix elements
       - Brehmer:2016nyr      # Better Higgs measurements through info geometry
       - Allanach:2007qj      # Natural priors, CMSSM fits
@@ -131,6 +143,8 @@ categories:
     title: "High-Energy Physics - Software and Infrastructure"
     description: "Software tools and infrastructure for particle physics analysis."
     publications:
+      - Aarrestad:2026xrs    # Building an AI-native Research Ecosystem (Community Vision)
+      - Espejo:2023wzf       # Scaling MadMiner with a deployment on REANA
       - ATLAS:2024nnj        # Implementation of neural SBI in ATLAS
       - Brehmer:2019jyt2     # MadMiner
       - Cranmer:2010hk       # RECAST

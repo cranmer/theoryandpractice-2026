@@ -307,6 +307,15 @@ items:
   # Outreach
   # ==================
 
+  - title: "Badgers on Tap: Artificial Intelligence at The Rigby"
+    outlet: "Badgers on Tap · UW–Madison"
+    category: outreach
+    date: 2026-08-05
+    featured: true
+    description: "A casual evening public talk on AI at The Rigby in Madison, Wisconsin, part of the Badgers on Tap series."
+    url: "https://badgertalks.wisc.edu/badgers-on-tap/"
+    image: "/images/badgers-on-tap-logo.png"
+
   - title: "How AI is and isn't Revolutionizing Science"
     outlet: "Aspen Center for Physics"
     category: outreach
