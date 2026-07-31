@@ -6,15 +6,15 @@ Tags: math, geometry, Claude, agentic AI
 Authors: Kyle Cranmer
 Summary: Porting an old Java applet of a 4D Rubik's cube to a modern web app with Claude Code.
 
-Last wekend I was thinking about the math of the Rubik's cube and started to think about them in four dimensions. After thinking aobut it for a while, I decided to look to see if there was already software for it. That's when I found an old java version from by **Don Hatch** and **Melinda Green** starting in 1988. The [original project lives on GitHub](https://github.com/cutelyaware/magiccube4d), and its git history stretches back about 17 years (it migrated from Google Code to GitHub at some point along the way).
+Last weekend I was thinking about the math of the Rubik's cube and started to think about them in four dimensions. After thinking about it for a while, I decided to look to see if there was already software for it. That's when I found an old Java version by **Don Hatch** and **Melinda Green** starting in 1988. The [original project lives on GitHub](https://github.com/cutelyaware/magiccube4d), and its git history stretches back about 17 years (it migrated from Google Code to GitHub at some point along the way).
 
-I decided to use this as an opportunity for a little experiment with [Claude Code](https://claude.com/claude-code), so I asked claude to port it to a standalone webapp that can run in your browser with no server beyond a simple static webhosting with GitHub pages. 
+I decided to use this as an opportunity for a little experiment with [Claude Code](https://claude.com/claude-code), so I asked Claude to port it to a standalone webapp that can run in your browser with no server beyond simple static web hosting with GitHub Pages. 
 The part that still surprises me is how fast the hard part went. I scaffolded the repo on a Sunday
 evening. By ten the next morning the puzzle was rendering in a browser, and by that afternoon it was
 **playable** — click a sticker to twist it, undo, redo, scramble, solve detection, and solve files
 from the original opening and replaying unchanged. That was
 [commit 12](https://github.com/cranmer/cube4d/commit/5ce229f5c87bb649c313fad45486c5f04b1a5abe), on
-day two. I spent the next few days was tweaking: interface experiments, adding a puzzle gallery, and adding
+day two. I spent the next few days tweaking: interface experiments, adding a puzzle gallery, and adding
 a three-dimensional cube running on the same engine.
 
 
@@ -51,7 +51,7 @@ A standard Rubik's cube is a 3×3×3 arrangement whose six faces are 2D squares.
 
 ## How it was ported
 
-The hardest part of the orignal MagicCube4D code base isn't the visuals or the 4D math you see — it's the **geometry engine**, a ~7,000-line n-dimensional CSG library that *computes* each puzzle's geometry rather than storing it. Every saved solution refers to that geometry by array index, so bit-for-bit compatibility with the original really matters.
+The hardest part of the original MagicCube4D code base isn't the visuals or the 4D math you see — it's the **geometry engine**, a ~7,000-line n-dimensional CSG library that *computes* each puzzle's geometry rather than storing it. Every saved solution refers to that geometry by array index, so bit-for-bit compatibility with the original really matters.
 
 Rather than reimplement that engine, the port takes a different route, laid out in two design docs written along the way:
 
@@ -76,7 +76,7 @@ Two of those turned into more than a feature, and are worth a section each.
 
 ## Two interfaces
 
-Once the puzzle was playable I kept adding controls to it, and after a while I realised I was
+Once the puzzle was playable I kept adding controls to it, and after a while I realized I was
 spoiling the thing I most wanted to keep. The original MagicCube4D is one window with a [trackball](https://en.wikipedia.org/wiki/Trackball):
 you drag, the hypercube tumbles, you click a sticker to twist. Every button I added chipped away at
 that.
@@ -118,9 +118,9 @@ None of this is in the classic app, on purpose. I tried the buttons there first,
 corners of the viewport, and then took them out. Two apps that each do one thing beat one app with a
 mode switch.
 
-## The gallery, and how far the framework generalises
+## The gallery, and how far the framework generalizes
 
-One interesting thing about the frame work is that **nothing in the engine is specifically about the
+One interesting thing about the framework is that **nothing in the engine is specifically about the
 hypercube.** A puzzle is a [Schläfli product symbol](https://en.wikipedia.org/wiki/Schläfli_symbol) and an edge length, and that is the whole
 specification. The program constructs the polytope from the symbol, slices it with hyperplanes, and
 derives the stickers, the twist axes and their rotation orders from whatever falls out. `{4,3,3} 3`
@@ -153,7 +153,7 @@ symbol instead of its geometry.
 ## A 3D Rubik's cube, flat in the fourth dimension
 
 Since the interface takes some getting used to, I thought it would be useful to make a normal 3D Rubik's cube using the same interface. 
-That led to some surprises and revealed that I was a bit confused about how the interface worked in 4D and also revealed to me something pretty wiled about the 4D hypercube (more later). I did have the idea that we could reuse the same engine if we just thought of the 3D cube as being flat in the 4th dimension. 
+That led to some surprises and revealed that I was a bit confused about how the interface worked in 4D and also revealed to me something pretty wild about the 4D hypercube (more later). I did have the idea that we could reuse the same engine if we just thought of the 3D cube as being flat in the 4th dimension. 
 
 Don Hatch's engine is genuinely n-dimensional. It does not hard-code the hypercube: you hand it a
 Schläfli product symbol and an edge length, and it constructs the polytope, slices it with
@@ -168,12 +168,12 @@ you leave that test switched on it quietly culls everything.
 
 What I actually cared about was the interface. In MagicCube4D, which axis a click means is *inferred*
 from how many colors the piece you clicked carries: a corner asks for a rotation about a vertex, an
-edge piece about an edge, a centre about a face. That rule is the thing worth learning, and I wanted
+edge piece about an edge, a center about a face. That rule is the thing worth learning, and I wanted
 the 3D cube to teach it on a shape you can already picture rather than invent its own scheme.
 
 It does, with one honest asymmetry that turned out to be the most interesting thing in the project.
 Click a centre sticker and you get the 90° face turn you expect. Click a corner and the axis is
-perfectly real — but it would turn the cubie by 120° and you can't rotate a corner piece in the 3D puzzle without breaking it. Similarly for the edge piece, but it would be a 180° degree rotation. The thing that is weird is that those are legal moves in 4-D. I'll have to create some images or something to explain that better later. 
+perfectly real — but it would turn the cubie by 120° and you can't rotate a corner piece in the 3D puzzle without breaking it. Similarly for the edge piece, but it would be a 180° rotation. The thing that is weird is that those are legal moves in 4-D. I'll have to create some images or something to explain that better later. 
 <!-- it turns the *whole cube* by 120° rather than a layer. The reason is that in
 four dimensions the first layer measured from a cell **is that cell**: a whole 3×3×3 block, which
 carries the cube's full rotation group, so a 120° turn about one of its corners maps it onto itself.
@@ -256,7 +256,7 @@ I would treat even that as an order of magnitude rather than a measurement, for 
   on Opus, which is substantially larger. 6.6 kg is closer to a floor than a midpoint.
 - **The cache multiplier is a derivation, not a measurement** — the author gives it a range of
   0.05–0.15×, and it drives half the total.
-- **It is inference only.** No amortised training, no hardware manufacturing, no water. And none of
+- **It is inference only.** No amortized training, no hardware manufacturing, no water. And none of
   the 860 shell commands, 86 CI runs and few dozen headless-browser rendering sessions, which ran on
   my laptop and on GitHub's machines rather than in a model.
 
@@ -265,5 +265,5 @@ tonnes.
 
 ## Reflections
 
-All and all this was a pretty fun project with a mix of 4D math, UI/UX, agentic coding, web technologies, and some digital anthropology. 
+All in all, this was a pretty fun project with a mix of 4D math, UI/UX, agentic coding, web technologies, and some digital anthropology. 
 I hope you play around with it.
