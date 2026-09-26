@@ -95,6 +95,7 @@ categories:
     title: "Miscellaneous AI for Science"
     description: "Other applications of machine learning to scientific problems."
     publications:
+      - cranmer2026reframing # AI for science: reframing AI's role in discovery
       - Drnevich:2025evh     # Quasiprobabilistic density ratio estimation
       - Drnevich:2024vfj     # Neural quasiprobabilistic likelihood ratio (neg. weights)
       - Gandrakota:2024ruu   # Robust anomaly detection
