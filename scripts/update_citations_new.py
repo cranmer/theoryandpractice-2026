@@ -26,38 +26,51 @@ USER_AGENT = "TheoryAndPractice/1.0 (https://theoryandpractice.org; mailto:kyle.
 
 
 def fetch_from_openalex(doi=None, arxiv_id=None):
-    """Fetch citation count from OpenAlex for a given DOI or arXiv ID."""
+    """Fetch citation count from OpenAlex for a given DOI or arXiv ID.
+
+    OpenAlex has no `arxiv:` prefix on the works endpoint -- that 404s. arXiv
+    preprints are indexed under their DataCite DOI (10.48550/arXiv.<id>), so
+    that is what we look up for entries that have no journal DOI.
+    """
+    urls = []
     if doi:
-        url = f"{OPENALEX_API}/doi:{doi}"
-    elif arxiv_id:
+        urls.append(f"{OPENALEX_API}/doi:{doi}")
+    if arxiv_id:
         clean_arxiv = arxiv_id.replace('arXiv:', '').strip()
-        url = f"{OPENALEX_API}/arxiv:{clean_arxiv}"
-    else:
-        return None
+        urls.append(f"{OPENALEX_API}/doi:10.48550/arXiv.{clean_arxiv}")
 
-    try:
-        req = urllib.request.Request(url)
-        req.add_header('User-Agent', USER_AGENT)
+    for url in urls:
+        try:
+            req = urllib.request.Request(url)
+            req.add_header('User-Agent', USER_AGENT)
 
-        with urllib.request.urlopen(req, timeout=10) as response:
-            data = json.loads(response.read().decode('utf-8'))
-            return {
-                'cited_by_count': data.get('cited_by_count', 0),
-                'openalex_id': data.get('id', ''),
-                'source': 'openalex',
-            }
-    except urllib.error.HTTPError:
-        return None
-    except Exception:
-        return None
+            with urllib.request.urlopen(req, timeout=10) as response:
+                data = json.loads(response.read().decode('utf-8'))
+                return {
+                    'cited_by_count': data.get('cited_by_count', 0),
+                    'openalex_id': data.get('id', ''),
+                    'source': 'openalex',
+                }
+        except urllib.error.HTTPError:
+            continue
+        except Exception:
+            continue
+
+    return None
 
 
 # Semantic Scholar API endpoint
 SEMANTIC_SCHOLAR_API = "https://api.semanticscholar.org/graph/v1/paper"
 
 
+# Unauthenticated Semantic Scholar requests share a small rate-limit pool and
+# return 429 frequently, so retry with a widening delay before giving up.
+S2_RETRIES = 3
+S2_BACKOFF = 3
+
+
 def fetch_from_semantic_scholar(doi=None, arxiv_id=None):
-    """Fetch citation count from Semantic Scholar as fallback."""
+    """Fetch citation count from Semantic Scholar."""
     if doi:
         url = f"{SEMANTIC_SCHOLAR_API}/DOI:{doi}?fields=citationCount,externalIds"
     elif arxiv_id:
@@ -66,37 +79,92 @@ def fetch_from_semantic_scholar(doi=None, arxiv_id=None):
     else:
         return None
 
-    try:
-        req = urllib.request.Request(url)
-        req.add_header('User-Agent', USER_AGENT)
+    for attempt in range(S2_RETRIES):
+        try:
+            req = urllib.request.Request(url)
+            req.add_header('User-Agent', USER_AGENT)
 
-        with urllib.request.urlopen(req, timeout=10) as response:
-            data = json.loads(response.read().decode('utf-8'))
-            paper_id = data.get('paperId', '')
+            with urllib.request.urlopen(req, timeout=15) as response:
+                data = json.loads(response.read().decode('utf-8'))
+                paper_id = data.get('paperId', '')
+                return {
+                    'cited_by_count': data.get('citationCount', 0),
+                    'semantic_scholar_id': f"https://www.semanticscholar.org/paper/{paper_id}" if paper_id else '',
+                    'source': 'semantic_scholar',
+                }
+        except urllib.error.HTTPError as exc:
+            if exc.code == 429 and attempt < S2_RETRIES - 1:
+                time.sleep(S2_BACKOFF * (attempt + 1))
+                continue
+            return None
+        except Exception:
+            return None
+
+    return None
+
+
+# INSPIRE-HEP API endpoint. Best coverage for high-energy physics, where both
+# OpenAlex and Semantic Scholar undercount badly, and it is not rate-limited.
+INSPIRE_API = "https://inspirehep.net/api"
+
+
+def fetch_from_inspire(doi=None, arxiv_id=None):
+    """Fetch citation count from INSPIRE-HEP."""
+    urls = []
+    if arxiv_id:
+        clean_arxiv = arxiv_id.replace('arXiv:', '').strip()
+        urls.append(f"{INSPIRE_API}/arxiv/{clean_arxiv}")
+    if doi:
+        urls.append(f"{INSPIRE_API}/doi/{doi}")
+
+    for url in urls:
+        try:
+            req = urllib.request.Request(url)
+            req.add_header('User-Agent', USER_AGENT)
+
+            with urllib.request.urlopen(req, timeout=15) as response:
+                metadata = json.loads(response.read().decode('utf-8')).get('metadata', {})
+
+            recid = metadata.get('control_number')
             return {
-                'cited_by_count': data.get('citationCount', 0),
-                'semantic_scholar_id': f"https://www.semanticscholar.org/paper/{paper_id}" if paper_id else '',
-                'source': 'semantic_scholar',
+                'cited_by_count': metadata.get('citation_count', 0) or 0,
+                'inspire_id': f"https://inspirehep.net/literature/{recid}" if recid else '',
+                'source': 'inspire',
             }
-    except urllib.error.HTTPError:
-        return None
-    except Exception:
-        return None
+        except urllib.error.HTTPError:
+            continue
+        except Exception:
+            continue
+
+    return None
 
 
 def fetch_citation_count(doi=None, arxiv_id=None):
-    """Fetch citation count, trying OpenAlex first, then Semantic Scholar."""
-    # Try OpenAlex first
-    result = fetch_from_openalex(doi=doi, arxiv_id=arxiv_id)
-    if result:
-        return result
+    """Fetch the best citation count available across sources.
 
-    # Fallback to Semantic Scholar
-    result = fetch_from_semantic_scholar(doi=doi, arxiv_id=arxiv_id)
-    if result:
-        return result
+    The three sources disagree substantially and none dominates:
 
-    return None
+      * INSPIRE-HEP has the best coverage for high-energy physics and is not
+        rate-limited, but does not index most of the ML/CS venues.
+      * OpenAlex often holds only the arXiv *preprint* record for conference
+        papers, which badly undercounts them (Learning to Pivot: 88 vs 244).
+      * Semantic Scholar merges preprint and published versions, but is
+        aggressively rate-limited without an API key and often returns nothing.
+
+    So query all three and keep the larger count rather than taking whichever
+    responds first. A citation count that is too low is just as wrong as a
+    missing one, and picking the max degrades gracefully when a source fails.
+    """
+    results = [
+        fetch_from_inspire(doi=doi, arxiv_id=arxiv_id),
+        fetch_from_openalex(doi=doi, arxiv_id=arxiv_id),
+        fetch_from_semantic_scholar(doi=doi, arxiv_id=arxiv_id),
+    ]
+    results = [r for r in results if r]
+    if not results:
+        return None
+
+    return max(results, key=lambda r: r.get('cited_by_count', 0))
 
 
 def load_bibtex_entries(bibtex_path):
@@ -219,7 +287,10 @@ def main():
                 'year': entry.get('year', ''),
             }
             # Store the appropriate ID based on source
-            if result.get('source') == 'openalex':
+            if result.get('source') == 'inspire':
+                citation_entry['inspire_id'] = result.get('inspire_id', '')
+                print(f"{result['cited_by_count']} citations (INSPIRE)")
+            elif result.get('source') == 'openalex':
                 citation_entry['openalex_id'] = result.get('openalex_id', '')
                 print(f"{result['cited_by_count']} citations (OpenAlex)")
             elif result.get('source') == 'semantic_scholar':

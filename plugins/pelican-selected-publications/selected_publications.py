@@ -28,6 +28,7 @@ import json
 import logging
 import os
 import re
+from html import escape as html_escape
 
 from pelican import signals
 
@@ -78,11 +79,16 @@ def format_publication(entry, key, plain_style, html_backend):
     # Clean title for matching (remove braces)
     clean_title = title.replace('{', '').replace('}', '')
     if clean_title:
+        # The rendered span holds pybtex's output, not the raw BibTeX: LaTeX
+        # escapes have been resolved and the result HTML-escaped. Match against
+        # that form, or titles containing & (or < >) never match and silently
+        # lose their pub-title styling.
+        rendered_title = html_escape(clean_title.replace('\\&', '&'), quote=False)
         # Escape special regex characters in title
-        escaped_title = re.escape(clean_title)
+        escaped_title = re.escape(rendered_title)
         # Replace the span containing the title with pub-title class
         pattern = r'<span class="bibtex-protected">' + escaped_title + r'</span>'
-        replacement = r'<span class="pub-title">' + clean_title + r'</span>'
+        replacement = '<span class="pub-title">' + rendered_title + '</span>'
         text = re.sub(pattern, replacement, text, count=1)
 
     # Generate BibTeX string
@@ -194,6 +200,7 @@ def add_selected_publications(generator):
                 pub['citations'] = citations[key].get('cited_by_count', 0)
                 # Use OpenAlex ID if available, otherwise Semantic Scholar
                 pub['citation_url'] = (
+                    citations[key].get('inspire_id', '') or
                     citations[key].get('openalex_id', '') or
                     citations[key].get('semantic_scholar_id', '')
                 )

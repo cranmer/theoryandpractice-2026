@@ -103,24 +103,31 @@ PROJECTS_SRC = 'content/projects.yml'
 # Media (pelican-media) - videos, podcasts, news articles, interviews
 MEDIA_SRC = 'content/media.yml'
 
-# Publication metrics (manually updated)
+# Publication metrics (manually updated; last refreshed 2026-09-26)
+#
+# Sources:
+#   - Publication count: INSPIRE, `a k.s.cranmer.1` (1,759 records)
+#   - Citations / h-index: Google Scholar profile EZjSxgwAAAAJ (374,265 / 251)
+#   - Small-author box: INSPIRE, `a k.s.cranmer.1 and ac 1->19`
+# Citation totals are rounded, since the exact figure goes stale within days.
+#
 # Keep PUBLICATION_METRICS for backwards compatibility (required for homepage to work correctly)
 PUBLICATION_METRICS = {
-    'total_publications': 1200,
-    'total_citations': 349000,
-    'h_index': 241,
+    'total_publications': 1759,
+    'total_citations': 374000,
+    'h_index': 251,
 }
 # All publications (including large collaborations like ATLAS)
 ALL_PUBLICATION_METRICS = {
-    'total_publications': 1200,
-    'total_citations': 349000,
-    'h_index': 241,
+    'total_publications': 1759,
+    'total_citations': 374000,
+    'h_index': 251,
 }
 # Publications with fewer than 20 authors
 SMALL_AUTHOR_METRICS = {
-    'total_publications': 119,
-    'total_citations': 14000,
-    'h_index': 41,
+    'total_publications': 128,
+    'total_citations': 15900,
+    'h_index': 43,
 }
 
 # Publication profile links

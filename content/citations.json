@@ -1,138 +1,162 @@
 {
   "ALEPH:2010aa": {
-    "cited_by_count": 66,
-    "semantic_scholar_id": "https://www.semanticscholar.org/paper/0b1c820078cb50276916da48ca759956e86119ad",
+    "cited_by_count": 93,
+    "inspire_id": "https://inspirehep.net/literature/847547",
     "year": "2010"
   },
   "ATLAS:2012yve": {
-    "cited_by_count": 10301,
-    "openalex_id": "https://openalex.org/W1858542512",
+    "cited_by_count": 17703,
+    "inspire_id": "https://inspirehep.net/literature/1124337",
     "year": "2012"
   },
   "ATLAS:2024nnj": {
-    "cited_by_count": 21,
-    "semantic_scholar_id": "https://www.semanticscholar.org/paper/bc7f95e18d5b3158964bd92c5d97f28feaa605cb",
+    "cited_by_count": 49,
+    "inspire_id": "https://inspirehep.net/literature/2854620",
     "year": "2024"
   },
   "ATLAS:2024ynn": {
-    "cited_by_count": 0,
+    "cited_by_count": 67,
+    "inspire_id": "https://inspirehep.net/literature/2854934",
     "year": "2024"
   },
+  "Aarrestad:2026xrs": {
+    "cited_by_count": 6,
+    "semantic_scholar_id": "https://www.semanticscholar.org/paper/47ee9620d0c17e557d49a4c1b791ed2190a7f7fa",
+    "year": "2026"
+  },
   "Albergo:2021bna": {
-    "cited_by_count": 46,
-    "semantic_scholar_id": "https://www.semanticscholar.org/paper/fa8294b7ed4345251d4cc5efe4c5134808b9298a",
+    "cited_by_count": 75,
+    "inspire_id": "https://inspirehep.net/literature/1867962",
     "year": "2021"
   },
   "Albergo:2021vyo": {
-    "cited_by_count": 0,
+    "cited_by_count": 89,
+    "inspire_id": "https://inspirehep.net/literature/1842016",
     "year": "2021"
   },
   "Albergo:2022qfi": {
-    "cited_by_count": 34,
-    "openalex_id": "https://openalex.org/W4288702334",
+    "cited_by_count": 55,
+    "inspire_id": "https://inspirehep.net/literature/2037638",
     "year": "2022"
   },
   "Allanach:2007qj": {
-    "cited_by_count": 92,
-    "openalex_id": "https://openalex.org/W2147642234",
+    "cited_by_count": 160,
+    "inspire_id": "https://inspirehep.net/literature/749860",
     "year": "2007"
   },
   "Baldi:2016fzo": {
-    "cited_by_count": 257,
-    "semantic_scholar_id": "https://www.semanticscholar.org/paper/9c6535b47190a856e248c7bc96bad24a91aa538a",
+    "cited_by_count": 310,
+    "inspire_id": "https://inspirehep.net/literature/1418479",
     "year": "2016"
   },
   "Baydin:2018tpf": {
-    "cited_by_count": 0,
+    "cited_by_count": 33,
+    "semantic_scholar_id": "https://www.semanticscholar.org/paper/9ecbc88c1cbf9709c0a26ecb4430223d9ec9aef4",
     "year": "2020"
   },
   "Baydin:2019pml": {
-    "cited_by_count": 27,
-    "openalex_id": "https://openalex.org/W2955467592",
+    "cited_by_count": 64,
+    "semantic_scholar_id": "https://www.semanticscholar.org/paper/e4cd5ddfa0ce555bdcf040e6884db19ca958d7ed",
     "year": "2019"
   },
   "Bhatti:2024sxm": {
-    "cited_by_count": 0,
-    "openalex_id": "https://openalex.org/W4396671444",
+    "cited_by_count": 1,
+    "inspire_id": "https://inspirehep.net/literature/2785076",
     "year": "2024"
   },
   "Boyda:2020hsi": {
-    "cited_by_count": 104,
-    "openalex_id": "https://openalex.org/W3048457240",
+    "cited_by_count": 161,
+    "inspire_id": "https://inspirehep.net/literature/1811378",
     "year": "2021"
   },
   "Brehmer:2016nyr": {
-    "cited_by_count": 66,
-    "openalex_id": "https://openalex.org/W2571635867",
+    "cited_by_count": 77,
+    "inspire_id": "https://inspirehep.net/literature/1504220",
     "year": "2017"
   },
   "Brehmer:2018eca": {
-    "cited_by_count": 164,
-    "semantic_scholar_id": "https://www.semanticscholar.org/paper/2aff69adb95ddb6c766385acf439e9a19d45b20b",
+    "cited_by_count": 199,
+    "inspire_id": "https://inspirehep.net/literature/1670936",
     "year": "2018"
   },
   "Brehmer:2018hga": {
-    "cited_by_count": 157,
-    "openalex_id": "https://openalex.org/W3006943238",
+    "cited_by_count": 215,
+    "semantic_scholar_id": "https://www.semanticscholar.org/paper/d4eb4655374c8711fb5e9bcd35b28576a7e43fc4",
     "year": "2020"
   },
   "Brehmer:2018kdj": {
-    "cited_by_count": 145,
-    "openalex_id": "https://openalex.org/W2799038815",
+    "cited_by_count": 190,
+    "inspire_id": "https://inspirehep.net/literature/1670939",
     "year": "2018"
   },
   "Brehmer:2019jyt": {
-    "cited_by_count": 72,
-    "openalex_id": "https://openalex.org/W2971647774",
+    "cited_by_count": 95,
+    "inspire_id": "https://inspirehep.net/literature/1752736",
     "year": "2019"
   },
   "Brehmer:2019jyt2": {
-    "cited_by_count": 129,
-    "semantic_scholar_id": "https://www.semanticscholar.org/paper/e44f9fc331b9711b2ec03f32af14dac12c3e5cb3",
+    "cited_by_count": 147,
+    "inspire_id": "https://inspirehep.net/literature/1746275",
     "year": "2020"
   },
   "Brehmer:2019xox": {
-    "cited_by_count": 19,
-    "openalex_id": "https://openalex.org/W2948214461",
+    "cited_by_count": 21,
+    "inspire_id": "https://inspirehep.net/literature/1738305",
     "year": "2020"
   },
   "Brehmer:2020cvb": {
-    "cited_by_count": 6,
+    "cited_by_count": 10,
     "semantic_scholar_id": "https://www.semanticscholar.org/paper/71f6fb199c1154dd83c3c649d7cebf202f119dbc",
     "year": "2020"
   },
   "Brehmer:2020vwc": {
-    "cited_by_count": 0,
+    "cited_by_count": 187,
+    "semantic_scholar_id": "https://www.semanticscholar.org/paper/319136a7230dcbde683f3d432524bf5dfa11fa10",
     "year": "2020"
   },
   "Bridges:2010de": {
-    "cited_by_count": 38,
-    "openalex_id": "https://openalex.org/W2086487774",
+    "cited_by_count": 47,
+    "inspire_id": "https://inspirehep.net/literature/878258",
     "year": "2011"
   },
   "CDF:2011af": {
-    "cited_by_count": 36,
-    "openalex_id": "https://openalex.org/W1532615268",
+    "cited_by_count": 66,
+    "inspire_id": "https://inspirehep.net/literature/885170",
     "year": "2011"
   },
   "Cai:2024znx": {
-    "cited_by_count": 8,
-    "openalex_id": "https://openalex.org/W4401898873",
+    "cited_by_count": 34,
+    "semantic_scholar_id": "https://www.semanticscholar.org/paper/97c52051e0d5557fbf0f378f5501ebba19277b53",
     "year": "2024"
   },
+  "Cai:2025atc": {
+    "cited_by_count": 9,
+    "inspire_id": "https://inspirehep.net/literature/2867111",
+    "year": "2025"
+  },
+  "Cao:2026nsz": {
+    "cited_by_count": 1,
+    "inspire_id": "https://inspirehep.net/literature/3151220",
+    "year": "2026"
+  },
   "Carleo:2019ptp": {
-    "cited_by_count": 2247,
+    "cited_by_count": 2513,
     "openalex_id": "https://openalex.org/W2923537029",
     "year": "2019"
   },
+  "Castro:2022zpq": {
+    "cited_by_count": 20,
+    "inspire_id": "https://inspirehep.net/literature/2182396",
+    "year": "2022"
+  },
   "Cowan:2010js": {
-    "cited_by_count": 2706,
-    "openalex_id": "https://openalex.org/W2019149276",
+    "cited_by_count": 6244,
+    "inspire_id": "https://inspirehep.net/literature/860907",
     "year": "2011"
   },
   "Cranmer:2000du": {
-    "cited_by_count": 482,
-    "openalex_id": "https://openalex.org/W2012206282",
+    "cited_by_count": 703,
+    "inspire_id": "https://inspirehep.net/literature/537082",
     "year": "2001"
   },
   "Cranmer:2003td": {
@@ -140,8 +164,8 @@
     "year": "2003"
   },
   "Cranmer:2003yx": {
-    "cited_by_count": 28,
-    "semantic_scholar_id": "https://www.semanticscholar.org/paper/d0d9249a8fda890cebcb9fc507a1b5ce92fc06ea",
+    "cited_by_count": 32,
+    "inspire_id": "https://inspirehep.net/literature/635211",
     "year": "2003"
   },
   "Cranmer:2003zq": {
@@ -150,52 +174,52 @@
     "year": "2003"
   },
   "Cranmer:2003zz": {
-    "cited_by_count": 3,
-    "semantic_scholar_id": "https://www.semanticscholar.org/paper/95fc9b8d83137df1a2328bdd1bb1c779141dd60f",
+    "cited_by_count": 4,
+    "inspire_id": "https://inspirehep.net/literature/635212",
     "year": "2003"
   },
   "Cranmer:2004gj": {
-    "cited_by_count": 23,
-    "openalex_id": "https://openalex.org/W2014578249",
+    "cited_by_count": 28,
+    "semantic_scholar_id": "https://www.semanticscholar.org/paper/58faad3c59a9f8f32404aade24bf5e8528937148",
     "year": "2005"
   },
   "Cranmer:2004hha": {
-    "cited_by_count": 6,
-    "semantic_scholar_id": "https://www.semanticscholar.org/paper/fbccd78731164656139fce36022d329661540ed2",
+    "cited_by_count": 14,
+    "inspire_id": "https://inspirehep.net/literature/643000",
     "year": "2004"
   },
   "Cranmer:2005hi": {
-    "cited_by_count": 22,
-    "openalex_id": "https://openalex.org/W2002947007",
+    "cited_by_count": 61,
+    "inspire_id": "https://inspirehep.net/literature/706581",
     "year": "2005"
   },
   "Cranmer:2006ky": {
-    "cited_by_count": 34,
-    "openalex_id": "https://openalex.org/W2053264071",
+    "cited_by_count": 52,
+    "inspire_id": "https://inspirehep.net/literature/717722",
     "year": "2007"
   },
   "Cranmer:2007zz": {
-    "cited_by_count": 9,
-    "openalex_id": "https://openalex.org/W1988330004",
+    "cited_by_count": 11,
+    "inspire_id": "https://inspirehep.net/literature/788119",
     "year": "2008"
   },
   "Cranmer:2007zza": {
-    "cited_by_count": 8,
-    "openalex_id": "https://openalex.org/W2281392227",
+    "cited_by_count": 9,
+    "semantic_scholar_id": "https://www.semanticscholar.org/paper/d5fff5959201d05952b3bc6280f23d180ec0b8de",
     "year": "2008"
   },
   "Cranmer:2010hk": {
-    "cited_by_count": 70,
-    "openalex_id": "https://openalex.org/W2038326164",
+    "cited_by_count": 118,
+    "inspire_id": "https://inspirehep.net/literature/872781",
     "year": "2011"
   },
   "Cranmer:2015bka": {
     "cited_by_count": 12,
-    "openalex_id": "https://openalex.org/W2979001666",
+    "inspire_id": "https://inspirehep.net/literature/1503115",
     "year": "2015"
   },
   "Cranmer:2019eaq": {
-    "cited_by_count": 1040,
+    "cited_by_count": 1398,
     "semantic_scholar_id": "https://www.semanticscholar.org/paper/562ec6a04929d9382bc401d3e7f35efc2effed4c",
     "year": "2020"
   },
@@ -205,13 +229,13 @@
     "year": "2019"
   },
   "Cranmer:2020wew": {
-    "cited_by_count": 571,
+    "cited_by_count": 725,
     "semantic_scholar_id": "https://www.semanticscholar.org/paper/643ac3ef063c77eb02a3d52637c11fe028bfae28",
     "year": "2020"
   },
   "Cranmer:2021pub": {
-    "cited_by_count": 48,
-    "openalex_id": "https://openalex.org/W3200145371",
+    "cited_by_count": 60,
+    "inspire_id": "https://inspirehep.net/literature/1919763",
     "year": "2022"
   },
   "Cranmer:2021urp": {
@@ -220,40 +244,58 @@
     "year": "2021"
   },
   "Cranmer:2023xbe": {
-    "cited_by_count": 25,
-    "openalex_id": "https://openalex.org/W4385583918",
+    "cited_by_count": 59,
+    "inspire_id": "https://inspirehep.net/literature/2693297",
     "year": "2023"
   },
+  "Drnevich:2024vfj": {
+    "cited_by_count": 9,
+    "inspire_id": "https://inspirehep.net/literature/2839645",
+    "year": "2025"
+  },
+  "Drnevich:2025evh": {
+    "cited_by_count": 1,
+    "inspire_id": "https://inspirehep.net/literature/3095301",
+    "year": "2025"
+  },
+  "Espejo:2023wzf": {
+    "cited_by_count": 1,
+    "inspire_id": "https://inspirehep.net/literature/2650787",
+    "year": "2026"
+  },
   "Frate:2017mai": {
-    "cited_by_count": 52,
-    "semantic_scholar_id": "https://www.semanticscholar.org/paper/294e8123842807ae5bc27cfe394bd23da39d0a54",
+    "cited_by_count": 75,
+    "inspire_id": "https://inspirehep.net/literature/1624168",
     "year": "2017"
   },
   "Gandrakota:2024ruu": {
-    "cited_by_count": 3,
-    "openalex_id": "https://openalex.org/W4402289531",
+    "cited_by_count": 4,
+    "inspire_id": "https://inspirehep.net/literature/2747745",
     "year": "2024"
   },
   "Golkar:2018obb": {
-    "cited_by_count": 0,
+    "cited_by_count": 2,
+    "semantic_scholar_id": "https://www.semanticscholar.org/paper/e6736b2b46b0b154d66a07397249924dd73e39c6",
     "year": "2018"
   },
   "Greenberg:2020heb": {
-    "cited_by_count": 0,
+    "cited_by_count": 3,
+    "inspire_id": "https://inspirehep.net/literature/1782435",
     "year": "2021"
   },
   "Greenberg:2021ynh": {
-    "cited_by_count": 3,
+    "cited_by_count": 5,
     "semantic_scholar_id": "https://www.semanticscholar.org/paper/fc3fc2f2027ce75af777eb70b9d522efa18506b3",
     "year": "2021"
   },
   "Guest:2018yhq": {
-    "cited_by_count": 369,
-    "openalex_id": "https://openalex.org/W2810437889",
+    "cited_by_count": 447,
+    "semantic_scholar_id": "https://www.semanticscholar.org/paper/1f135e98e867ffcde5b359e7b817bbe21f80cfce",
     "year": "2018"
   },
   "Hackett:2021idh": {
-    "cited_by_count": 0,
+    "cited_by_count": 64,
+    "inspire_id": "https://inspirehep.net/literature/1875561",
     "year": "2021"
   },
   "Henrion:2017nips": {
@@ -261,8 +303,8 @@
     "year": "2017"
   },
   "Kanwar:2020xzo": {
-    "cited_by_count": 185,
-    "openalex_id": "https://openalex.org/W3012274818",
+    "cited_by_count": 243,
+    "inspire_id": "https://inspirehep.net/literature/1785309",
     "year": "2020"
   },
   "LezcanoCasado:2017": {
@@ -270,17 +312,17 @@
     "year": "2017"
   },
   "Louppe:2016ylz": {
-    "cited_by_count": 235,
+    "cited_by_count": 244,
     "semantic_scholar_id": "https://www.semanticscholar.org/paper/f47ae242ac12225f1c4f7bfe07b972ffb6401cce",
     "year": "2017"
   },
   "Louppe:2017ipp": {
-    "cited_by_count": 113,
-    "openalex_id": "https://openalex.org/W2586765566",
+    "cited_by_count": 214,
+    "inspire_id": "https://inspirehep.net/literature/1511884",
     "year": "2019"
   },
   "Louppe:2017lwp": {
-    "cited_by_count": 69,
+    "cited_by_count": 72,
     "semantic_scholar_id": "https://www.semanticscholar.org/paper/c24405ad1e5f6eee2c3aaa4db74a803b05638f44",
     "year": "2019"
   },
@@ -290,31 +332,43 @@
     "year": "2021"
   },
   "MishraSharma:2020wys": {
-    "cited_by_count": 0,
+    "cited_by_count": 14,
+    "inspire_id": "https://inspirehep.net/literature/1824092",
     "year": "2020"
   },
   "MishraSharma:2021oxe": {
-    "cited_by_count": 37,
-    "openalex_id": "https://openalex.org/W4220740074",
+    "cited_by_count": 62,
+    "inspire_id": "https://inspirehep.net/literature/1944904",
     "year": "2022"
   },
   "Moneta:2010pm": {
-    "cited_by_count": 228,
-    "openalex_id": "https://openalex.org/W2749747231",
+    "cited_by_count": 1077,
+    "inspire_id": "https://inspirehep.net/literature/868303",
     "year": "2010"
   },
   "PDG:2024": {
-    "cited_by_count": 1817,
-    "openalex_id": "https://openalex.org/W4401211033",
+    "cited_by_count": 20952,
+    "semantic_scholar_id": "https://www.semanticscholar.org/paper/654daa3cea17b46629b818ae157314617ceb7d90",
     "year": "2024"
   },
   "Rezende:2020hrd": {
-    "cited_by_count": 171,
-    "semantic_scholar_id": "https://www.semanticscholar.org/paper/bc4470af94d0dd449e30df3fd11191fa03fca370",
+    "cited_by_count": 192,
+    "semantic_scholar_id": "https://www.semanticscholar.org/paper/fff6262387817887920394be576afdee953ca49e",
     "year": "2020"
   },
+  "Rieck:2025xnh": {
+    "cited_by_count": 3,
+    "inspire_id": "https://inspirehep.net/literature/2900474",
+    "year": "2025"
+  },
+  "Romero:2025rck": {
+    "cited_by_count": 1,
+    "inspire_id": "https://inspirehep.net/literature/2971475",
+    "year": "2026"
+  },
   "SanchezGonzalez:2019": {
-    "cited_by_count": 0,
+    "cited_by_count": 199,
+    "semantic_scholar_id": "https://www.semanticscholar.org/paper/57784e5db3504d549d16382de8f7f4ad222b3d71",
     "year": "2019"
   },
   "Serviansky:2020qwa": {
@@ -323,12 +377,18 @@
     "year": "2020"
   },
   "Shlomi:2020gdn": {
-    "cited_by_count": 18,
-    "openalex_id": "https://openalex.org/W3047831307",
+    "cited_by_count": 46,
+    "inspire_id": "https://inspirehep.net/literature/1810547",
     "year": "2021"
   },
   "Stoye:2018ovl": {
-    "cited_by_count": 0,
+    "cited_by_count": 53,
+    "inspire_id": "https://inspirehep.net/literature/1684960",
     "year": "2018"
+  },
+  "cranmer2026reframing": {
+    "cited_by_count": 0,
+    "openalex_id": "https://openalex.org/W7207542597",
+    "year": "2026"
   }
 }
