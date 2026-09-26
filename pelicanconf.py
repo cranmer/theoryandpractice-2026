@@ -126,7 +126,7 @@ SMALL_AUTHOR_METRICS = {
 # Publication profile links
 PUBLICATION_PROFILES = (
     ('Google Scholar', 'http://scholar.google.com/citations?user=EZjSxgwAAAAJ', 'google-scholar'),
-    ('INSPIRE', 'https://inspirehep.net/authors/1023993', 'inspire'),
+    ('INSPIRE', 'https://inspirehep.net/authors/1012846?ui-citation-summary=true', 'inspire'),
     ('arXiv', 'https://arxiv.org/search/?searchtype=author&query=Cranmer%2C+K', 'arxiv'),
     ('OpenAlex', 'https://openalex.org/works?filter=authorships.author.id:a5108167175', 'openaccess'),
     ('ORCiD', 'https://orcid.org/0000-0002-5769-7094', 'orcid'),
